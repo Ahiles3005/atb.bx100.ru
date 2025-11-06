@@ -1,0 +1,41 @@
+<?php return array(
+    'root' => array(
+        'pretty_version' => '1.0.0+no-version-set',
+        'version' => '1.0.0.0',
+        'type' => 'library',
+        'install_path' => __DIR__ . '/../../',
+        'aliases' => array(),
+        'reference' => NULL,
+        'name' => 'handpc/site',
+        'dev' => true,
+    ),
+    'versions' => array(
+        'handpc/site' => array(
+            'pretty_version' => '1.0.0+no-version-set',
+            'version' => '1.0.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../../',
+            'aliases' => array(),
+            'reference' => NULL,
+            'dev_requirement' => false,
+        ),
+        'symfony/polyfill-mbstring' => array(
+            'pretty_version' => 'v1.31.0',
+            'version' => '1.31.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/polyfill-mbstring',
+            'aliases' => array(),
+            'reference' => '85181ba99b2345b0ef10ce42ecac37612d9fd341',
+            'dev_requirement' => true,
+        ),
+        'symfony/var-dumper' => array(
+            'pretty_version' => 'v7.1.0',
+            'version' => '7.1.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/var-dumper',
+            'aliases' => array(),
+            'reference' => '595e4a4bc2118e7f4884315a684678b9403d44a6',
+            'dev_requirement' => true,
+        ),
+    ),
+);
