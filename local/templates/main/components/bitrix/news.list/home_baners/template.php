@@ -15,7 +15,7 @@ $this->setFrameMode(true);
 
 
 <?php if(isset($arResult["ITEMS"]) && !empty($arResult["ITEMS"])):?>
-    <!-- ---------- ********** СЕКЦИЯ HERO ********** ---------- -->
+
     <section class="hm-hero">
         <div class="hm-hero--div__SWIPER swiper">
             <div class="hm-hero--div__SWIPER_WRAPPER swiper-wrapper">
