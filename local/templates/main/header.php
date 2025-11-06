@@ -96,4 +96,14 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/js/catalog.js');
         </nav>
     </div>
 </header>
-<main id="home">
+
+<?php if($APPLICATION->GetCurPage() == '/' || $APPLICATION->GetCurPage() == '/index.php'):?>
+
+    <?require_once($_SERVER['DOCUMENT_ROOT'].'/'.SITE_TEMPLATE_PATH.'/include/home.php')?>
+<?
+    var_dump($_SERVER['DOCUMENT_ROOT'].SITE_TEMPLATE_PATH.'/include/home.php');
+    die();
+    ?>
+<?php else:?>
+<main id="other">
+<?php endif?>
