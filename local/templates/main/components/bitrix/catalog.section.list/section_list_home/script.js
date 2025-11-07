@@ -5,6 +5,37 @@ window.addEventListener("load", function () {
     if (document.querySelector("#home")) {
 
 
+
+        //загрузка товара
+        const subMenuItems = Array.from(document.querySelectorAll(".hm-cat--label__SUBMENU"));
+
+        subMenuItems.forEach((v) => {
+            v.addEventListener("click", (event) => {
+                if (event.target.classList.contains('hm-cat--label__SUBMENU') || event.target.classList.contains('hm-cat--span__SUBMENU')) {
+                    let sectionId = v.dataset.sectionid;
+                    let url = 'local/templates/main/include/home/ajax/products.php?SECTION_ID=' + sectionId
+
+                    fetch(url)
+                        .then(response => {
+                            if (!response.ok) {
+                                throw new Error(response.statusText);
+                            }
+                            return response.text();
+                        })
+                        .then(html => {
+                            document.querySelector('#products-html').innerHTML = html
+
+                            hmCatImageSwiper()
+                            observeScrollElements();
+                        })
+                        .catch(error => {
+                            console.error('Fetch error:', error);
+                        });
+                }
+            });
+        });
+
+
         /* ---------- ********** СЕКЦИЯ CAT ********** ---------- */
 
         // 1. ОТКРЫТИЕ / ЗАКРЫТИЕ СУБМЕНЮ,
@@ -59,6 +90,10 @@ window.addEventListener("load", function () {
 
         hmCatButtonMenuItem[0]?.click ();
 
+
+
+
+
         // 2. СЛАЙДЕР КАРТОЧЕК ТОВАРОВ
         // ПРИ ЗАГРУЗКЕ КАРТОЧЕК С СЕРВЕРА ТАКЖЕ ВЫЗВАТЬ ЭТУ ФУНКЦИЮ !
 
@@ -93,7 +128,7 @@ window.addEventListener("load", function () {
             });
         }
 
-        hmCatImageSwiper ();
+        // hmCatImageSwiper ();
 
         // 3. КНОПКИ ВЫБОРА ТОВАРА ДЛЯ СРАВНЕНИЯ ИЛИ В ИЗБРАННОЕ
         function hmCatCardButtons () {
