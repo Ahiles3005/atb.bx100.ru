@@ -9,11 +9,11 @@ $component = $this->getComponent();
 $arParams = $component->applyTemplateModifications();
 
 
-foreach ($arResult['ITEMS'] as $key => $items) {
+foreach ($arResult['ITEMS'] as $key => $item) {
     $slider = [];
-    if (isset($items['DETAIL_PICTURE']) && !empty($items['DETAIL_PICTURE'])) {
+    if (isset($item['DETAIL_PICTURE']) && !empty($item['DETAIL_PICTURE'])) {
         $file = CFile::ResizeImageGet(
-            $items['DETAIL_PICTURE'],
+            $item['DETAIL_PICTURE'],
             ["width" => 364, "height" => 364],
             BX_RESIZE_IMAGE_PROPORTIONAL,
             true
@@ -21,9 +21,9 @@ foreach ($arResult['ITEMS'] as $key => $items) {
         $slider[] = ['src' => $file['src']];
     }
 
-    if (isset($items['PROPERTIES']['MORE_PHOTO'])) {
-        if (is_array($items['PROPERTIES']['MORE_PHOTO']['VALUE'])) {
-            foreach ($items['PROPERTIES']['MORE_PHOTO']['VALUE'] as $fileId) {
+    if (isset($item['PROPERTIES']['MORE_PHOTO'])) {
+        if (is_array($item['PROPERTIES']['MORE_PHOTO']['VALUE'])) {
+            foreach ($item['PROPERTIES']['MORE_PHOTO']['VALUE'] as $fileId) {
                 $file = CFile::ResizeImageGet(
                     $fileId,
                     ["width" => 364, "height" => 364],
@@ -34,7 +34,7 @@ foreach ($arResult['ITEMS'] as $key => $items) {
             }
         } else {
             $file = CFile::ResizeImageGet(
-                $items['PROPERTIES']['MORE_PHOTO']['VALUE'],
+                $item['PROPERTIES']['MORE_PHOTO']['VALUE'],
                 ["width" => 364, "height" => 364],
                 BX_RESIZE_IMAGE_PROPORTIONAL,
                 true
