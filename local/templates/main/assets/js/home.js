@@ -42,28 +42,6 @@ window.addEventListener ("load", function () {
         observeScrollElements();
 
 
-
-
-
-        /* ---------- ********** СЕКЦИЯ DES ********** ---------- */
-
-        const hmDesDivHead = document.querySelector (".hm-des--div__HEAD");
-        const hmDesSvgSubmenu = document.querySelector (".hm-des--svg__SUBMENU");
-        const hmDesFormSubmenu = document.querySelector (".hm-des--form__SUBMENU");
-        const hmDesDivContent = document.querySelector (".hm-des--div__CONTENT");
-
-        hmDesFormSubmenu?.querySelector (".hm-des--label__SUBMENU:first-of-type")?.click ();
-
-        hmDesDivHead?.addEventListener ("click", () => {
-            if (!hmDesFormSubmenu.classList.contains ("__hm-des--form__SUBMENU")) {
-                hmDesFormSubmenu.classList.add ("__hm-des--form__SUBMENU");
-                hmDesSvgSubmenu.classList.add ("__hm-des--svg__SUBMENU");
-            } else {
-                hmDesFormSubmenu.classList.remove ("__hm-des--form__SUBMENU");
-                hmDesSvgSubmenu.classList.remove ("__hm-des--svg__SUBMENU");
-            }
-        });
-
         /* ---------- ********** СЕКЦИЯ HST ********** ---------- */
 
         const hmHstLiMenuItem = Array.from (document.querySelectorAll (".hm-hst--li__MENU_ITEM"));

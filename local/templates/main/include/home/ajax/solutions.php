@@ -5,7 +5,7 @@ require_once($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/prolog_befo
 <?php if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die() ?>
 
 
-<?$APPLICATION->IncludeComponent("bitrix:catalog.section", "products_home", Array(
+<?$APPLICATION->IncludeComponent("bitrix:catalog.section", "solutions_home", Array(
     "ACTION_VARIABLE" => "action",	// Название переменной, в которой передается действие
     "ADD_PICT_PROP" => "-",	// Дополнительная картинка основного товара
     "ADD_PROPERTIES_TO_BASKET" => "N",	// Добавлять в корзину свойства товаров и предложений
@@ -34,8 +34,8 @@ require_once($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/prolog_befo
     "ELEMENT_SORT_ORDER2" => "desc",	// Порядок второй сортировки элементов
     "ENLARGE_PRODUCT" => "STRICT",	// Выделять товары в списке
     "FILTER_NAME" => "arrFilter",	// Имя массива со значениями фильтра для фильтрации элементов
-    "IBLOCK_ID" => "1",	// Инфоблок
-    "IBLOCK_TYPE" => "catalog",	// Тип инфоблока
+    "IBLOCK_ID" => "3",	// Инфоблок
+    "IBLOCK_TYPE" => "content",	// Тип инфоблока
     "INCLUDE_SUBSECTIONS" => "Y",	// Показывать элементы подразделов раздела
     "LABEL_PROP" => "",	// Свойства меток товара
     "LAZY_LOAD" => "N",	// Показать кнопку ленивой загрузки Lazy Load

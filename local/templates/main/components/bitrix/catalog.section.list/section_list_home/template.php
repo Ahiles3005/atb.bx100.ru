@@ -80,7 +80,7 @@ $strTitle = "";
                     <div class="hm-cat--div__LEFT"></div>
 
 
-                    <div class="hm-cat--div__CONTENT" id="products-html" style="min-height: 500px;">
+                    <div class="hm-cat--div__CONTENT" id="products-html">
 
                     </div>
                 </div>
