@@ -1,0 +1,5 @@
+<?
+$arDirProperties = array(
+   "mainid" => "home"
+);
+?>

@@ -47,7 +47,7 @@ if (!empty($arResult['ITEMS'])) {
                 <a class="hm-des--a__CARD_TAG color-green" href="<?= $item['DETAIL_PAGE_URL'] ?>">
                     <div class="hm-des--div__CARD_TAG_CIRCLE"></div>
                     <span class="hm-des--span__CARD_TAG">
-                                НАДО УТОЧНИТЬ
+                                <?=$item['DISPLAY_PROPERTIES']['TAG_KRASOTA']['VALUE'] ?? ''?>
                             </span>
                 </a>
                 <p class="hm-des--p__CARD_NAME">

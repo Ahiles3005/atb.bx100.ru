@@ -37,14 +37,14 @@ if (!empty($arResult['ITEMS'])) {
         $uniqueId = $item['ID'] . '_' . md5($this->randString() . $component->getAction());
         $this->AddEditAction($uniqueId, $item['EDIT_LINK'], $elementEdit);
         $this->AddDeleteAction($uniqueId, $item['DELETE_LINK'], $elementDelete, $elementDeleteParams);
-
+var_dump($item['PROPERTIES']);
         ?>
 
         <article class="hm-hst--article__CARD __C-SCRL DOWN">
             <a class="hm-hst--a__CARD_TAG color-green" href="#">
                 <div class="hm-hst--div__CARD_TAG_CIRCLE"></div>
                 <span class="hm-hst--span__CARD_TAG">
-                                НАДО УТОЧНИТЬ
+                                <?=$item['DISPLAY_PROPERTIES']['TAG_KRASOTA']['VALUE'] ?? ''?>
                             </span>
             </a>
             <p class="hm-hst--p__CARD_NAME">

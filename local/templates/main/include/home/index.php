@@ -1,4 +1,4 @@
-<main id="home">
+
 
     <!-- ---------- ********** СЕКЦИЯ HERO ********** ---------- -->
     <? require_once(__DIR__ . '/parts/banner.php') ?>

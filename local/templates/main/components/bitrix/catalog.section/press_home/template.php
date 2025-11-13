@@ -59,7 +59,7 @@ if (!empty($arResult['ITEMS'])) {
                 <a class="hm-pre--a__CARD_TAG color-yellow" href="#">
                     <div class="hm-pre--div__CARD_TAG_CIRCLE"></div>
                     <span class="hm-pre--span__CARD_TAG">
-                                НАДО УТОЧНИТЬ
+                                <?=$item['DISPLAY_PROPERTIES']['TAG_KRASOTA']['VALUE'] ?? ''?>
                             </span>
                 </a>
                 <span class="hm-pre--span__CARD_DATE">

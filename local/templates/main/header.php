@@ -97,10 +97,12 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/js/catalog.js');
     </div>
 </header>
 
+<?
+$mainId = $APPLICATION->GetProperty('mainid') ?? 'other';
+
+?>
+
+<main id="<?=$mainId?>">
 <?php if($APPLICATION->GetCurPage() == '/' || $APPLICATION->GetCurPage() == '/index.php'):?>
-
     <?require_once($_SERVER['DOCUMENT_ROOT'].'/'.SITE_TEMPLATE_PATH.'/include/home/index.php')?>
-
-<?php else:?>
-<main id="other">
 <?php endif?>
