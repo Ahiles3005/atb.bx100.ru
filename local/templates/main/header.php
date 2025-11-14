@@ -5,6 +5,10 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
 
 use Bitrix\Main\Page\Asset;
 
+
+$mainId = $APPLICATION->GetProperty('mainid') ?? 'other';
+
+
 //Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/css/atb.css');
 Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/libs/swiper/swiper-bundle.min.css');
 Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/css/variables.css');
@@ -12,7 +16,7 @@ Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/css/base.css');
 Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/css/common.css');
 Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/css/header.css');
 Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/css/footer.css');
-Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/css/home.css');
+
 Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/css/card.css');
 Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/css/catalog.css');
 
@@ -97,10 +101,6 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/js/catalog.js');
     </div>
 </header>
 
-<?
-$mainId = $APPLICATION->GetProperty('mainid') ?? 'other';
-
-?>
 
 <main id="<?=$mainId?>">
 <?php if($APPLICATION->GetCurPage() == '/' || $APPLICATION->GetCurPage() == '/index.php'):?>
