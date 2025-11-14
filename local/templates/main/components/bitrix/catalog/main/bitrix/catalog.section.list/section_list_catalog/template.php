@@ -17,20 +17,6 @@ $strTitle = "";
 
 
 <? if (isset($arResult["SECTIONS"]) && !empty($arResult["SECTIONS"])): ?>
-    <section class="hm-cat">
-        <div class="hm-cat--div__CONT C-CONTAINER">
-            <div class="c-common--div__HEAD">
-                <h2 class="c-common--h2 __C-SCRL RIGHT">
-                    Каталог
-                </h2>
-
-                <a class="c-common--a__ALL __C-SCRL DOWN" href="/catalog/">
-                    СМОТРЕТЬ ВСЕ
-                </a>
-            </div>
-
-
-            <div class="hm-cat--div__BODY">
 
 
                 <ul class="hm-cat--ul__MENU __C-SCRL LEFT">
@@ -76,18 +62,7 @@ $strTitle = "";
                 </ul>
 
 
-                <div class="hm-cat--div__MAIN">
-                    <div class="hm-cat--div__LEFT"></div>
 
-
-                    <div class="hm-cat--div__CONTENT" id="products-html">
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </section>
 <? endif; ?>
 
 
