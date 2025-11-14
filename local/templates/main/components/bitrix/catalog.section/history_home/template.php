@@ -37,7 +37,6 @@ if (!empty($arResult['ITEMS'])) {
         $uniqueId = $item['ID'] . '_' . md5($this->randString() . $component->getAction());
         $this->AddEditAction($uniqueId, $item['EDIT_LINK'], $elementEdit);
         $this->AddDeleteAction($uniqueId, $item['DELETE_LINK'], $elementDelete, $elementDeleteParams);
-var_dump($item['PROPERTIES']);
         ?>
 
         <article class="hm-hst--article__CARD __C-SCRL DOWN">
