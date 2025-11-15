@@ -68,26 +68,34 @@ if ($arParams["USE_COMPARE"] === "Y")
 <!-- ---------- ********** СЕКЦИЯ CAT ********** ---------- -->
 
 
+<?php
+/*
+ TODO
+    2) при выводе подразделов  указывать активный раздел
+    3) подгрузку элементов для активного раздела с изменение ссылки в поисковой строке
+    4) подгрузка доп элементов раздела
+    5) напишите нам
+    6) фильтр
+    7) облако тегов
+
+
+*/
+
+
+?>
+
 <section class="hm-cat ct-cat">
     <div class="hm-cat--div__CONT C-CONTAINER">
-        <ul class="c-common--ul__BC">
-            <li class="c-common--li__BC">
-                <a class="c-common--a__BC" href="#">
-                    ГЛАВНАЯ СТРАНИЦА
-                </a>
-                <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1 15.5L8.05882 8L1 0.5" stroke="#BFBFBF" stroke-width="0.5"/>
-                </svg>
-            </li>
-            <li class="c-common--li__BC">
-                <a class="c-common--a__BC" href="#">
-                    КАТАЛОГ
-                </a>
-                <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1 15.5L8.05882 8L1 0.5" stroke="#BFBFBF" stroke-width="0.5"/>
-                </svg>
-            </li>
-        </ul>
+
+        <?$APPLICATION->IncludeComponent(
+                "bitrix:breadcrumb",
+                ".default",
+                Array(
+                        "PATH" => "",
+                        "SITE_ID" => "s1",
+                        "START_FROM" => "0"
+                )
+        );?>
 
 
         <h2 class="ct-cat--h2 c-common--h2 __C-SCRL RIGHT">

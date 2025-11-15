@@ -1,0 +1,78 @@
+/* Хлебные крошки */
+
+.c-common--ul__BC {
+    width: 100%;
+    margin-top: 22px;
+    display: flex;
+    gap: 6px;
+    list-style-type: none;
+    overflow-x: auto;
+    scrollbar-color: transparent transparent;
+}
+@media (min-width: 1440px) {
+    .c-common--ul__BC {
+        margin-top: 35px;
+        gap: 20px;
+    }
+}
+
+
+
+
+.c-common--li__BC {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+@media (min-width: 1440px) {
+    .c-common--li__BC {
+        gap: 20px;
+    }
+}
+
+
+
+
+.c-common--a__BC {
+    display: flex;
+    font-size: 8px;
+    line-height: 10px;
+    color: var(--color-gray);
+    white-space: nowrap;
+}
+@media (min-width: 1440px) {
+    .c-common--a__BC {
+        font-size: 14px;
+        line-height: 22px;
+    }
+}
+
+
+
+
+.c-common--li__BC:last-of-type .c-common--a__BC {
+    color: var(--color-blue);
+    pointer-events: none;
+}
+
+
+
+
+.c-common--li__BC svg {
+    height: 8px;
+    width: 3.75px;
+    flex-shrink: 0;
+}
+@media (min-width: 1440px) {
+    .c-common--li__BC svg {
+        height: 15px;
+        width: 7px;
+    }
+}
+
+
+
+
+.c-common--li__BC:last-of-type svg {
+    display: none;
+}

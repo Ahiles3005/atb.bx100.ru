@@ -1,5 +1,5 @@
 <?
 $arDirProperties = array(
-   "mainid" => "home"
+   "mainid" => "home",
 );
 ?>
