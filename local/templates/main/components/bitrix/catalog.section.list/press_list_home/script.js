@@ -1,6 +1,6 @@
 
 function getArticlesPress(sectionId){
-    let url = 'local/templates/main/include/home/ajax/press.php?SECTION_ID=' + sectionId
+    let url = '/local/templates/main/include/home/ajax/press.php?SECTION_ID=' + sectionId
 
     fetch(url)
         .then(response => {

@@ -11,7 +11,7 @@ window.addEventListener("load", function () {
             v.addEventListener("click", (event) => {
                 if (event.target.classList.contains('hm-ind--label__SUBMENU') || event.target.classList.contains('hm-ind--span__SUBMENU')) {
                     let sectionId = v.dataset.sectionid;
-                    let url = 'local/templates/main/include/home/ajax/industries.php?SECTION_ID=' + sectionId
+                    let url = '/local/templates/main/include/home/ajax/industries.php?SECTION_ID=' + sectionId
 
                     fetch(url)
                         .then(response => {
