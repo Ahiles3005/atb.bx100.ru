@@ -11,7 +11,34 @@ window.addEventListener ("load", function () {
 
     if (document.querySelector ("#home")) {
 
-        
+        const menuItems = Array.from(document.querySelectorAll(".hm-ind--label__SUBMENU"));
+
+        menuItems.forEach((v) => {
+            v.addEventListener("click", (event) => {
+                if (event.target.classList.contains('hm-ind--label__SUBMENU') || event.target.classList.contains('hm-ind--span__SUBMENU')) {
+                    let sectionId = v.dataset.sectionid;
+                    let url = '/local/templates/main/include/home/ajax/industries.php?SECTION_ID=' + sectionId
+
+                    fetch(url)
+                        .then(response => {
+                            if (!response.ok) {
+                                throw new Error(response.statusText);
+                            }
+                            return response.text();
+                        })
+                        .then(html => {
+                            document.querySelector('#ind-html').innerHTML = html
+
+                        })
+                        .catch(error => {
+                            console.error('Fetch error:', error);
+                        });
+                }
+            });
+        });
+
+
+
         /* ---------- ********** СЕКЦИЯ IND ********** ---------- */
 
 

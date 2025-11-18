@@ -11,6 +11,33 @@ window.addEventListener ("load", function () {
 
     if (document.querySelector ("#home")) {
 
+
+        //загрузка товара
+        const subMenuItems = Array.from(document.querySelectorAll(".hm-hst--label__SUBMENU"));
+
+        subMenuItems.forEach((v) => {
+            v.addEventListener("click", (event) => {
+                if (event.target.classList.contains('hm-hst--label__SUBMENU') || event.target.classList.contains('hm-hst--span__SUBMENU')) {
+                    let sectionId = v.dataset.sectionid;
+                    let url = '/local/templates/main/include/home/ajax/history.php?SECTION_ID=' + sectionId
+
+                    fetch(url)
+                        .then(response => {
+                            if (!response.ok) {
+                                throw new Error(response.statusText);
+                            }
+                            return response.text();
+                        })
+                        .then(html => {
+                            document.querySelector('#history-html').innerHTML = html
+                        })
+                        .catch(error => {
+                            console.error('Fetch error:', error);
+                        });
+                    hmHstFormHeight();
+                }
+            });
+        });
         
         /* ---------- ********** СЕКЦИЯ HST ********** ---------- */
 

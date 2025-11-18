@@ -11,7 +11,37 @@ window.addEventListener ("load", function () {
 
     if (document.querySelector ("#home")) {
 
-        
+
+        //загрузка товара
+        const subMenuItems = Array.from(document.querySelectorAll(".hm-cat--label__SUBMENU"));
+
+        subMenuItems.forEach((v) => {
+            v.addEventListener("click", (event) => {
+                if (event.target.classList.contains('hm-cat--label__SUBMENU') || event.target.classList.contains('hm-cat--span__SUBMENU')) {
+                    let sectionId = v.dataset.sectionid;
+                    let url = '/local/templates/main/include/home/ajax/products.php?SECTION_ID=' + sectionId
+
+                    fetch(url)
+                        .then(response => {
+                            if (!response.ok) {
+                                throw new Error(response.statusText);
+                            }
+                            return response.text();
+                        })
+                        .then(html => {
+                            document.querySelector('#products-html').innerHTML = html
+
+                            hmCatImageSwiper()
+                        })
+                        .catch(error => {
+                            console.error('Fetch error:', error);
+                        });
+                }
+            });
+        });
+
+
+
         /* ---------- ********** СЕКЦИЯ 2 - CAT ********** ---------- */
 
 
