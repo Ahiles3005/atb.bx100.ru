@@ -1,0 +1,60 @@
+
+"use strict";
+
+
+
+window.addEventListener ("load", function () {
+
+
+    /* ---------- ********** |||||||||| СТРАНИЦА ОТРАСЛИ |||||||||| ********** ---------- */
+
+
+    if (document.querySelector ("#ind")) {
+
+
+        // ОБЪЕКТЫ ДЛЯ ПРОСЛУШИВАНИЯ ПЕРЕХОДА ЧЕРЕЗ БРЕЙКПОИНТЫ
+
+        const cdCommonMedia400 = window.matchMedia ("(min-width: 400px)");
+        const cdCommonMedia511 = window.matchMedia ("(min-width: 511px)");
+        const cdCommonMedia768 = window.matchMedia ("(min-width: 768px)");
+        const cdCommonMedia1200 = window.matchMedia ("(min-width: 1200px)");
+        const cdCommonMedia1440 = window.matchMedia ("(min-width: 1440px)");
+        const cdCommonMedia1920 = window.matchMedia ("(min-width: 1920px)");
+
+
+        
+
+
+
+        
+        /* ---------- ********** СЕКЦИЯ DES (РЕШЕНИЕ) ********** ---------- */
+
+
+        // 1. ШИРИНА БЛОКОВ НА МОБИЛЬНЫХ (ДО 1440) С ИЗОБРАЖЕНИЯМИ 
+
+        const inDesDivBottom = Array.from (document.querySelectorAll (".in-des--div__BOTTOM"));
+
+        function inDesDivBottomWidth () {
+            inDesDivBottom.forEach ((v, i, a) => {
+                a[i].style.width = `${document.documentElement.clientWidth}px`;
+            });
+        }
+
+        inDesDivBottomWidth ();
+
+        function inDesDivBottomWidthDebounce0 (cB, time) {
+            let idTimer;
+            return function () {
+                clearTimeout (idTimer);
+                idTimer = setTimeout (() => {
+                    cB();
+                }, time);
+            }
+        }
+
+        const inDesDivBottomWidthDebounce1 = inDesDivBottomWidthDebounce0 (inDesDivBottomWidth, 150);
+
+        window.addEventListener ("resize", inDesDivBottomWidthDebounce1);
+
+    }
+});

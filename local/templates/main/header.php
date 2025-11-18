@@ -9,24 +9,45 @@ use Bitrix\Main\Page\Asset;
 $mainId = $APPLICATION->GetProperty('mainid') ?? 'other';
 
 
-//Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/css/atb.css');
 Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/libs/swiper/swiper-bundle.min.css');
-Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/css/variables.css');
-Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/css/base.css');
-Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/css/common.css');
-Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/css/header.css');
-Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/css/footer.css');
+Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/common/css/common.css');
+Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/header/css/header.css');
+Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/footer/css/footer.css');
 
-Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/css/card.css');
-Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/css/catalog.css');
+
+switch ($mainId) {
+    case 'home':
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/home/css/home1-hero.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/home/css/home2-cat.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/home/css/home3-ind.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/home/css/home4-des.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/home/css/home5-hst.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/home/css/home6-pre.css');
+        break;
+
+}
+
 
 Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/libs/swiper/swiper-bundle.min.js');
-Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/js/common.js');
-Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/js/header.js');
-Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/js/footer.js');
-Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/js/home.js');
-Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/js/card.js');
-Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/js/catalog.js');
+Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/common/js/common.js');
+Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/header/js/header.js');
+Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/footer/js/footer.js');
+
+
+switch ($mainId) {
+    case 'home':
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/home/js/home0-common.js');
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/home/js/home1-hero.js');
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/home/js/home2-cat.js');
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/home/js/home3-ind.js');
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/home/js/home3-ind.js');
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/home/js/home5-hst.js');
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/home/js/home6-pre.js');
+        break;
+
+}
+
+
 ?>
 <!DOCTYPE html>
 <html lang="<?= LANGUAGE_ID ?>">
@@ -54,20 +75,20 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/js/catalog.js');
             <!-- МЕНЮ -->
             <?php
             $APPLICATION->IncludeComponent(
-                'bitrix:menu',
-                'header',
-                [
-                    'ROOT_MENU_TYPE' => 'header',
-                    'CHILD_MENU_TYPE' => 'child',
-                    'MAX_LEVEL' => '4',
-                    'USE_EXT' => 'Y',
-                    'DELAY' => 'N',
-                    'ALLOW_MULTI_SELECT' => 'N',
-                    'MENU_CACHE_TYPE' => 'N',
-                    'MENU_CACHE_TIME' => '3600',
-                    'MENU_CACHE_USE_GROUPS' => 'Y',
-                ],
-                false
+                    'bitrix:menu',
+                    'header',
+                    [
+                            'ROOT_MENU_TYPE' => 'header',
+                            'CHILD_MENU_TYPE' => 'child',
+                            'MAX_LEVEL' => '4',
+                            'USE_EXT' => 'Y',
+                            'DELAY' => 'N',
+                            'ALLOW_MULTI_SELECT' => 'N',
+                            'MENU_CACHE_TYPE' => 'N',
+                            'MENU_CACHE_TIME' => '3600',
+                            'MENU_CACHE_USE_GROUPS' => 'Y',
+                    ],
+                    false
             );
             ?>
 
@@ -102,7 +123,7 @@ Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/js/catalog.js');
 </header>
 
 
-<main id="<?=$mainId?>">
-<?php if($APPLICATION->GetCurPage() == '/' || $APPLICATION->GetCurPage() == '/index.php'):?>
-    <?require_once($_SERVER['DOCUMENT_ROOT'].'/'.SITE_TEMPLATE_PATH.'/include/home/index.php')?>
-<?php endif?>
+<main id="<?= $mainId ?>">
+    <?php if ($APPLICATION->GetCurPage() == '/' || $APPLICATION->GetCurPage() == '/index.php'): ?>
+        <? require_once($_SERVER['DOCUMENT_ROOT'] . '/' . SITE_TEMPLATE_PATH . '/include/home/index.php') ?>
+    <?php endif ?>

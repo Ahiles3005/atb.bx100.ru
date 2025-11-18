@@ -1,0 +1,120 @@
+
+/* ---------- ********** |||||||||| СТРАНИЦА КАТАЛОГ-N |||||||||| ********** ---------- */
+
+
+/* ---------- ********** СЕКЦИЯ CAT ********** ---------- */
+
+
+
+
+@media (min-width: 1440px) {
+    .ctn-cat .ct-cat--ul__TAGS {
+        margin-top: 0px;
+    }
+}
+
+
+
+
+@media (max-width: 1439px) {
+    #catalog-n .hm-cat--div__MAIN {
+        position: relative;
+    }
+    #catalog-n .hm-cat--div__MAIN::before {
+        content: "";
+        height: 34px;
+        width: 34px;
+        position: absolute;
+        top: -64px;
+        right: 0px;
+        z-index: 2;
+        background: linear-gradient(90deg, transparent, hsl(0, 0%, 100%));
+    }
+}
+
+
+
+
+.ctn-cat .hm-cat--form__SUBMENU {
+    max-height: none;
+}
+
+
+
+.ctn-cat .hm-cat--form__SUBMENU {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0px;
+}
+@media (min-width: 1440px) {
+    .ctn-cat .hm-cat--form__SUBMENU {
+        margin-top: 0px;
+        padding-right: 10px;
+        max-height: none;
+        width: 22.5%;
+        position: absolute;
+        top: 239px;
+        left: 0px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0px;
+        background: linear-gradient(90deg, var(--color-gray) 0%, var(--color-gray) 100%) left top / 0.25px 100% no-repeat;
+        overflow-y: auto;
+        opacity: 1;
+        animation: none;
+        transition: opacity 0.7s, transform 0.7s;
+    }
+}
+
+
+
+
+@media (max-width: 1439px) {
+    .ctn-cat .hm-cat--label__SUBMENU {
+        margin: 0px;
+        padding: 10px 12px 10px 20px;
+        position: relative;
+        background-color: transparent;
+        border-left: 2px solid transparent;
+        border-radius: 0px 7px 7px 0px;
+        transition: all 0.2s;
+    }
+
+    .ctn-cat .hm-cat--label__SUBMENU:has(.hm-cat--input__SUBMENU:checked) {
+        z-index: 4;
+        background-color: var(--color-bluegray);
+        border-left: solid 2px var(--color-red);
+    }
+
+
+
+
+    .ctn-cat .hm-cat--label__SUBMENU::before {
+        content: "";
+        position: absolute;
+        left: -2px;
+        top: 50%;
+        transform: translateY(-50%);
+        border: 8px solid transparent;
+        transition: all 0.2s;
+    }
+
+    .ctn-cat .hm-cat--label__SUBMENU:has(.hm-cat--input__SUBMENU:checked)::before {
+        border-left-color: var(--color-red);
+    }
+
+
+
+
+    .ctn-cat .hm-cat--span__SUBMENU {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 22px;
+        color: var(--color-black1);
+        transition: all 0.2s;
+    }
+
+    .ctn-cat .hm-cat--label__SUBMENU:has(.hm-cat--input__SUBMENU:checked) .hm-cat--span__SUBMENU {
+        color: var(--color-blue);
+    }
+}
