@@ -30,7 +30,7 @@ window.addEventListener ("load", function () {
                         })
                         .then(html => {
                             document.querySelector('#des-html').innerHTML = html
-
+                            observeScrollElements();
                         })
                         .catch(error => {
                             console.error('Fetch error:', error);

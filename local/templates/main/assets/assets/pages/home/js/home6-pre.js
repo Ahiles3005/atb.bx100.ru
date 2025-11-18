@@ -13,6 +13,7 @@ function getArticlesPress(sectionId){
         })
         .then(html => {
             document.querySelector('#press_html').innerHTML = html
+            observeScrollElements();
         })
         .catch(error => {
             console.error('Fetch error:', error);

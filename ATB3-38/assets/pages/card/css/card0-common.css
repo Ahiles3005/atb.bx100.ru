@@ -1,0 +1,80 @@
+
+/* ---------- ********** |||||||||| СТРАНИЦА КАРТОЧКА СЕРИИ |||||||||| ********** ---------- */
+
+
+/* ---------- ********** ОБЩИЕ СТИЛИ ДЛЯ ВСЕЙ СТРАНИЦЫ ********** ---------- */
+
+
+#card {
+    padding: 0px 16px;
+}
+@media (min-width: 1440px) {
+    #card {
+        padding: 0px 80px;
+    }
+}
+
+
+
+
+.c-common--ul__BC {
+    width: 100%;
+    margin-top: 75px;
+    display: flex;
+    gap: 6px;
+    list-style-type: none;
+    overflow-x: auto;
+    scrollbar-color: transparent transparent;
+}
+@media (min-width: 1440px) {
+    .c-common--ul__BC {
+        margin-top: 125px;
+        width: auto;
+        gap: 20px;
+        overflow-x: hidden;
+    }
+}
+
+
+
+
+.cd-common--div__CONT {
+    display: flex;
+    flex-direction: column;
+}
+@media (min-width: 1440px) {
+    .cd-common--div__CONT {
+        margin-top: 57px;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 57px;
+    }
+}
+
+
+
+
+.cd-common--div__LEFT {
+    display: none;
+}
+@media (min-width: 1440px) {
+    .cd-common--div__LEFT {
+        padding-bottom: 174px;
+        display: flex;
+        align-items: flex-start;
+        width: 490px;
+    }
+}
+
+
+
+
+.cd-common--div__RIGHT {
+    display: flex;
+    flex-direction: column;
+}
+@media (min-width: 1440px) {
+    .cd-common--div__RIGHT {
+        width: 63%;
+    }
+}

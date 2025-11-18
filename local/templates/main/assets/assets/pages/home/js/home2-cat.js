@@ -30,7 +30,7 @@ window.addEventListener ("load", function () {
                         })
                         .then(html => {
                             document.querySelector('#products-html').innerHTML = html
-
+                            observeScrollElements();
                             hmCatImageSwiper()
                         })
                         .catch(error => {

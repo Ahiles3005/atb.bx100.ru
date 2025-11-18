@@ -28,7 +28,7 @@ window.addEventListener ("load", function () {
                         })
                         .then(html => {
                             document.querySelector('#ind-html').innerHTML = html
-
+                            observeScrollElements();
                         })
                         .catch(error => {
                             console.error('Fetch error:', error);

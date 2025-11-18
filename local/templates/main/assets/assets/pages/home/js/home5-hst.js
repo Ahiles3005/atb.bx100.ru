@@ -30,6 +30,7 @@ window.addEventListener ("load", function () {
                         })
                         .then(html => {
                             document.querySelector('#history-html').innerHTML = html
+                            observeScrollElements();
                         })
                         .catch(error => {
                             console.error('Fetch error:', error);
