@@ -1625,4 +1625,3 @@ if ($arParams["USE_COMPARE"] === "Y")
         </div>
     </div>
 </section>
-
