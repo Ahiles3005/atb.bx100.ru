@@ -40,7 +40,7 @@ $strTitle = "";
                             <? if (isset($arSection['childs']) && !empty($arSection['childs'])): ?>
 
                                     <? foreach ($arSection['childs'] as $childSection) : ?>
-                                        <label class="hm-cat--label__SUBMENU" data-sectionid="<?=$childSection['ID']?>" data-href="<?=$childSection['SECTION_PAGE_URL']?>">
+                                        <label class="hm-cat--label__SUBMENU" data-sectionid="<?=$childSection['ID']?>" data-href="<?=$childSection['SECTION_PAGE_URL']?>" data-elementcount="<?=(int) $childSection['ELEMENT_CNT']?>">
                                             <input class="hm-cat--input__SUBMENU" type="radio" name="1" value="" >
                                             <span class="hm-cat--span__SUBMENU"><?= $childSection['NAME'] ?></span>
                                             <a class="hm-cat--a__SUBMENU"

@@ -71,8 +71,8 @@ if ($arParams["USE_COMPARE"] === "Y")
 <?php
 /*
  TODO
-    2) при выводе подразделов  указывать активный раздел
-    3) подгрузку элементов для активного раздела с изменение ссылки в поисковой строке
+   - 2) при выводе подразделов  указывать активный раздел
+   - 3) подгрузку элементов для активного раздела с изменение ссылки в поисковой строке
     4) подгрузка доп элементов раздела
     5) напишите нам
     6) фильтр
@@ -115,6 +115,7 @@ if ($arParams["USE_COMPARE"] === "Y")
             unset($sectionListParams);
             ?>
 
+<!--            облако тегов start-->
             <ul class="ct-cat--ul__TAGS __C-SCRL DOWN">
                 <li class="ct-cat--li__TAGS">
                     <a class="ct-cat--a__TAGS" href="#">
@@ -248,8 +249,14 @@ if ($arParams["USE_COMPARE"] === "Y")
                 </li>
             </ul>
 
+            <!--            облако тегов  end-->
+
+
+
 
             <div class="hm-cat--div__MAIN">
+
+<!--                список подразделов старт-->
                 <div class="hm-cat--div__LEFT ct-cat--div__LEFT">
                     <div class="ct-cat--div__FILTER_BACK">
                         <form class="ct-cat--form__FILTER __C-SCRL DOWN" action="#" method="post" name="ct-cat-filter">
@@ -1335,7 +1342,7 @@ if ($arParams["USE_COMPARE"] === "Y")
                         </form>
                     </div>
                 </div>
-
+<!--                список подразделов энд-->
 
                 <div class="ct-cat--div__CONTENT0">
                     <div class="ct-cat--div__BUTTONS __C-SCRL DOWN">
@@ -1433,6 +1440,10 @@ if ($arParams["USE_COMPARE"] === "Y")
                 </div>
 
             </div>
+
+
+
+
         </div>
 
 
