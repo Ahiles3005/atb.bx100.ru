@@ -15,11 +15,11 @@ window.addEventListener ("load", function () {
             if (event.target.classList.contains('hm-cat--label__SUBMENU') || event.target.classList.contains('hm-cat--span__SUBMENU')) {
                 let sectionId = v.dataset.sectionid;
                 let elementCount = v.dataset.elementcount;
-                let href = v.dataset.href;
-
-
-
-                window.history.replaceState(null, '', href);
+                // let href = v.dataset.href;
+                //
+                //
+                //
+                // window.history.replaceState(null, '', href);
                 document.querySelector(".ct-cat--span__IND2").innerText=elementCount;
 
                 let url = '/local/templates/main/include/catalog/ajax/products.php?SECTION_ID=' + sectionId

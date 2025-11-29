@@ -94,7 +94,7 @@ require_once($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/prolog_befo
     "SLIDER_PROGRESS" => "N",	// Показывать полосу прогресса
     "TEMPLATE_THEME" => "blue",	// Цветовая тема
     "USE_ENHANCED_ECOMMERCE" => "N",	// Отправлять данные электронной торговли в Google и Яндекс
-    "USE_MAIN_ELEMENT_SECTION" => "N",	// Использовать основной раздел для показа элемента
+    "USE_MAIN_ELEMENT_SECTION" => "Y",	// Использовать основной раздел для показа элемента
     "USE_PRICE_COUNT" => "N",	// Использовать вывод цен с диапазонами
     "USE_PRODUCT_QUANTITY" => "N",	// Разрешить указание количества товара
 

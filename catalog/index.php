@@ -115,7 +115,7 @@ $APPLICATION->SetTitle("КАТАЛОГ");
 		"SEF_MODE" => "Y",	// Включить поддержку ЧПУ
 		"SEF_URL_TEMPLATES" => array(
 			"compare" => "compare.php?action=#ACTION_CODE#",
-			"element" => "#SECTION_CODE_PATH#/#CODE#/",
+			"element" => "#SECTION_CODE_PATH#/#ELEMENT_CODE#/",
 			"section" => "#SECTION_CODE_PATH#/",
 			"sections" => "",
 			"smart_filter" => "#SECTION_CODE_PATH#/filter/#SMART_FILTER_PATH#/apply/",
