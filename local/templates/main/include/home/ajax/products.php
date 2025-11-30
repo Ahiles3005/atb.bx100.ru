@@ -97,6 +97,11 @@ require_once($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/prolog_befo
     "USE_MAIN_ELEMENT_SECTION" => "Y",	// Использовать основной раздел для показа элемента
     "USE_PRICE_COUNT" => "N",	// Использовать вывод цен с диапазонами
     "USE_PRODUCT_QUANTITY" => "N",	// Разрешить указание количества товара
+    "PROPERTY_CODE" => [
+        'PROCESSOR',
+        'OPER_PAMAT',
+        'VSTROY_JOSTKIY_DISK',
+    ]
 
 ),
     false

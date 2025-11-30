@@ -109,15 +109,16 @@ if (!empty($arResult['ITEMS'])) {
                 <?= mb_substr($item['PREVIEW_TEXT'], 0, 273) ?>
             </p>
             <ul class="hm-cat--ul__CARD_PARAMS">
-                <li class="hm-cat--li__CARD_PARAM">
-                    Надо доделать
-                </li>
-                <li class="hm-cat--li__CARD_PARAM">
-                    Надо доделать
-                </li>
-                <li class="hm-cat--li__CARD_PARAM">
-                    Надо доделать
-                </li>
+                <?
+                $propsCode = ['PROCESSOR', 'OPER_PAMAT', 'VSTROY_JOSTKIY_DISK']
+                ?>
+                <? foreach ($propsCode as $propCode): ?>
+                    <? if (isset($item['PROPERTIES'][$propCode]['VALUE']) && !empty($item['PROPERTIES'][$propCode]['VALUE'])): ?>
+                        <li class="hm-cat--li__CARD_PARAM">
+                            <?= $item['PROPERTIES']['PROCESSOR']['VALUE'] ?>
+                        </li>
+                    <? endif ?>
+                <? endforeach; ?>
             </ul>
             <div class="hm-cat--div__CARD_PRICE">
                 <p class="hm-cat--p__CARD_PRICE_CUR">
