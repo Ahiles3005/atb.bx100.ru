@@ -5,6 +5,43 @@
 
 window.addEventListener ("load", function () {
 
+    const subMenuItems = Array.from(document.querySelectorAll(".hm-cat--label__SUBMENU"));
+
+    subMenuItems.forEach((v) => {
+        v.addEventListener("click", (event) => {
+            if (event.target.classList.contains('hm-cat--label__SUBMENU') || event.target.classList.contains('hm-cat--span__SUBMENU')) {
+                let sectionId = v.dataset.sectionid;
+                let elementCount = v.dataset.elementcount;
+
+                document.querySelector(".ct-cat--span__IND2").innerText=elementCount;
+
+                let url = '/local/templates/main/include/catalog/ajax/products.php?SECTION_ID=' + sectionId
+
+                fetch(url)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error(response.statusText);
+                        }
+                        return response.text();
+                    })
+                    .then(html => {
+                        document.querySelector('#products-html').innerHTML = html
+
+                        observeScrollElements();
+                        hmCatImageSwiper();
+                        hmCatCardButtons();
+                        hmCatPriceSplit();
+                        // ctCatCardsCur();
+                        ctCatCardsAdd();
+
+                    })
+                    .catch(error => {
+                        console.error('Fetch error:', error);
+                    });
+            }
+        });
+    });
+
 
     /* ---------- ********** |||||||||| СТРАНИЦА КАТАЛОГ-N |||||||||| ********** ---------- */
 
@@ -21,7 +58,7 @@ window.addEventListener ("load", function () {
         const cdCommonMedia1440 = window.matchMedia ("(min-width: 1440px)");
         const cdCommonMedia1920 = window.matchMedia ("(min-width: 1920px)");
 
-        
+
 
 
 
@@ -47,11 +84,11 @@ window.addEventListener ("load", function () {
 
         cdCommonMedia1440.addEventListener ("change", (e) => {
             if (e.matches) {
-                setTimeout (ctCatFormSubmenuTop, 400);  
+                setTimeout (ctCatFormSubmenuTop, 400);
             }
         });
 
-        
+
 
 
 
@@ -100,7 +137,7 @@ window.addEventListener ("load", function () {
         }
 
 
-        hmCatFormHeight ();
+        // hmCatFormHeight ();
 
         function hmCatDebounce (cB, time) {
             let idTimer;
@@ -112,15 +149,15 @@ window.addEventListener ("load", function () {
             }
         }
 
-        const hmCatFormDebounce = hmCatDebounce (hmCatFormHeight, 100);
-
-        window.addEventListener ("resize", hmCatFormDebounce);
+        // const hmCatFormDebounce = hmCatDebounce (hmCatFormHeight, 100);
+        //
+        // window.addEventListener ("resize", hmCatFormDebounce);
 
 
         // 2.3 Скролл элементов субменю до видимой части
 
         hmCatLabelSubmenu.forEach ((v, i, a) => {
-            a[i].addEventListener ("click", () => {   
+            a[i].addEventListener ("click", () => {
                 if (a[i].parentNode.scrollHeight > a[i].parentNode.offsetHeight) {
 
                     let k = a[i].offsetTop - a[i].parentNode.scrollTop;
@@ -170,13 +207,13 @@ window.addEventListener ("load", function () {
                     let div = document.createElement ("div");
                     div.className = "hm-cat--div__CARD_SENSOR_ITEM";
                     a[i].querySelector (".hm-cat--div__CARD_SENSOR").append (div);
-                    
+
                     div.addEventListener ("mouseover", () => {
                         hmCatDivCardImage[i].slideTo (i1);
                     });
                 });
             });
-        
+
         }
 
         hmCatImageSwiper ();
@@ -226,7 +263,7 @@ window.addEventListener ("load", function () {
 
 
 
-    
+
         // 6. ТЭГИ
 
         const containerClass = 'ct-cat--ul__TAGS';
@@ -235,7 +272,7 @@ window.addEventListener ("load", function () {
         const buttonClass = 'ct-cat--a__TAGS';
         const breakpoint = 1439;
         const maxLines = 2;
-        const gap = 16; 
+        const gap = 16;
 
         let container = null;
         let resizeObserver = null;
@@ -514,7 +551,7 @@ window.addEventListener ("load", function () {
 
         ctCatButtonFilter.addEventListener ("click", () => {
             ctCatDivFilterBack.classList.add ("__ct-cat--div__FILTER_BACK");
-            
+
         });
 
         ctCatButtonFilterClose.addEventListener ("click", () => {
@@ -557,7 +594,7 @@ window.addEventListener ("load", function () {
 
 
         // 8.3 Разворачивание до 6 чекбоксов
-        
+
         const ctCatButtonFilterItemTop = Array.from (document.querySelectorAll (".ct-cat--button__FILTER_ITEM_TOP"));
         const ctCatSvgFilterItemTop = Array.from (document.querySelectorAll (".ct-cat--svg__FILTER_ITEM_TOP"));
         const ctCatFieldsetFilterItemBody = Array.from (document.querySelectorAll (".ct-cat--fieldset__FILTER_ITEM_BODY"));
@@ -570,19 +607,19 @@ window.addEventListener ("load", function () {
 
             ctCatFieldsetFilterItemBody.forEach ((v, i, a) => {
                 const items = Array.from (a[i].querySelectorAll (".ct-cat--label__FILTER_ITEM"));
-                
+
                 let sixItemsHeight = 0;
                 for (let j = 0; j < 6; j++) {
                     if (!items[j]) break;
                     sixItemsHeight += items[j].offsetHeight;
                 };
-                
+
                 if (items.length > 5) {
                     sixItemsHeight += parseInt (getComputedStyle (a[i]).gap) * 5;
                 } else {
                     sixItemsHeight += parseInt (getComputedStyle (a[i]).gap) * (items.length - 1);
                 }
-                
+
                 ctCatFieldsetFilterItemBodyMaxHeight.push (sixItemsHeight);
             });
 
@@ -593,7 +630,7 @@ window.addEventListener ("load", function () {
                     ctCatFieldsetFilterItemBody[i].style.maxHeight = `${ctCatFieldsetFilterItemBodyMaxHeight[i]}px`;
                 }
             });
-            
+
 
             return ctCatFieldsetFilterItemBodyMaxHeight;
         }
@@ -614,7 +651,7 @@ window.addEventListener ("load", function () {
 
         window.addEventListener ("resize", ctCatDebounce1);
 
-        
+
         // 8.3.2 Разворачивание / сворачивание
 
         ctCatButtonFilterItemTop.forEach ((v, i, a) => {
@@ -718,11 +755,11 @@ window.addEventListener ("load", function () {
                 selPriceMax.blur ();
             }
         });
-        
-        
+
+
         selPriceMin.value = "0";
-        
-        
+
+
         selRangeMin.addEventListener ("input", () => {
             if (+selRangeMin.value > +selRangeMax.value) {
                 selRangeMin.value = "0";
@@ -739,10 +776,10 @@ window.addEventListener ("load", function () {
             selPriceMin.value = selRangeMin.value;
         });
 
-        
+
         selPriceMax.value = "550000";
-        
-        
+
+
         selRangeMax.addEventListener ("input", () => {
             if (+selRangeMax.value < +selRangeMin.value) {
                 selRangeMin.value = "0";
@@ -754,7 +791,7 @@ window.addEventListener ("load", function () {
                 var(--color-bluegray) ${selRangeMin.value / 5500}%, 
                 var(--color-blue) ${selRangeMin.value / 5500}%, 
                 var(--color-blue) ${selRangeMax.value / 5500}%, 
-                var(--color-bluegray) ${selRangeMax.value / 5500}%)`;            
+                var(--color-bluegray) ${selRangeMax.value / 5500}%)`;
             selPriceMax.value = selRangeMax.value;
         });
 
@@ -805,7 +842,7 @@ window.addEventListener ("load", function () {
         ctCatFormFilterMarginTop ();
 
         cdCommonMedia1440.addEventListener ("change", ctCatFormFilterMarginTop);
-        
+
         hmCatButtonMenuItem.forEach ((v, i, a) => {
             a[i].addEventListener ("click", () => {
                 ctCatFormFilterMarginTop ();
@@ -817,7 +854,11 @@ window.addEventListener ("load", function () {
 
         // 9. РАСКРЫТИЕ КАРТОЧЕК
 
-        const ctCatArticles = Array.from (document.querySelectorAll (".ct-cat--div__CONTENT .hm-cat--article__CARD"));
+        function getctCatArticles(){
+            return Array.from (document.querySelectorAll (".ct-cat--div__CONTENT .hm-cat--article__CARD"));
+        }
+
+        const ctCatArticles = getctCatArticles();
         const ctCatSpanInd1 = document.querySelector (".ct-cat--span__IND1");
         const ctCatSpanInd2 = document.querySelector (".ct-cat--span__IND2");
         const ctCatDivLine1 = document.querySelector (".ct-cat--div__LINE1");
@@ -891,7 +932,7 @@ window.addEventListener ("load", function () {
                     }
                 });
             }
-            
+
             ctCatVisCounter ();
         }
 
@@ -902,6 +943,7 @@ window.addEventListener ("load", function () {
         // 9.4 Добавление карточек по клику по кнопке
 
         function ctCatCardsAdd () {
+            const ctCatArticles = getctCatArticles();
             ctCatCounter++;
 
             if (window.innerWidth < 768 || (window.innerWidth > 1199 && window.innerWidth < 1440)) {

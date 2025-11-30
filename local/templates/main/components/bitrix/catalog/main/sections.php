@@ -1413,9 +1413,9 @@ if ($arParams["USE_COMPARE"] === "Y")
                         <div class="ct-cat--div__IND">
                             <p class="ct-cat--p__IND">
                                 Вы посмотрели
-                                <span class="ct-cat--span__IND1">2</span>
+                                <span class="ct-cat--span__IND1">0</span>
                                 из
-                                <span class="ct-cat--span__IND2">10</span>
+                                <span class="ct-cat--span__IND2">0</span>
                                 товаров
                             </p>
 
