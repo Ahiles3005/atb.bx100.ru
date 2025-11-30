@@ -151,7 +151,25 @@ window.addEventListener ("load", function () {
 
         // 2.6 Открытие первого субменю при загрузке страницы
 
-        hmCatButtonMenuItem[0].click ();
+        //переделываем на переключение актуальной версии, в зависимости от ссылки
+
+        let currectUri = window.location.pathname;
+        let uriMatch = false;
+
+        hmCatButtonMenuItem.forEach(function(v,i, a){
+            if(v.dataset.href == currectUri){
+                v.click();
+                uriMatch = true;
+                return;
+            }
+        })
+
+        if(!uriMatch){
+            hmCatButtonMenuItem[0].click ();
+        }
+
+
+
 
 
         // 2.7 Выравнивание высоты form для десктопов по блоку с контентом

@@ -70,15 +70,18 @@ if (!isset($arCurSection)) {
 
 <?
 $isSeria = intval($arCurSection['UF_SERIA']) == 1 ? true : false;
+$isRootSection = empty($arCurSection['IBLOCK_SECTION_ID']) ? true : false;
 
 
-if ($isSeria) {
+if ($isRootSection) {
+    $APPLICATION->SetPageProperty('mainid', 'catalog');
+    include($_SERVER["DOCUMENT_ROOT"] . "/" . $this->GetFolder() . "/sections.php");
+} elseif ($isSeria) {
     $APPLICATION->SetPageProperty('mainid', 'card_n');
     include($_SERVER["DOCUMENT_ROOT"] . "/" . $this->GetFolder() . "/section_series.php");
 } else {
     $APPLICATION->SetPageProperty('mainid', 'catalog-n');
     include($_SERVER["DOCUMENT_ROOT"] . "/" . $this->GetFolder() . "/section_view.php");
-
 }
 
 
