@@ -103,7 +103,7 @@ window.addEventListener ("load", function () {
         const hmCatButtonMenuItem = Array.from (document.querySelectorAll (".hm-cat--button__MENU_ITEM"));
         const hmCatFormSubmenu = Array.from (document.querySelectorAll (".hm-cat--form__SUBMENU"));
         const ctCatDivContent = document.querySelector (".ct-cat--div__CONTENT");
-
+        const hmCatLabelSubmenu = Array.from (document.querySelectorAll (".hm-cat--label__SUBMENU"));
 
 
         hmCatButtonMenuItem.forEach ((v, i, a) => {
@@ -174,24 +174,41 @@ window.addEventListener ("load", function () {
 
         // 2.7 Выравнивание высоты form для десктопов по блоку с контентом
 
-        function hmCatFormHeight () {
-            if (window.innerWidth > 1439) {
-                hmCatFormSubmenu.forEach ((v, i, a) => {
-                    setTimeout (() => {
-                        a[i].style.maxHeight = getComputedStyle (ctCatDivContent).height;
-                    }, 800);
+        // function hmCatFormHeight () {
+        //     if (window.innerWidth > 1439) {
+        //         hmCatFormSubmenu.forEach ((v, i, a) => {
+        //             setTimeout (() => {
+        //                 a[i].style.maxHeight = getComputedStyle (ctCatDivContent).height;
+        //             }, 800);
 
-                });
-            } else {
-                hmCatFormSubmenu.forEach ((v, i, a) => {
-                    setTimeout (() => {
-                        a[i].style.maxHeight = null;
-                    }, 50);
-                });
-            }
-        }
+        //         });
+        //     } else {
+        //         hmCatFormSubmenu.forEach ((v, i, a) => {
+        //             setTimeout (() => {
+        //                 a[i].style.maxHeight = null;
+        //             }, 50);
+        //         });
+        //     }
+        // }
+
+        // 2.3 Скролл элементов субменю до видимой части
+
+        hmCatLabelSubmenu.forEach ((v, i, a) => {
+            a[i].addEventListener ("click", () => {
+                if (a[i].parentNode.scrollHeight > a[i].parentNode.offsetHeight) {
+
+                    let k = a[i].offsetTop - a[i].parentNode.scrollTop;
+                    let k1 = a[i].offsetTop + a[i].offsetHeight - a[i].parentNode.scrollTop;
 
 
+                    if (k < 0 && k1 > 0) {
+                        a[i].parentNode.scrollTop = a[i].offsetTop;
+                    } else if (k < a[i].parentNode.offsetHeight && k1 > a[i].parentNode.offsetHeight) {
+                        a[i].parentNode.scrollTop = a[i].parentNode.scrollTop + k1 - a[i].parentNode.offsetHeight;
+                    }
+                }
+            });
+        });
 
         // 3. СЛАЙДЕР КАРТОЧЕК ТОВАРОВ
 
