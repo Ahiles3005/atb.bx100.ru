@@ -820,7 +820,7 @@ if ($isFilter || $isSidebar): ?>
                                     </video>
                                 </div>
                                 <div class="cd-hero--div__SWIPER_SLIDE swiper-slide">
-                                    <canvas class="cd-hero--canvas"></canvas>
+                                    <canvas class="cd-hero--canvas" data-d="<?= SITE_TEMPLATE_PATH ?>/3d/images/atom.glb"></canvas>
                                 </div>
                             </div>
                         </div>
