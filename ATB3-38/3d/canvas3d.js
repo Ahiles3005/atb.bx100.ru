@@ -4,6 +4,7 @@
 import * as THREE from "three";
 import { OrbitControls } from "orbitcontrolls";
 import { GLTFLoader } from "gltfloader";
+import { DRACOLoader } from "dracoloader";
 
 
 
@@ -14,7 +15,7 @@ import { GLTFLoader } from "gltfloader";
 const canvas = document.querySelector(".cd-hero--canvas");
 const renderer = new THREE.WebGLRenderer({antialias: true, canvas, alpha: true});
 const scene = new THREE.Scene ();
-const camera = new THREE.PerspectiveCamera (75, window.innerWidth / window.innerHeight, 0.1, 1000);
+const camera = new THREE.PerspectiveCamera (5, window.innerWidth / window.innerHeight, 0.1, 1000);
 
 
 
@@ -62,10 +63,16 @@ window.addEventListener ("resize", cdHero3dDebounce1);
 
 // 3. ЗАГРУЗЧИК МОДЕЛЕЙ ФОРМАТА GLTF (GLB) И ЗАГРУЗКА МОДЕЛИ
 
-const loader = new GLTFLoader();
-loader.load ('3d/images/car2.glb', function (gltf) {
-    scene.add(gltf.scene);
-});
+const loader = new GLTFLoader ();
+const drloader = new DRACOLoader ();
+drloader.setDecoderPath ("3d/dracoFiles/");
+loader.setDRACOLoader (drloader);
+{
+    const d3 = canvas.dataset.d;
+    loader.load (`${d3}`, function (gltf) {
+        scene.add(gltf.scene);
+    });
+}
 
 
 
@@ -101,11 +108,11 @@ camera.position.z = 5;
 // 7. РЕНДЕРИНГ С УСТАНОВЛЕННОЙ ВОЗМОЖНОСТЬЮ АНИМАЦИИ
 
 function animate() {
-      requestAnimationFrame(animate)
+    requestAnimationFrame(animate)
     
-      controls.update();
+    controls.update();
     
-      renderer.render (scene, camera);
+    renderer.render (scene, camera);
 }
 
 animate ();
