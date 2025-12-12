@@ -11,6 +11,19 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php $APPLICATION->ShowHead(); ?>
     <title><?php $APPLICATION->ShowTitle(); ?></title>
+
+
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "<?= SITE_TEMPLATE_PATH ?>/assets/3d/build/three.module.js",
+                "orbitcontrolls": "<?= SITE_TEMPLATE_PATH ?>/assets/3d/build/OrbitControls.js",
+                "objectloader": "<?= SITE_TEMPLATE_PATH ?>/assets/3d/build/OBJLoader.js",
+                "gltfloader": "<?= SITE_TEMPLATE_PATH ?>/assets/3d/build/GLTFLoader.js",
+                "dracoloader": "<?= SITE_TEMPLATE_PATH ?>/assets/3d/build/DRACOLoader.js"
+            }
+        }
+    </script>
 </head>
 <body class="body">
 <?php $APPLICATION->ShowPanel(); ?>
