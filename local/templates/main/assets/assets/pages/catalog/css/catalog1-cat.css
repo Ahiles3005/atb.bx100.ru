@@ -7,11 +7,11 @@
 
 .ct-cat {
     margin-top: 53px;
+    overflow: hidden;
 }
 @media (min-width: 1440px) {
     .ct-cat {
         margin-top: 90px;
-        overflow: hidden;
     }
 }
 
@@ -135,6 +135,8 @@
 
 @media (min-width: 1440px) {
     .ct-cat .hm-cat--form__SUBMENU {
+        max-height: 408px;
+        width: 23%;
         top: 390px;
         z-index: 3;
     }
@@ -1602,4 +1604,17 @@
 }
 .ct-cat--button__ELSE:active svg {
     filter: drop-shadow(0px 0px var(--color-blue));
+}
+
+
+
+
+.ct-cat .cdn-reg--div__REQUEST {
+    margin-top: 38px;
+}
+@media (min-width: 1440px) {
+    .ct-cat .cdn-reg--div__REQUEST {
+        margin-top: 60px;
+        width: 100%;
+    }
 }
