@@ -1699,32 +1699,27 @@ if ($sectionListParams["COUNT_ELEMENTS"] === "Y") {
                             </svg>
                         </button>
                     </div>
+
+
+                    <div class="cdn-reg--div__REQUEST">
+                        <div class="cdn-reg--div__TEXT __C-SCRL RIGHT">
+                            <h3 class="cdn-reg--h3">
+                                Напишите нам
+                            </h3>
+                            <p class="cdn-reg--p__REQUEST">
+                                Свяжитесь с нами, чтобы получить персональное решение для вашей организации
+                            </p>
+                            <button class="cdn-reg--button__REQUEST">
+                                Отправить запрос
+                            </button>
+                        </div>
+                    </div>
                 </div>
 
             </div>
         </div>
 
 
-    </div>
-</section>
-
-
-<!-- ---------- ********** СЕКЦИЯ WRT ********** ---------- -->
-
-
-<section class="ct-wrt">
-    <div class="ct-wrt--div__CONT C-CONTAINER">
-        <div class="ct-wrt--div__CONT2 __C-SCRL RIGHT">
-            <h2 class="ct-wrt--h2">
-                Напишите нам
-            </h2>
-            <p class="ct-wrt--p">
-                Свяжитесь с нами, чтобы получить персональное решение для вашей организации
-            </p>
-            <button class="ct-wrt--button">
-                Отправить запрос
-            </button>
-        </div>
     </div>
 </section>
 
@@ -1817,16 +1812,13 @@ if ($sectionListParams["COUNT_ELEMENTS"] === "Y") {
 
             <div class="ct-abt--div__1_4">
                 <p class="ct-abt--p__1_TOP">
-                    Сочетание технических параметров, форм-фактора и условий эксплуатации открывают возможности для
-                    применения АТБ-АТОМ-1 и в различных сферах:
+                    Сочетание технических параметров, форм-фактора и условий эксплуатации открывают возможности для применения АТБ-АТОМ-1 и в различных сферах:
                 </p>
 
                 <ul class="ct-abt--ul__1_4_1">
                     <li class="ct-abt--li__1_4_1">
-                        <svg class="ct-abt--svg__CORNER" width="9" height="10" viewBox="0 0 9 10" fill="none"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <path d="M8.29289 2.40703C8.92286 1.77707 8.47669 0.699922 7.58579 0.699922L0.999999 0.699922C0.447714 0.699922 -5.36129e-07 1.14764 -5.60271e-07 1.69992L-8.48144e-07 8.28571C-8.87087e-07 9.17661 1.07714 9.62278 1.70711 8.99281L8.29289 2.40703Z"
-                                  fill="#62BE37"></path>
+                        <svg class="ct-abt--svg__CORNER" width="9" height="10" viewBox="0 0 9 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.29289 2.40703C8.92286 1.77707 8.47669 0.699922 7.58579 0.699922L0.999999 0.699922C0.447714 0.699922 -5.36129e-07 1.14764 -5.60271e-07 1.69992L-8.48144e-07 8.28571C-8.87087e-07 9.17661 1.07714 9.62278 1.70711 8.99281L8.29289 2.40703Z" fill="#62BE37"></path>
                         </svg>
 
                         <div class="ct-abt--div__1_4_1_TEXT">
@@ -1839,10 +1831,8 @@ if ($sectionListParams["COUNT_ELEMENTS"] === "Y") {
                         </div>
                     </li>
                     <li class="ct-abt--li__1_4_1">
-                        <svg class="ct-abt--svg__CORNER" width="9" height="10" viewBox="0 0 9 10" fill="none"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <path d="M8.29289 2.40703C8.92286 1.77707 8.47669 0.699922 7.58579 0.699922L0.999999 0.699922C0.447714 0.699922 -5.36129e-07 1.14764 -5.60271e-07 1.69992L-8.48144e-07 8.28571C-8.87087e-07 9.17661 1.07714 9.62278 1.70711 8.99281L8.29289 2.40703Z"
-                                  fill="#62BE37"></path>
+                        <svg class="ct-abt--svg__CORNER" width="9" height="10" viewBox="0 0 9 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.29289 2.40703C8.92286 1.77707 8.47669 0.699922 7.58579 0.699922L0.999999 0.699922C0.447714 0.699922 -5.36129e-07 1.14764 -5.60271e-07 1.69992L-8.48144e-07 8.28571C-8.87087e-07 9.17661 1.07714 9.62278 1.70711 8.99281L8.29289 2.40703Z" fill="#62BE37"></path>
                         </svg>
 
                         <div class="ct-abt--div__1_4_1_TEXT">
@@ -1855,10 +1845,8 @@ if ($sectionListParams["COUNT_ELEMENTS"] === "Y") {
                         </div>
                     </li>
                     <li class="ct-abt--li__1_4_1">
-                        <svg class="ct-abt--svg__CORNER" width="9" height="10" viewBox="0 0 9 10" fill="none"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <path d="M8.29289 2.40703C8.92286 1.77707 8.47669 0.699922 7.58579 0.699922L0.999999 0.699922C0.447714 0.699922 -5.36129e-07 1.14764 -5.60271e-07 1.69992L-8.48144e-07 8.28571C-8.87087e-07 9.17661 1.07714 9.62278 1.70711 8.99281L8.29289 2.40703Z"
-                                  fill="#62BE37"></path>
+                        <svg class="ct-abt--svg__CORNER" width="9" height="10" viewBox="0 0 9 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.29289 2.40703C8.92286 1.77707 8.47669 0.699922 7.58579 0.699922L0.999999 0.699922C0.447714 0.699922 -5.36129e-07 1.14764 -5.60271e-07 1.69992L-8.48144e-07 8.28571C-8.87087e-07 9.17661 1.07714 9.62278 1.70711 8.99281L8.29289 2.40703Z" fill="#62BE37"></path>
                         </svg>
 
                         <div class="ct-abt--div__1_4_1_TEXT">
@@ -1871,10 +1859,8 @@ if ($sectionListParams["COUNT_ELEMENTS"] === "Y") {
                         </div>
                     </li>
                     <li class="ct-abt--li__1_4_1">
-                        <svg class="ct-abt--svg__CORNER" width="9" height="10" viewBox="0 0 9 10" fill="none"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <path d="M8.29289 2.40703C8.92286 1.77707 8.47669 0.699922 7.58579 0.699922L0.999999 0.699922C0.447714 0.699922 -5.36129e-07 1.14764 -5.60271e-07 1.69992L-8.48144e-07 8.28571C-8.87087e-07 9.17661 1.07714 9.62278 1.70711 8.99281L8.29289 2.40703Z"
-                                  fill="#62BE37"></path>
+                        <svg class="ct-abt--svg__CORNER" width="9" height="10" viewBox="0 0 9 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.29289 2.40703C8.92286 1.77707 8.47669 0.699922 7.58579 0.699922L0.999999 0.699922C0.447714 0.699922 -5.36129e-07 1.14764 -5.60271e-07 1.69992L-8.48144e-07 8.28571C-8.87087e-07 9.17661 1.07714 9.62278 1.70711 8.99281L8.29289 2.40703Z" fill="#62BE37"></path>
                         </svg>
 
                         <div class="ct-abt--div__1_4_1_TEXT">

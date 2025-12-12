@@ -1435,6 +1435,21 @@ if ($arParams["USE_COMPARE"] === "Y")
                             </svg>
                         </button>
                     </div>
+
+
+                    <div class="cdn-reg--div__REQUEST">
+                        <div class="cdn-reg--div__TEXT __C-SCRL RIGHT">
+                            <h3 class="cdn-reg--h3">
+                                Напишите нам
+                            </h3>
+                            <p class="cdn-reg--p__REQUEST">
+                                Свяжитесь с нами, чтобы получить персональное решение для вашей организации
+                            </p>
+                            <button class="cdn-reg--button__REQUEST">
+                                Отправить запрос
+                            </button>
+                        </div>
+                    </div>
                 </div>
 
             </div>
@@ -1447,31 +1462,6 @@ if ($arParams["USE_COMPARE"] === "Y")
 
 
 
-    </div>
-</section>
-
-
-
-
-
-
-
-<!-- ---------- ********** СЕКЦИЯ WRT ********** ---------- -->
-
-
-<section class="ct-wrt">
-    <div class="ct-wrt--div__CONT C-CONTAINER">
-        <div class="ct-wrt--div__CONT2 __C-SCRL DOWN">
-            <h2 class="ct-wrt--h2">
-                Напишите нам
-            </h2>
-            <p class="ct-wrt--p">
-                Свяжитесь с нами, чтобы получить персональное решение для вашей организации
-            </p>
-            <button class="ct-wrt--button">
-                Отправить запрос
-            </button>
-        </div>
     </div>
 </section>
 
