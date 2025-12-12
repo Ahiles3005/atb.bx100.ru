@@ -124,30 +124,30 @@ window.addEventListener ("load", function () {
 
         // 2.2 Выравнивание высоты form для десктопов по блоку с контентом
 
-        function hmCatFormHeight () {
-            if (window.innerWidth > 1439) {
-                setTimeout (() => {
-                    hmCatFormSubmenu.style.maxHeight = getComputedStyle (ctCatDivContent).height;
-                }, 800);
-            } else {
-                setTimeout (() => {
-                    hmCatFormSubmenu.style.maxHeight = null;
-                }, 50);
-            }
-        }
+        // function hmCatFormHeight () {
+        //     if (window.innerWidth > 1439) {
+        //         setTimeout (() => {
+        //             hmCatFormSubmenu.style.maxHeight = getComputedStyle (ctCatDivContent).height;
+        //         }, 800);
+        //     } else {
+        //         setTimeout (() => {
+        //             hmCatFormSubmenu.style.maxHeight = null;
+        //         }, 50);
+        //     }
+        // }
 
 
         // hmCatFormHeight ();
 
-        function hmCatDebounce (cB, time) {
-            let idTimer;
-            return function () {
-                clearTimeout (idTimer);
-                idTimer = setTimeout (() => {
-                    cB();
-                }, time);
-            }
-        }
+        // function hmCatDebounce (cB, time) {
+        //     let idTimer;
+        //     return function () {
+        //         clearTimeout (idTimer);
+        //         idTimer = setTimeout (() => {
+        //             cB();
+        //         }, time);
+        //     }
+        // }
 
         // const hmCatFormDebounce = hmCatDebounce (hmCatFormHeight, 100);
         //
