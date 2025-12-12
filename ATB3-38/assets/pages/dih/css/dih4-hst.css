@@ -1,0 +1,147 @@
+
+/* ---------- ********** |||||||||| СТРАНИЦА Р.О.И. |||||||||| ********** ---------- */
+
+
+/* ---------- ********** СЕКЦИЯ HST ********** ---------- */
+
+
+#dih .hm-hst {
+    overflow: hidden;
+}
+
+
+
+
+#dih .hm-hst--div__CONT {
+    padding-bottom: 0px;
+}
+
+
+
+
+#dih .hm-hst--div__CONTENT {
+    margin: 0px;
+}
+@media (min-width: 768px) {
+    #dih .hm-hst--div__CONTENT {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+.dh-hst--div__SWIPER {
+    margin: -10px 0px 0px -10px;
+    padding: 10px 0px 0px 10px;
+    width: calc(100% + 10px);
+    transition: opacity 0.7s, transform 0.7s;
+}
+@media (min-width: 1920px) {
+    .dh-hst--div__SWIPER {
+        width: calc(100% + 30px);
+    }
+}
+
+
+
+
+.dh-hst--div__SWIPER_WRAPPER {
+    box-sizing: border-box;
+}
+
+
+
+
+.dh-hst--div__SWIPER_SLIDE {
+    background-color: hsl(0, 0%, 100%);
+}
+
+
+
+
+.dh-hst--div__SWIPER_SLIDE:not(.swiper-slide-active) {
+    position: relative;
+    z-index: -2;
+    opacity: 0 !important;
+}
+
+
+
+
+#dih .cd-use--div__SWIPER23 {
+    margin-top: 0px;
+    margin-left: -10px;
+    padding: 10px 10px 60px 10px;
+    width: calc(100% + 20px);
+    transition: transform 0.7s, opacity 0.7s;
+}
+@media (min-width: 1440px) {
+    #dih .cd-use--div__SWIPER23 {
+        margin-top: -10px;
+        padding: 10px 10px 64px 10px;
+    }
+}
+@media (min-width: 1920px) {
+    #dih .cd-use--div__SWIPER23 {
+        width: 100%;
+    }
+}
+
+
+
+
+#dih .cd-use--div__SWIPER23_WRAPPER {
+    box-sizing: border-box;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: auto;
+    column-gap: 0px;
+    row-gap: 0px;
+}
+@media (min-width: 768px) {
+    #dih .cd-use--div__SWIPER23_WRAPPER {
+        grid-auto-flow: column;
+        grid-template-columns: auto;
+        column-gap: 0px;
+        row-gap: 0px;
+    }
+}
+@media (min-width: 1200px) {
+    #dih .cd-use--div__SWIPER23_WRAPPER {
+        grid-template-columns: auto;
+    }
+}
+@media (min-width: 1440px) {
+    #dih .cd-use--div__SWIPER23_WRAPPER {
+        grid-auto-flow: column;
+        grid-template-columns: auto;
+        column-gap: 0px;
+        row-gap: 0px;
+    }
+}
+
+
+
+
+.cd-use--div__SWIPER23_NAV {
+    margin-left: auto;
+    height: 38px;
+    position: absolute;
+    right: 10px;
+    bottom: 2px;
+    display: flex;
+    align-items: center;
+    background-color: hsl(0, 0%, 100%);
+    border: 0.25px solid var(--color-gray);
+    border-radius: 12px;
+}
+
+
+
+
+@media (min-width: 1920px) {
+    #dih .cdn-reg--div__REQUEST {
+        width: 77.2%;
+    }
+}

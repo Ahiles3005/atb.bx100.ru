@@ -1,0 +1,35 @@
+
+/* ---------- ********** |||||||||| СТРАНИЦА Р.О.И. |||||||||| ********** ---------- */
+
+
+/* ---------- ********** СЕКЦИЯ HERO ********** ---------- */
+
+
+.dh-hero {
+    margin-top: 53px;
+    padding: 0px 16px;
+    width: 100%;
+    position: relative;
+}
+@media (min-width: 1440px) {
+    .dh-hero {
+        margin-top: 90px;
+        padding: 0px 80px;
+        overflow: hidden;
+    } 
+}
+
+
+
+
+.dh-hero--div__CONT {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+@media (min-width: 1440px) {
+    .dh-hero--div__CONT {
+        padding-bottom: 0px;
+    }
+}

@@ -1,0 +1,22 @@
+
+/* ---------- ********** |||||||||| СТРАНИЦА Р.О.И. |||||||||| ********** ---------- */
+
+
+/* ---------- ********** СЕКЦИЯ HST ********** ---------- */
+
+
+@media (min-width: 1440px) {
+    #dih .ct-abt--div__MAIN_TOP_TEXT {
+        width: 100%;
+    }
+}
+
+
+
+
+#dih .ct-abt--p__1_1,
+#dih .ct-abt--p__1_2,
+#dih .ct-abt--div__1_3,
+#dih .ct-abt--div__1_4 {
+    transition: opacity 0.7s, transform 0.7s;
+}
