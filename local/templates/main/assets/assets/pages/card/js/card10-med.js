@@ -57,7 +57,6 @@ window.addEventListener ("load", function () {
         // 2. СЛАЙДЕР С КОНТЕНТОМ
         
         const cdMedDivSwiper2 = new Swiper (".cd-med--div__SWIPER2", {
-            autoHeight: true,
             effect: "fade",
             allowTouchMove: false,
         });
