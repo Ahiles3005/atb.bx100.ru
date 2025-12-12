@@ -5,6 +5,11 @@
 /* ---------- ********** СЕКЦИЯ CAT ********** ---------- */
 
 
+.ctn-cat {
+    overflow: hidden;
+}
+
+
 
 
 @media (min-width: 1440px) {
@@ -37,11 +42,6 @@
 
 .ctn-cat .hm-cat--form__SUBMENU {
     max-height: none;
-}
-
-
-
-.ctn-cat .hm-cat--form__SUBMENU {
     display: grid;
     grid-template-columns: 1fr;
     gap: 0px;
@@ -50,8 +50,8 @@
     .ctn-cat .hm-cat--form__SUBMENU {
         margin-top: 0px;
         padding-right: 10px;
-        max-height: none;
-        width: 22.5%;
+        max-height: 408px;
+        width: 23%;
         position: absolute;
         top: 239px;
         left: 0px;
@@ -116,5 +116,18 @@
 
     .ctn-cat .hm-cat--label__SUBMENU:has(.hm-cat--input__SUBMENU:checked) .hm-cat--span__SUBMENU {
         color: var(--color-blue);
+    }
+}
+
+
+
+
+.ctn-cat .cdn-reg--div__REQUEST {
+    margin-top: 38px;
+}
+@media (min-width: 1440px) {
+    .ctn-cat .cdn-reg--div__REQUEST {
+        margin-top: 60px;
+        width: 100%;
     }
 }

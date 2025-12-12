@@ -295,7 +295,7 @@
 }
 @media (min-width: 768px) {
     .in-tsk--div__ITEM_IMAGE {
-        max-width: 500px;
+        width: 500px;
         align-self: center;
     }
 }
