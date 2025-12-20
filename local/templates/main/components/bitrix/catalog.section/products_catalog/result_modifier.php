@@ -18,7 +18,10 @@ foreach ($arResult['ITEMS'] as $key => $item) {
             BX_RESIZE_IMAGE_PROPORTIONAL,
             true
         );
-        $slider[] = ['src' => $file['src']];
+        if(isset($file['src'])){
+            $slider[] = ['src' => $file['src']];
+        }
+
     }
 
     if (isset($item['PROPERTIES']['MORE_PHOTO'])) {
@@ -30,7 +33,9 @@ foreach ($arResult['ITEMS'] as $key => $item) {
                     BX_RESIZE_IMAGE_PROPORTIONAL,
                     true
                 );
-                $slider[] = ['src' => $file['src']];
+                if(isset($file['src'])){
+                    $slider[] = ['src' => $file['src']];
+                }
             }
         } else {
             $file = CFile::ResizeImageGet(
@@ -39,7 +44,9 @@ foreach ($arResult['ITEMS'] as $key => $item) {
                 BX_RESIZE_IMAGE_PROPORTIONAL,
                 true
             );
-            $slider[] = ['src' => $file['src']];
+            if(isset($file['src'])){
+                $slider[] = ['src' => $file['src']];
+            }
         }
 
     }
