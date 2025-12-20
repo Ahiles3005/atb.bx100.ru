@@ -77,11 +77,11 @@ if ($isRootSection) {
     $APPLICATION->SetPageProperty('mainid', 'catalog');
     include($_SERVER["DOCUMENT_ROOT"] . "/" . $this->GetFolder() . "/sections.php");
 } elseif ($isSeria) {
-    $APPLICATION->SetPageProperty('mainid', 'card_n');
-    include($_SERVER["DOCUMENT_ROOT"] . "/" . $this->GetFolder() . "/section_series.php");
+    $APPLICATION->SetPageProperty('mainid', 'card');
+    include($_SERVER["DOCUMENT_ROOT"] . "/" . $this->GetFolder() . "/section_card.php");
 } else {
     $APPLICATION->SetPageProperty('mainid', 'catalog-n');
-    include($_SERVER["DOCUMENT_ROOT"] . "/" . $this->GetFolder() . "/section_view.php");
+    include($_SERVER["DOCUMENT_ROOT"] . "/" . $this->GetFolder() . "/section_catalog_n.php");
 }
 
 

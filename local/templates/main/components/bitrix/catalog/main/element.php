@@ -19,7 +19,7 @@ use Bitrix\Main\ModuleManager;
 
 
 $this->setFrameMode(true);
-$APPLICATION->SetPageProperty('mainid','card');
+$APPLICATION->SetPageProperty('mainid','card-n');
 
 
 ?>
@@ -197,9 +197,9 @@ $APPLICATION->SetPageProperty('mainid','card');
 			$componentElementParams['USER_CONSENT_IS_LOADED'] = $arParams['USER_CONSENT_IS_LOADED'];
 		}
 
-        echo '<pre>';
-        var_dump($arResult);
-        var_dump($componentElementParams);
+//        echo '<pre>';
+//        var_dump($arResult);
+//        var_dump($componentElementParams);
 
 		$elementId = $APPLICATION->IncludeComponent(
 			'bitrix:catalog.element',
