@@ -1,0 +1,144 @@
+
+/* ---------- ********** |||||||||| СТРАНИЦА Р.О.И. |||||||||| ********** ---------- */
+
+
+/* ---------- ********** СЕКЦИЯ IND ********** ---------- */
+
+
+#dih .hm-ind--div__CONT {
+    padding-bottom: 0px;
+}
+
+
+
+
+.hm-ind--div__SUBMENU_BACK {
+    display: none;
+    position: absolute;
+    height: 32px;
+    width: calc(22.5% - 10px);
+    left: 0px;
+    background: linear-gradient(0deg, hsla(0, 0%, 100%, 100%), hsla(0, 0%, 100%, 0%));
+    pointer-events: none;
+}
+@media (min-width: 1440px) {
+    .hm-ind--div__SUBMENU_BACK {
+        display: flex;
+    }
+}
+
+
+
+
+#dih .с-common--div__SECT_MAIN {
+    margin-top: 20px;
+}
+@media (min-width: 1440px) {
+    #dih .с-common--div__SECT_MAIN {
+        margin-top: 42px;
+    }
+}
+
+
+
+
+#dih .hm-ind--div__CONTENT {
+    margin: 0px;
+}
+@media (min-width: 768px) {
+    #dih .hm-ind--div__CONTENT {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+.dh-ind--div__SWIPER {
+    margin: -10px 0px 0px -10px;
+    padding: 10px 0px 0px 10px;
+    width: calc(100% + 10px);
+}
+@media (min-width: 1920px) {
+    .dh-ind--div__SWIPER {
+        width: calc(100% + 30px);
+    }
+}
+
+
+
+
+.dh-ind--div__SWIPER_WRAPPER {
+    box-sizing: border-box;
+}
+
+
+
+
+.dh-ind--div__SWIPER_SLIDE {
+    background-color: hsl(0, 0%, 100%);
+}
+
+
+
+
+.dh-ind--div__SWIPER_SLIDE:not(.swiper-slide-active) {
+    position: relative;
+    z-index: -2;
+    opacity: 0 !important;
+}
+
+
+
+
+#dih .cd-use--div__SWIPER21 {
+    margin-top: 0px;
+    margin-left: -10px;
+    padding: 10px 10px 60px 10px;
+    width: calc(100% + 20px);
+    transition: transform 0.7s, opacity 0.7s;
+}
+@media (min-width: 1440px) {
+    #dih .cd-use--div__SWIPER21 {
+        margin-top: -10px;
+        padding: 10px 10px 64px 10px;
+    }
+}
+@media (min-width: 1920px) {
+    #dih .cd-use--div__SWIPER21 {
+        width: 100%;
+    }
+}
+
+
+
+
+#dih .cd-use--div__SWIPER21_WRAPPER {
+    box-sizing: border-box;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: auto;
+    column-gap: 0px;
+    row-gap: 0px;
+}
+@media (min-width: 768px) {
+    #dih .cd-use--div__SWIPER21_WRAPPER {
+        grid-auto-flow: column;
+        grid-template-columns: auto;
+        column-gap: 0px;
+        row-gap: 0px;
+    }
+}
+@media (min-width: 1200px) {
+    #dih .cd-use--div__SWIPER21_WRAPPER {
+        grid-template-columns: auto;
+    }
+}
+@media (min-width: 1440px) {
+    #dih .cd-use--div__SWIPER21_WRAPPER {
+        grid-auto-flow: column;
+        grid-template-columns: auto;
+        column-gap: 0px;
+        row-gap: 0px;
+    }
+}
