@@ -246,7 +246,8 @@
 @media (min-width: 1440px) {
     .__hm-cat--li__MENU_ITEM .hm-cat--form__SUBMENU {
         margin-top: 0px;
-        max-height: none;
+        max-height: 400px;
+        /*max-height: none;*/
         opacity: 1;
         visibility: visible;
         animation: none;
