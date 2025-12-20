@@ -28,8 +28,10 @@ $strTitle = "";
                         <li class="hm-cat--li__MENU_ITEM __C-SCRL DOWN" id="<?=$this->GetEditAreaId($arSection['ID']);?>">
                             <button class="hm-cat--button__MENU_ITEM" data-href="<?=$arSection['SECTION_PAGE_URL']?>">
                                 <div class="hm-cat--div__MENU_ITEM">
-                                    <img src="<?= $arSection['RESIZE_PICTURE']['src'] ?>"
-                                         alt="<?= $arSection['NAME'] ?>">
+                                    <?if(isset($arSection['RESIZE_PICTURE']['src'])):?>
+                                        <img src="<?= $arSection['RESIZE_PICTURE']['src'] ?>"
+                                             alt="<?= $arSection['NAME'] ?>">
+                                    <?endif?>
                                 </div>
                                 <span class="hm-cat--span__MENU_ITEM">
                                     <?= $arSection['~UF_NAME_MENU_HOME'] ?? $arSection['NAME'] ?>
