@@ -155,7 +155,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
             </form>
 
             <div class="c-common--div__FB_IMAGE __C-SCRL LEFT">
-                <img src="images/home/hm-des_2.png" alt="">
+                <img src="<?= SITE_TEMPLATE_PATH ?>/assets/images/home/hm-des_2.png" alt="">
             </div>
         </div>
     </div>
