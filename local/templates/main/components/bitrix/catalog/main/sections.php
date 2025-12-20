@@ -104,6 +104,7 @@ if ($arParams["USE_COMPARE"] === "Y")
         <div class="hm-cat--div__BODY">
 
             <?
+            $sectionListParams['HIDE_SECTIONS_WITH_ZERO_COUNT_ELEMENTS'] = 'Y';
             $APPLICATION->IncludeComponent(
                     "bitrix:catalog.section.list",
                     "section_list_catalog",

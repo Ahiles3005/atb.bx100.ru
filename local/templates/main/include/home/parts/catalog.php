@@ -14,7 +14,7 @@ $APPLICATION->IncludeComponent(
                 "COUNT_ELEMENTS" => "Y",
                 "COUNT_ELEMENTS_FILTER" => "CNT_ACTIVE",
                 "FILTER_NAME" => "sectionsFilter",
-                "HIDE_SECTIONS_WITH_ZERO_COUNT_ELEMENTS" => "N",
+                "HIDE_SECTIONS_WITH_ZERO_COUNT_ELEMENTS" => "Y",
                 "IBLOCK_ID" => "1",
                 "IBLOCK_TYPE" => "catalog",
                 "SECTION_CODE" => "",
