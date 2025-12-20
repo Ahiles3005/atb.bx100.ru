@@ -5,48 +5,52 @@
 
 window.addEventListener ("load", function () {
 
-    const subMenuItems = Array.from(document.querySelectorAll(".hm-cat--label__SUBMENU"));
-
-    subMenuItems.forEach((v) => {
-        v.addEventListener("click", (event) => {
-            if (event.target.classList.contains('hm-cat--label__SUBMENU') || event.target.classList.contains('hm-cat--span__SUBMENU')) {
-                let sectionId = v.dataset.sectionid;
-                let elementCount = v.dataset.elementcount;
-
-                document.querySelector(".ct-cat--span__IND2").innerText=elementCount;
-
-                let url = '/local/templates/main/include/catalog/ajax/products.php?SECTION_ID=' + sectionId
-
-                fetch(url)
-                    .then(response => {
-                        if (!response.ok) {
-                            throw new Error(response.statusText);
-                        }
-                        return response.text();
-                    })
-                    .then(html => {
-                        document.querySelector('#products-html').innerHTML = html
-
-                        observeScrollElements();
-                        hmCatImageSwiper();
-                        hmCatCardButtons();
-                        hmCatPriceSplit();
-                        // ctCatCardsCur();
-                        ctCatCardsAdd();
-
-                    })
-                    .catch(error => {
-                        console.error('Fetch error:', error);
-                    });
-            }
-        });
-    });
-
 
     /* ---------- ********** |||||||||| СТРАНИЦА КАТАЛОГ-N |||||||||| ********** ---------- */
 
 
     if (document.querySelector ("#catalog-n")) {
+
+
+
+        const subMenuItems = Array.from(document.querySelectorAll(".hm-cat--label__SUBMENU"));
+
+        subMenuItems.forEach((v) => {
+            v.addEventListener("click", (event) => {
+                if (event.target.classList.contains('hm-cat--label__SUBMENU') || event.target.classList.contains('hm-cat--span__SUBMENU')) {
+                    let sectionId = v.dataset.sectionid;
+                    let elementCount = v.dataset.elementcount;
+
+                    document.querySelector(".ct-cat--span__IND2").innerText=elementCount;
+
+                    let url = '/local/templates/main/include/catalog/ajax/products.php?SECTION_ID=' + sectionId
+
+                    fetch(url)
+                        .then(response => {
+                            if (!response.ok) {
+                                throw new Error(response.statusText);
+                            }
+                            return response.text();
+                        })
+                        .then(html => {
+                            document.querySelector('#products-html').innerHTML = html
+
+                            observeScrollElements();
+                            hmCatImageSwiper();
+                            hmCatCardButtons();
+                            hmCatPriceSplit();
+                            // ctCatCardsCur();
+                            ctCatCardsAdd();
+
+                        })
+                        .catch(error => {
+                            console.error('Fetch error:', error);
+                        });
+                }
+            });
+        });
+
+
 
 
         // ОБЪЕКТЫ ДЛЯ ПРОСЛУШИВАНИЯ ПЕРЕХОДА ЧЕРЕЗ БРЕЙКПОИНТЫ
