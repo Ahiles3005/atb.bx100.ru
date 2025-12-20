@@ -108,22 +108,9 @@ window.addEventListener ("load", function () {
 
         // 2.1 Выбор первой радиокнопки при загрузке
 
-        //переделываем на переключение актуальной версии, в зависимости от ссылки
 
-        let currectUri = window.location.pathname;
-        let uriMatch = false;
+        hmCatLabelSubmenu[0]?.click ();
 
-        hmCatLabelSubmenu.forEach(function(v,i, a){
-            if(v.dataset.href == currectUri){
-                v.click();
-                uriMatch = true;
-                return;
-            }
-        })
-
-        if(!uriMatch){
-            hmCatLabelSubmenu[0].click ();
-        }
 
 
         // 2.2 Выравнивание высоты form для десктопов по блоку с контентом

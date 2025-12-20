@@ -14,6 +14,7 @@ use Bitrix\Main\ModuleManager;
 
 //для списка ставим либо свой ид либо родителя
 $sectindId = $arCurSection['IBLOCK_SECTION_ID'] ?? $arCurSection['ID'];
+$sectindId = $arCurSection['ID'];
 
 $sectionListParams = [
         "SECTION_ID" => $sectindId,
