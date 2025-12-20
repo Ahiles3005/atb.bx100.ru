@@ -12,8 +12,6 @@ use Bitrix\Main\ModuleManager;
  */
 
 
-//для списка ставим либо свой ид либо родителя
-$sectindId = $arCurSection['IBLOCK_SECTION_ID'] ?? $arCurSection['ID'];
 $sectindId = $arCurSection['ID'];
 
 $sectionListParams = [
@@ -88,7 +86,7 @@ if ($sectionListParams["COUNT_ELEMENTS"] === "Y") {
 
 
         <h2 class="ct-cat--h2 c-common--h2 __C-SCRL RIGHT">
-            <?php $APPLICATION->ShowTitle(false); ?>
+            <?=$arCurSection['NAME'] ?>
         </h2>
 
 

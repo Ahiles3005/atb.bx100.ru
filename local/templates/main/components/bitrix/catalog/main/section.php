@@ -45,7 +45,7 @@ if ($obCache->InitCache(36000, serialize($arFilter), "/iblock/catalog")) {
 } elseif ($obCache->StartDataCache()) {
     $arCurSection = [];
     if (Loader::includeModule("iblock")) {
-        $dbRes = CIBlockSection::GetList([], $arFilter, false, ["ID", 'UF_SERIA','IBLOCK_SECTION_ID']);
+        $dbRes = CIBlockSection::GetList([], $arFilter, false, ["ID", 'UF_SERIA','IBLOCK_SECTION_ID','NAME']);
         if (defined("BX_COMP_MANAGED_CACHE")) {
             global $CACHE_MANAGER;
             $CACHE_MANAGER->StartTagCache("/iblock/catalog");
