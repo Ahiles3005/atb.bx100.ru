@@ -5,16 +5,13 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
 }
 
 
-
 $sections = [];
 
 foreach ($arResult["SECTIONS"] as $section) {
-    if($section['DEPTH_LEVEL'] > 2){
-        continue;
-    }
-    if(intval($section['IBLOCK_SECTION_ID']) == 0){
-        $sections[$section['ID']] = array_merge($sections[$section['ID']] ?? [],$section);
-    }else{
+    if (intval($section['IBLOCK_SECTION_ID']) == 0) {
+        $currectSection = $sections[$section['ID']] ?? [];
+        $sections[$section['ID']] = array_merge($currectSection, $section);
+    } else {
         $sections[$section['IBLOCK_SECTION_ID']]['childs'][] = $section;
     }
 }
