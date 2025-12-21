@@ -1,5 +1,7 @@
 <?php
 $sSectionName = "ОТРАСЛИ";
-$arDirProperties = array();
+$arDirProperties = array(
+    "mainid" => "ind"
+);
 ?>
 
