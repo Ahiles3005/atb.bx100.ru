@@ -352,7 +352,6 @@ switch ($mainId) {
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/home/css/home4-des.css');
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/home/css/home5-hst.css');
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/home/css/home6-pre.css');
-
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/card/css/card0-common.css');
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/card/css/card1-hero.css');
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/card/css/card2-adv.css');
@@ -367,13 +366,11 @@ switch ($mainId) {
         break;
 
     case 'card-n':
-
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/home/css/home2-cat.css');
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/home/css/home3-ind.css');
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/home/css/home4-des.css');
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/home/css/home5-hst.css');
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/home/css/home6-pre.css');
-
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/card-n/css/card-n1-hero.css');
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/card-n/css/card-n1-mod.css');
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/card-n/css/card-n2-abt.css');
@@ -384,7 +381,6 @@ switch ($mainId) {
         break;
 
     case 'ind':
-
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/home/css/home2-cat.css');
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/home/css/home3-ind.css');
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/card/css/card7-use.css');
@@ -394,9 +390,22 @@ switch ($mainId) {
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/ind/css/in2-adv.css');
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/ind/css/in3-tsk.css');
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/ind/css/in4-des.css');
-
         break;
 
+    case 'des':
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/home/css/home2-cat.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/home/css/home3-ind.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/home/css/home4-des.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/card/css/card7-use.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/card-n/css/card-n4-reg.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/card-n/css/card-n5-rec.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/ind/css/in1-hero.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/ind/css/in2-adv.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/ind/css/in3-tsk.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/ind/css/in4-des.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/des/css/des5-prod.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/des/css/des6-dss.css');
+        break;
 
 }
 
@@ -420,7 +429,6 @@ switch ($mainId) {
         break;
 
     case 'catalog':
-
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/catalog/js/catalog0-common.js');
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/catalog/js/catalog1-cat.js');
         break;
@@ -452,7 +460,6 @@ switch ($mainId) {
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/card-n/js/card-n6-rec.js');
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/card-n/js/card-n8-mat.js');
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/libs/dragscroll/dragscroll.js');
-
         break;
 
     case 'ind':
@@ -460,10 +467,13 @@ switch ($mainId) {
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/ind/js/in2-adv.js');
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/ind/js/in3-tsk.js');
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/ind/js/in4-des.js');
+        break;
 
-
+    case 'des':
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/des/js/des0-common.js');
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/des/js/des2-adv.js');
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/des/js/des3-tsk.js');
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/des/js/des4-des.js');
         break;
 }
-
-
 ?>

@@ -1,5 +1,7 @@
 <?php
 $sSectionName = "РЕШЕНИЯ";
-$arDirProperties = array();
+$arDirProperties = array(
+    "mainid" => "des"
+);
 ?>
 
