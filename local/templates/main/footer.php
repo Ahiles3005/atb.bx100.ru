@@ -227,9 +227,6 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
                 ?>
             </div>
 
-            <!-- <div class="c-footer--div__RIGHT">
-                    
-                </div> -->
         </div>
 
 

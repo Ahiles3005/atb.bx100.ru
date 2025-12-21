@@ -69,7 +69,7 @@ function renderFooterMenuItems(array $items, $level = 1)
                     }
 
                     if ($childHasChildren) {
-                        echo '<a class="' . $childAClass . '">';
+                        echo '<a class="' . $childAClass . '" href="' . $childLink . '">';
                     } else {
                         echo '<a class="' . $childAClass . '" href="' . $childLink . '">';
                     }
@@ -118,7 +118,7 @@ function renderFooterMenuItems(array $items, $level = 1)
                 $aClass = htmlspecialchars($item['PARAMS']['CSS_CLASS']);
             }
             if ($hasChildren) {
-                echo '<a class="' . $aClass . '">';
+                echo '<a class="' . $aClass . '" >';
             } else {
                 echo '<a class="' . $aClass . '" href="' . $link . '">';
             }
