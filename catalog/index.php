@@ -3,7 +3,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("КАТАЛОГ");
 ?><?$APPLICATION->IncludeComponent("bitrix:catalog", "main", Array(
 	"ACTION_VARIABLE" => "action",	// Название переменной, в которой передается действие
-		"ADD_ELEMENT_CHAIN" => "N",	// Включать название элемента в цепочку навигации
+		"ADD_ELEMENT_CHAIN" => "Y",	// Включать название элемента в цепочку навигации
 		"ADD_PICT_PROP" => "-",	// Дополнительная картинка основного товара
 		"ADD_PROPERTIES_TO_BASKET" => "Y",	// Добавлять в корзину свойства товаров и предложений
 		"ADD_SECTIONS_CHAIN" => "Y",	// Включать раздел в цепочку навигации
