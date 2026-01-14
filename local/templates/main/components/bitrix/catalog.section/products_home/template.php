@@ -115,7 +115,7 @@ if (!empty($arResult['ITEMS'])) {
                 <? foreach ($propsCode as $propCode): ?>
                     <? if (isset($item['PROPERTIES'][$propCode]['VALUE']) && !empty($item['PROPERTIES'][$propCode]['VALUE'])): ?>
                         <li class="hm-cat--li__CARD_PARAM">
-                            <?= $item['PROPERTIES']['PROCESSOR']['VALUE'] ?>
+                            <?= $item['PROPERTIES'][$propCode]['VALUE'] ?>
                         </li>
                     <? endif ?>
                 <? endforeach; ?>
