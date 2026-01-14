@@ -32,7 +32,7 @@ foreach ($arResult['ITEMS'] as $key => $item) {
                 );
                 $slider[] = ['src' => $file['src']];
             }
-        } else {
+        } elseif(!empty($item['PROPERTIES']['MORE_PHOTO']['VALUE'])) {
             $file = CFile::ResizeImageGet(
                 $item['PROPERTIES']['MORE_PHOTO']['VALUE'],
                 ["width" => 364, "height" => 364],
