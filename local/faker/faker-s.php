@@ -13,14 +13,13 @@ if (!Loader::includeModule('iblock')) {
 $iblockId = 1;
 
 // Пути к файлам - УКАЖИТЕ СВОИ ПУТИ
-$descriptionsFile = '/path/to/descriptions.txt';  // файл с описаниями
+$descriptionsFile = __DIR__ . '/file1.html';  // файл с описаниями
 $photosFile = '/path/to/photos.txt';             // файл с путями к фото
 
 // Читаем файлы с данными
-$descriptions = [];
+$description = '';
 if (file_exists($descriptionsFile)) {
-    $descriptions = explode("\n", trim(file_get_contents($descriptionsFile)));
-    $descriptions = array_filter($descriptions); // убираем пустые строки
+    $description = file_get_contents($descriptionsFile);
 }
 
 $photos = [];
@@ -29,8 +28,8 @@ if (file_exists($photosFile)) {
     $photos = array_filter($photos);
 }
 
-if (empty($descriptions) || empty($photos)) {
-    die('Не найдены файлы с описаниями или фото');
+if (empty($description) && empty($photos)) {
+    die('Не найдены файлы с описаниями и фото');
 }
 
 echo "Начинаем обработку разделов...<br>\n";
@@ -50,65 +49,36 @@ $sections = CIBlockSection::GetList(
 $counter = 0;
 while ($section = $sections->Fetch()) {
     $sectionId = $section['ID'];
-    $isSeria = !empty($section['UF_SERIA']); // проверяем тип раздела
-    $needUpdate = false;
+    $isSeria = boolval($section['UF_SERIA']); // проверяем тип раздела
+    if ($isSeria) {
+        continue;
+    }
+
 
     echo "Обработка раздела ID: {$sectionId} ";
-
     // Проверяем детальное описание
     if (empty($section['DESCRIPTION_TYPE']) || empty($section['DESCRIPTION'])) {
-        $randomDescription = $descriptions[array_rand($descriptions)];
-
         $updateFields = [
             'DESCRIPTION_TYPE' => 'html',
-            'DESCRIPTION' => $randomDescription,
-            'UF_LAST_UPDATE' => date('d.m.Y H:i:s') // поле для отметки обновления (если есть)
+            'DESCRIPTION' => $description,
         ];
-        $needUpdate = true;
+
         echo "(добавлено описание) ";
     }
 
-    // Проверяем детальное фото (UF_DET_PHOTO или DETAIL_PICTURE)
-    $photoField = !empty($section['UF_DET_PHOTO']) ? 'UF_DET_PHOTO' : 'DETAIL_PICTURE';
-    $currentPhoto = $section[$photoField];
 
-    if (empty($currentPhoto)) {
-        $randomPhoto = $photos[array_rand($photos)];
+    $bs = new CIBlockSection;
+    $updateResult = $bs->Update($sectionId, $updateFields);
 
-        // Проверяем существование файла
-        $fullPhotoPath = $_SERVER['DOCUMENT_ROOT'] . $randomPhoto;
-        if (file_exists($fullPhotoPath)) {
-            $updateFields[$photoField] = [
-                'name' => basename($randomPhoto),
-                'tmp_name' => $fullPhotoPath,
-                'del' => 'Y'
-            ];
-            $needUpdate = true;
-            echo "(добавлено фото) ";
-        } else {
-            echo "(фото не найдено: {$randomPhoto}) ";
-        }
-    }
-
-    // Для серийных разделов добавляем дополнительные поля (при необходимости)
-    if ($isSeria && $needUpdate) {
-        $updateFields['UF_SERIA_TYPE'] = 'series'; // пример дополнительного поля
-        echo "(серийный раздел) ";
-    }
-
-    if ($needUpdate) {
-        $bs = new CIBlockSection;
-        $updateResult = $bs->Update($sectionId, $updateFields);
-
-        if ($updateResult) {
-            echo "- обновлен успешно<br>\n";
-            $counter++;
-        } else {
-            echo "- ОШИБКА: " . $bs->LAST_ERROR . "<br>\n";
-        }
+    if ($updateResult) {
+        echo "- обновлен успешно<br>\n";
+        $counter++;
     } else {
-        echo "- все поля заполнены<br>\n";
+        echo "- ОШИБКА: " . $bs->LAST_ERROR . "<br>\n";
     }
+
+    echo "- все поля заполнены<br>\n";
+
 }
 
 echo "<br>Обработка завершена. Обновлено разделов: {$counter}<br>\n";
