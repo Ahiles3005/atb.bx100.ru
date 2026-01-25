@@ -102,144 +102,15 @@ if ($sectionListParams["COUNT_ELEMENTS"] === "Y") {
             unset($sectionListParams);
             ?>
 
-            <ul class="ct-cat--ul__TAGS __C-SCRL DOWN">
-                <li class="ct-cat--li__TAGS">
-                    <a class="ct-cat--a__TAGS" href="#">
-                        Дрели-шуруповерты аккумуляторные
-                    </a>
-                </li>
-                <li class="ct-cat--li__TAGS">
-                    <a class="ct-cat--a__TAGS" href="#">
-                        Италия
-                    </a>
-                </li>
-                <li class="ct-cat--li__TAGS">
-                    <a class="ct-cat--a__TAGS" href="#">
-                        Масляные
-                    </a>
-                </li>
-                <li class="ct-cat--li__TAGS">
-                    <a class="ct-cat--a__TAGS" href="#">
-                        4 кВт
-                    </a>
-                </li>
-                <li class="ct-cat--li__TAGS">
-                    <a class="ct-cat--a__TAGS" href="#">
-                        10 кВт
-                    </a>
-                </li>
-                <li class="ct-cat--li__TAGS">
-                    <a class="ct-cat--a__TAGS" href="#">
-                        Деревянные
-                    </a>
-                </li>
-                <li class="ct-cat--li__TAGS">
-                    <a class="ct-cat--a__TAGS" href="#">
-                        Россия
-                    </a>
-                </li>
-                <li class="ct-cat--li__TAGS">
-                    <a class="ct-cat--a__TAGS" href="#">
-                        С осушителем
-                    </a>
-                </li>
-                <li class="ct-cat--li__TAGS">
-                    <a class="ct-cat--a__TAGS" href="#">
-                        С прямым приводом
-                    </a>
-                </li>
-                <li class="ct-cat--li__TAGS">
-                    <a class="ct-cat--a__TAGS" href="#">
-                        Масляные
-                    </a>
-                </li>
-                <li class="ct-cat--li__TAGS">
-                    <a class="ct-cat--a__TAGS" href="#">
-                        кВт
-                    </a>
-                </li>
-                <li class="ct-cat--li__TAGS">
-                    <a class="ct-cat--a__TAGS" href="#">
-                        10 кВт
-                    </a>
-                </li>
-                <li class="ct-cat--li__TAGS">
-                    <a class="ct-cat--a__TAGS" href="#">
-                        Деревянные
-                    </a>
-                </li>
-                <li class="ct-cat--li__TAGS">
-                    <a class="ct-cat--a__TAGS" href="#">
-                        Россия
-                    </a>
-                </li>
-                <li class="ct-cat--li__TAGS">
-                    <a class="ct-cat--a__TAGS" href="#">
-                        С осуш
-                    </a>
-                </li>
-                <li class="ct-cat--li__TAGS">
-                    <a class="ct-cat--a__TAGS" href="#">
-                        С
-                    </a>
-                </li>
-                <li class="ct-cat--li__TAGS">
-                    <a class="ct-cat--a__TAGS" href="#">
-                        Сп
-                    </a>
-                </li>
-                <li class="ct-cat--li__TAGS">
-                    <a class="ct-cat--a__TAGS" href="#">
-                        Масляные
-                    </a>
-                </li>
-                <li class="ct-cat--li__TAGS">
-                    <a class="ct-cat--a__TAGS" href="#">
-                        4 кВт
-                    </a>
-                </li>
-                <li class="ct-cat--li__TAGS">
-                    <a class="ct-cat--a__TAGS" href="#">
-                        10 кВт
-                    </a>
-                </li>
-                <li class="ct-cat--li__TAGS">
-                    <a class="ct-cat--a__TAGS" href="#">
-                        Деревянные
-                    </a>
-                </li>
-                <li class="ct-cat--li__TAGS">
-                    <a class="ct-cat--a__TAGS" href="#">
-                        Россия
-                    </a>
-                </li>
-                <li class="ct-cat--li__TAGS">
-                    <a class="ct-cat--a__TAGS" href="#">
-                        С осушителем
-                    </a>
-                </li>
-                <li class="ct-cat--li__TAGS">
-                    <a class="ct-cat--a__TAGS" href="#">
-                        С прямым приводом
-                    </a>
-                </li>
-                <li class="ct-cat--li__TAGS">
-                    <a class="ct-cat--a__TAGS" href="#">
-                        С осушителем
-                    </a>
-                </li>
-                <li class="ct-cat--li__TAGS">
-                    <a class="ct-cat--a__TAGS" href="#">
-                        С прямым приводом
-                    </a>
-                </li>
-            </ul>
+            <!--            облако тегов start-->
+            <? include($_SERVER["DOCUMENT_ROOT"] . "/" . $this->GetFolder() . "/cloud.php"); ?>
+            <!--            облако тегов  end-->
 
 
             <div class="hm-cat--div__MAIN">
                 <!--                список подразделов старт-->
-                <?// include($_SERVER["DOCUMENT_ROOT"] . "/" . $this->GetFolder() . "/filter.php"); ?>
-                <form></form>
+                <? include($_SERVER["DOCUMENT_ROOT"] . "/" . $this->GetFolder() . "/filter.php"); ?>
+
                 <!--                список подразделов энд-->
 
 
