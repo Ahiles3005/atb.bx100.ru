@@ -1,5 +1,5 @@
 
-
+<form></form>
 <div style="display: none">
 <?
 $APPLICATION->IncludeComponent(
