@@ -238,7 +238,8 @@ if ($sectionListParams["COUNT_ELEMENTS"] === "Y") {
 
             <div class="hm-cat--div__MAIN">
                 <!--                список подразделов старт-->
-                <? include($_SERVER["DOCUMENT_ROOT"] . "/" . $this->GetFolder() . "/filter.php"); ?>
+                <?// include($_SERVER["DOCUMENT_ROOT"] . "/" . $this->GetFolder() . "/filter.php"); ?>
+                <form></form>
                 <!--                список подразделов энд-->
 
 

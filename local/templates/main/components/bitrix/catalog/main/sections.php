@@ -254,7 +254,8 @@ if ($arParams["USE_COMPARE"] === "Y")
             <div class="hm-cat--div__MAIN">
 
                 <!--                список подразделов старт-->
-                <? include($_SERVER["DOCUMENT_ROOT"] . "/" . $this->GetFolder() . "/filter.php"); ?>
+                <?// include($_SERVER["DOCUMENT_ROOT"] . "/" . $this->GetFolder() . "/filter.php"); ?>
+                <form></form>
                 <!--                список подразделов энд-->
 
                 <div class="ct-cat--div__CONTENT0">
