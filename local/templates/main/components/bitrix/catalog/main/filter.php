@@ -1,6 +1,6 @@
 
 
-
+<div style="display: none">
 <?
 $APPLICATION->IncludeComponent(
         "bitrix:catalog.smart.filter",
@@ -33,3 +33,4 @@ $APPLICATION->IncludeComponent(
         array('HIDE_ICONS' => 'Y')
 );
 ?>
+</div>
