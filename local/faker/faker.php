@@ -108,7 +108,23 @@ $data = [
         'Mellanox ConnectX-5 25GbE',
         'QLogic QL45262 100GbE',
         'Marvell FastLinQ 41000 10GbE'
-    ]
+    ],
+
+    'ARTICLE' => [
+        rand(1111111, 99999999),
+        rand(1111111, 99999999),
+        rand(1111111, 99999999),
+        rand(1111111, 99999999),
+        rand(1111111, 99999999),
+        rand(1111111, 99999999),
+        rand(1111111, 99999999),
+        rand(1111111, 99999999),
+        rand(1111111, 99999999),
+    ],
+
+
+
+
 ];
 
 // Получаем все элементы инфоблока
@@ -145,20 +161,8 @@ while ($element = $elements->GetNext()) {
 
     // Проверяем и заполняем каждое свойство, если оно пустое
     foreach ($data as $propCode => $values) {
-        if (empty($existingProps[$propCode])) {
-            // Выбираем случайное значение
-            $randomValue = $values[array_rand($values)];
-
-            // Для числовых полей
-            if ($propCode === 'PRICE_NEW' || $propCode === 'PRICE_OLD') {
-                $updateFields[$propCode] = $randomValue;
-            } else {
-                // Для строковых полей
-                $updateFields[$propCode] = $randomValue;
-            }
-
+            $updateFields[$propCode] = $values[array_rand($values)];
             $needUpdate = true;
-        }
     }
 
     // Проверяем и заполняем список CATEGORY, если пусто
@@ -191,6 +195,33 @@ while ($element = $elements->GetNext()) {
         $needUpdate = true;
     }
 
+
+    $updateFields['SVOISTVA_DLA_DETALNO'] = [
+        [
+            'VALUE' => [
+                'Процессор' . rand(1, 99),
+                'Intel Atom E3845' . rand(1, 99),
+                '4 ядра, 2 Мб кэш, 1.91 ГГц' . rand(1, 99)
+            ]
+        ],
+        [
+            'VALUE' => [
+                'Оперативная память' . rand(1, 99),
+                'DDR3L SODIMM' . rand(1, 99),
+                'до 8 Гб' . rand(1, 99)
+            ]
+        ],
+        [
+            'VALUE' => [
+                'Встроенный жесткий диск' . rand(1, 99),
+                'SSD М.2 2242' . rand(1, 99),
+                'до 256 Гб' . rand(1, 99)
+            ]
+        ],
+    ];
+
+
+
     // Обновляем элемент, если есть что обновлять
     if ($needUpdate) {
         $el = new CIBlockElement;
@@ -203,7 +234,8 @@ while ($element = $elements->GetNext()) {
 
         $updateResult = $el->Update($elementId, [
             'IBLOCK_ID' => $iblockId,
-            'PROPERTY_VALUES' => $properties
+            'PROPERTY_VALUES' => $properties,
+            'PREVIEW_TEXT' => 'Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности обеспечивает широкому кругу (специалистов) участие в формировании форм развития. Идейные соображения высшего порядка, а также сложившаяся структура организации позволяет выполнять важные задания по разработке позиций, занимаемых участниками в отношении поставленных задач. Задача организации, в особенности же постоянное информационно-пропагандистское обеспечение нашей деятельности требуют от нас анализа систем массового участия.',
         ]);
 
         if ($updateResult) {
