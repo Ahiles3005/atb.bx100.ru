@@ -127,6 +127,146 @@ $data = [
 
 ];
 
+// ============================================================================
+// НАСТРОЙКА ПУТЕЙ К ФАЙЛАМ (множественные свойства типа файл)
+// ============================================================================
+
+// Пути к файлам фотографий для свойства MORE_PHOTO
+// Укажите массив путей к файлам относительно корня сайта или абсолютные пути
+$morePhotoFiles = [
+    '/var/www/free/data/www/atb.bx100.ru/ATB3-38/images/home/ATB-2100/АТБ-2100_1.webp',
+    '/var/www/free/data/www/atb.bx100.ru/ATB3-38/images/home/ATB-2100/АТБ-2100_2.webp',
+    '/var/www/free/data/www/atb.bx100.ru/ATB3-38/images/home/ATB-2100/АТБ-2100_3.webp',
+    '/var/www/free/data/www/atb.bx100.ru/ATB3-38/images/home/ATB-2100/АТБ-2100_4.webp',
+    '/var/www/free/data/www/atb.bx100.ru/ATB3-38/images/home/ATB-2100/АТБ-2100_5.webp',
+    '/var/www/free/data/www/atb.bx100.ru/ATB3-38/images/home/ATB-2100/АТБ-2100_6.webp',
+    //
+    '/var/www/free/data/www/atb.bx100.ru/ATB3-38/images/home/ATB-2400/АТБ-2400_1.webp',
+    '/var/www/free/data/www/atb.bx100.ru/ATB3-38/images/home/ATB-2400/АТБ-2400_2.webp',
+    '/var/www/free/data/www/atb.bx100.ru/ATB3-38/images/home/ATB-2400/АТБ-2400_3.webp',
+    '/var/www/free/data/www/atb.bx100.ru/ATB3-38/images/home/ATB-2400/АТБ-2400_4.webp',
+    ///
+    '/var/www/free/data/www/atb.bx100.ru/ATB3-38/images/home/ATB-RK3568-MPC-G/АТБ-RK3568-MPC-G_1.webp',
+    '/var/www/free/data/www/atb.bx100.ru/ATB3-38/images/home/ATB-RK3568-MPC-G/АТБ-RK3568-MPC-G_2.webp',
+    '/var/www/free/data/www/atb.bx100.ru/ATB3-38/images/home/ATB-RK3568-MPC-G/АТБ-RK3568-MPC-G_3.webp',
+    '/var/www/free/data/www/atb.bx100.ru/ATB3-38/images/home/ATB-RK3568-MPC-G/АТБ-RK3568-MPC-G_4.webp',
+    '/var/www/free/data/www/atb.bx100.ru/ATB3-38/images/home/ATB-RK3568-MPC-G/АТБ-RK3568-MPC-G_5.webp',
+    ///
+
+    '/var/www/free/data/www/atb.bx100.ru/ATB3-38/images/home/ATB-RK3568-MPC-M/АТБ-RK3568-MPC-M_1.webp',
+    '/var/www/free/data/www/atb.bx100.ru/ATB3-38/images/home/ATB-RK3568-MPC-M/АТБ-RK3568-MPC-M_2.webp',
+    '/var/www/free/data/www/atb.bx100.ru/ATB3-38/images/home/ATB-RK3568-MPC-M/АТБ-RK3568-MPC-M_3.webp',
+    '/var/www/free/data/www/atb.bx100.ru/ATB3-38/images/home/ATB-RK3568-MPC-M/АТБ-RK3568-MPC-M_4.webp',
+///
+    '/var/www/free/data/www/atb.bx100.ru/ATB3-38/images/home/ATB-RK3568J-SMC/АТБ-RK3568J-SMC_1.webp',
+    '/var/www/free/data/www/atb.bx100.ru/ATB3-38/images/home/ATB-RK3568J-SMC/АТБ-RK3568J-SMC_2.webp',
+    '/var/www/free/data/www/atb.bx100.ru/ATB3-38/images/home/ATB-RK3568J-SMC/АТБ-RK3568J-SMC_3.webp',
+    '/var/www/free/data/www/atb.bx100.ru/ATB3-38/images/home/ATB-RK3568J-SMC/АТБ-RK3568J-SMC_4.webp',
+    '/var/www/free/data/www/atb.bx100.ru/ATB3-38/images/home/ATB-RK3568J-SMC/АТБ-RK3568J-SMC_5.webp',
+///
+    '/var/www/free/data/www/atb.bx100.ru/ATB3-38/images/home/ATB-RK3588J-SMC/АТБ-RK3588J-SMC_1.webp',
+    '/var/www/free/data/www/atb.bx100.ru/ATB3-38/images/home/ATB-RK3588J-SMC/АТБ-RK3588J-SMC_2.webp',
+    '/var/www/free/data/www/atb.bx100.ru/ATB3-38/images/home/ATB-RK3588J-SMC/АТБ-RK3588J-SMC_3.webp',
+    '/var/www/free/data/www/atb.bx100.ru/ATB3-38/images/home/ATB-RK3588J-SMC/АТБ-RK3588J-SMC_4.webp',
+    '/var/www/free/data/www/atb.bx100.ru/ATB3-38/images/home/ATB-RK3588J-SMC/АТБ-RK3588J-SMC_5.webp',
+
+];
+
+// Пути к файлам 3D для свойства MORE_3D
+// Поддерживаемые форматы: .obj, .fbx, .gltf, .glb, .stl и другие
+$more3dFiles = [
+    '/var/www/free/data/www/atb.bx100.ru/ATB3-38/3d/images/atb-gsm-lcs_3d.glb',
+    '/var/www/free/data/www/atb.bx100.ru/ATB3-38/3d/images/atb-lw-bs_3d.glb',
+    '/var/www/free/data/www/atb.bx100.ru/ATB3-38/3d/images/atb-lw-m_3d.glb',
+    '/var/www/free/data/www/atb.bx100.ru/ATB3-38/3d/images/atom.glb',
+    '/var/www/free/data/www/atb.bx100.ru/ATB3-38/3d/images/car.glb',
+    '/var/www/free/data/www/atb.bx100.ru/ATB3-38/3d/images/car2.glb',
+];
+
+// Пути к видеофайлам для свойства MORE_VIDEO
+// Поддерживаемые форматы: .mp4, .avi, .mov, .mkv и другие
+$moreVideoFiles = [
+    '/var/www/free/data/www/atb.bx100.ru/ATB3-38/video/vp-specs-video.mp4',
+    '/var/www/free/data/www/atb.bx100.ru/ATB3-38/video/vp-specs-video.webm',
+];
+
+// ============================================================================
+// ГЛОБАЛЬНЫЙ КЕШ ЗАГРУЖЕННЫХ ФАЙЛОВ (md5_hash => file_id)
+// ============================================================================
+$GLOBALS['fakerFileCache'] = [];
+
+// ============================================================================
+// ФУНКЦИЯ ЗАГРУЗКИ ФАЙЛОВ В СВОЙСТВА
+// ============================================================================
+
+/**
+ * Загружает файлы в множественное свойство типа файл
+ * При повторной загрузке того же файла переиспользует существующий ID
+ *
+ * @param int $elementId ID элемента инфоблока
+ * @param int $iblockId ID инфоблока
+ * @param string $propCode Код свойства
+ * @param array $filesArray Массив путей к файлам
+ * @param int $maxFiles Максимальное количество файлов для загрузки (0 = все)
+ * @return array Массив ID загруженных файлов
+ */
+function loadFilesToProperty($elementId, $iblockId, $propCode, $filesArray, $maxFiles = 0)
+{
+    $fileIds = [];
+
+    if (empty($filesArray)) {
+        return $fileIds;
+    }
+
+    // Определяем количество файлов для загрузки
+    $filesToLoad = $filesArray;
+    if ($maxFiles > 0 && count($filesArray) > $maxFiles) {
+        shuffle($filesArray);
+        $filesToLoad = array_slice($filesArray, 0, $maxFiles);
+    }
+
+    // Загружаем файлы
+    foreach ($filesToLoad as $filePath) {
+        // Проверяем существование файла
+        if (!file_exists($filePath)) {
+            echo "  warning: Файл не найден: {$filePath}<br>\n";
+            continue;
+        }
+
+        // Вычисляем MD5 хеш файла для проверки дубликатов
+        $fileHash = md5_file($filePath);
+
+        // Проверяем кеш - если файл уже загружался, переиспользуем ID
+        if (isset($GLOBALS['fakerFileCache'][$fileHash])) {
+            $fileId = $GLOBALS['fakerFileCache'][$fileHash];
+        } else {
+            // Файл еще не загружался - загружаем новый
+            $fileArray = CFile::MakeFileArray($filePath);
+
+            if ($fileArray) {
+                $fileId = CFile::SaveFile($fileArray, 'iblock');
+
+                if ($fileId) {
+                    // Сохраняем в кеш
+                    $GLOBALS['fakerFileCache'][$fileHash] = $fileId;
+                } else {
+                    echo "  error: Не удалось загрузить файл: {$filePath}<br>\n";
+                    continue;
+                }
+            }
+        }
+
+        if ($fileId) {
+            $fileIds[] = [
+                'VALUE' => $fileId,
+                'DESCRIPTION' => ''
+            ];
+        }
+    }
+
+    return $fileIds;
+}
+
 // Получаем все элементы инфоблока
 $elements = CIBlockElement::GetList(
     ['ID' => 'ASC'],
@@ -138,15 +278,16 @@ $elements = CIBlockElement::GetList(
 
 echo "Начинаем обработку элементов...<br>\n";
 
+$el = new CIBlockElement;
 $counter = 0;
+
 while ($element = $elements->GetNext()) {
     $elementId = $element['ID'];
-    $needUpdate = false;
+    $updatedProps = [];
 
-    // Собираем данные для обновления
-    $updateFields = [];
+    echo "Элемент ID: {$elementId}<br>\n";
 
-    // Проверяем и заполняем стандартные поля
+    // Получаем все существующие свойства элемента
     $props = CIBlockElement::GetProperty(
         $iblockId,
         $elementId,
@@ -156,97 +297,142 @@ while ($element = $elements->GetNext()) {
 
     $existingProps = [];
     while ($prop = $props->Fetch()) {
-        $existingProps[$prop['CODE']] = $prop['VALUE'];
+        // Для множественных свойств собираем все значения
+        if ($prop['MULTIPLE'] == 'Y') {
+            $existingProps[$prop['CODE']][] = $prop['VALUE'];
+        } else {
+            $existingProps[$prop['CODE']] = $prop['VALUE'];
+        }
     }
 
-    // Проверяем и заполняем каждое свойство, если оно пустое
+    // ============================================================================
+    // ПРОВЕРКА И ЗАПОЛНЕНИЕ СВОЙСТВ (только пустых)
+    // ============================================================================
+
+    // Проверяем и заполняем свойства из массива $data
     foreach ($data as $propCode => $values) {
-            $updateFields[$propCode] = $values[array_rand($values)];
-            $needUpdate = true;
+        $propValue = $existingProps[$propCode] ?? null;
+
+        if (empty($propValue)) {
+            $valueToSet = $values[array_rand($values)];
+            CIBlockElement::SetPropertyValuesEx($elementId, $iblockId, [$propCode => $valueToSet]);
+            $updatedProps[] = $propCode;
+            echo "  + {$propCode}: {$valueToSet}<br>\n";
+        }
     }
 
-    // Проверяем и заполняем список CATEGORY, если пусто
+    // Проверяем и заполняем CATEGORY
     if (empty($existingProps['CATEGORY'])) {
-        $categoryValues = [1, 2]; // ID значений
-        $updateFields['CATEGORY'] = $categoryValues[array_rand($categoryValues)];
-        $needUpdate = true;
+        $categoryValues = [1, 2];
+        $valueToSet = $categoryValues[array_rand($categoryValues)];
+        CIBlockElement::SetPropertyValuesEx($elementId, $iblockId, ['CATEGORY' => $valueToSet]);
+        $updatedProps[] = 'CATEGORY';
+        echo "  + CATEGORY: {$valueToSet}<br>\n";
     }
 
-    // Проверяем и заполняем список NALICHIE, если пусто
+    // Проверяем и заполняем NALICHIE
     if (empty($existingProps['NALICHIE'])) {
-        $nalichieValues = [7, 8, 9]; // ID значений
-        $updateFields['NALICHIE'] = $nalichieValues[array_rand($nalichieValues)];
-        $needUpdate = true;
+        $nalichieValues = [7, 8, 9];
+        $valueToSet = $nalichieValues[array_rand($nalichieValues)];
+        CIBlockElement::SetPropertyValuesEx($elementId, $iblockId, ['NALICHIE' => $valueToSet]);
+        $updatedProps[] = 'NALICHIE';
+        echo "  + NALICHIE: {$valueToSet}<br>\n";
     }
 
-    // Проверяем и заполняем список TEGI_DLA_FOTO, если пусто
-    if (empty($existingProps['TEGI_DLA_FOTO'])) {
-        $tegiValues = [10, 11, 12]; // ID значений
-        // Можно выбрать одно или несколько значений
+    // Проверяем и заполняем TEGI_DLA_FOTO (множественное)
+    if (empty($existingProps['TEGI_DLA_FOTO']) || !array_filter($existingProps['TEGI_DLA_FOTO'])) {
+        $tegiValues = [10, 11, 12];
         $selectedValues = [];
-        $numValues = rand(1, 3); // От 1 до 3 тегов
+        $numValues = rand(1, 3);
         for ($i = 0; $i < $numValues; $i++) {
             $selectedValues[] = $tegiValues[array_rand($tegiValues)];
         }
-        // Убираем дубликаты
-        $selectedValues = array_unique($selectedValues);
-
-        $updateFields['TEGI_DLA_FOTO'] = $selectedValues;
-        $needUpdate = true;
+        $selectedValues = array_values(array_unique($selectedValues));
+        CIBlockElement::SetPropertyValuesEx($elementId, $iblockId, ['TEGI_DLA_FOTO' => $selectedValues]);
+        $updatedProps[] = 'TEGI_DLA_FOTO';
+        echo "  + TEGI_DLA_FOTO: " . implode(', ', $selectedValues) . "<br>\n";
     }
 
+    // Проверяем и заполняем SVOISTVA_DLA_DETALNO (множественное)
+    if (empty($existingProps['SVOISTVA_DLA_DETALNO']) || !array_filter($existingProps['SVOISTVA_DLA_DETALNO'])) {
+        $valueToSet = [
+            [
+                'VALUE' => [
+                    'Процессор' . rand(1, 99),
+                    'Intel Atom E3845' . rand(1, 99),
+                    '4 ядра, 2 Мб кэш, 1.91 ГГц' . rand(1, 99)
+                ]
+            ],
+            [
+                'VALUE' => [
+                    'Оперативная память' . rand(1, 99),
+                    'DDR3L SODIMM' . rand(1, 99),
+                    'до 8 Гб' . rand(1, 99)
+                ]
+            ],
+            [
+                'VALUE' => [
+                    'Встроенный жесткий диск' . rand(1, 99),
+                    'SSD М.2 2242' . rand(1, 99),
+                    'до 256 Гб' . rand(1, 99)
+                ]
+            ],
+        ];
+        CIBlockElement::SetPropertyValuesEx($elementId, $iblockId, ['SVOISTVA_DLA_DETALNO' => $valueToSet]);
+        $updatedProps[] = 'SVOISTVA_DLA_DETALNO';
+        echo "  + SVOISTVA_DLA_DETALNO<br>\n";
+    }
 
-    $updateFields['SVOISTVA_DLA_DETALNO'] = [
-        [
-            'VALUE' => [
-                'Процессор' . rand(1, 99),
-                'Intel Atom E3845' . rand(1, 99),
-                '4 ядра, 2 Мб кэш, 1.91 ГГц' . rand(1, 99)
-            ]
-        ],
-        [
-            'VALUE' => [
-                'Оперативная память' . rand(1, 99),
-                'DDR3L SODIMM' . rand(1, 99),
-                'до 8 Гб' . rand(1, 99)
-            ]
-        ],
-        [
-            'VALUE' => [
-                'Встроенный жесткий диск' . rand(1, 99),
-                'SSD М.2 2242' . rand(1, 99),
-                'до 256 Гб' . rand(1, 99)
-            ]
-        ],
-    ];
+    // ============================================================================
+    // ЗАГРУЗКА ФАЙЛОВ В СВОЙСТВА (только если пустые)
+    // ============================================================================
 
-
-
-    // Обновляем элемент, если есть что обновлять
-    if ($needUpdate) {
-        $el = new CIBlockElement;
-
-        // Подготавливаем свойства
-        $properties = [];
-        foreach ($updateFields as $code => $value) {
-            $properties[$code] = $value;
+    // Проверяем MORE_PHOTO (множественное свойство файла)
+    $morePhotoEmpty = empty($existingProps['MORE_PHOTO']) || !array_filter($existingProps['MORE_PHOTO']);
+    if ($morePhotoEmpty && !empty($morePhotoFiles)) {
+        $photoCount = rand(3, min(5, count($morePhotoFiles)));
+        $loadedPhotos = loadFilesToProperty($elementId, $iblockId, 'MORE_PHOTO', $morePhotoFiles, $photoCount);
+        if (!empty($loadedPhotos)) {
+            CIBlockElement::SetPropertyValuesEx($elementId, $iblockId, ['MORE_PHOTO' => $loadedPhotos]);
+            $updatedProps[] = 'MORE_PHOTO';
+            echo "  + MORE_PHOTO: загружено " . count($loadedPhotos) . " файлов<br>\n";
         }
+    }
 
-        $updateResult = $el->Update($elementId, [
-            'IBLOCK_ID' => $iblockId,
-            'PROPERTY_VALUES' => $properties,
+    // Проверяем MORE_3D (множественное свойство файла)
+    $more3dEmpty = empty($existingProps['MORE_3D']) || !array_filter($existingProps['MORE_3D']);
+    if ($more3dEmpty && !empty($more3dFiles)) {
+        $modelCount = rand(1, min(2, count($more3dFiles)));
+        $loaded3d = loadFilesToProperty($elementId, $iblockId, 'MORE_3D', $more3dFiles, $modelCount);
+        if (!empty($loaded3d)) {
+            CIBlockElement::SetPropertyValuesEx($elementId, $iblockId, ['MORE_3D' => $loaded3d]);
+            $updatedProps[] = 'MORE_3D';
+            echo "  + MORE_3D: загружено " . count($loaded3d) . " файлов<br>\n";
+        }
+    }
+
+    // Проверяем MORE_VIDEO (множественное свойство файла)
+    $moreVideoEmpty = empty($existingProps['MORE_VIDEO']) || !array_filter($existingProps['MORE_VIDEO']);
+    if ($moreVideoEmpty && !empty($moreVideoFiles)) {
+        $videoCount = rand(1, min(3, count($moreVideoFiles)));
+        $loadedVideo = loadFilesToProperty($elementId, $iblockId, 'MORE_VIDEO', $moreVideoFiles, $videoCount);
+        if (!empty($loadedVideo)) {
+            CIBlockElement::SetPropertyValuesEx($elementId, $iblockId, ['MORE_VIDEO' => $loadedVideo]);
+            $updatedProps[] = 'MORE_VIDEO';
+            echo "  + MORE_VIDEO: загружено " . count($loadedVideo) . " файлов<br>\n";
+        }
+    }
+
+    // Обновляем PREVIEW_TEXT если были обновления
+    if (!empty($updatedProps)) {
+        $el->Update($elementId, [
             'PREVIEW_TEXT' => 'Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности обеспечивает широкому кругу (специалистов) участие в формировании форм развития. Идейные соображения высшего порядка, а также сложившаяся структура организации позволяет выполнять важные задания по разработке позиций, занимаемых участниками в отношении поставленных задач. Задача организации, в особенности же постоянное информационно-пропагандистское обеспечение нашей деятельности требуют от нас анализа систем массового участия.',
         ]);
-
-        if ($updateResult) {
-            echo "Элемент ID: {$elementId} - обновлен<br>\n";
-            $counter++;
-        } else {
-            echo "Ошибка при обновлении элемента ID: {$elementId} - {$el->LAST_ERROR}<br>\n";
-        }
+        $counter++;
     } else {
-        echo "Элемент ID: {$elementId} - все поля уже заполнены<br>\n";
+        echo "  (все свойства уже заполнены)<br>\n";
     }
+    echo "<br>\n";
 }
 
 echo "<br>\nОбработка завершена. Обновлено элементов: {$counter}<br>\n";
