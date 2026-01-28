@@ -228,7 +228,7 @@ class MultipleString
     /**
      * HTML для множественного свойства (несколько групп)
      */
-    public static function GetPropertyFieldHtmlMulty($arProperty, $value, $strHTMLControlName)
+    public static function GetPropertyFieldHtmlMulty($arProperty, $values, $strHTMLControlName)
     {
         $settings = self::PrepareSettings($arProperty);
         $fieldCount = $settings['count'];
@@ -238,18 +238,12 @@ class MultipleString
 
         // Получаем текущие группы значений
         $groups = [];
-        if (!empty($value['VALUE']) && is_array($value['VALUE'])) {
-            foreach ($value['VALUE'] as $val) {
-                if (is_array($val)) {
-                    $groups[] = $val;
-                } else {
-                    $unserialized = unserialize($val, ['allowed_classes' => false]);
+        if (!empty($values) && is_array($values)) {
+            foreach ($values as $value) {
+                    $unserialized = unserialize($value['VALUE'], ['allowed_classes' => false]);
                     if (is_array($unserialized)) {
-                        $groups[] = $unserialized;
-                    } else {
-                        $groups[] = [$val];
+                        $groups[] = $unserialized['VALUE'];
                     }
-                }
             }
         }
 
