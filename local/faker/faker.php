@@ -32,7 +32,7 @@ $data = [
     'PRICE_NEW' => [150000, 200000, 250000, 300000, 350000, 400000, 450000, 500000, 550000, 600000],
     'PRICE_OLD' => [180000, 220000, 280000, 320000, 380000, 420000, 480000, 520000, 580000, 650000],
 
-    'PROCESSOR' => [
+    'CPU' => [
         'Intel Xeon Gold 6248R',
         'Intel Xeon Platinum 8280',
         'AMD EPYC 7763',
@@ -45,7 +45,7 @@ $data = [
         'Intel Xeon E-2388G'
     ],
 
-    'OPER_PAMAT' => [
+    'RAM' => [
         '64 GB DDR4 ECC',
         '128 GB DDR4 ECC',
         '256 GB DDR4 ECC',
@@ -58,7 +58,7 @@ $data = [
         '768 GB DDR4 ECC'
     ],
 
-    'VSTROY_JOSTKIY_DISK' => [
+    'BUILT_IN_HARD_DRIVE' => [
         '2x 480 GB SSD',
         '4x 960 GB SSD',
         '8x 1.92 TB SSD',
@@ -71,7 +71,7 @@ $data = [
         '24x 16 TB HDD'
     ],
 
-    'RAB_DIAP_TEMP' => [
+    'OPERATING_TEMPERATURE_RANGE' => [
         '0°C до +35°C',
         '+5°C до +40°C',
         '-10°C до +45°C',
@@ -84,7 +84,7 @@ $data = [
         '-15°C до +50°C'
     ],
 
-    'OHLOJDENIE' => [
+    'COOLING' => [
         'Пассивное воздушное охлаждение',
         'Активное воздушное охлаждение',
         'Жидкостное охлаждение',
@@ -97,7 +97,7 @@ $data = [
         'Водяное охлаждение'
     ],
 
-    'SETEVOI_KONTROLLER' => [
+    'NETWORK_CONTROLLER' => [
         'Intel X550 10GbE',
         'Broadcom 57416 10/25GbE',
         'Mellanox ConnectX-6 100GbE',
@@ -330,13 +330,13 @@ while ($element = $elements->GetNext()) {
         echo "  + CATEGORY: {$valueToSet}<br>\n";
     }
 
-    // Проверяем и заполняем NALICHIE
-    if (empty($existingProps['NALICHIE'])) {
-        $nalichieValues = [7, 8, 9];
-        $valueToSet = $nalichieValues[array_rand($nalichieValues)];
-        CIBlockElement::SetPropertyValuesEx($elementId, $iblockId, ['NALICHIE' => $valueToSet]);
-        $updatedProps[] = 'NALICHIE';
-        echo "  + NALICHIE: {$valueToSet}<br>\n";
+    // Проверяем и заполняем AVAILABILITY
+    if (empty($existingProps['AVAILABILITY'])) {
+        $AVAILABILITYValues = [7, 8, 9];
+        $valueToSet = $AVAILABILITYValues[array_rand($AVAILABILITYValues)];
+        CIBlockElement::SetPropertyValuesEx($elementId, $iblockId, ['AVAILABILITY' => $valueToSet]);
+        $updatedProps[] = 'AVAILABILITY';
+        echo "  + AVAILABILITY: {$valueToSet}<br>\n";
     }
 
     // Проверяем и заполняем TEGI_DLA_FOTO (множественное)

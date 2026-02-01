@@ -112,7 +112,7 @@ if (!empty($arResult['ITEMS'])) :?>
 
             <ul class="hm-cat--ul__CARD_PARAMS">
                 <?
-                $propsCode = ['PROCESSOR', 'OPER_PAMAT', 'VSTROY_JOSTKIY_DISK']
+                $propsCode = ['CPU', 'RAM', 'BUILT_IN_HARD_DRIVE']
                 ?>
                 <? foreach ($propsCode as $propCode): ?>
                     <? if (isset($item['PROPERTIES'][$propCode]['VALUE']) && !empty($item['PROPERTIES'][$propCode]['VALUE'])): ?>

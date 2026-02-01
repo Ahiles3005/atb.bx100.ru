@@ -21,6 +21,10 @@ $this->setFrameMode(true);
 $APPLICATION->SetPageProperty('mainid', 'card-n');
 
 
+if (file_exists(__DIR__ . '/functions.php')) {
+    require(__DIR__ . '/functions.php');
+}
+
 ?>
 
 
@@ -218,12 +222,18 @@ if (isset($arParams['USER_CONSENT_IS_LOADED'])) {
             $arFields = $element->GetFields();
             $arProps = $element->GetProperties();  // Все свойства здесь!
         }
-
-//        echo '<pre>';
-//        var_dump($arProps['SVOISTVA_DLA_DETALNO']);
-//        echo '</pre>';
+        //
+        //                echo '<pre>';
+        //                var_dump($arProps['SVOISTVA_DLA_DETALNO']);
+        //                var_dump($arProps);
+        //                echo '</pre>';
 
         $GLOBALS['CATALOG_CURRENT_ELEMENT_ID'] = $elementId;
+
+
+        $gallaryData = getSliderDataForElements($arFields, $arProps);
+
+
         ?>
 
         <div class="cd-hero--div__MAIN">
@@ -287,34 +297,35 @@ if (isset($arParams['USER_CONSENT_IS_LOADED'])) {
 
 
                     <div class="cd-hero--div__PARAMS">
-                        <?foreach($arProps['SVOISTVA_DLA_DETALNO']['~VALUE'] as $valueSerialized):?>
-                        <?$valueUnserialized = unserialize($valueSerialized);?>
+                        <? foreach ($arProps['SVOISTVA_DLA_DETALNO']['~VALUE'] as $valueSerialized): ?>
+                            <? $valueUnserialized = unserialize($valueSerialized); ?>
 
-                        <div class="cd-hero--div__PARAMS_ITEM __C-SCRL DOWN">
-                            <p class="cd-hero--p__PARAMS_NAME">
-                                <?=$valueUnserialized['VALUE'][0] ?? ''?>
-                            </p>
-                            <p class="cd-hero--p__PARAMS_MODEL">
-                                <?=$valueUnserialized['VALUE'][1] ?? ''?>
-                            </p>
-                            <p class="cd-hero--p__PARAMS_PROPS">
-                                <?=$valueUnserialized['VALUE'][2] ?? ''?>
-                            </p>
-                        </div>
-                        <?endforeach;?>
+                            <div class="cd-hero--div__PARAMS_ITEM __C-SCRL DOWN">
+                                <p class="cd-hero--p__PARAMS_NAME">
+                                    <?= $valueUnserialized['VALUE'][0] ?? '' ?>
+                                </p>
+                                <p class="cd-hero--p__PARAMS_MODEL">
+                                    <?= $valueUnserialized['VALUE'][1] ?? '' ?>
+                                </p>
+                                <p class="cd-hero--p__PARAMS_PROPS">
+                                    <?= $valueUnserialized['VALUE'][2] ?? '' ?>
+                                </p>
+                            </div>
+                        <? endforeach; ?>
                     </div>
 
 
                     <div class="cd-hero--div__IMAGES __C-SCRL DOWN">
                         <div class="cd-hero--div__IMAGES_TOP_CONT">
                             <div class="cd-hero--div__IMAGES_TOP">
-                                <img class="cd-hero--img__IMAGES_TOP" src="images/home/ATB-2100/АТБ-2100_1.webp" alt="">
+                                <img class="cd-hero--img__IMAGES_TOP"
+                                     src="<?= $gallaryData['images'][0]['original'] ?? '' ?>" alt="">
                                 <div class="cd-hero--div__CARD_TAG">
-                                    <?foreach ($arProps['TEGI_DLA_FOTO']['VALUE'] as $tag):?>
+                                    <? foreach ($arProps['TEGI_DLA_FOTO']['VALUE'] as $tag): ?>
                                         <a class="cd-hero--a__CARD_TAG" href="#">
-                                           <?=$tag?>
+                                            <?= $tag ?>
                                         </a>
-                                    <?endforeach;?>
+                                    <? endforeach; ?>
                                 </div>
 
 
@@ -346,21 +357,50 @@ if (isset($arParams['USER_CONSENT_IS_LOADED'])) {
                                         </svg>
                                     </button>
                                 </div>
-                                <img class="cd-hero--img__CARD_GISP" src="images/home/hm-cat_icon.svg" alt="ГИСП">
+                                <img class="cd-hero--img__CARD_GISP"
+                                     src="<?= SITE_TEMPLATE_PATH ?>/assets/images/home/hm-cat_icon.svg" alt="ГИСП">
+
                             </div>
                             <button class="cd-hero--button__IMAGES_TOP_CONT"></button>
                         </div>
 
 
                         <div class="cd-hero--div__IMAGES_BOTTOM">
-                            <button class="cd-hero--button__IMAGES cd-hero__IMG">
-                                <img class="cd-hero--img__IMAGES" src="images/home/ATB-2100/АТБ-2100_1.webp" alt="">
-                            </button>
-                            <button class="cd-hero--button__IMAGES cd-hero__IMG">
-                                <img class="cd-hero--img__IMAGES" src="images/home/ATB-2100/АТБ-2100_2.webp" alt="">
-                            </button>
-                            <button class="cd-hero--button__IMAGES cd-hero__VID"></button>
-                            <button class="cd-hero--button__IMAGES cd-hero__3D"></button>
+
+                            <?
+
+                            if (count($gallaryData['images']) >= 4) {
+                                $countImage = 4;
+                            } else {
+                                $countImage = count($gallaryData['images']);
+                            }
+
+                            $gallaryHaveVideo = $gallaryData['video'][0] ?? false;
+                            $gallaryHave3d = $gallaryData['3d'][0] ?? false;
+                            if ($gallaryHaveVideo) {
+                                $countImage -= 1;
+                            }
+
+                            if ($gallaryHave3d) {
+                                $countImage -= 1;
+                            }
+                            ?>
+
+
+                            <? for ($i = 0; $i < $countImage; $i++): ?>
+                                <button class="cd-hero--button__IMAGES cd-hero__IMG">
+                                    <img class="cd-hero--img__IMAGES"
+                                         src="<?= $gallaryData['images'][$i]['original'] ?>" alt="">
+                                </button>
+                            <? endfor; ?>
+
+                            <? if ($gallaryHaveVideo): ?>
+                                <button class="cd-hero--button__IMAGES cd-hero__VID"></button>
+                            <? endif; ?>
+                            <? if ($gallaryHave3d): ?>
+                                <button class="cd-hero--button__IMAGES cd-hero__3D"></button>
+                            <? endif; ?>
+
                             <button class="cd-hero--button__IMAGES cd-hero__MORE">
                                 <span>+ 6</span>
                                 <span>больше</span>
@@ -398,71 +438,31 @@ if (isset($arParams['USER_CONSENT_IS_LOADED'])) {
                         </button>
                         <div class="cd-hero--div__SWIPER swiper">
                             <div class="cd-hero--div__SWIPER_WRAPPER swiper-wrapper">
-                                <div class="cd-hero--div__SWIPER_SLIDE swiper-slide">
-                                    <img class="cd-hero--img__SWIPER_IMAGE" src="images/home/ATB-2100/АТБ-2100_1.webp"
-                                         alt="" loading="lazy">
-                                </div>
-                                <div class="cd-hero--div__SWIPER_SLIDE swiper-slide">
-                                    <img class="cd-hero--img__SWIPER_IMAGE" src="images/home/ATB-2100/АТБ-2100_2.webp"
-                                         alt="" loading="lazy">
-                                </div>
-                                <div class="cd-hero--div__SWIPER_SLIDE swiper-slide">
-                                    <img class="cd-hero--img__SWIPER_IMAGE" src="images/home/ATB-2100/АТБ-2100_3.webp"
-                                         alt="" loading="lazy">
-                                </div>
-                                <div class="cd-hero--div__SWIPER_SLIDE swiper-slide">
-                                    <img class="cd-hero--img__SWIPER_IMAGE" src="images/home/ATB-2100/АТБ-2100_4.webp"
-                                         alt="" loading="lazy">
-                                </div>
-                                <div class="cd-hero--div__SWIPER_SLIDE swiper-slide">
-                                    <img class="cd-hero--img__SWIPER_IMAGE" src="images/home/ATB-2100/АТБ-2100_5.webp"
-                                         alt="" loading="lazy">
-                                </div>
-                                <div class="cd-hero--div__SWIPER_SLIDE swiper-slide">
-                                    <img class="cd-hero--img__SWIPER_IMAGE" src="images/home/ATB-2100/АТБ-2100_6.webp"
-                                         alt="" loading="lazy">
-                                </div>
-                                <div class="cd-hero--div__SWIPER_SLIDE swiper-slide">
-                                    <img class="cd-hero--img__SWIPER_IMAGE" src="images/home/ATB-2100/АТБ-2100_3.webp"
-                                         alt="" loading="lazy">
-                                </div>
-                                <div class="cd-hero--div__SWIPER_SLIDE swiper-slide">
-                                    <img class="cd-hero--img__SWIPER_IMAGE" src="images/home/ATB-2100/АТБ-2100_4.webp"
-                                         alt="" loading="lazy">
-                                </div>
-                                <div class="cd-hero--div__SWIPER_SLIDE swiper-slide">
-                                    <img class="cd-hero--img__SWIPER_IMAGE" src="images/home/ATB-2100/АТБ-2100_5.webp"
-                                         alt="" loading="lazy">
-                                </div>
-                                <div class="cd-hero--div__SWIPER_SLIDE swiper-slide">
-                                    <img class="cd-hero--img__SWIPER_IMAGE" src="images/home/ATB-2100/АТБ-2100_6.webp"
-                                         alt="" loading="lazy">
-                                </div>
-                                <div class="cd-hero--div__SWIPER_SLIDE swiper-slide">
-                                    <img class="cd-hero--img__SWIPER_IMAGE" src="images/home/ATB-2100/АТБ-2100_3.webp"
-                                         alt="" loading="lazy">
-                                </div>
-                                <div class="cd-hero--div__SWIPER_SLIDE swiper-slide">
-                                    <img class="cd-hero--img__SWIPER_IMAGE" src="images/home/ATB-2100/АТБ-2100_4.webp"
-                                         alt="" loading="lazy">
-                                </div>
-                                <div class="cd-hero--div__SWIPER_SLIDE swiper-slide">
-                                    <video class="cd-hero--video" preload="none" width="100%" controls muted>
-                                        <source src="video/vp-specs-video.webm" type="video/webm">
-                                        <source src="video/vp-specs-video.mp4" type="video/mp4">
-                                        Ваш браузер не поддерживает встроенные видео.
-                                    </video>
-                                </div>
-                                <div class="cd-hero--div__SWIPER_SLIDE swiper-slide">
-                                    <video class="cd-hero--video" preload="none" width="100%" controls muted>
-                                        <source src="video/vp-specs-video.webm" type="video/webm">
-                                        <source src="video/vp-specs-video.mp4" type="video/mp4">
-                                        Ваш браузер не поддерживает встроенные видео.
-                                    </video>
-                                </div>
-                                <div class="cd-hero--div__SWIPER_SLIDE swiper-slide">
-                                    <canvas class="cd-hero--canvas" data-d="3d/images/atom.glb"></canvas>
-                                </div>
+                                <? foreach ($gallaryData['images'] as $image): ?>
+                                    <div class="cd-hero--div__SWIPER_SLIDE swiper-slide">
+                                        <img class="cd-hero--img__SWIPER_IMAGE" src="<?= $image['original'] ?>"
+                                             alt="" loading="lazy">
+                                    </div>
+                                <? endforeach; ?>
+
+                                <? foreach ($gallaryData['video'] as $video): ?>
+
+                                    <div class="cd-hero--div__SWIPER_SLIDE swiper-slide">
+                                        <video class="cd-hero--video" preload="none" width="100%" controls muted>
+                                            <source src="<?= $video['src'] ?>" type="<?= $video['type'] ?>">
+                                            Ваш браузер не поддерживает встроенные видео.
+                                        </video>
+                                    </div>
+                                <? endforeach; ?>
+
+                                <? foreach ($gallaryData['3d'] as $d3): ?>
+
+                                    <div class="cd-hero--div__SWIPER_SLIDE swiper-slide">
+                                        <canvas class="cd-hero--canvas" data-d="<?= $d3 ?>"></canvas>
+                                    </div>
+                                <? endforeach; ?>
+
+
                             </div>
                         </div>
 
