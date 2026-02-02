@@ -573,145 +573,8 @@ if (isset($arParams['USER_CONSENT_IS_LOADED'])) {
         <div class="cd-abt--div__SWIPER2 swiper __C-SCRL DOWN">
             <div class="cd-abt--div__SWIPER2_WRAPPER swiper-wrapper">
                 <div class="cd-abt--div__SWIPER2_SLIDE swiper-slide">
-                    <p class="cd-abt--p__SWIPER2_SLIDE1_1">
-                        АТБ-АТОМ-1 является сетевой вычислительной платформой,
-                        включённой в единый реестр российской радиоэлектронной
-                        продукции (ПП РФ №878 от 10.07.2019), что допускает
-                        применение на объектах критической информационной
-                        инфраструктуры.
-                    </p>
-                    <p class="cd-abt--p__SWIPER2_SLIDE1_2">
-                        <a class="cd-abt--a__SWIPER2_SLIDE1_2" href="#">
-                            Платформа совместима с российскими операционными системами
-                        </a>
-                        и может использоваться в роли маршрутизатора, межсетевого
-                        экрана или шлюза совместно со специализированным российским ПО.
-                        АТБ-АТОМ-1 поддерживает до 8 Гб оперативной памяти и до 256 Гб
-                        накопителя SSD.
-                    </p>
 
-                    <div class="cd-abt--div__SWIPER2_SLIDE1_3">
-                        <p class="cd-abt--p__SWIPER2_SLIDE1_TOP">
-                            Под требования заказчика АТБ-АТОМ-1 может быть доукомплектован опциональными модулями:
-                        </p>
-
-                        <ul class="cd-abt--ul__SWIPER2_SLIDE1_3">
-                            <li class="cd-abt--li__SWIPER2_SLIDE1_3">
-                                <div class="cd-abt--div__POINT"></div>
-                                <span class="cd-abt--li__SWIPER2_SLIDE1_3">
-                                            АТБ-WiFi/BT - модуль беспроводной передачи данных WiFi/BT с внешней антенной;
-                                        </span>
-                            </li>
-                            <li class="cd-abt--li__SWIPER2_SLIDE1_3">
-                                <div class="cd-abt--div__POINT"></div>
-                                <span class="cd-abt--li__SWIPER2_SLIDE1_3">
-                                            АТБ-LTE (GPS) – модуль LTE (GPS) с внешней антенной и слотом под SIM-карту;
-                                        </span>
-                            </li>
-                            <li class="cd-abt--li__SWIPER2_SLIDE1_3">
-                                <div class="cd-abt--div__POINT"></div>
-                                <span class="cd-abt--li__SWIPER2_SLIDE1_3">
-                                            АТБ-AUDIO – аудио-карта с динамиком или разъемами Audio-jack 3.5 мм;
-                                        </span>
-                            </li>
-                            <li class="cd-abt--li__SWIPER2_SLIDE1_3">
-                                <div class="cd-abt--div__POINT"></div>
-                                <span class="cd-abt--li__SWIPER2_SLIDE1_3">
-                                            АТБ-МУВВ — модуль мониторинга условий эксплуатации и внешних воздействий (t◦C, U, мех. воздействия, вскрытия);
-                                        </span>
-                            </li>
-                            <li class="cd-abt--li__SWIPER2_SLIDE1_3">
-                                <div class="cd-abt--div__POINT"></div>
-                                <span class="cd-abt--li__SWIPER2_SLIDE1_3">
-                                            АТБ-GSM — GSM-модем отечественного производства;
-                                        </span>
-                            </li>
-                            <li class="cd-abt--li__SWIPER2_SLIDE1_3">
-                                <div class="cd-abt--div__POINT"></div>
-                                <span class="cd-abt--li__SWIPER2_SLIDE1_3">
-                                            АТБ-LW — базовая станция LoRaWAN.
-                                        </span>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="cd-abt--div__SWIPER2_SLIDE1_4">
-                        <p class="cd-abt--p__SWIPER2_SLIDE1_TOP">
-                            Сочетание технических параметров, форм-фактора и условий эксплуатации открывают возможности
-                            для применения АТБ-АТОМ-1 и в различных сферах:
-                        </p>
-
-                        <ul class="cd-abt--ul__SWIPER2_SLIDE1_4_1">
-                            <li class="cd-abt--li__SWIPER2_SLIDE1_4_1">
-                                <svg class="cd-abt--svg__CORNER" width="9" height="10" viewBox="0 0 9 10" fill="none"
-                                     xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                            d="M8.29289 2.40703C8.92286 1.77707 8.47669 0.699922 7.58579 0.699922L0.999999 0.699922C0.447714 0.699922 -5.36129e-07 1.14764 -5.60271e-07 1.69992L-8.48144e-07 8.28571C-8.87087e-07 9.17661 1.07714 9.62278 1.70711 8.99281L8.29289 2.40703Z"
-                                            fill="#62BE37"/>
-                                </svg>
-
-                                <div class="cd-abt--div__SWIPER2_SLIDE1_4_1_TEXT">
-                                    <p class="cd-abt--p__SWIPER2_SLIDE1_4_1_TEXT1">
-                                        В системах информационной безопасности
-                                    </p>
-                                    <p class="cd-abt--p__SWIPER2_SLIDE1_4_1_TEXT2">
-                                        в роли межсетевого экрана, шлюза, ловушки, монитора сетевых запросов и трафика;
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="cd-abt--li__SWIPER2_SLIDE1_4_1">
-                                <svg class="cd-abt--svg__CORNER" width="9" height="10" viewBox="0 0 9 10" fill="none"
-                                     xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                            d="M8.29289 2.40703C8.92286 1.77707 8.47669 0.699922 7.58579 0.699922L0.999999 0.699922C0.447714 0.699922 -5.36129e-07 1.14764 -5.60271e-07 1.69992L-8.48144e-07 8.28571C-8.87087e-07 9.17661 1.07714 9.62278 1.70711 8.99281L8.29289 2.40703Z"
-                                            fill="#62BE37"/>
-                                </svg>
-
-                                <div class="cd-abt--div__SWIPER2_SLIDE1_4_1_TEXT">
-                                    <p class="cd-abt--p__SWIPER2_SLIDE1_4_1_TEXT1">
-                                        В системах контроля доступа и видеонаблюдения
-                                    </p>
-                                    <p class="cd-abt--p__SWIPER2_SLIDE1_4_1_TEXT2">
-                                        в роли вычислительного узла сбора данных, управления и маршрутизациа;
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="cd-abt--li__SWIPER2_SLIDE1_4_1">
-                                <svg class="cd-abt--svg__CORNER" width="9" height="10" viewBox="0 0 9 10" fill="none"
-                                     xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                            d="M8.29289 2.40703C8.92286 1.77707 8.47669 0.699922 7.58579 0.699922L0.999999 0.699922C0.447714 0.699922 -5.36129e-07 1.14764 -5.60271e-07 1.69992L-8.48144e-07 8.28571C-8.87087e-07 9.17661 1.07714 9.62278 1.70711 8.99281L8.29289 2.40703Z"
-                                            fill="#62BE37"/>
-                                </svg>
-
-                                <div class="cd-abt--div__SWIPER2_SLIDE1_4_1_TEXT">
-                                    <p class="cd-abt--p__SWIPER2_SLIDE1_4_1_TEXT1">
-                                        в банкоматах, платежных автоматах и постаматах
-                                    </p>
-                                    <p class="cd-abt--p__SWIPER2_SLIDE1_4_1_TEXT2">
-                                        в роли межсетевого экрана, шлюза, маршрутизатора, вычислительного узла;
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="cd-abt--li__SWIPER2_SLIDE1_4_1">
-                                <svg class="cd-abt--svg__CORNER" width="9" height="10" viewBox="0 0 9 10" fill="none"
-                                     xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                            d="M8.29289 2.40703C8.92286 1.77707 8.47669 0.699922 7.58579 0.699922L0.999999 0.699922C0.447714 0.699922 -5.36129e-07 1.14764 -5.60271e-07 1.69992L-8.48144e-07 8.28571C-8.87087e-07 9.17661 1.07714 9.62278 1.70711 8.99281L8.29289 2.40703Z"
-                                            fill="#62BE37"/>
-                                </svg>
-
-                                <div class="cd-abt--div__SWIPER2_SLIDE1_4_1_TEXT">
-                                    <p class="cd-abt--p__SWIPER2_SLIDE1_4_1_TEXT1">
-                                        на прозводстве и в офисе
-                                    </p>
-                                    <p class="cd-abt--p__SWIPER2_SLIDE1_4_1_TEXT2">
-                                        в роли рабочего автоматизированного места, терминала или тонкого клиента.
-                                    </p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
+                    <?= htmlspecialchars_decode($arFields['DETAIL_TEXT']) ?>
                 </div>
 
 
@@ -729,149 +592,42 @@ if (isset($arParams['USER_CONSENT_IS_LOADED'])) {
                             </button>
 
                             <div class="cd-abt--div__TABLE_BODY">
-                                <div class="cd-abt--div__TABLE_ITEM">
-                                    <p class="cd-abt--p__TABLE_ITEM_NAME">
-                                        Процессор
-                                    </p>
-                                    <p class="cd-abt--p__TABLE_ITEM_TEXT">
-                                        Intel Atom E3845 — 4 ядра, 2 Мб кэш, 1.91 ГГц
-                                    </p>
-                                </div>
-                                <div class="cd-abt--div__TABLE_ITEM">
-                                    <p class="cd-abt--p__TABLE_ITEM_NAME">
-                                        Оперативная память
-                                    </p>
-                                    <p class="cd-abt--p__TABLE_ITEM_TEXT">
-                                        DDR3L SODIMM до 8 Гб
-                                    </p>
-                                </div>
-                                <div class="cd-abt--div__TABLE_ITEM">
-                                    <p class="cd-abt--p__TABLE_ITEM_NAME">
-                                        Встроенный жесткий диск
-                                    </p>
-                                    <p class="cd-abt--p__TABLE_ITEM_TEXT">
-                                        SSD М.2 2242 до 256 Гб
-                                    </p>
-                                </div>
-                                <div class="cd-abt--div__TABLE_ITEM">
-                                    <p class="cd-abt--p__TABLE_ITEM_NAME">
-                                        Сетевые интерфейсы
-                                    </p>
-                                    <p class="cd-abt--p__TABLE_ITEM_TEXT">
-                                        3 x Ethernet 1G/100M RJ45
-                                    </p>
-                                </div>
-                                <div class="cd-abt--div__TABLE_ITEM">
-                                    <p class="cd-abt--p__TABLE_ITEM_NAME">
-                                        Слоты расширения
-                                    </p>
-                                    <ul class="cd-abt--ul__TABLE_ITEM_TEXT">
-                                        <li class="cd-abt--li__TABLE_ITEM_TEXT">
-                                            <div class="cd-abt--div__POINT"></div>
-                                            <span class="cd-abt--span__TABLE_ITEM_TEXT">
-                                                        1 x mini PCIe (интерфейсы PCIe, USB 2.0, SPI, SIM, I2C);
+                                <?
+                                $horPropUnserialized = unserialize($arProps['OSNOV_HARAKTR']['~VALUE']);
+
+                                $horProp = $horPropUnserialized['VALUE'] ?? [];
+                                ?>
+                                <? foreach ($horProp as $propKey): ?>
+                                    <?
+                                    $propValue = $arProps[$propKey] ?? [];
+                                    if (empty($propValue['VALUE'] ?? [])) {
+                                        continue;
+                                    } ?>
+
+                                    <div class="cd-abt--div__TABLE_ITEM">
+                                        <p class="cd-abt--p__TABLE_ITEM_NAME">
+                                            <?= $propValue['NAME'] ?>
+                                        </p>
+                                        <? if (!is_array($propValue['VALUE'])): ?>
+                                            <p class="cd-abt--p__TABLE_ITEM_TEXT">
+                                                <?= $propValue['VALUE'] ?>
+                                            </p>
+                                        <? else: ?>
+                                            <ul class="cd-abt--ul__TABLE_ITEM_TEXT">
+                                                <? foreach ($propValue['VALUE'] as $val): ?>
+                                                    <li class="cd-abt--li__TABLE_ITEM_TEXT">
+                                                        <div class="cd-abt--div__POINT"></div>
+                                                        <span class="cd-abt--span__TABLE_ITEM_TEXT">
+                                                        <?= $val ?>
                                                     </span>
-                                        </li>
-                                        <li class="cd-abt--li__TABLE_ITEM_TEXT">
-                                            <div class="cd-abt--div__POINT"></div>
-                                            <span class="cd-abt--span__TABLE_ITEM_TEXT">
-                                                        1 x PLS-5 (интерфейс USB 2.0)
-                                                    </span>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="cd-abt--div__TABLE_ITEM">
-                                    <p class="cd-abt--p__TABLE_ITEM_NAME">
-                                        Консольный порт
-                                    </p>
-                                    <p class="cd-abt--p__TABLE_ITEM_TEXT">
-                                        1 x RS-232C (RJ-45)
-                                    </p>
-                                </div>
-                                <div class="cd-abt--div__TABLE_ITEM">
-                                    <p class="cd-abt--p__TABLE_ITEM_NAME">
-                                        Аудио интерфейс
-                                    </p>
-                                    <ul class="cd-abt--ul__TABLE_ITEM_TEXT">
-                                        <li class="cd-abt--li__TABLE_ITEM_TEXT">
-                                            <div class="cd-abt--div__POINT"></div>
-                                            <span class="cd-abt--span__TABLE_ITEM_TEXT">
-                                                        1 x выход для наушников или внешних динамиков (опция);
-                                                    </span>
-                                        </li>
-                                        <li class="cd-abt--li__TABLE_ITEM_TEXT">
-                                            <div class="cd-abt--div__POINT"></div>
-                                            <span class="cd-abt--span__TABLE_ITEM_TEXT">
-                                                        1 x вход микрофона (опция);
-                                                    </span>
-                                        </li>
-                                        <li class="cd-abt--li__TABLE_ITEM_TEXT">
-                                            <div class="cd-abt--div__POINT"></div>
-                                            <span class="cd-abt--span__TABLE_ITEM_TEXT">
-                                                        1 х встроенный динамик (опция)
-                                                    </span>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="cd-abt--div__TABLE_ITEM">
-                                    <p class="cd-abt--p__TABLE_ITEM_NAME">
-                                        Программное обеспечение
-                                    </p>
-                                    <p class="cd-abt--p__TABLE_ITEM_TEXT">
-                                        Базовая система ввода-вывода АТОМ (BIOS UEFI / LEGACY с подготовкой к установке
-                                        ОС)
-                                    </p>
-                                </div>
-                                <div class="cd-abt--div__TABLE_ITEM">
-                                    <p class="cd-abt--p__TABLE_ITEM_NAME">
-                                        Сетевые контроллеры
-                                    </p>
-                                    <ul class="cd-abt--ul__TABLE_ITEM_TEXT">
-                                        <li class="cd-abt--li__TABLE_ITEM_TEXT">
-                                            <div class="cd-abt--div__POINT"></div>
-                                            <span class="cd-abt--span__TABLE_ITEM_TEXT">
-                                                        АТБ-АТОМ-1.3 - 3 x GBE (i226)
-                                                    </span>
-                                        </li>
-                                        <li class="cd-abt--li__TABLE_ITEM_TEXT">
-                                            <div class="cd-abt--div__POINT"></div>
-                                            <span class="cd-abt--span__TABLE_ITEM_TEXT">
-                                                        АТБ-АТОМ-1.3 - 3 x GBE (i226)
-                                                    </span>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="cd-abt--div__TABLE_ITEM">
-                                    <p class="cd-abt--p__TABLE_ITEM_NAME">
-                                        АТБ-АТОМ-1.3 - 3 x GBE (i226)
-                                    </p>
-                                    <ul class="cd-abt--ul__TABLE_ITEM_TEXT">
-                                        <li class="cd-abt--li__TABLE_ITEM_TEXT">
-                                            <div class="cd-abt--div__POINT"></div>
-                                            <span class="cd-abt--span__TABLE_ITEM_TEXT">
-                                                        АТБ-АТОМ-1.3 - 3 x GBE (i226)
-                                                    </span>
-                                        </li>
-                                        <li class="cd-abt--li__TABLE_ITEM_TEXT">
-                                            <div class="cd-abt--div__POINT"></div>
-                                            <span class="cd-abt--span__TABLE_ITEM_TEXT">
-                                                        АТБ-АТОМ-1.3 - 3 x GBE (i226)
-                                                    </span>
-                                        </li>
-                                        <li class="cd-abt--li__TABLE_ITEM_TEXT">
-                                            <div class="cd-abt--div__POINT"></div>
-                                            <span class="cd-abt--span__TABLE_ITEM_TEXT">
-                                                        АТБ-АТОМ-1.3 - 3 x GBE (i226)
-                                                    </span>
-                                        </li>
-                                        <li class="cd-abt--li__TABLE_ITEM_TEXT">
-                                            <div class="cd-abt--div__POINT"></div>
-                                            <span class="cd-abt--span__TABLE_ITEM_TEXT">
-                                                        АТБ-АТОМ-1.3 - 3 x GBE (i226)
-                                                    </span>
-                                        </li>
-                                    </ul>
-                                </div>
+                                                    </li>
+                                                <? endforeach; ?>
+
+                                            </ul>
+                                        <? endif; ?>
+                                    </div>
+                                <? endforeach; ?>
+
                             </div>
                         </div>
 
@@ -888,57 +644,43 @@ if (isset($arParams['USER_CONSENT_IS_LOADED'])) {
                             </button>
 
                             <div class="cd-abt--div__TABLE_BODY">
-                                <div class="cd-abt--div__TABLE_ITEM">
-                                    <p class="cd-abt--p__TABLE_ITEM_NAME">
-                                        Видео интерфейс
-                                    </p>
-                                    <ul class="cd-abt--ul__TABLE_ITEM_TEXT">
-                                        <li class="cd-abt--li__TABLE_ITEM_TEXT">
-                                            <div class="cd-abt--div__POINT"></div>
-                                            <span class="cd-abt--span__TABLE_ITEM_TEXT">
-                                                        1 x HDMI 2.1;
+                                <div class="cd-abt--div__TABLE_BODY">
+                                    <?
+                                    $horPropUnserialized = unserialize($arProps['OPCII']['~VALUE']);
+
+                                    $horProp = $horPropUnserialized['VALUE'] ?? [];
+                                    ?>
+                                    <? foreach ($horProp as $propKey): ?>
+                                        <?
+                                        $propValue = $arProps[$propKey] ?? [];
+                                        if (empty($propValue['VALUE'] ?? [])) {
+                                            continue;
+                                        } ?>
+
+                                        <div class="cd-abt--div__TABLE_ITEM">
+                                            <p class="cd-abt--p__TABLE_ITEM_NAME">
+                                                <?= $propValue['NAME'] ?>
+                                            </p>
+                                            <? if (!is_array($propValue['VALUE'])): ?>
+                                                <p class="cd-abt--p__TABLE_ITEM_TEXT">
+                                                    <?= $propValue['VALUE'] ?>
+                                                </p>
+                                            <? else: ?>
+                                                <ul class="cd-abt--ul__TABLE_ITEM_TEXT">
+                                                    <? foreach ($propValue['VALUE'] as $val): ?>
+                                                        <li class="cd-abt--li__TABLE_ITEM_TEXT">
+                                                            <div class="cd-abt--div__POINT"></div>
+                                                            <span class="cd-abt--span__TABLE_ITEM_TEXT">
+                                                        <?= $val ?>
                                                     </span>
-                                        </li>
-                                        <li class="cd-abt--li__TABLE_ITEM_TEXT">
-                                            <div class="cd-abt--div__POINT"></div>
-                                            <span class="cd-abt--span__TABLE_ITEM_TEXT">
-                                                        1080p@120Гц и 4096x2304@60Гц Mali-G610
-                                                    </span>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="cd-abt--div__TABLE_ITEM">
-                                    <p class="cd-abt--p__TABLE_ITEM_NAME">
-                                        Модуль расширения
-                                    </p>
-                                    <ul class="cd-abt--ul__TABLE_ITEM_TEXT">
-                                        <li class="cd-abt--li__TABLE_ITEM_TEXT">
-                                            <div class="cd-abt--div__POINT"></div>
-                                            <span class="cd-abt--span__TABLE_ITEM_TEXT">
-                                                        Слот 1 (mPCIe): USB 2.0, PCIе x 1, SPI, I2C, SIM1 или SIM2;
-                                                    </span>
-                                        </li>
-                                        <li class="cd-abt--li__TABLE_ITEM_TEXT">
-                                            <div class="cd-abt--div__POINT"></div>
-                                            <span class="cd-abt--span__TABLE_ITEM_TEXT">
-                                                        Слот 2 (mPCIe): USB 2.0, PCIе x 1, I2C, SIM2;
-                                                    </span>
-                                        </li>
-                                        <li class="cd-abt--li__TABLE_ITEM_TEXT">
-                                            <div class="cd-abt--div__POINT"></div>
-                                            <span class="cd-abt--span__TABLE_ITEM_TEXT">
-                                                        Слот 3 (M.2 2280): PCIе x 1, SATA, USB 2.0;
-                                                    </span>
-                                        </li>
-                                        <li class="cd-abt--li__TABLE_ITEM_TEXT">
-                                            <div class="cd-abt--div__POINT"></div>
-                                            <span class="cd-abt--span__TABLE_ITEM_TEXT">
-                                                        2 х внутренних слота расширения сетевых интерфейсов: 2xPCIe x1 Lane,
-                                                        2 x USB2.0, 1 x UART 4 pin, 1 x SPI, 1 x I2C; 1xPCIe x1 Lane, 2 x USB2.0,
-                                                        1 x UART 4 pin, 1 x SPI, 1 x I2C, 1 x I2S
-                                                    </span>
-                                        </li>
-                                    </ul>
+                                                        </li>
+                                                    <? endforeach; ?>
+
+                                                </ul>
+                                            <? endif; ?>
+                                        </div>
+                                    <? endforeach; ?>
+
                                 </div>
                             </div>
                         </div>
@@ -1039,19 +781,19 @@ if (isset($arParams['USER_CONSENT_IS_LOADED'])) {
         </div>
 
 
-        <div class="cdn-abt--div__GATHER __C-SCRL RIGHT">
-            <h3 class="cdn-abt--h3">
-                Собери свою конфигурацию
-            </h3>
-            <p class="cdn-abt--p__GATHER">
-                Вы можете выбрать необходиме опции
-                и собрать конфигурацию в соответствии
-                с вашими задачами на странице серии продукта
-            </p>
-            <a class="cdn-abt--a__GATHER" href="#">
-                ПЕРЕЙТИ
-            </a>
-        </div>
+        <!--        <div class="cdn-abt--div__GATHER __C-SCRL RIGHT">-->
+        <!--            <h3 class="cdn-abt--h3">-->
+        <!--                Собери свою конфигурацию-->
+        <!--            </h3>-->
+        <!--            <p class="cdn-abt--p__GATHER">-->
+        <!--                Вы можете выбрать необходиме опции-->
+        <!--                и собрать конфигурацию в соответствии-->
+        <!--                с вашими задачами на странице серии продукта-->
+        <!--            </p>-->
+        <!--            <a class="cdn-abt--a__GATHER" href="#">-->
+        <!--                ПЕРЕЙТИ-->
+        <!--            </a>-->
+        <!--        </div>-->
     </div>
 </section>
 

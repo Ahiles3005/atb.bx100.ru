@@ -122,9 +122,111 @@ $data = [
         rand(1111111, 99999999),
     ],
 
+    // Сетевой интерфейс = NETWORK_INTERFACE
+    'NETWORK_INTERFACE' => [
+        '3 x Ethernet 1G/100M RJ45',
+        '2 x Ethernet 10G SFP+ + 2 x Ethernet 1G RJ45',
+        '4 x Ethernet 1G/100M/10M RJ45',
+        '1 x Ethernet 10G SFP+ + 4 x Ethernet 1G RJ45',
+        '2 x Ethernet 10GbE RJ45 + 2 x Ethernet 1GbE RJ45',
+        '8 x Ethernet 1G/100M RJ45',
+        '1 x Ethernet 25G SFP28 + 2 x Ethernet 1G RJ45',
+        '6 x Ethernet 1G/100M/10M RJ45 с поддержкой PoE',
+        '2 x Ethernet 10G SFP+ + 4 x Ethernet 1G/100M RJ45',
+        '4 x Ethernet 10G SFP+',
+    ],
 
+    // Слоты расширения = EXPANSION_SLOTS (множественное)
+    'EXPANSION_SLOTS' => [
+        [
+            '1 x mini PCIe (интерфейсы PCIe, USB 2.0, SPI, SIM, I2C); 1 x PLS-5 (интерфейс USB 2.0)',
+            '2 x mini PCIe (PCIe x1, USB 2.0, SIM); 1 x M.2 2242 (SATA/PCIe)',
+            '1 x PCIe x8 слот; 2 x mini PCIe',
+            '3 x mini PCIe (PCIe, USB, SPI, I2C, SIM); 1 x mSATA',
+            '2 x PCIe x4 слота; 1 x mini PCIe',
+            '1 x PCIe x16 слот; 2 x mini PCIe (с поддержкой SIM)',
+            '4 x mini PCIe с различными интерфейсами (PCIe, USB, SPI, I2C)',
+            '1 x PCIe x8 + 1 x PCIe x4; 2 x mini PCIe',
+            '2 x mPCIe + 1 x M.2 2280 (PCIe x1, SATA, USB 2.0)',
+            'Слот 1 (mPCIe): USB 2.0, PCIе x 1, SPI, I2C, SIM1 или SIM2; Слот 2 (mPCIe): USB 2.0, PCIе x 1, I2C, SIM2; Слот 3 (M.2 2280): PCIе x 1, SATA, USB 2.0',
+        ],
+    ],
 
+    // Консольный порт = CONSOLE_PORT
+    'CONSOLE_PORT' => [
+        '1 x RS-232C (RJ-45)',
+        '1 x RS-232 (DB9)',
+        '1 x RS-485 (клеммная колодка)',
+        '1 x USB Console (micro-USB)',
+        '1 x RS-232/485 (переключаемый)',
+        '2 x RS-232C (RJ-45)',
+        '1 x RS-422/485 (витая пара)',
+        '1 x USB-C Console',
+        '1 x RJ-45 Console (совместим с Cisco)',
+        '1 x RS-232 (DB9) + 1 x RJ-45 Console',
+    ],
 
+    // Аудио интерфейс = AUDIO_INTERFACE (множественное)
+    'AUDIO_INTERFACE' => [
+        [
+            '1 x выход для наушников или внешних динамиков (опция); 1 x вход микрофона (опция); 1 х встроенный динамик (опция)',
+            '1 x линейный выход (Line Out); 1 x линейный вход (Line In); 1 x встроенный микрофон',
+            '1 x HDMI Audio; 1 x разъем 3.5мм для наушников',
+            '2 x динамика 2W; 1 x микрофонный вход',
+            '1 x выход на динамики 4 Ом; 1 x вход микрофона с усилением',
+            'Поддержка HDMI Audio с поддержкой 7.1; 1 x оптический выход',
+            '1 x аналоговый выход 3.5мм; встроенный моно динамик',
+            '2 x линии Line Out; 1 x микрофонный вход с поддержкой Phantom Power',
+            'HDMI Audio + 1 x 3.5mm стерео выход',
+            'Встроенный стерео динамик 2x3W; 1 x вход для микрофона',
+        ],
+    ],
+
+    // Программное обеспечение = SOFTWARE
+    'SOFTWARE' => [
+        'Базовая система ввода-вывода АТОМ (BIOS UEFI / LEGACY с подготовкой к установке ОС)',
+        'UEFI BIOS с поддержкой Secure Boot; ACM (Authenticated Code Module)',
+        'BIOS с функцией автоматического восстановления после сбоев',
+        'Прошивка UEFI 2.7 с поддержкой Legacy Mode; драйверы для Linux/Windows',
+        'Система BIOS с поддержкой удаленного управления (IPMI 2.0)',
+        'UEFI Firmware с функцией Platform Trust Technology (PTT)',
+        'BIOS с поддержкой Wake-on-LAN; автоматическое восстановление питания',
+        'Прошивка с поддержкой TPM 2.0; комплект драйверов для Windows Server',
+        'BIOS UEFI с графическим интерфейсом и поддержкой мыши',
+        'Система BIOS с функцией автоматического отключения при перегреве',
+    ],
+
+    // Видео интерфейс = VIDEO_INTERFACE (множественное)
+    'VIDEO_INTERFACE' => [
+        [
+            '1 x HDMI 2.1; 1080p@120Гц и 4096x2304@60Гц Mali-G610',
+            '2 x HDMI 2.0; 4K@60Гц; поддержка 3 независимых дисплеев',
+            '1 x DisplayPort 1.4; 5K@60Гц; HDMI 2.0 выход',
+            '1 x VGA + 1 x HDMI 1.4; поддержка двух мониторов',
+            '2 x DP++ (DisplayPort++) + 1 x HDMI 2.1',
+            '1 x LVDS (для встроенного дисплея) + 1 x HDMI 2.0',
+            '3 x HDMI 1.4b + 1 x еDP (внутренний дисплей)',
+            '1 x USB Type-C с поддержкой DisplayPort Alt Mode',
+            'DVI-I + HDMI 2.0 + VGA через адаптер',
+            '1 x HDMI 2.1 + 1 x DisplayPort 1.4; поддержка HDR10',
+        ],
+    ],
+
+    // Модуль расширения = EXPANSION_MODULE (множественное)
+    'EXPANSION_MODULE' => [
+        [
+            'Слот 1 (mPCIe): USB 2.0, PCIе x 1, SPI, I2C, SIM1 или SIM2; Слот 2 (mPCIe): USB 2.0, PCIе x 1, I2C, SIM2; Слот 3 (M.2 2280): PCIе x 1, SATA, USB 2.0; 2 х внутренних слота расширения сетевых интерфейсов: 2xPCIe x1 Lane, 2 x USB2.0, 1 x UART 4 pin, 1 x SPI, 1 x I2C; 1xPCIe x1 Lane, 2 x USB2.0, 1 x UART 4 pin, 1 x SPI, 1 x I2C, 1 x I2S',
+            'Слот 1: mini-PCIe (USB 2.0, PCIe x1); Слот 2: mini-PCIe (USB 2.0, PCIe x1, SIM); Слот 3: M.2 2230 (WiFi/BT)',
+            '4 x слота расширения: 2x PCIe x1, 1x PCIe x4, 1x mini-PCIe',
+            'Система модулей: слот A (PCIe x4), слот B (PCIe x2), 2 x слота mini-PCIe с поддержкой SIM',
+            'Модульная система: 2 x слота M.2 2280 (PCIe/SATA), 1 x mini-PCIe',
+            '3 x PCIe слота (x8, x4, x1), 1 x слот для модуля WiFi',
+            '2 x слота расширения PCIe x8 + 2 x mini-PCIe с поддержкой различных интерфейсов',
+            'Слоты: 1 x PCIe x16, 2 x mini-PCIe, 1 x M.2 для SSD',
+            '4 x слота mini-PCIe с различными конфигурациями (PCIe, USB, SPI, I2C, SIM)',
+            'Система модулей расширения: основной слот PCIe x8, дополнительный PCIe x4, 2 x mini-PCIe',
+        ],
+    ],
 ];
 
 // ============================================================================
@@ -267,13 +369,40 @@ function loadFilesToProperty($elementId, $iblockId, $propCode, $filesArray, $max
     return $fileIds;
 }
 
+/**
+ * Загружает детальное описание из HTML файла
+ *
+ * @param int $elementId ID элемента инфоблока
+ * @return string|null Содержимое файла или null в случае ошибки
+ */
+function loadDetailTextFromHtml($elementId)
+{
+    // Определяем путь к файлу в той же директории, где находится этот скрипт
+    $scriptDir = dirname(__FILE__);
+    $htmlFilePath = $scriptDir . '/detail_text.html';
+
+    if (!file_exists($htmlFilePath)) {
+        echo "  warning: HTML файл не найден: {$htmlFilePath}<br>\n";
+        return null;
+    }
+
+    $content = file_get_contents($htmlFilePath);
+
+    if ($content === false) {
+        echo "  error: Не удалось прочитать HTML файл: {$htmlFilePath}<br>\n";
+        return null;
+    }
+
+    return $content;
+}
+
 // Получаем все элементы инфоблока
 $elements = CIBlockElement::GetList(
     ['ID' => 'ASC'],
     ['IBLOCK_ID' => $iblockId, 'ACTIVE' => 'Y'],
     false,
     false,
-    ['ID', 'NAME', 'IBLOCK_ID']
+    ['ID', 'NAME', 'IBLOCK_ID', 'DETAIL_TEXT']
 );
 
 echo "Начинаем обработку элементов...<br>\n";
@@ -283,6 +412,7 @@ $counter = 0;
 
 while ($element = $elements->GetNext()) {
     $elementId = $element['ID'];
+    $elementName = $element['NAME'];
     $updatedProps = [];
 
     echo "Элемент ID: {$elementId}<br>\n";
@@ -314,10 +444,25 @@ while ($element = $elements->GetNext()) {
         $propValue = $existingProps[$propCode] ?? null;
 
         if (empty($propValue)) {
-            $valueToSet = $values[array_rand($values)];
+            // Для множественных свойств берем случайный элемент из вложенного массива
+            if (is_array($values) && isset($values[0]) && is_array($values[0])) {
+                // Множественное свойство (массив массивов)
+                $valueToSet = $values[array_rand($values)];
+                $valueToSet = array_map(function ($item) {
+                    return ['VALUE' => $item];
+                }, $valueToSet);
+            } else {
+                $valueToSet = $values[array_rand($values)];
+            }
+
             CIBlockElement::SetPropertyValuesEx($elementId, $iblockId, [$propCode => $valueToSet]);
             $updatedProps[] = $propCode;
-            echo "  + {$propCode}: {$valueToSet}<br>\n";
+
+            if (is_array($valueToSet)) {
+                echo "  + {$propCode}: [множественное значение]<br>\n";
+            } else {
+                echo "  + {$propCode}: {$valueToSet}<br>\n";
+            }
         }
     }
 
@@ -384,6 +529,36 @@ while ($element = $elements->GetNext()) {
     }
 
     // ============================================================================
+    // ЗАПОЛНЕНИЕ СВОЙСТВ OSNOV_HARAKTR И OPCII
+    // ============================================================================
+
+    // Проверяем и заполняем OSNOV_HARAKTR (множественное свойство с 7 подпунктами)
+    if (empty($existingProps['OSNOV_HARAKTR']) || !array_filter($existingProps['OSNOV_HARAKTR'])) {
+        $osnovHaraktrKeys = [
+            'SOFTWARE',
+            'AUDIO_INTERFACE',
+            'CONSOLE_PORT',
+            'EXPANSION_SLOTS',
+            'NETWORK_INTERFACE',
+            'NETWORK_CONTROLLER',
+            'OPERATING_TEMPERATURE_RANGE'
+        ];
+
+        CIBlockElement::SetPropertyValuesEx($elementId, $iblockId, ['OSNOV_HARAKTR' => json_encode($osnovHaraktrKeys)]);
+        $updatedProps[] = 'OSNOV_HARAKTR';
+        echo "  + OSNOV_HARAKTR: 7 подпунктов<br>\n";
+    }
+
+    // Проверяем и заполняем OPCII (множественное свойство с 2 подпунктами)
+    if (empty($existingProps['OPCII']) || !array_filter($existingProps['OPCII'])) {
+        $opciiKeys = ['EXPANSION_MODULE', 'VIDEO_INTERFACE'];
+
+        CIBlockElement::SetPropertyValuesEx($elementId, $iblockId, ['OPCII' => json_encode($opciiKeys)]);
+        $updatedProps[] = 'OPCII';
+        echo "  + OPCII: 2 подпункта<br>\n";
+    }
+
+    // ============================================================================
     // ЗАГРУЗКА ФАЙЛОВ В СВОЙСТВА (только если пустые)
     // ============================================================================
 
@@ -423,11 +598,24 @@ while ($element = $elements->GetNext()) {
         }
     }
 
-    // Обновляем PREVIEW_TEXT если были обновления
+    // Обновляем PREVIEW_TEXT и DETAIL_TEXT если были обновления
     if (!empty($updatedProps)) {
-        $el->Update($elementId, [
+        $updateFields = [
             'PREVIEW_TEXT' => 'Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности обеспечивает широкому кругу (специалистов) участие в формировании форм развития. Идейные соображения высшего порядка, а также сложившаяся структура организации позволяет выполнять важные задания по разработке позиций, занимаемых участниками в отношении поставленных задач. Задача организации, в особенности же постоянное информационно-пропагандистское обеспечение нашей деятельности требуют от нас анализа систем массового участия.',
-        ]);
+        ];
+
+        // Проверяем и заполняем DETAIL_TEXT из файла
+        if (empty($element['DETAIL_TEXT'])) {
+            $detailText = loadDetailTextFromHtml($elementId);
+            if ($detailText !== null) {
+                $detailText = str_replace('#REPLACE#', $elementName, $detailText);
+                $updateFields['DETAIL_TEXT'] = $detailText;
+                $updateFields['DETAIL_TEXT_TYPE'] = 'html';
+                echo "  + DETAIL_TEXT: загружен из detail_text.html<br>\n";
+            }
+        }
+
+        $el->Update($elementId, $updateFields);
         $counter++;
     } else {
         echo "  (все свойства уже заполнены)<br>\n";
@@ -436,4 +624,3 @@ while ($element = $elements->GetNext()) {
 }
 
 echo "<br>\nОбработка завершена. Обновлено элементов: {$counter}<br>\n";
-
