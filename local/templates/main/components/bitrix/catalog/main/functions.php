@@ -12,12 +12,10 @@ function getSliderDataForElements($arFields, $arProps)
 
     $imageIds = [];
 
-    // Собираем ID детальной картинки
     if (!empty($arFields['DETAIL_PICTURE'])) {
         $imageIds[] = $arFields['DETAIL_PICTURE'];
     }
 
-    // Собираем ID из свойства MORE_PHOTO
     if (!empty($arProps['MORE_PHOTO']['VALUE']) && is_array($arProps['MORE_PHOTO']['VALUE'])) {
         foreach ($arProps['MORE_PHOTO']['VALUE'] as $photoId) {
             if (!empty($photoId)) {
@@ -26,7 +24,6 @@ function getSliderDataForElements($arFields, $arProps)
         }
     }
 
-    // Обрабатываем изображения: оригинал + ресайз 150x150
     foreach ($imageIds as $imageId) {
         $originalPath = CFile::GetPath($imageId);
 
@@ -42,7 +39,6 @@ function getSliderDataForElements($arFields, $arProps)
         ];
     }
 
-    // Собираем 3D объекты
     if (!empty($arProps['MORE_3D']['VALUE']) && is_array($arProps['MORE_3D']['VALUE'])) {
         foreach ($arProps['MORE_3D']['VALUE'] as $fileId) {
             if (!empty($fileId)) {
@@ -51,8 +47,6 @@ function getSliderDataForElements($arFields, $arProps)
         }
     }
 
-    // Собираем видео
-    // Собираем видео
     if (!empty($arProps['MORE_VIDEO']['VALUE']) && is_array($arProps['MORE_VIDEO']['VALUE'])) {
         foreach ($arProps['MORE_VIDEO']['VALUE'] as $fileId) {
             if (!empty($fileId)) {
@@ -84,3 +78,108 @@ function getSliderDataForElements($arFields, $arProps)
 
     return $result;
 }
+
+
+function getSchemesData($schemes)
+{
+    $elementsIds = $schemes['VALUE'] ?? [];
+    if (empty($elementsIds)) {
+        return [];
+    }
+
+    $elementsData = [];
+
+    Bitrix\Main\Loader::includeModule('iblock');
+
+    $elements = CIBlockElement::GetList([], ['IBLOCK_ID' => 7, 'ID' => $elementsIds, 'ACTIVE' => 'Y']);
+
+    while ($element = $elements->GetNextElement()) {
+        $arFields = $element->GetFields();
+        $arProps = $element->GetProperties();
+
+        $fileid = $arProps['SCHEME']['VALUE'] ?? false;
+        $originalPath = CFile::GetPath($fileid);
+        $elementsData[] = [
+            'name' => $arFields['NAME'],
+            'src' => $originalPath,
+        ];
+
+
+    }
+
+    return $elementsData;
+
+}
+
+function getMaterialsData($materials)
+{
+    $elementsIds = $materials['VALUE'] ?? [];
+    if (empty($elementsIds)) {
+        return [];
+    }
+
+    $elementsData = [];
+
+    Bitrix\Main\Loader::includeModule('iblock');
+
+    $elements = CIBlockElement::GetList([], ['IBLOCK_ID' => 8, 'ID' => $elementsIds, 'ACTIVE' => 'Y']);
+
+    while ($element = $elements->GetNextElement()) {
+        $arFields = $element->GetFields();
+        $arProps = $element->GetProperties();
+
+
+        $fileid = $arProps['FILE']['VALUE'] ?? false;
+        $type = $arProps['TYPE']['VALUE'] ?? false;
+        $typeId = $arProps['TYPE']['VALUE_XML_ID'] ?? false;
+
+        $originalPath = CFile::GetPath($fileid);
+        $elementsData[$typeId]['name'] = $type;
+        $elementsData[$typeId]['elements'][] = [
+            'name' => $arFields['NAME'],
+            'src' => $originalPath,
+        ];
+
+    }
+
+    return $elementsData;
+
+}
+
+function getRegistryData($registry)
+{
+    $elementsIds = $registry['VALUE'] ?? [];
+    if (empty($elementsIds)) {
+        return [];
+    }
+
+    $elementsData = [];
+
+    Bitrix\Main\Loader::includeModule('iblock');
+
+    $elements = CIBlockElement::GetList([], ['IBLOCK_ID' => 9, 'ID' => $elementsIds, 'ACTIVE' => 'Y']);
+
+    while ($element = $elements->GetNextElement()) {
+        $arFields = $element->GetFields();
+        $arProps = $element->GetProperties();
+
+
+        $fileid = $arProps['FILE']['VALUE'] ?? false;
+        $link = $arProps['LINK']['VALUE'] ?? false;
+        $number = $arProps['NUMBER']['VALUE_XML_ID'] ?? false;
+
+        $originalPath = CFile::GetPath($fileid);
+
+        $elementsData[] = [
+            'name' => $arFields['NAME'],
+            'link' => $link,
+            'number' => $number,
+            'src' => $originalPath,
+        ];
+
+    }
+
+    return $elementsData;
+
+}
+
