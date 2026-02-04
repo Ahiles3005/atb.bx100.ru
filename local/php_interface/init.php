@@ -10,7 +10,7 @@
 setlocale(LC_TIME, 'ru_RU.UTF-8');
 
 // Автозагрузка классов проекта
-require_once $_SERVER['DOCUMENT_ROOT'].'/local/php_interface/autoload.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/local/php_interface/autoload.php';
 
 
 if (file_exists($_SERVER['DOCUMENT_ROOT'] . '/local/php_interface/ahiles3005/property_code_link.php')) {
@@ -19,4 +19,12 @@ if (file_exists($_SERVER['DOCUMENT_ROOT'] . '/local/php_interface/ahiles3005/pro
 if (file_exists($_SERVER['DOCUMENT_ROOT'] . '/local/php_interface/ahiles3005/multiple_string_property.php')) {
     require_once $_SERVER['DOCUMENT_ROOT'] . '/local/php_interface/ahiles3005/multiple_string_property.php';
 }
-
+if (file_exists($_SERVER['DOCUMENT_ROOT'] . '/local/php_interface/ahiles3005/section_multiple_string.php')) {
+    require_once $_SERVER['DOCUMENT_ROOT'] . '/local/php_interface/ahiles3005/section_multiple_string.php';
+}
+if (file_exists($_SERVER['DOCUMENT_ROOT'] . '/local/php_interface/ahiles3005/characteristic_list_property.php')) {
+    require_once $_SERVER['DOCUMENT_ROOT'] . '/local/php_interface/ahiles3005/characteristic_list_property.php';
+}
+if (file_exists($_SERVER['DOCUMENT_ROOT'] . '/local/php_interface/ahiles3005/characteristic_list_section.php')) {
+    require_once $_SERVER['DOCUMENT_ROOT'] . '/local/php_interface/ahiles3005/characteristic_list_section.php';
+}

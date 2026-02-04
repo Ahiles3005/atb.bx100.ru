@@ -49,8 +49,8 @@ $elementDeleteParams = ['CONFIRM' => GetMessage('CT_BCS_TPL_ELEMENT_DELETE_CONFI
                                     <?=$arResult['NAME']?>
                                 </h1>
                                 <p class="cd-hero--p__TOP">
-                                    Мини-компьютер. Сетевая вычислительная платформа
-                                    для информационной безопасности (ИБ)
+                                    <?=$arResult['DESCRIPTION']?>
+
                                 </p>
                             </div>
 
