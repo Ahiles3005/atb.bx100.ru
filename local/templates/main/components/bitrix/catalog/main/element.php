@@ -957,7 +957,7 @@ if (isset($arParams['USER_CONSENT_IS_LOADED'])) {
 
         <div class="cdn-reg--div__REQUEST">
             <div class="cdn-reg--div__IMAGE __C-SCRL LEFT">
-                <img class="cdn-reg--img__IMAGE" src="images/home/menu/Аппаратные-платформы.png" alt="">
+                <img class="cdn-reg--img__IMAGE" src="<?=SITE_TEMPLATE_PATH?>/assets/images/home/menu/Аппаратные-платформы.png" alt="">
             </div>
             <div class="cdn-reg--div__TEXT __C-SCRL RIGHT">
                 <h3 class="cdn-reg--h3">
