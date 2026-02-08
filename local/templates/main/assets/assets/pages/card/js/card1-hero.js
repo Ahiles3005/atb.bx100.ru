@@ -364,7 +364,7 @@ window.addEventListener ("load", function () {
             cdHeroDivSwiper.slideTo (cdHeroDivSwiper.slides.length - 2);
         });
 
-        cdHeroButtonImagescdHero3d.addEventListener ("click", (e) => {
+        cdHeroButtonImagescdHero3d?.addEventListener ("click", (e) => {
             e.stopPropagation ();
             cdHeroDivPopup.classList.add ("__cd-hero--div__POPUP");
             cdHeroDivSwiperPagBuls[cdHeroDivSwiperPagBuls.length - 1].click ();
