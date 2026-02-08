@@ -199,7 +199,7 @@ if (isset($arParams['USER_CONSENT_IS_LOADED'])) {
                 [
                         "PATH" => "",
                         "SITE_ID" => "s1",
-                        "START_FROM" => "0"
+                        "START_FROM" => "1"
                 ]
         ); ?>
 
