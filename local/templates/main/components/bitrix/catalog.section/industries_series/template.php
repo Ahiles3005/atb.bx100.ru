@@ -46,7 +46,7 @@ if (!empty($arResult['ITEMS'])) {
                 <a class="hm-ind--a__CARD_TAG color-yellow" href="<?= $item['DETAIL_PAGE_URL'] ?>">
                     <div class="hm-ind--div__CARD_TAG_CIRCLE"></div>
                     <span class="hm-ind--span__CARD_TAG">
-                            <?= $item['DISPLAY_PROPERTIES']['TAG_KRASOTA']['VALUE'] ?? '' ?>
+                            <?= $item['DISPLAY_PROPERTIES']['OTRASLI']['VALUE'] ?? '' ?>
                         </span>
                 </a>
                 <p class="hm-ind--p__CARD_NAME">
