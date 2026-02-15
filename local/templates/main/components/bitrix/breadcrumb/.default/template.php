@@ -29,8 +29,9 @@ for ($index = 0; $index < $itemSize; $index++) {
     $title = htmlspecialcharsex($arResult[$index]["TITLE"]);
     $jsonSeparator = ($index > 0 ? ',' : '');
 
-    if ($arResult[$index]["LINK"] <> "") {
-        $link = $index + 1 < $itemSize ? $arResult[$index]["LINK"] : '#';
+    $link = $index + 1 < $itemSize ? $arResult[$index]["LINK"] : '#';
+    if ($link <> "") {
+
 
         $strReturn .= '<li class="c-common--li__BC" id="bx_breadcrumb_' . $index . '">
         <a class="c-common--a__BC" href="' . $link . '" title="' . $title . '" >
