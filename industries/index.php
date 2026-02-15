@@ -7,7 +7,7 @@ $APPLICATION->SetTitle("ОТРАСЛИ");
 	"bitrix:news", 
 	"industries", 
 	array(
-		"ADD_ELEMENT_CHAIN" => "N",
+		"ADD_ELEMENT_CHAIN" => "Y",
 		"ADD_SECTIONS_CHAIN" => "Y",
 		"AJAX_MODE" => "N",
 		"AJAX_OPTION_ADDITIONAL" => "",
@@ -42,9 +42,9 @@ $APPLICATION->SetTitle("ОТРАСЛИ");
 		"DISPLAY_PREVIEW_TEXT" => "Y",
 		"DISPLAY_TOP_PAGER" => "N",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
-		"IBLOCK_ID" => "3",
-		"IBLOCK_TYPE" => "catalog",
-		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
+		"IBLOCK_ID" => "2",
+		"IBLOCK_TYPE" => "content",
+		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
 		"LIST_ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"LIST_FIELD_CODE" => array(
 			0 => "",
@@ -86,7 +86,7 @@ $APPLICATION->SetTitle("ОТРАСЛИ");
 		"USE_SHARE" => "N",
 		"COMPONENT_TEMPLATE" => "industries",
 		"SEF_URL_TEMPLATES" => array(
-			"news" => "/industries/",
+			"news" => "",
 			"section" => "#SECTION_CODE_PATH#/",
 			"detail" => "#SECTION_CODE_PATH#/#ELEMENT_CODE#/",
 		)

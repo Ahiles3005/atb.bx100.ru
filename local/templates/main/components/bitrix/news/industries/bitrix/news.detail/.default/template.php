@@ -14,78 +14,7 @@ $this->setFrameMode(true);
 ?>
 
 
-<!-- ---------- ********** СЕКЦИЯ HERO ********** ---------- -->
 
-
-<section class="in-hero">
-    <div class="in-hero--div__CONT C-CONTAINER">
-        <ul class="c-common--ul__BC">
-            <li class="c-common--li__BC">
-                <a class="c-common--a__BC" href="#">
-                    ГЛАВНАЯ СТРАНИЦА
-                </a>
-                <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1 15.5L8.05882 8L1 0.5" stroke="#BFBFBF" stroke-width="0.5"/>
-                </svg>
-            </li>
-            <li class="c-common--li__BC">
-                <a class="c-common--a__BC" href="#">
-                    ОТРАСЛИ
-                </a>
-                <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1 15.5L8.05882 8L1 0.5" stroke="#BFBFBF" stroke-width="0.5"/>
-                </svg>
-            </li>
-        </ul>
-
-
-        <div class="in-hero--div__TOP __C-SCRL LEFT">
-            <div class="in-hero--div__IND_TYPE">
-                <p class="in-hero--p__IND_TYPE">
-                    Отрасль
-                </p>
-                <a class="in-hero--a__TAG color-green-dark" href="#">
-                    <div class="in-hero--div__TAG_CIRCLE"></div>
-                    <span class="in-hero--span__TAG">
-                                БАНКИ И ФИНАНСЫ
-                            </span>
-                </a>
-            </div>
-
-            <h1 class="in-hero--h1">
-                Защита финансовых данных клиентов в банковской сфере
-            </h1>
-        </div>
-
-
-        <div class="in-hero--div__BODY">
-            <div class="in-hero--div__IMAGE __C-SCRL DOWN">
-                <img src="images/home/hm-ind_1.png" alt="" loading="lazy">
-            </div>
-            <div class="in-hero--div__BODY_TEXT __C-SCRL DOWN">
-                <p class="in-hero--p__BODY_TITLE">
-                    Основная информация
-                </p>
-                <p class="in-hero--p__BODY_TEXT">
-                    <a class="in-hero--a__BODY_TEXT" href="#">
-                        Платформа совместима с российскими операционными
-                        системами
-                    </a>
-                    и может использоваться в роли маршрутизатора,
-                    межсетевого экрана или шлюза совместно со специализированным
-                    российским ПО. АТБ-АТОМ-1 поддерживает до 8 Гб оперативной
-                    памяти и до 256 Гб накопителя SSD. ться в роли маршрутизатора,
-                    межсетевого экрана или шлюза совместно со специализированным
-                    российским ПО. АТБ-АТОМ-1 поддерживает до 8 Гб оперативной
-                    памяти и до 256 Гб накопителя SSDться в роли маршрутизатора,
-                    межсетевого экрана или шлюза совместно со специализированным
-                    российским ПО. АТБ-АТОМ-1 поддерживает до 8 Гб оперативной
-                    памяти и до 256 Гб накопителя SSD.
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
 
 
 
