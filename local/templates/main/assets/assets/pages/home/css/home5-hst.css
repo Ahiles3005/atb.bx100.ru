@@ -362,7 +362,7 @@
         height: 2px;
         width: 46px;
         position: absolute;
-        bottom: 0px;
+        bottom: -1px;
         left: 0px;
         display: flex;
         background-color: var(--color-red);
@@ -370,6 +370,11 @@
     }
     .hm-hst--ul__MENU:has(.hm-hst--li__MENU_ITEM:nth-of-type(2).__hm-hst--li__MENU_ITEM) .hm-hst--div__LINE {
         transform: translate(308px);
+    }
+}
+@media (min-resolution: 2dppx) {
+    .hm-hst--div__LINE {
+        bottom: -0.25px;
     }
 }
 

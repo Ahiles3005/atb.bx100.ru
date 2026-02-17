@@ -32,15 +32,10 @@ window.addEventListener ("load", function () {
         const cdMedSvgSubmenu = document.querySelector (".cd-med--svg__SUBMENU");
         const cdMedFormSubmenu = document.querySelector (".cd-med--form__SUBMENU");
 
-
-        // 1.1 Выбор первой радиокнопки в субменю при загрузке страницы
-
-        cdMedFormSubmenu.querySelector (".cd-med--label__SUBMENU:first-of-type").click ();
         
+        // 1.1 Открытие / закрытие субменю
 
         cdMedDivHead.addEventListener ("click", () => {
-        
-            // 1.2 Открытие / закрытие субменю
 
             if (!cdMedFormSubmenu.classList.contains ("__cd-med--form__SUBMENU")) {
                 cdMedFormSubmenu.classList.add ("__cd-med--form__SUBMENU");
@@ -61,6 +56,8 @@ window.addEventListener ("load", function () {
             allowTouchMove: false,
         });
 
+        
+        // 2.1 Переключение слайдов через радиокнопки
 
         const cdMedLabelSubmenu = Array.from (document.querySelectorAll (".cd-med--label__SUBMENU"));
 
@@ -69,6 +66,11 @@ window.addEventListener ("load", function () {
                 cdMedDivSwiper2.slideTo(i);
             });
         });
+
+
+        // 2.1 Выбор первой радиокнопки в субменю при загрузке страницы
+
+        cdMedLabelSubmenu[0].click ();
 
 
 

@@ -449,34 +449,6 @@
 
 
 
-.c-common--div__LINE1 {
-    margin-bottom: 10px;
-    height: 0.25px;
-    width: 100%;
-    display: flex;
-    background-color: hsla(0, 0%, 5%, 40%);
-}
-@media (min-width: 1440px) {
-    .c-common--div__LINE1 {
-        margin-bottom: 20px;
-    }
-}
-
-
-
-
-.c-common--div__LINE11 {
-    height: 2px;
-    width: 46px;
-    position: relative;
-    top: -2px;
-    background-color: var(--color-red);
-}
-
-
-
-
-
 .hm-hero--p__COUNT {
     max-width: 75%;
     font-weight: 300;

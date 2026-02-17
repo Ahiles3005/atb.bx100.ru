@@ -139,14 +139,14 @@
 @media (min-width: 1440px) {
     .c-common--div__FB_CONT {
         padding: 40px;
-        max-width: 1277px;
+        width: 1277px;
         background-color: hsl(0, 0%, 100%);
         border-radius: 30px;
     }
 }
 @media (min-width: 1920px) {
     .c-common--div__FB_CONT {
-        max-width: 1653px;
+        width: 1653px;
     }
 }
 
@@ -209,6 +209,17 @@
         line-height: 36px;
     }
 }
+
+
+
+
+
+
+._FORM_COMMON .c-common--p__FB_NAME,
+._FORM_REGISTRATION .c-common--p__FB_NAME {
+    margin-bottom: 8px;
+}
+
 
 
 
@@ -812,10 +823,15 @@
 }
 @media (min-width: 1440px) {
     .c-common--textarea__FB_TA {
-        height: 130px;
+        height: 110px;
         font-size: 18px;
         line-height: 18px;
         border-radius: 10px;
+    }
+}
+@media (min-width: 1920px) {
+    .c-common--textarea__FB_TA {
+        height: 120px;
     }
 }
 
@@ -879,7 +895,7 @@
 
 
 .c-common--button__FB_SB {
-    margin-top: 8px;
+    margin: 8px 0px;
     padding: 12px;
     width: 100%;
     position: relative;

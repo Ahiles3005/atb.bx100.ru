@@ -106,7 +106,7 @@
 
 .c-footer--button__REQUEST {
     margin: 0px auto;
-    padding: 18px 44px;
+    padding: 17px 44px;
     width: 100%;
     max-width: 767px;
     position: relative;
@@ -116,7 +116,7 @@
     line-height: 23px;
     color: hsl(0, 0%, 100%);
     background-color: var(--color-red);
-    border-radius: 7px;
+    border-radius: 10px;
     transition: all 0.2s;
 }
 @media (min-width: 768px) {
@@ -556,11 +556,6 @@
     flex-direction: column;
     gap: 40px;
 }
-/* @media (min-width: 1440px) {
-    .c-footer--div__BOTTOM {
-        margin-top: 0px;
-    }
-} */
 
 
 
@@ -715,6 +710,11 @@
     left: 0px;
     top: -1px;
     background-color: var(--color-red);
+}
+@media (min-resolution: 2dppx) {
+    .c-footer--div__LINE::before {
+        top: -1.75px;
+    }
 }
 
 

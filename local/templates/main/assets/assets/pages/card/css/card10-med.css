@@ -240,11 +240,16 @@
     height: 2px;
     width: 46px;
     position: absolute;
-    bottom: 0px;
+    top: -1px;
     left: 0px;
     display: flex;
     background-color: var(--color-red);
     transition: transform 0.3s;
+}
+@media (min-resolution: 2dppx) {
+    .cd-med--div__LINE2 {
+        top: -1.75px;
+    }
 }
 
 .cd-med--div__CONT2:has(.cd-med--label__SUBMENU:nth-of-type(1) > .cd-med--input__SUBMENU:checked) .cd-med--div__LINE2 {

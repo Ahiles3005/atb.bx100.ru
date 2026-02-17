@@ -149,9 +149,14 @@
     height: 2px;
     width: 46px;
     position: absolute;
-    bottom: 0.25px;
+    bottom: -1px;
     left: 0px;
     background-color: var(--color-red);
+}
+@media (min-resolution: 2dppx) {
+    .hs-hero--div__LINE2 {
+        bottom: -0.25px;
+    }
 }
 
 

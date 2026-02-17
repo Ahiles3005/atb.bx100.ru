@@ -191,10 +191,15 @@
 
 .c-common--div__GLR_SWIPER {
     width: 100%;
-    box-shadow: var(--block-shadow);
+    box-shadow: 0px 0px 9px 7px hsla(0, 0%, 0%, 5%);
     border-radius: 10px;
     overflow: hidden;
     transition: opacity 0.7s, transform 0.7s;
+}
+@media (min-width: 1440px) {
+    .c-common--div__GLR_SWIPER {
+        border-radius: 24px;
+    }
 }
 
 
@@ -219,20 +224,16 @@
     aspect-ratio: 37 / 25;
     display: flex;
     justify-content: center;
-    border-radius: 10px;
     overflow: hidden;
-}
-@media (min-width: 1440px) {
-    .c-common--div__GLR_IMAGE {
-        border-radius: 24px;
-    }
 }
 
 
 
 
 .c-common--img__GLR_IMAGE {
-    max-width: 100%;
+    /* max-width: 100%; */
+    max-height: 100%;
+    width: 100%;
     object-fit: cover;
     object-position: center;
     pointer-events: none;
@@ -248,13 +249,20 @@
     top: 50%;
     z-index: 2;
     transform: translateY(-50%);
-    filter: drop-shadow(0 0 2px hsl(0, 0%, 0%));
 }
 @media (min-width: 1440px) {
     .c-common--button__GLR_LEFT,
     .c-common--button__GLR_RIGHT {
         display: block;
     }
+}
+
+
+
+
+.c-common--button__GLR_LEFT.swiper-button-disabled,
+.c-common--button__GLR_RIGHT.swiper-button-disabled {
+    cursor: auto;
 }
 
 
@@ -276,15 +284,24 @@
 
 .c-common--button__GLR_LEFT svg,
 .c-common--button__GLR_RIGHT svg {
-    filter: drop-shadow(0 0 0.8px hsl(0, 0%, 0%)) drop-shadow(1px 1px 6px hsl(0, 0%, 100%));
+    filter: drop-shadow(0 0 0.8px hsla(0, 0%, 0%, 50%));
+    mix-blend-mode: hard-light;
+    transition: opacity 0.2s;
 }
 
 
 
 
-.c-common--button__GLR_LEFT.swiper-button-disabled,
-.c-common--button__GLR_RIGHT.swiper-button-disabled {
-    filter: none;
+.c-common--button__GLR_LEFT.swiper-button-disabled svg,
+.c-common--button__GLR_RIGHT.swiper-button-disabled svg {
+    opacity: 0.6;
+}
+
+
+
+
+.c-common--button__GLR_LEFT svg {
+    transform: rotate(180deg);
 }
 
 
@@ -311,7 +328,7 @@
 
 
 .c-common--div__GLR_SWIPER_PAGINATION {
-    padding: 15px 0px 5px;
+    padding: 20px 0px 5px;
     display: none;
     gap: 10px;
     width: auto !important;
@@ -322,8 +339,9 @@
 }
 @media (min-width: 1440px) {
     .c-common--div__GLR_SWIPER_PAGINATION {
-        padding: 16px 0px 5px;
+        padding: 24px 0px 5px;
         scroll-behavior: auto;
+        gap: 12px;
     }
 }
 
@@ -356,7 +374,6 @@
 
 .c-common--div__GLR_SWIPER_PAGINATION .swiper-pagination-bullet-active {
     border: 0.25px solid var(--color-blue);
-    box-shadow: inset 0px 0px 4px 2px hsla(0, 0%, 0%, 8%);
 }
 
 

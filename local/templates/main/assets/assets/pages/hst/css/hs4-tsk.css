@@ -5,11 +5,11 @@
 /* ---------- ********** СЕКЦИЯ TSK ********** ---------- */
 
 
-#hs-tsk .in-des--div__LIST {
+#hs-tsk .st-main--div__LIST {
     margin-top: 20px;
 }
 @media (min-width: 1440px) {
-    #hs-tsk .in-des--div__LIST {
+    #hs-tsk .st-main--div__LIST {
         margin-top: 44px;
     } 
 }
