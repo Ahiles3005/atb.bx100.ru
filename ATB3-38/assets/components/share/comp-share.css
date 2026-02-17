@@ -1,0 +1,347 @@
+
+/* ---------- ********** КОМПОНЕНТ SHARE ********** ---------- */
+
+.c-common--div__SHARE {
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media (min-width: 1440px) {
+    .c-common--div__SHARE {
+        height: auto;
+        width: auto;
+        top: 20px;
+        left: 30px;
+        z-index: 2;
+    }
+}
+
+@media (max-width: 1439px) {
+    .__c-common--div__SHARE {
+        z-index: 12;
+    }
+}
+
+
+
+
+.c-common--button__SHARE {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.2s;
+}
+@media (min-width: 1440px) {
+    .c-common--button__SHARE {
+        padding: 17px 54px;
+        height: auto;
+        width: auto;
+        justify-content: space-between;
+        gap: 22px;
+        border: 0.25px solid var(--color-blue);
+        border-radius: 10px;
+    }
+}
+
+@media (any-hover: hover) {
+    .c-common--button__SHARE:hover {
+        background-color: var(--color-blue);
+    }
+}
+
+
+
+
+@media (min-width: 1440px) {
+    .c-common--svg__SHARE {
+        height: 28px;
+        width: 23px;
+        flex-shrink: 0;
+    }
+}
+
+
+
+
+.c-common--button__SHARE path {
+    transition: fill 0.2s;
+}
+
+@media (any-hover: hover) {
+    .c-common--button__SHARE:hover path {
+        fill: hsl(0, 0%, 100%);
+    }
+}
+
+
+
+
+.c-common--span__SHARE {
+    display: none;
+}
+@media (min-width: 1440px) {
+    .c-common--span__SHARE {
+        display: flex;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 32px;
+        color: var(--color-black1);
+        text-transform: uppercase;
+        transition: color 0.2s;
+    }
+}
+
+@media (any-hover: hover) {
+    .c-common--button__SHARE:hover .c-common--span__SHARE {
+        color: hsl(0, 0%, 100%);
+    }
+}
+
+
+
+
+.c-common--div__SHARE_POPUP_CONT {
+    height: calc(100 * var(--uservh));
+    position: fixed;
+    inset: 0px 0px auto 0px;
+    z-index: 2;
+    display: none;
+    background-color: hsla(0, 0%, 0%, 0%);
+    transition: background-color 0.4s;
+}
+@media (min-width: 1440px) {
+    .c-common--div__SHARE_POPUP_CONT {
+        height: auto;
+        max-height: 0px;
+        position: absolute;
+        inset: 80px 0px auto;
+        display: flex !important;
+        flex-direction: column;
+        background-color: transparent !important;
+        opacity: 0;
+        border-radius: 10px;
+        transition: max-height 0.4s, opacity 0.3s, box-shadow 0.4s;
+        overflow: hidden;
+    }
+}
+
+.__c-common--div__SHARE_POPUP_CONT {
+    display: flex;
+}
+@media (min-width: 1440px) {
+    .__c-common--div__SHARE_POPUP_CONT {
+        max-height: 350px;
+        opacity: 1;
+        border: 0.5px solid var(--color-blue-light);
+        box-shadow: var(--block-shadow);
+    }
+}
+
+@media (max-width: 1439px) {
+    .__c-common--div__SHARE_POPUP_CONT1 {
+        background-color: hsla(0, 0%, 0%, 50%);
+    }
+}
+
+
+
+
+
+.c-common--div__SHARE_POPUP_CONT2 {
+    padding: 30px 0px 38px;
+    position: absolute;
+    inset: auto 0px 0px 0px;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 24px 24px 0px 0px;
+    transform: translateY(120%);
+    transition: transform 0.4s;
+}
+@media (min-width: 1440px) {
+    .c-common--div__SHARE_POPUP_CONT2 {
+        padding: 0px;
+        position: static;
+        transform: translateY(0%);
+        border-radius: 0px;
+    }
+}
+
+.__c-common--div__SHARE_POPUP_CONT2 {
+    transform: translateY(0%);
+}
+
+
+
+
+.c-common--p__SHARE_POPUP_TOP {
+    align-self: center;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    color: var(--color-black1);
+}
+@media (min-width: 1440px) {
+    .c-common--p__SHARE_POPUP_TOP {
+        display: none;
+    }
+}
+
+
+
+
+.c-common--div__SHARE_POPUP_LINKS {
+    margin: 16px auto 0px;
+    padding: 0px 15px;
+    max-width: 100%;
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    scrollbar-color: transparent transparent;
+}
+@media (min-width: 1440px) {
+    .c-common--div__SHARE_POPUP_LINKS {
+        margin: 0px;
+        padding: 0px;
+        flex-direction: column;
+        gap: 0px;
+    }
+}
+
+
+
+
+.c-common--any__SHARE_POPUP_LINK {
+    width: 64px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+@media (min-width: 1440px) {
+    .c-common--any__SHARE_POPUP_LINK {
+        padding: 10px 20px;
+        width: auto;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        transition: background-color 0.2s;
+    }
+}
+
+@media (any-hover: hover) {
+    .c-common--any__SHARE_POPUP_LINK:hover {
+        background-color: var(--color-bluegray);
+    }
+}
+
+
+
+
+.c-common--any__SHARE_POPUP_LINK svg:first-of-type {
+    display: block;
+}
+@media (min-width: 1440px) {
+    .c-common--any__SHARE_POPUP_LINK svg:first-of-type {
+        display: none;
+    }
+}
+
+
+
+
+.c-common--any__SHARE_POPUP_LINK svg:last-of-type {
+    display: none;
+}
+@media (min-width: 1440px) {
+    .c-common--any__SHARE_POPUP_LINK svg:last-of-type {
+        flex-shrink: 0;
+        display: block;
+    }
+}
+
+
+
+
+.c-common--any__SHARE_POPUP_LINK svg:last-of-type path:first-of-type {
+    fill: var(--color-gray);
+    transition: fill 0.2s;
+}
+
+.c-common--any__SHARE_POPUP_LINK:first-of-type svg:last-of-type path {
+    fill: var(--color-gray);
+    transition: fill 0.2s;
+}
+
+@media (any-hover: hover) {
+    .c-common--any__SHARE_POPUP_LINK:hover svg:last-of-type path:first-of-type {
+        fill: var(--color-blue);
+    }
+
+    .c-common--any__SHARE_POPUP_LINK:first-of-type:hover svg:last-of-type path {
+        fill: var(--color-blue);
+    }
+}
+
+
+
+.c-common--any__SHARE_POPUP_LINK._ELSE svg:last-of-type {
+    display: block;
+}
+@media (min-width: 1440px) {
+    .c-common--any__SHARE_POPUP_LINK._ELSE {
+        display: none;
+    }
+}
+
+.c-common--any__SHARE_POPUP_LINK._ELSE svg:last-of-type path:first-of-type {
+    fill: hsl(0, 0%, 100%) !important;
+}
+
+
+
+
+.c-common--p__SHARE_POPUP_LINK {
+    font-size: 10px;
+    line-height: 14px;
+    color: var(--color-black1);
+}
+@media (min-width: 1440px) {
+    .c-common--p__SHARE_POPUP_LINK {
+        font-weight: 300;
+        font-size: 17px;
+        line-height: 24px;
+    }
+}
+
+
+
+
+.c-common--button__SHARE_POPUP_CLOSE {
+    margin-top: 18px;
+    height: 40px;
+    width: 320px;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 32px;
+    text-transform: uppercase;
+    background-color: var(--color-gray3);
+    border-radius: 10px;
+}
+@media (min-width: 1440px) {
+    .c-common--button__SHARE_POPUP_CLOSE {
+        display: none;
+    }
+}
