@@ -547,14 +547,10 @@
     overflow: hidden;
     transition: transform 0.7s, opacity 0.7s;
 }
-@media (min-width: 768px) {
-    .cdn-reg--div__IMAGE {
-        width: 328px;
-    }
-}
 @media (min-width: 1440px) {
     .cdn-reg--div__IMAGE {
         margin-bottom: 0px;
+        width: 328px;
         align-self: flex-start;
         flex-shrink: 0;
     }

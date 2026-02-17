@@ -156,6 +156,7 @@
 } */
 
 .hm-des--label__SUBMENU:has(.hm-des--input__SUBMENU:checked) {
+    z-index: 4;
     background-color: var(--color-bluegray);
     border-left: solid 2px var(--color-red);
 }

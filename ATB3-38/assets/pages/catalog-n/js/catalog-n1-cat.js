@@ -503,7 +503,7 @@ window.addEventListener ("load", function () {
             
         });
 
-        ctCatButtonFilterClose?.addEventListener ("click", () => {
+        ctCatButtonFilterClose.addEventListener ("click", () => {
             ctCatDivFilterBack.classList.remove ("__ct-cat--div__FILTER_BACK");
         });
 

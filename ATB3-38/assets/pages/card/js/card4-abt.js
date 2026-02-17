@@ -188,30 +188,7 @@ window.addEventListener ("load", function () {
 
 
 
-        // 4. ЗАКРЫТИЕ / РАСКРЫТИЕ ТАБЛИЦ
-
-        const cdAbtButtonTableHead = Array.from (document.querySelectorAll (".cd-abt--button__TABLE_HEAD"));
-        const cdAbtdivTableBody = Array.from (document.querySelectorAll (".cd-abt--div__TABLE_BODY"));
-        const cdAbtSvgTableHead = Array.from (document.querySelectorAll (".cd-abt--svg__TABLE_HEAD"));
-
-
-        cdAbtButtonTableHead.forEach((v, i, a) => {
-            a[i].addEventListener ("click", () => {
-                if (!cdAbtdivTableBody[i].classList.contains ("__cd-abt--div__TABLE_BODY")) {
-                    cdAbtdivTableBody[i].classList.add ("__cd-abt--div__TABLE_BODY");
-                    cdAbtSvgTableHead[i].classList.add ("__cd-abt--svg__TABLE_HEAD");
-                    setTimeout (() => {
-                        cdAbtButtonTabs[1].click ();
-                    }, 50);
-                } else {
-                    cdAbtdivTableBody[i].classList.remove ("__cd-abt--div__TABLE_BODY");
-                    cdAbtSvgTableHead[i].classList.remove ("__cd-abt--svg__TABLE_HEAD");
-                    setTimeout (() => {
-                        cdAbtButtonTabs[1].click ();
-                    }, 50);
-                }
-            });
-        });
+        // 4. ЗАКРЫТИЕ / РАСКРЫТИЕ ТАБЛИЦ - в файле st1-common.js
 
 
 

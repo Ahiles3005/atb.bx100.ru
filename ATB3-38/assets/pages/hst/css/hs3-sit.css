@@ -10,15 +10,3 @@
         max-width: none;
     }
 }
-
-
-
-
-#hs-sit .in-des--div__LIST {
-    margin-top: 20px;
-}
-@media (min-width: 1440px) {
-    #hs-sit .in-des--div__LIST {
-        margin-top: 44px;
-    } 
-}

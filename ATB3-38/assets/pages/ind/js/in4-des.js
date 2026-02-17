@@ -30,36 +30,7 @@ window.addEventListener ("load", function () {
         /* ---------- ********** СЕКЦИЯ DES (РЕШЕНИЕ) ********** ---------- */
 
 
-        // 1. ШИРИНА БЛОКА
-
-        const inDesDivBottom = Array.from (document.querySelectorAll (".in-des--div__BOTTOM"));
-
-        function inDesDivBottomWidth () {
-            inDesDivBottom.forEach ((v, i, a) => {
-                a[i].style.width = `${document.documentElement.clientWidth}px`;
-            });
-        }
-
-        inDesDivBottomWidth ();
-
-        function inDesDivBottomWidthDebounce0 (cB, time) {
-            let idTimer;
-            return function () {
-                clearTimeout (idTimer);
-                idTimer = setTimeout (() => {
-                    cB();
-                }, time);
-            }
-        }
-
-        const inDesDivBottomWidthDebounce1 = inDesDivBottomWidthDebounce0 (inDesDivBottomWidth, 150);
-
-        window.addEventListener ("resize", inDesDivBottomWidthDebounce1);
-
-
-
-
-        // 2. СЛАЙДЕР
+        // 1. СЛАЙДЕР
 
         const cdRecDivSwiper = new Swiper (".cd-rec--div__SWIPER", {
             navigation: {
@@ -97,7 +68,7 @@ window.addEventListener ("load", function () {
 
 
 
-        // 3. СЛАЙДЕР КАРТОЧЕК ТОВАРОВ
+        // 2. СЛАЙДЕР КАРТОЧЕК ТОВАРОВ
 
         // ПРИ ЗАГРУЗКЕ КАРТОЧЕК С СЕРВЕРА ТАКЖЕ ВЫЗВАТЬ ЭТУ ФУНКЦИЮ !
 
@@ -142,7 +113,7 @@ window.addEventListener ("load", function () {
 
 
 
-        // 4. КНОПКИ ВЫБОРА ТОВАРА ДЛЯ СРАВНЕНИЯ ИЛИ В ИЗБРАННОЕ
+        // 3. КНОПКИ ВЫБОРА ТОВАРА ДЛЯ СРАВНЕНИЯ ИЛИ В ИЗБРАННОЕ
 
         // ПРИ ЗАГРУЗКЕ КАРТОЧЕК С СЕРВЕРА ТАКЖЕ ВЫЗВАТЬ ЭТУ ФУНКЦИЮ !
 
@@ -167,7 +138,7 @@ window.addEventListener ("load", function () {
 
 
 
-        // 5. РАЗБИВКА ЧИСЕЛ В ЦЕННИКАХ ПО ТЫСЯЧАМ
+        // 4. РАЗБИВКА ЧИСЕЛ В ЦЕННИКАХ ПО ТЫСЯЧАМ
 
         // ПРИ ЗАГРУЗКЕ КАРТОЧЕК С СЕРВЕРА ТАКЖЕ ВЫЗВАТЬ ЭТУ ФУНКЦИЮ !
 
@@ -185,7 +156,7 @@ window.addEventListener ("load", function () {
 
 
 
-        // 6. СЛАЙДЕР ОТРАСЛИ
+        // 5. СЛАЙДЕР ОТРАСЛИ
         
         const cdUseDivSwiper21 = new Swiper (".cd-use--div__SWIPER21", {
             navigation: {

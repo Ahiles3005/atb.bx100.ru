@@ -65,6 +65,7 @@
         border: none;
         border-radius: 0px;
         border-bottom: 0.25px solid var(--color-gray);
+        overflow: visible;
     }
 }
 
@@ -307,7 +308,7 @@
         height: 2px;
         width: 46px;
         position: absolute;
-        bottom: 0px;
+        bottom: -1px;
         left: 0px;
         z-index: 3;
         display: flex;
@@ -325,6 +326,11 @@
     }
     .hm-pre--form__SUBMENU:has(.hm-pre--label__SUBMENU:nth-of-type(4) > input:checked) .hm-pre--div__LINE {
         transform: translate(1053px);
+    }
+}
+@media (min-resolution: 2dppx) {
+    .hm-pre--div__LINE {
+        bottom: -0.25px;
     }
 }
 

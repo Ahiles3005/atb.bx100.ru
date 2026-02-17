@@ -117,7 +117,7 @@
 }
 @media (min-width: 1440px) {
     .in-hero--div__TAG_CIRCLE {
-        margin-top: 6px;
+        margin-top: 7px;
         height: 12px;
         width: 12px;
     }
@@ -276,24 +276,20 @@
 
 
 
-.in-hero--p__BODY_TEXT {
-    font-weight: 300;
-    font-size: 14px;
-    line-height: 20px;
-    color: var(--color-black1);
+.in-hero .st-main--p__DESCR2 {
+    margin-top: 0px;
 }
 @media (min-width: 1440px) {
-    .in-hero--p__BODY_TEXT {
-        font-size: 16px;
-        line-height: 26px;
+    .in-hero .st-main--p__DESCR2 {
+        margin-top: 0px;
     }
 }
 
 
 
 
-.in-hero--a__BODY_TEXT {
-    color: var(--color-blue);
-    text-decoration: underline;
-    text-underline-offset: 2px;
+@media (min-width: 1440px) {
+    .in-hero .st-main--p__DESCR2.__C-SCRL.DOWN {
+        transform: translate(0px, 0px) !important;
+    }
 }

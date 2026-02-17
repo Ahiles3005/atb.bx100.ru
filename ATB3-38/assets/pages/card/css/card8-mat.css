@@ -256,11 +256,17 @@
     height: 2px;
     width: 46px;
     position: absolute;
-    bottom: 0px;
+    top: -1px;
     left: 0px;
     display: flex;
     background-color: var(--color-red);
     transition: transform 0.3s;
+}
+
+@media (min-resolution: 2dppx) {
+    .cd-mat--div__LINE2 {
+        top: -1.75px;
+    }
 }
 
 .cd-mat--div__CONT2:has(.cd-mat--label__SUBMENU:nth-of-type(1) > .cd-mat--input__SUBMENU:checked) .cd-mat--div__LINE2,
