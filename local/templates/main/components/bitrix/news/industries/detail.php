@@ -131,7 +131,7 @@ $otrosli = $arProps['OTRASLI']['VALUE'] ?? '';
                 <p class="in-hero--p__BODY_TITLE">
                     Основная информация
                 </p>
-                <p class="in-hero--p__BODY_TEXT">
+                <p class="st-main--p__DESCR2 __C-SCRL DOWN">
                     <?= $arFields['DETAIL_TEXT'] ?>
                 </p>
             </div>

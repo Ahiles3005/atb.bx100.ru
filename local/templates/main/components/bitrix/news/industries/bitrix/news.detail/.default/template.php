@@ -33,14 +33,14 @@ $this->setFrameMode(true);
 
 
         <div class="in-adv--div__TEXT">
-            <p class="in-adv--p__TEXT1 __C-SCRL DOWN">
+            <p class="st-main--p__DESCR1 __C-SCRL DOWN">
                 АТБ-АТОМ-1 является сетевой вычислительной платформой,
                 включённой в единый реестр российской радиоэлектронной
                 продукции (ПП РФ №878 от 10.07.2019), что допускает
                 применение на объектах критической информационной инфраструктуры.
             </p>
-            <p class="in-adv--p__TEXT2 __C-SCRL DOWN">
-                <a class="in-adv--a__TEXT2" href="#">
+            <p class="st-main--p__DESCR2 __C-SCRL DOWN">
+                <a class="st-main--a__DESCR2" href="#">
                     Платформа совместима с российскими операционными системами
                 </a>
                 и может использоваться в роли маршрутизатора, межсетевого экрана
@@ -51,77 +51,77 @@ $this->setFrameMode(true);
         </div>
 
 
-        <div class="in-adv--div__TABLE_CONT">
-            <div class="in-adv--div__TABLE">
-                <div class="in-adv--div__ITEM __C-SCRL DOWN">
-                    <button class="in-adv--button__ITEM_TOP">
-                        <div class="in-adv--div__ITEM_IMAGE">
-                            <img class="in-adv--img__ITEM_IMAGE" src="images/home/menu/Вычислительные-системы.png" alt="">
+        <div class="st-main--div__GRID2_CONT">
+            <div class="st-main--div__GRID2">
+                <div class="st-main--div__GRID2_ITEM __C-SCRL DOWN">
+                    <button class="st-main--button__GRID2_ITEM_TOP">
+                        <div class="st-main--div__GRID2_ITEM_IMAGE">
+                            <img class="st-main--img__GRID2_ITEM_IMAGE" src="images/home/menu/Вычислительные-системы.png" alt="" loading="lazy">
                         </div>
-                        <p class="in-adv--p__ITEM_TOP">
+                        <p class="st-main--p__GRID2_ITEM_TOP">
                             Проверенные поставщики компонентов
                         </p>
-                        <svg class="in-adv--svg__ITEM_TOP" width="27" height="13" viewBox="0 0 27 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="st-main--svg__GRID2_ITEM_TOP" width="27" height="13" viewBox="0 0 27 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M0.0859375 0.0910645L13.0859 12.3264L26.0859 0.0910645" stroke="#0C0C0C" stroke-width="0.25"/>
                         </svg>
                     </button>
-                    <p class="in-adv--p__ITEM_BODY">
+                    <p class="st-main--p__GRID2_ITEM_BODY">
                         Арпарпарпарпра прарпарпарпап апврапартимтиттмт мтипапапврОставьте контакты, и мы расскажем,
                         как наши решения повысят защищенность вашей компании, поможем с выбором продукта и ответим
                         на любые вопросы. Указав ИНН организации, вы сможете быстрее получить детальную информацию.
                     </p>
                 </div>
 
-                <div class="in-adv--div__ITEM __C-SCRL DOWN">
-                    <button class="in-adv--button__ITEM_TOP">
-                        <div class="in-adv--div__ITEM_IMAGE">
-                            <img class="in-adv--img__ITEM_IMAGE" src="images/home/menu/АСУ-ТП.png" alt="">
+                <div class="st-main--div__GRID2_ITEM __C-SCRL DOWN">
+                    <button class="st-main--button__GRID2_ITEM_TOP">
+                        <div class="st-main--div__GRID2_ITEM_IMAGE">
+                            <img class="st-main--img__GRID2_ITEM_IMAGE" src="images/home/menu/АСУ-ТП.png" alt="" loading="lazy">
                         </div>
-                        <p class="in-adv--p__ITEM_TOP">
+                        <p class="st-main--p__GRID2_ITEM_TOP">
                             Проверенные
                         </p>
-                        <svg class="in-adv--svg__ITEM_TOP" width="27" height="13" viewBox="0 0 27 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="st-main--svg__GRID2_ITEM_TOP" width="27" height="13" viewBox="0 0 27 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M0.0859375 0.0910645L13.0859 12.3264L26.0859 0.0910645" stroke="#0C0C0C" stroke-width="0.25"/>
                         </svg>
                     </button>
-                    <p class="in-adv--p__ITEM_BODY">
+                    <p class="st-main--p__GRID2_ITEM_BODY">
                         Арпарпарпарпра прарпарпарпап апврапартимтиттмт мтипапапврОставьте контакты, и мы расскажем,
                         как
                     </p>
                 </div>
 
-                <div class="in-adv--div__ITEM __C-SCRL DOWN">
-                    <button class="in-adv--button__ITEM_TOP">
-                        <div class="in-adv--div__ITEM_IMAGE">
-                            <img class="in-adv--img__ITEM_IMAGE" src="images/home/menu/АСУНО.png" alt="">
+                <div class="st-main--div__GRID2_ITEM __C-SCRL DOWN">
+                    <button class="st-main--button__GRID2_ITEM_TOP">
+                        <div class="st-main--div__GRID2_ITEM_IMAGE">
+                            <img class="st-main--img__GRID2_ITEM_IMAGE" src="images/home/menu/АСУНО.png" alt="" loading="lazy">
                         </div>
-                        <p class="in-adv--p__ITEM_TOP">
+                        <p class="st-main--p__GRID2_ITEM_TOP">
                             Проверенные поставщики компонентов
                         </p>
-                        <svg class="in-adv--svg__ITEM_TOP" width="27" height="13" viewBox="0 0 27 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="st-main--svg__GRID2_ITEM_TOP" width="27" height="13" viewBox="0 0 27 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M0.0859375 0.0910645L13.0859 12.3264L26.0859 0.0910645" stroke="#0C0C0C" stroke-width="0.25"/>
                         </svg>
                     </button>
-                    <p class="in-adv--p__ITEM_BODY">
+                    <p class="st-main--p__GRID2_ITEM_BODY">
                         Арпарпарпарпра прарпарпарпап апврапартимтиттмт мтипапапврОставьте контакты, и мы расскажем,
                         как наши решения повысят защищенность вашей компании, поможем с выбором продукта и ответим
                         на любые вопросы. Указав ИНН организации, вы сможете быстрее получить детальную информацию.
                     </p>
                 </div>
 
-                <div class="in-adv--div__ITEM __C-SCRL DOWN">
-                    <button class="in-adv--button__ITEM_TOP">
-                        <div class="in-adv--div__ITEM_IMAGE">
-                            <img class="in-adv--img__ITEM_IMAGE" src="images/home/menu/Контроль-и-мониторинг.png" alt="">
+                <div class="st-main--div__GRID2_ITEM __C-SCRL DOWN">
+                    <button class="st-main--button__GRID2_ITEM_TOP">
+                        <div class="st-main--div__GRID2_ITEM_IMAGE">
+                            <img class="st-main--img__GRID2_ITEM_IMAGE" src="images/home/menu/Контроль-и-мониторинг.png" alt="" loading="lazy">
                         </div>
-                        <p class="in-adv--p__ITEM_TOP">
+                        <p class="st-main--p__GRID2_ITEM_TOP">
                             Проверенные поставщики
                         </p>
-                        <svg class="in-adv--svg__ITEM_TOP" width="27" height="13" viewBox="0 0 27 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="st-main--svg__GRID2_ITEM_TOP" width="27" height="13" viewBox="0 0 27 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M0.0859375 0.0910645L13.0859 12.3264L26.0859 0.0910645" stroke="#0C0C0C" stroke-width="0.25"/>
                         </svg>
                     </button>
-                    <p class="in-adv--p__ITEM_BODY">
+                    <p class="st-main--p__GRID2_ITEM_BODY">
                         Арпарпарпарпра прарпарпарпап апврапартимтиттмт мтипапапврОставьте контакты, и мы расскажем,
                         как наши решения повысят защищенность вашей компании, поможем с выбором продукта и ответим
                         на любые вопросы. Указав ИНН организации, вы сможете быстрее получить детальную информацию.
@@ -131,38 +131,38 @@ $this->setFrameMode(true);
                     </p>
                 </div>
 
-                <div class="in-adv--div__ITEM __C-SCRL DOWN">
-                    <button class="in-adv--button__ITEM_TOP">
-                        <div class="in-adv--div__ITEM_IMAGE">
-                            <img class="in-adv--img__ITEM_IMAGE" src="images/home/menu/Аппаратные-платформы.png" alt="">
+                <div class="st-main--div__GRID2_ITEM __C-SCRL DOWN">
+                    <button class="st-main--button__GRID2_ITEM_TOP">
+                        <div class="st-main--div__GRID2_ITEM_IMAGE">
+                            <img class="st-main--img__GRID2_ITEM_IMAGE" src="images/home/menu/Аппаратные-платформы.png" alt="" loading="lazy">
                         </div>
-                        <p class="in-adv--p__ITEM_TOP">
+                        <p class="st-main--p__GRID2_ITEM_TOP">
                             Проверенные поставщики компонентов
                         </p>
-                        <svg class="in-adv--svg__ITEM_TOP" width="27" height="13" viewBox="0 0 27 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="st-main--svg__GRID2_ITEM_TOP" width="27" height="13" viewBox="0 0 27 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M0.0859375 0.0910645L13.0859 12.3264L26.0859 0.0910645" stroke="#0C0C0C" stroke-width="0.25"/>
                         </svg>
                     </button>
-                    <p class="in-adv--p__ITEM_BODY">
+                    <p class="st-main--p__GRID2_ITEM_BODY">
                         Арпарпарпарпра прарпарпарпап апврапартимтиттмт мтипапапврОставьте контакты, и мы расскажем,
                         как наши решения повысят защищенность вашей компании, поможем с выбором продукта и ответим
                         на любые вопросы. Указав ИНН организации, вы сможете быстрее получить детальную информацию.
                     </p>
                 </div>
 
-                <div class="in-adv--div__ITEM __C-SCRL DOWN">
-                    <button class="in-adv--button__ITEM_TOP">
-                        <div class="in-adv--div__ITEM_IMAGE">
-                            <img class="in-adv--img__ITEM_IMAGE" src="images/home/menu/Программое-обеспечение.png" alt="">
+                <div class="st-main--div__GRID2_ITEM __C-SCRL DOWN">
+                    <button class="st-main--button__GRID2_ITEM_TOP">
+                        <div class="st-main--div__GRID2_ITEM_IMAGE">
+                            <img class="st-main--img__GRID2_ITEM_IMAGE" src="images/home/menu/Программое-обеспечение.png" alt="" loading="lazy">
                         </div>
-                        <p class="in-adv--p__ITEM_TOP">
+                        <p class="st-main--p__GRID2_ITEM_TOP">
                             Проверенные поставщики компонентов поставщики компонентов
                         </p>
-                        <svg class="in-adv--svg__ITEM_TOP" width="27" height="13" viewBox="0 0 27 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="st-main--svg__GRID2_ITEM_TOP" width="27" height="13" viewBox="0 0 27 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M0.0859375 0.0910645L13.0859 12.3264L26.0859 0.0910645" stroke="#0C0C0C" stroke-width="0.25"/>
                         </svg>
                     </button>
-                    <p class="in-adv--p__ITEM_BODY">
+                    <p class="st-main--p__GRID2_ITEM_BODY">
                         Арпарпарпарпра прарпарпарпап апврапартимтиттмт мтипапапврОставьте контакты, и мы расскажем,
                         как наши решения повысят защищенность вашей компании, поможем с выбором продукта и ответим
                         на любые вопросы. Указав ИНН организации, вы сможете быстрее получить детальную информацию.
@@ -190,7 +190,7 @@ $this->setFrameMode(true);
 
 
 
-        <p class="in-tsk--p__1 __C-SCRL DOWN">
+        <p class="st-main--p__DESCR1 __C-SCRL DOWN">
             АТБ-АТОМ-1 является сетевой вычислительной платформой,
             включённой в единый реестр российской радиоэлектронной
             продукции (ПП РФ №878 от 10.07.2019), что допускает
@@ -198,8 +198,8 @@ $this->setFrameMode(true);
             инфраструктуры.
         </p>
 
-        <p class="in-tsk--p__2 __C-SCRL DOWN">
-            <a class="in-tsk--a__2" href="#">
+        <p class="st-main--p__DESCR2 __C-SCRL DOWN">
+            <a class="st-main--a__DESCR2" href="#">
                 Платформа совместима с российскими операционными системами
             </a>
             и может использоваться в роли маршрутизатора, межсетевого
@@ -213,45 +213,45 @@ $this->setFrameMode(true);
             поддерживает до 8 Гб оперативной памяти и до 256 Гб накопителя SSD.
         </p>
 
-        <div class="in-tsk--div__3">
-            <p class="in-tsk--p__3_TOP __C-SCRL DOWN">
+        <div class="st-main--div__DESCR3">
+            <p class="st-main--p__DESCR3_TOP __C-SCRL DOWN">
                 Под требования заказчика АТБ-АТОМ-1 может быть доукомплектован опциональными модулями:
             </p>
 
-            <ul class="in-tsk--ul__3 __C-SCRL DOWN">
-                <li class="in-tsk--li__3">
-                    <div class="in-tsk--div__3_POINT"></div>
-                    <span class="in-tsk--span__3">
+            <ul class="st-main--ul__DESCR3 __C-SCRL DOWN">
+                <li class="st-main--li__DESCR3">
+                    <div class="st-main--div__DESCR3_POINT"></div>
+                    <span class="st-main--span__DESCR3">
                                 АТБ-WiFi/BT - модуль беспроводной передачи данных WiFi/BT с внешней антенной;
                             </span>
                 </li>
-                <li class="in-tsk--li__3">
-                    <div class="in-tsk--div__3_POINT"></div>
-                    <span class="in-tsk--span__3">
+                <li class="st-main--li__DESCR3">
+                    <div class="st-main--div__DESCR3_POINT"></div>
+                    <span class="st-main--span__DESCR3">
                                 АТБ-LTE (GPS) – модуль LTE (GPS) с внешней антенной и слотом под SIM-карту;
                             </span>
                 </li>
-                <li class="in-tsk--li__3">
-                    <div class="in-tsk--div__3_POINT"></div>
-                    <span class="in-tsk--span__3">
+                <li class="st-main--li__DESCR3">
+                    <div class="st-main--div__DESCR3_POINT"></div>
+                    <span class="st-main--span__DESCR3">
                                 АТБ-AUDIO – аудио-карта с динамиком или разъемами Audio-jack 3.5 мм;
                             </span>
                 </li>
-                <li class="in-tsk--li__3">
-                    <div class="in-tsk--div__3_POINT"></div>
-                    <span class="in-tsk--span__3">
+                <li class="st-main--li__DESCR3">
+                    <div class="st-main--div__DESCR3_POINT"></div>
+                    <span class="st-main--span__DESCR3">
                                 АТБ-МУВВ — модуль мониторинга условий эксплуатации и внешних воздействий (t◦C, U, мех. воздействия, вскрытия);
                             </span>
                 </li>
-                <li class="in-tsk--li__3">
-                    <div class="in-tsk--div__3_POINT"></div>
-                    <span class="in-tsk--span__3">
+                <li class="st-main--li__DESCR3">
+                    <div class="st-main--div__DESCR3_POINT"></div>
+                    <span class="st-main--span__DESCR3">
                                 АТБ-GSM — GSM-модем отечественного производства;
                             </span>
                 </li>
-                <li class="in-tsk--li__3">
-                    <div class="in-tsk--div__3_POINT"></div>
-                    <span class="in-tsk--span__3">
+                <li class="st-main--li__DESCR3">
+                    <div class="st-main--div__DESCR3_POINT"></div>
+                    <span class="st-main--span__DESCR3">
                                 АТБ-LW — базовая станция LoRaWAN.
                             </span>
                 </li>
@@ -260,37 +260,40 @@ $this->setFrameMode(true);
 
 
 
-        <div class="in-tsk--div__ITEM __C-SCRL DOWN">
-            <div class="in-tsk--div__ITEM_TEXT __C-SCRL LEFT">
-                <p class="in-tsk--p__ITEM_NAME">
+        <div class="st-main--div__IMAGE4">
+            <div class="st-main--div__IMAGE4_TEXT __C-SCRL DOWN">
+                <p class="st-main--p__IMAGE4_TEXT_TOP">
                     Характеристика какая-то там
                 </p>
-                <p class="in-tsk--p__ITEM_TEXT">
-                    Платформа совместима с российскими операционными системами
-                    и может использоваться в роли маршрутизатора, межсетевого
-                    экрана или шлюза совместно.
+                <p class="st-main--p__IMAGE4_TEXT_BODY">
+                    Платформа совместима с российскими операционными
+                    системами и может использоваться в роли маршрутизатора,
+                    межсетевого экрана или шлюза совместно.
                 </p>
             </div>
 
-            <div class="in-tsk--div__ITEM_IMAGE __C-SCRL RIGHT">
-                <img class="in-tsk--img__ITEM_IMAGE" src="images/home/hm-ind_1.png" alt="" loading="lazy">
+            <div class="st-main--div__IMAGE4_CONT __C-SCRL DOWN">
+                <img class="st-main--img__IMAGE4" src="images/home/hm-ind_2.png" alt="" loading="lazy">
             </div>
         </div>
 
-        <div class="in-tsk--div__ITEM __C-SCRL DOWN">
-            <div class="in-tsk--div__ITEM_TEXT __C-SCRL RIGHT">
-                <p class="in-tsk--p__ITEM_NAME">
+
+
+
+        <div class="st-main--div__IMAGE4 second">
+            <div class="st-main--div__IMAGE4_TEXT __C-SCRL DOWN">
+                <p class="st-main--p__IMAGE4_TEXT_TOP">
                     Характеристика какая-то там
                 </p>
-                <p class="in-tsk--p__ITEM_TEXT">
-                    Платформа совместима с российскими операционными системами
-                    и может использоваться в роли маршрутизатора, межсетевого
-                    экрана или шлюза совместно.
+                <p class="st-main--p__IMAGE4_TEXT_BODY">
+                    Платформа совместима с российскими операционными
+                    системами и может использоваться в роли маршрутизатора,
+                    межсетевого экрана или шлюза совместно.
                 </p>
             </div>
 
-            <div class="in-tsk--div__ITEM_IMAGE __C-SCRL LEFT">
-                <img class="in-tsk--img__ITEM_IMAGE" src="images/home/hm-ind_2.png" alt="" loading="lazy">
+            <div class="st-main--div__IMAGE4_CONT __C-SCRL DOWN">
+                <img class="st-main--img__IMAGE4" src="images/home/hm-ind_1.png" alt="" loading="lazy">
             </div>
         </div>
     </div>
@@ -313,7 +316,7 @@ $this->setFrameMode(true);
 
 
 
-        <p class="in-des--p__1  __C-SCRL DOWN">
+        <p class="st-main--p__DESCR1 __C-SCRL DOWN">
             АТБ-АТОМ-1 является сетевой вычислительной платформой,
             включённой в единый реестр российской радиоэлектронной
             продукции (ПП РФ №878 от 10.07.2019), что допускает
@@ -321,8 +324,8 @@ $this->setFrameMode(true);
             инфраструктуры.
         </p>
 
-        <p class="in-des--p__2  __C-SCRL DOWN">
-            <a class="in-des--a__2" href="#">
+        <p class="st-main--p__DESCR2 __C-SCRL DOWN">
+            <a class="st-main--a__DESCR2" href="#">
                 Платформа совместима с российскими операционными системами
             </a>
             и может использоваться в роли маршрутизатора, межсетевого
@@ -338,27 +341,27 @@ $this->setFrameMode(true);
 
 
 
-        <div class="in-des--div__STAGES">
-            <p class="in-des--p__STAGES_TITLE __C-SCRL DOWN">
+        <div class="st-main--div__STAGES">
+            <p class="st-main--p__STAGES_TITLE __C-SCRL DOWN">
                 Этапы и перечисления:
             </p>
-            <p class="in-des--p__STAGES_TOP __C-SCRL DOWN">
+            <p class="st-main--p__STAGES_TOP __C-SCRL DOWN">
                 Платформа совместима с российскими операционными системами и
                 может использоваться в роли маршрутизатора, межсетевого экрана
                 или шлюза совместно со специализированным российским ПО.
                 АТБ-АТОМ-1 поддерживает до 8 Гб оперативной памяти и до
                 256 Гб накопителя SSD.
             </p>
-            <ol class="in-des--ol__STAGES">
-                <li class="in-des--li__STAGES_ITEM __C-SCRL DOWN">
-                            <span class="in-des--span__STAGES_NUM">
+            <ol class="st-main--ol__STAGES">
+                <li class="st-main--li__STAGES_ITEM __C-SCRL DOWN">
+                            <span class="st-main--span__STAGES_NUM">
                                 1
                             </span>
-                    <div class="in-des--div__STAGES_ITEM">
-                        <p class="in-des--p__STAGES_ITEM_TOP">
+                    <div class="st-main--div__STAGES_ITEM">
+                        <p class="st-main--p__STAGES_ITEM_TOP">
                             В системах информационной безопасности
                         </p>
-                        <p class="in-des--p__STAGES_ITEM_TEXT">
+                        <p class="st-main--p__STAGES_ITEM_TEXT">
                             в роли межсетевого экрана, шлюза, ловушки,
                             монитора сетевых запросов и трафика ана или
                             шлюза совместно со специализированным российским ПО.
@@ -370,15 +373,15 @@ $this->setFrameMode(true);
                     </div>
                 </li>
 
-                <li class="in-des--li__STAGES_ITEM __C-SCRL DOWN">
-                            <span class="in-des--span__STAGES_NUM">
+                <li class="st-main--li__STAGES_ITEM __C-SCRL DOWN">
+                            <span class="st-main--span__STAGES_NUM">
                                 2
                             </span>
-                    <div class="in-des--div__STAGES_ITEM">
-                        <p class="in-des--p__STAGES_ITEM_TOP">
+                    <div class="st-main--div__STAGES_ITEM">
+                        <p class="st-main--p__STAGES_ITEM_TOP">
                             В системах контроля доступа и видеонаблюдения
                         </p>
-                        <p class="in-des--p__STAGES_ITEM_TEXT">
+                        <p class="st-main--p__STAGES_ITEM_TEXT">
                             в роли вычислительного узла сбора данных, управления и
                             маршрутизациаанным российским ПО. АТБ-АТОМ-1 поддерживает
                             до 8 Гб оперативной памяти и до 256 Гб накопителя SSDана
@@ -389,15 +392,15 @@ $this->setFrameMode(true);
                     </div>
                 </li>
 
-                <li class="in-des--li__STAGES_ITEM __C-SCRL DOWN">
-                            <span class="in-des--span__STAGES_NUM">
+                <li class="st-main--li__STAGES_ITEM __C-SCRL DOWN">
+                            <span class="st-main--span__STAGES_NUM">
                                 3
                             </span>
-                    <div class="in-des--div__STAGES_ITEM">
-                        <p class="in-des--p__STAGES_ITEM_TOP">
+                    <div class="st-main--div__STAGES_ITEM">
+                        <p class="st-main--p__STAGES_ITEM_TOP">
                             в банкоматах, платежных автоматах и постаматах
                         </p>
-                        <p class="in-des--p__STAGES_ITEM_TEXT">
+                        <p class="st-main--p__STAGES_ITEM_TEXT">
                             в роли межсетевого экрана, шлюза, маршрутизатора,
                             вычислительного узла анным российским ПО. АТБ-АТОМ-1
                             поддерживает до 8 Гб оперативной памяти и до 256 Гб
@@ -407,15 +410,15 @@ $this->setFrameMode(true);
                     </div>
                 </li>
 
-                <li class="in-des--li__STAGES_ITEM __C-SCRL DOWN">
-                            <span class="in-des--span__STAGES_NUM">
+                <li class="st-main--li__STAGES_ITEM __C-SCRL DOWN">
+                            <span class="st-main--span__STAGES_NUM">
                                 4
                             </span>
-                    <div class="in-des--div__STAGES_ITEM">
-                        <p class="in-des--p__STAGES_ITEM_TOP">
+                    <div class="st-main--div__STAGES_ITEM">
+                        <p class="st-main--p__STAGES_ITEM_TOP">
                             на прозводстве и в офисе
                         </p>
-                        <p class="in-des--p__STAGES_ITEM_TEXT">
+                        <p class="st-main--p__STAGES_ITEM_TEXT">
                             в роли рабочего автоматизированного места,
                             терминала или тонкого клиента.
                         </p>
@@ -426,16 +429,29 @@ $this->setFrameMode(true);
 
 
 
-        <div class="in-des--div__IMAGES">
-            <div class="in-des--div__IMAGES_ITEM __C-SCRL DOWN">
-                <div class="in-des--div__IMAGE">
-                    <img class="in-des--img__IMAGE" src="images/home/hm-ind_3.png" alt="" loading="lazy">
+        <div class="st-main--div__IMAGES9">
+            <div class="st-main--div__IMAGES9_ITEM __C-SCRL DOWN">
+                <div class="st-main--div__IMAGE9">
+                    <img class="st-main--img__IMAGE9" src="images/home/hm-ind_3.png" alt="" loading="lazy">
                 </div>
-                <div class="in-des--div__IMAGES_TEXT">
-                    <p class="in-des--p__IMAGES_TOP">
+                <div class="st-main--div__IMAGES9_POPUP">
+                    <div class="st-main--div__IMAGES9_POPUP_CONT">
+                        <button class="st-main--button__IMAGES9_POPUP_CLOSE">
+                            <svg class="st-main--svg__IMAGES9_POPUP_CLOSE" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="19.6727" height="1.50269" rx="0.751343" transform="matrix(0.705843 -0.708368 0.705843 0.708368 0 13.9355)" fill="#005792"></rect>
+                                <rect width="19.6727" height="1.50269" rx="0.751343" transform="matrix(-0.705843 -0.708368 -0.705843 0.708368 15 13.9355)" fill="#005792"></rect>
+                            </svg>
+                        </button>
+                        <div class="st-main--div__IMAGE9">
+                            <img class="st-main--img__IMAGE9" src="images/home/hm-ind_3.png" alt="" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+                <div class="st-main--div__IMAGES9_TEXT">
+                    <p class="st-main--p__IMAGES9_TOP">
                         Условий эксплуатации открыва АТБ-АТОМ-1
                     </p>
-                    <p class="in-des--p__IMAGES_TEXT">
+                    <p class="st-main--p__IMAGES9_TEXT">
                         Примечание: целевая система — информационная система,
                         нарушение работы которой может привести. Ключевая система
                         — информационная система, от воздействия успешность
@@ -444,15 +460,30 @@ $this->setFrameMode(true);
                 </div>
             </div>
 
-            <div class="in-des--div__IMAGES_ITEM __C-SCRL DOWN">
-                <div class="in-des--div__IMAGE">
-                    <img class="in-des--img__IMAGE" src="images/home/hm-ind_1.png" alt="" loading="lazy">
+
+
+            <div class="st-main--div__IMAGES9_ITEM __C-SCRL DOWN">
+                <div class="st-main--div__IMAGE9">
+                    <img class="st-main--img__IMAGE9" src="images/home/hm-ind_1.png" alt="" loading="lazy">
                 </div>
-                <div class="in-des--div__IMAGES_TEXT">
-                    <p class="in-des--p__IMAGES_TOP">
+                <div class="st-main--div__IMAGES9_POPUP">
+                    <div class="st-main--div__IMAGES9_POPUP_CONT">
+                        <button class="st-main--button__IMAGES9_POPUP_CLOSE">
+                            <svg class="st-main--svg__IMAGES9_POPUP_CLOSE" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="19.6727" height="1.50269" rx="0.751343" transform="matrix(0.705843 -0.708368 0.705843 0.708368 0 13.9355)" fill="#005792"></rect>
+                                <rect width="19.6727" height="1.50269" rx="0.751343" transform="matrix(-0.705843 -0.708368 -0.705843 0.708368 15 13.9355)" fill="#005792"></rect>
+                            </svg>
+                        </button>
+                        <div class="st-main--div__IMAGE9">
+                            <img class="st-main--img__IMAGE9" src="images/home/hm-ind_1.png" alt="" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+                <div class="st-main--div__IMAGES9_TEXT">
+                    <p class="st-main--p__IMAGES9_TOP">
                         Условий эксплуатации открыва АТБ-АТОМ-1
                     </p>
-                    <p class="in-des--p__IMAGES_TEXT">
+                    <p class="st-main--p__IMAGES9_TEXT">
                         Примечание: целевая система — информационная система,
                         нарушение работы которой может привести. Ключевая система
                         — информационная система, от воздействия успешность
@@ -464,11 +495,11 @@ $this->setFrameMode(true);
 
 
 
-        <div class="in-des--div__QUOTE __C-SCRL DOWN">
-            <p class="in-des--p__QUOTE_QM">
+        <div class="st-main--div__QUOTE __C-SCRL DOWN">
+            <p class="st-main--p__QUOTE_QM">
                 «
             </p>
-            <blockquote class="in-des--blockquote__QUOTE">
+            <blockquote class="st-main--blockquote__QUOTE">
                 Компания «АТБ Электроника» поставляет АТБ - ATOM-1
                 под собственной торговой маркой. Также возможна
                 поставка и cтолицы мы организуем мастер-классы —
@@ -477,18 +508,18 @@ $this->setFrameMode(true);
                 передвижной лаборатории профориентации, каждый сможет с
                 помощьпаврарапрлрол олдодтдлддлжлджлжждлй заказчи.
             </blockquote>
-            <p class="in-des--p__QUOTE_QM">
+            <p class="st-main--p__QUOTE_QM">
                 «
             </p>
-            <div class="in-des--div__AUTHOR">
-                <div class="in-des--div__AUTHOR_IMAGE">
-                    <img class="in-des--img__AUTHOR_IMAGE" src="images/home/hm-pre_3.png" alt="">
+            <div class="st-main--div__AUTHOR">
+                <div class="st-main--div__AUTHOR_IMAGE">
+                    <img class="st-main--img__AUTHOR_IMAGE" src="images/home/hm-pre_3.png" alt="" loading="lazy">
                 </div>
-                <div class="in-des--div__AUTHOR_TEXT">
-                    <p class="in-des--p__AUTHOR_TEXT_NAME">
+                <div class="st-main--div__AUTHOR_TEXT">
+                    <p class="st-main--p__AUTHOR_TEXT_NAME">
                         Иванов Иван Иванович
                     </p>
-                    <p class="in-des--p__AUTHOR_TEXT_POST">
+                    <p class="st-main--p__AUTHOR_TEXT_POST">
                         Главный разработчик
                     </p>
                 </div>
@@ -497,81 +528,81 @@ $this->setFrameMode(true);
 
 
 
-        <div class="in-des--div__LIST __C-SCRL DOWN">
-            <p class="in-des--p__LIST_TOP">
+        <div class="st-main--div__LIST __C-SCRL DOWN">
+            <p class="st-main--p__LIST_TOP">
                 Под требования заказчика АТБ-АТОМ-1 может быть доукомплектован опциональными модулями:
             </p>
 
-            <ul class="in-des--ul__LIST">
-                <li class="in-des--li__LIST">
-                    <div class="in-des--div__LIST_POINT"></div>
-                    <span class="in-des--span__LIST">
+            <ul class="st-main--ul__LIST">
+                <li class="st-main--li__LIST">
+                    <div class="st-main--div__LIST_POINT"></div>
+                    <span class="st-main--span__LIST">
                                 АТБ-WiFi/BT - модуль беспроводной передачи данных WiFi/BT с внешней антенной;
                             </span>
                 </li>
-                <li class="in-des--li__LIST">
-                    <div class="in-des--div__LIST_POINT"></div>
-                    <span class="in-des--span__LIST">
+                <li class="st-main--li__LIST">
+                    <div class="st-main--div__LIST_POINT"></div>
+                    <span class="st-main--span__LIST">
                                 АТБ-WiFi/BT - модуль беспроводной передачи данных WiFi/BT с внешней антенной;
                             </span>
                 </li>
-                <li class="in-des--li__LIST">
-                    <div class="in-des--div__LIST_POINT"></div>
-                    <span class="in-des--span__LIST">
+                <li class="st-main--li__LIST">
+                    <div class="st-main--div__LIST_POINT"></div>
+                    <span class="st-main--span__LIST">
                                 АТБ-LTE (GPS) – модуль LTE (GPS) с внешней антенной и слотом под SIM-карту;
                             </span>
                 </li>
-                <li class="in-des--li__LIST">
-                    <div class="in-des--div__LIST_POINT"></div>
-                    <span class="in-des--span__LIST">
+                <li class="st-main--li__LIST">
+                    <div class="st-main--div__LIST_POINT"></div>
+                    <span class="st-main--span__LIST">
                                 АТБ-LTE (GPS) – модуль LTE (GPS) с внешней антенной и слотом под SIM-карту;
                             </span>
                 </li>
-                <li class="in-des--li__LIST">
-                    <div class="in-des--div__LIST_POINT"></div>
-                    <span class="in-des--span__LIST">
+                <li class="st-main--li__LIST">
+                    <div class="st-main--div__LIST_POINT"></div>
+                    <span class="st-main--span__LIST">
                                 АТБ-AUDIO – аудио-карта с динамиком или разъемами Audio-jack 3.5 мм;
                             </span>
                 </li>
-                <li class="in-des--li__LIST">
-                    <div class="in-des--div__LIST_POINT"></div>
-                    <span class="in-des--span__LIST">
+                <li class="st-main--li__LIST">
+                    <div class="st-main--div__LIST_POINT"></div>
+                    <span class="st-main--span__LIST">
                                 АТБ-AUDIO – аудио-карта с динамиком или разъемами Audio-jack 3.5 мм;
                             </span>
                 </li>
-                <li class="in-des--li__LIST">
-                    <div class="in-des--div__LIST_POINT"></div>
-                    <span class="in-des--span__LIST">
+                <li class="st-main--li__LIST">
+                    <div class="st-main--div__LIST_POINT"></div>
+                    <span class="st-main--span__LIST">
                                 АТБ-МУВВ — модуль мониторинга условий эксплуатации и внешних воздействий (t◦C, U, мех. воздействия, вскрытия);
                             </span>
                 </li>
-                <li class="in-des--li__LIST">
-                    <div class="in-des--div__LIST_POINT"></div>
-                    <span class="in-des--span__LIST">
+                <li class="st-main--li__LIST">
+                    <div class="st-main--div__LIST_POINT"></div>
+                    <span class="st-main--span__LIST">
                                 АТБ-МУВВ — модуль мониторинга условий эксплуатации и внешних воздействий (t◦C, U, мех. воздействия, вскрытия);
                             </span>
                 </li>
-                <li class="in-des--li__LIST">
-                    <div class="in-des--div__LIST_POINT"></div>
-                    <span class="in-des--span__LIST">
+                <li class="st-main--li__LIST">
+                    <div class="st-main--div__LIST_POINT"></div>
+                    <span class="st-main--span__LIST">
                                 АТБ-GSM — GSM-модем отечественного производства;
                             </span>
                 </li>
-                <li class="in-des--li__LIST">
-                    <div class="in-des--div__LIST_POINT"></div>
-                    <span class="in-des--span__LIST">
+                <li class="st-main--li__LIST">
+                    <div class="st-main--div__LIST_POINT"></div>
+                    <span class="st-main--span__LIST">
                                 АТБ-GSM — GSM-модем отечественного производства;
                             </span>
                 </li>
-                <li class="in-des--li__LIST">
-                    <div class="in-des--div__LIST_POINT"></div>
-                    <span class="in-des--span__LIST">
+                <li class="st-main--li__LIST">
+                    <div class="st-main--div__LIST_POINT"></div>
+                    <span class="st-main--span__LIST">
                                 АТБ-LW — базовая станция LoRaWAN.
                             </span>
                 </li>
-                <li class="in-des--li__LIST">
-                    <div class="in-des--div__LIST_POINT"></div>
-                    <span class="in-des--span__LIST">
+                <li class="st-main--li__LIST">
+                    <div class="st-main--div__LIST_POINT"></div>
+                    <span class="st-main--span__LIST">
                                 АТБ-LW — базовая станция LoRaWAN.
                             </span>
                 </li>
@@ -580,16 +611,16 @@ $this->setFrameMode(true);
 
 
 
-        <ul class="in-des--ul__EXAMPLES">
-            <li class="in-des--li__EXAMPLES __C-SCRL DOWN">
-                <p class="in-des--p__EXAMPLES_NUM">
+        <ol class="st-main--ol__EXAMPLES">
+            <li class="st-main--li__EXAMPLES __C-SCRL DOWN">
+                <p class="st-main--p__EXAMPLES_NUM">
                     01
                 </p>
-                <div class="in-des--div__EXAMPLES_TEXT">
-                    <p class="in-des--p__EXAMPLES_NAME">
+                <div class="st-main--div__EXAMPLES_TEXT">
+                    <p class="ist-main--p__EXAMPLES_NAME">
                         В системах информационной безопасности
                     </p>
-                    <p class="in-des--p__EXAMPLES_TEXT">
+                    <p class="st-main--p__EXAMPLES_TEXT">
                         В роли межсетевого экрана, шлюза, ловушки,
                         монитора сетевых запросов и трафика ана или
                         шлюза совместно со специализированным российским
@@ -599,20 +630,18 @@ $this->setFrameMode(true);
                         АТБ-АТОМ-1 поддерживает до 8 Гб оя SSD;
                     </p>
                 </div>
-                <div class="in-des--div__EXAMPLES_LINE">
-
-                </div>
+                <div class="st-main--div__EXAMPLES_LINE"></div>
             </li>
 
-            <li class="in-des--li__EXAMPLES __C-SCRL DOWN">
-                <p class="in-des--p__EXAMPLES_NUM">
+            <li class="st-main--li__EXAMPLES __C-SCRL DOWN">
+                <p class="st-main--p__EXAMPLES_NUM">
                     02
                 </p>
-                <div class="in-des--div__EXAMPLES_TEXT">
-                    <p class="in-des--p__EXAMPLES_NAME">
+                <div class="st-main--div__EXAMPLES_TEXT">
+                    <p class="st-main--p__EXAMPLES_NAME">
                         В системах информационной безопасности
                     </p>
-                    <p class="in-des--p__EXAMPLES_TEXT">
+                    <p class="st-main--p__EXAMPLES_TEXT">
                         В роли межсетевого экрана, шлюза, ловушки,
                         монитора сетевых запросов и трафика ана или
                         шлюза совместно со специализированным российским
@@ -622,20 +651,18 @@ $this->setFrameMode(true);
                         АТБ-АТОМ-1 поддерживает до 8 Гб оя SSD;
                     </p>
                 </div>
-                <div class="in-des--div__EXAMPLES_LINE">
-
-                </div>
+                <div class="st-main--div__EXAMPLES_LINE"></div>
             </li>
 
-            <li class="in-des--li__EXAMPLES __C-SCRL DOWN">
-                <p class="in-des--p__EXAMPLES_NUM">
+            <li class="st-main--li__EXAMPLES __C-SCRL DOWN">
+                <p class="st-main--p__EXAMPLES_NUM">
                     03
                 </p>
-                <div class="in-des--div__EXAMPLES_TEXT">
-                    <p class="in-des--p__EXAMPLES_NAME">
+                <div class="st-main--div__EXAMPLES_TEXT">
+                    <p class="st-main--p__EXAMPLES_NAME">
                         В системах информационной безопасности
                     </p>
-                    <p class="in-des--p__EXAMPLES_TEXT">
+                    <p class="st-main--p__EXAMPLES_TEXT">
                         В роли межсетевого экрана, шлюза, ловушки,
                         монитора сетевых запросов и трафика ана или
                         шлюза совместно со специализированным российским
@@ -645,20 +672,18 @@ $this->setFrameMode(true);
                         АТБ-АТОМ-1 поддерживает до 8 Гб оя SSD;
                     </p>
                 </div>
-                <div class="in-des--div__EXAMPLES_LINE">
-
-                </div>
+                <div class="st-main--div__EXAMPLES_LINE"></div>
             </li>
 
-            <li class="in-des--li__EXAMPLES __C-SCRL DOWN">
-                <p class="in-des--p__EXAMPLES_NUM">
+            <li class="st-main--li__EXAMPLES __C-SCRL DOWN">
+                <p class="st-main--p__EXAMPLES_NUM">
                     04
                 </p>
-                <div class="in-des--div__EXAMPLES_TEXT">
-                    <p class="in-des--p__EXAMPLES_NAME">
+                <div class="st-main--div__EXAMPLES_TEXT">
+                    <p class="st-main--p__EXAMPLES_NAME">
                         В системах информационной безопасности
                     </p>
-                    <p class="in-des--p__EXAMPLES_TEXT">
+                    <p class="st-main--p__EXAMPLES_TEXT">
                         В роли межсетевого экрана, шлюза, ловушки,
                         монитора сетевых запросов и трафика ана или
                         шлюза совместно со специализированным российским
@@ -668,65 +693,63 @@ $this->setFrameMode(true);
                         АТБ-АТОМ-1 поддерживает до 8 Гб оя SSD;
                     </p>
                 </div>
-                <div class="in-des--div__EXAMPLES_LINE">
-
-                </div>
+                <div class="st-main--div__EXAMPLES_LINE"></div>
             </li>
-        </ul>
+        </ol>
 
 
 
-        <div class="in-des--div__BOTTOM">
-            <div class="in-des--div__BOTTOM_IMAGE __C-SCRL DOWN">
-                <img class="in-des--img__BOTTOM_IMAGE" src="images/home/ATB-2100/АТБ-2100_1.webp" alt="" loading="lazy">
+        <div class="st-main--div__IMGLIST">
+            <div class="st-main--div__IMGLIST_IMAGE __C-SCRL DOWN">
+                <img class="st-main--img__IMGLIST_IMAGE" src="images/home/ATB-2100/АТБ-2100_1.webp" alt="" loading="lazy">
             </div>
 
-            <div class="in-des--div__BOTTOM_ITEMS">
-                <div class="in-des--div__BOTTOM_ITEM __C-SCRL DOWN">
-                    <div class="in-des--div__BOTTOM_ITEM_TEXT">
-                        <p class="in-des--p__BOTTOM_ITEM_NAME">
+            <div class="st-main--div__IMGLIST_ITEMS">
+                <div class="st-main--div__IMGLIST_ITEM __C-SCRL DOWN">
+                    <div class="st-main--div__IMGLIST_ITEM_TEXT">
+                        <p class="st-main--p__IMGLIST_ITEM_NAME">
                             В системах информационной безопасности
                         </p>
-                        <p class="in-des--p__BOTTOM_ITEM_TEXT">
+                        <p class="st-main--p__IMGLIST_ITEM_TEXT">
                             В роли межсетевого экрана, шлюза, ловушки, монитора
                             сетевых запросов и трафика ана или шлюза совместно
                             со специализированным российским ПО.
                         </p>
                     </div>
-                    <div class="in-des--div__BOTTOM_ITEM_IMAGE">
-                        <img class="in-des--img__BOTTOM_ITEM_IMAGE" src="images/home/menu/Аппаратные-платформы.png" alt="">
+                    <div class="st-main--div__IMGLIST_ITEM_IMAGE">
+                        <img class="st-main--img__IMGLIST_ITEM_IMAGE" src="images/home/menu/Аппаратные-платформы.png" alt="" loading="lazy">
                     </div>
                 </div>
 
-                <div class="in-des--div__BOTTOM_ITEM __C-SCRL DOWN">
-                    <div class="in-des--div__BOTTOM_ITEM_TEXT">
-                        <p class="in-des--p__BOTTOM_ITEM_NAME">
+                <div class="st-main--div__IMGLIST_ITEM __C-SCRL DOWN">
+                    <div class="st-main--div__IMGLIST_ITEM_TEXT">
+                        <p class="st-main--p__IMGLIST_ITEM_NAME">
                             В системах информационной безопасности
                         </p>
-                        <p class="in-des--p__BOTTOM_ITEM_TEXT">
+                        <p class="st-main--p__IMGLIST_ITEM_TEXT">
                             В роли межсетевого экрана, шлюза, ловушки, монитора
                             сетевых запросов и трафика ана или шлюза совместно
                             со специализированным российским ПО.
                         </p>
                     </div>
-                    <div class="in-des--div__BOTTOM_ITEM_IMAGE">
-                        <img class="in-des--img__BOTTOM_ITEM_IMAGE" src="images/home/menu/АСУ-ТП.png" alt="">
+                    <div class="st-main--div__IMGLIST_ITEM_IMAGE">
+                        <img class="st-main--img__IMGLIST_ITEM_IMAGE" src="images/home/menu/АСУ-ТП.png" alt="" loading="lazy">
                     </div>
                 </div>
 
-                <div class="in-des--div__BOTTOM_ITEM __C-SCRL DOWN">
-                    <div class="in-des--div__BOTTOM_ITEM_TEXT">
-                        <p class="in-des--p__BOTTOM_ITEM_NAME">
+                <div class="st-main--div__IMGLIST_ITEM __C-SCRL DOWN">
+                    <div class="st-main--div__IMGLIST_ITEM_TEXT">
+                        <p class="st-main--p__IMGLIST_ITEM_NAME">
                             В системах информационной безопасности
                         </p>
-                        <p class="in-des--p__BOTTOM_ITEM_TEXT">
+                        <p class="st-main--p__IMGLIST_ITEM_TEXT">
                             В роли межсетевого экрана, шлюза, ловушки, монитора
                             сетевых запросов и трафика ана или шлюза совместно
                             со специализированным российским ПО.
                         </p>
                     </div>
-                    <div class="in-des--div__BOTTOM_ITEM_IMAGE">
-                        <img class="in-des--img__BOTTOM_ITEM_IMAGE" src="images/home/menu/АСУНО.png" alt="">
+                    <div class="st-main--div__IMGLIST_ITEM_IMAGE">
+                        <img class="st-main--img__IMGLIST_ITEM_IMAGE" src="images/home/menu/АСУНО.png" alt="" loading="lazy">
                     </div>
                 </div>
             </div>

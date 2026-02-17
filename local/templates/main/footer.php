@@ -120,6 +120,7 @@ $mainId = $APPLICATION->GetProperty('mainid', 'other');
 
 Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/libs/swiper/swiper-bundle.min.css');
 Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/common/css/common.css');
+Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/styles/css/st-common.css');
 Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/header/css/header.css');
 Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/footer/css/footer.css');
 Asset::getInstance()->addCss('https://cdn.jsdelivr.net/npm/intl-tel-input@25.12.4/build/css/intlTelInput.css');
@@ -219,6 +220,7 @@ switch ($mainId) {
 
 Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/libs/swiper/swiper-bundle.min.js');
 Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/common/js/common.js');
+Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/styles/js/st1-common.js');
 Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/common/js/form.js');
 Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/header/js/header.js');
 Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/footer/js/footer.js');
@@ -271,7 +273,6 @@ switch ($mainId) {
 
     case 'ind':
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/ind/js/in0-common.js');
-        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/ind/js/in2-adv.js');
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/ind/js/in3-tsk.js');
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/ind/js/in4-des.js');
         break;
