@@ -764,35 +764,35 @@ $elementDeleteParams = ['CONFIRM' => GetMessage('CT_BCS_TPL_ELEMENT_DELETE_CONFI
 
 
                     <div class="cd-abt--div__SWIPER2_SLIDE swiper-slide">
-                        <div class="cd-abt--div__TABLE">
-                            <div class="cd-abt--div__TABLE1">
-                                <button class="cd-abt--button__TABLE_HEAD">
-                                                    <span class="cd-abt--span__TABLE_HEAD">
+                        <div class="st-main--div__TABLE">
+                            <div class="st-main--div__TABLE1 __C-SCRL DOWN">
+                                <button class="st-main--button__TABLE_HEAD">
+                                                    <span class="st-main--span__TABLE_HEAD">
                                                         основные характеристики
                                                     </span>
-                                    <svg class="cd-abt--svg__TABLE_HEAD" width="28" height="13"
+                                    <svg class="st-main--svg__TABLE_HEAD" width="28" height="13"
                                          viewBox="0 0 28 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M1 12.5L14 0.264706L27 12.5" stroke="#0C0C0C"
                                               stroke-width="0.25"/>
                                     </svg>
                                 </button>
-                                <div class="cd-abt--div__TABLE_BODY">
+                                <div class="st-main--div__TABLE_BODY">
                                     <? foreach ($arResult['UF']['UF_PROPERTY'] as $property): ?>
 
-                                        <div class="cd-abt--div__TABLE_ITEM">
-                                            <p class="cd-abt--p__TABLE_ITEM_NAME">
+                                        <div class="st-main--div__TABLE_ITEM _COL">
+                                            <p class="st-main--p__TABLE_ITEM_NAME">
                                                 <?= $property['name'] ?>
                                             </p>
                                             <? if (count($property['values']) == 1): ?>
-                                                <p class="cd-abt--p__TABLE_ITEM_TEXT">
+                                                <p class="st-main--p__TABLE_ITEM_TEXT">
                                                     <?= $property['values'][0] ?>
                                                 </p>
                                             <? else: ?>
-                                                <ul class="cd-abt--ul__TABLE_ITEM_TEXT">
+                                                <ul class="st-main--ul__TABLE_ITEM_TEXT">
                                                     <? foreach ($property['values'] as $val): ?>
-                                                        <li class="cd-abt--li__TABLE_ITEM_TEXT">
-                                                            <div class="cd-abt--div__POINT"></div>
-                                                            <span class="cd-abt--span__TABLE_ITEM_TEXT">
+                                                        <li class="st-main--li__TABLE_ITEM_TEXT">
+                                                            <div class="st-main--div__POINT"></div>
+                                                            <span class="st-main--span__TABLE_ITEM_TEXT">
                                                         <?= $val ?>
                                                     </span>
                                                         </li>
@@ -806,35 +806,35 @@ $elementDeleteParams = ['CONFIRM' => GetMessage('CT_BCS_TPL_ELEMENT_DELETE_CONFI
                             </div>
 
 
-                            <div class="cd-abt--div__TABLE1">
-                                <button class="cd-abt--button__TABLE_HEAD">
-                                                    <span class="cd-abt--span__TABLE_HEAD">
+                            <div class="st-main--div__TABLE1 __C-SCRL DOWN">
+                                <button class="st-main--button__TABLE_HEAD">
+                                                    <span class="st-main--span__TABLE_HEAD">
                                                         Опции
                                                     </span>
-                                    <svg class="cd-abt--svg__TABLE_HEAD" width="28" height="13"
+                                    <svg class="st-main--svg__TABLE_HEAD" width="28" height="13"
                                          viewBox="0 0 28 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M1 12.5L14 0.264706L27 12.5" stroke="#0C0C0C"
                                               stroke-width="0.25"/>
                                     </svg>
                                 </button>
 
-                                <div class="cd-abt--div__TABLE_BODY">
+                                <div class="st-main--div__TABLE_BODY">
                                     <? foreach ($arResult['UF']['UF_OPTIONS'] as $property): ?>
 
-                                        <div class="cd-abt--div__TABLE_ITEM">
-                                            <p class="cd-abt--p__TABLE_ITEM_NAME">
+                                        <div class="st-main--div__TABLE_ITEM _COL">
+                                            <p class="st-main--p__TABLE_ITEM_NAME">
                                                 <?= $property['name'] ?>
                                             </p>
                                             <? if (count($property['values']) == 1): ?>
-                                                <p class="cd-abt--p__TABLE_ITEM_TEXT">
+                                                <p class="st-main--p__TABLE_ITEM_TEXT">
                                                     <?= $property['values'][0] ?>
                                                 </p>
                                             <? else: ?>
-                                                <ul class="cd-abt--ul__TABLE_ITEM_TEXT">
+                                                <ul class="st-main--ul__TABLE_ITEM_TEXT">
                                                     <? foreach ($property['values'] as $val): ?>
-                                                        <li class="cd-abt--li__TABLE_ITEM_TEXT">
-                                                            <div class="cd-abt--div__POINT"></div>
-                                                            <span class="cd-abt--span__TABLE_ITEM_TEXT">
+                                                        <li class="st-main--li__TABLE_ITEM_TEXT">
+                                                            <div class="st-main--div__POINT"></div>
+                                                            <span class="st-main--span__TABLE_ITEM_TEXT">
                                                         <?= $val ?>
                                                     </span>
                                                         </li>
