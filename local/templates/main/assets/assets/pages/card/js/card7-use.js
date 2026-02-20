@@ -115,7 +115,7 @@ window.addEventListener ("load", function () {
 
         cdUseButtonTabsClick ();
 
-        cdUseButtonTabs[0].click ();
+        cdUseButtonTabs[0]?.click ();
 
 
         let cdUsetimeout;

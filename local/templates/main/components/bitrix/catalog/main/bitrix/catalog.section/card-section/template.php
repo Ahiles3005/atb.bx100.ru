@@ -121,11 +121,16 @@ $elementDeleteParams = ['CONFIRM' => GetMessage('CT_BCS_TPL_ELEMENT_DELETE_CONFI
 
                             <?
 
-                            if (count($arResult['UF']['UF_MORE_PHOTO']) >= 4) {
-                                $countImage = 4;
+                            if (is_array($arResult['UF']['UF_MORE_PHOTO'])) {
+                                if (count($arResult['UF']['UF_MORE_PHOTO']) >= 4) {
+                                    $countImage = 4;
+                                } else {
+                                    $countImage = count($arResult['UF']['UF_MORE_PHOTO']);
+                                }
                             } else {
-                                $countImage = count($arResult['UF']['UF_MORE_PHOTO']);
+                                $countImage = 0;
                             }
+
 
                             $gallaryHaveVideo = $arResult['UF']['UF_MORE_3D'][0] ?? false;
                             $gallaryHave3d = $arResult['UF']['UF_MORE_VIDEO'][0] ?? false;

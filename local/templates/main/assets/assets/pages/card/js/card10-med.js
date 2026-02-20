@@ -70,7 +70,7 @@ window.addEventListener ("load", function () {
 
         // 2.1 Выбор первой радиокнопки в субменю при загрузке страницы
 
-        cdMedLabelSubmenu[0].click ();
+        cdMedLabelSubmenu[0]?.click ();
 
 
 

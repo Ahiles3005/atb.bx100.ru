@@ -1,3 +1,10 @@
 .hm-cat--div__CARD_BTNS, .cd-hero--div__CARD_BTNS {
     display: none;
 }
+
+@media (min-width: 1440px) {
+    .__hm-cat--li__MENU_ITEM .hm-cat--form__SUBMENU {
+        max-height: 400px !important;
+
+    }
+}

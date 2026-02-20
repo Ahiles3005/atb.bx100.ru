@@ -46,6 +46,11 @@ $strTitle = "";
                     <div class="hm-pre--div__FORM_BODY">
 
                         <? foreach ($arResult["SECTIONS"] as $arSection) : ?>
+                        <?
+                            if ($arSection["ELEMENT_CNT"] == 0) {
+                                continue;
+                            }
+                            ?>
                             <label class="hm-pre--label__SUBMENU" role="button" data-sectionid="<?=$arSection['ID']?>">
                                 <input class="hm-pre--input__SUBMENU" type="radio" name="1" value="">
                                 <span class="hm-pre--span__SUBMENU">
