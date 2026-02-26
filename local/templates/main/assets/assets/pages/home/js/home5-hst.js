@@ -112,7 +112,9 @@ window.addEventListener ("load", function () {
                 hmHstFormSubmenu.forEach ((v, i, a) => {
                     setTimeout (() => {
                         a[i].style.maxHeight = getComputedStyle (hmHstDivContent).height;
-                        hmHstDivSubmenuBack.style.top = `${parseInt (getComputedStyle (hmHstDivContent).height) + 115}px`;
+                        if(hmHstDivSubmenuBack){
+                            hmHstDivSubmenuBack.style.top = `${parseInt (getComputedStyle (hmHstDivContent).height) + 115}px`;
+                        }
                     }, 800);
                 });
             } else {
