@@ -43,7 +43,7 @@ function renderMenuItems(array $items, $isTop = false, $parentTitle = null)
         echo '<span>' . $title . '</span>';
         // Иконка-указатель для пунктов с дочерними
         if ($hasChildren) {
-            echo \Site\Template::showSvg('/assets/images/svg/chevron-right.svg');
+            echo \Site\Template::showSvg('/assets/images/svg/chevron-left.svg');
         }
         echo '</a>';
 
@@ -57,13 +57,34 @@ function renderMenuItems(array $items, $isTop = false, $parentTitle = null)
                 $backTitle = strtoupper($backTitle);
             }
             echo '<a class="c-header--a__SUBMENU_BACK">';
-            echo \Site\Template::showSvg('/assets/images/svg/chevron-left.svg');
+            echo \Site\Template::showSvg('/assets/images/svg/chevron-right.svg');
             echo '<span>' . $backTitle . '</span>';
             echo '</a>';
 
             // Дочерний список
             renderMenuItems($item['CHILDS'], false, $title);
 
+            ?>
+            <div class="c-header--div__SUBMENU_BOTTOM">
+                                <span class="c-header--span__SUBMENU_BOTTOM">
+                                    <?=$title?>
+                                </span>
+                <div class="c-header--div__SUBMENU_BOTTOM_IMAGE">
+                    <img src="images/header/header_device1.png" alt="Устройство 1">
+                </div>
+                <p class="c-header--p__SUBMENU_BOTTOM">
+                    Аппаратные платформы для обеспечения
+                    Критической информационной инфраструктуры (КИИ)
+                    и Информационной безопасности Аппаратные платформы для обеспечения
+                    Критической информационной инфраструктуры (КИИ)
+                    и Информационной безопасности
+                </p>
+                <a class="c-header--a__SUBMENU_BOTTOM" href="<?=$link?>">
+                    ПЕРЕЙТИ В РАЗДЕЛ
+                </a>
+            </div>
+
+            <?php
             echo '</div>';
         }
 
@@ -74,3 +95,6 @@ function renderMenuItems(array $items, $isTop = false, $parentTitle = null)
 }
 
 renderMenuItems($arResult, true);
+
+?>
+
