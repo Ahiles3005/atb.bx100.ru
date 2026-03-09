@@ -61,25 +61,25 @@ function renderMenuItems(array $items, $isTop = false, $parentTitle = null)
             echo '<span>' . $backTitle . '</span>';
             echo '</a>';
 
+
             // Дочерний список
             renderMenuItems($item['CHILDS'], false, $title);
 
             ?>
             <div class="c-header--div__SUBMENU_BOTTOM">
                                 <span class="c-header--span__SUBMENU_BOTTOM">
-                                    <?=$title?>
+                                    <?= $title ?>
                                 </span>
-                <div class="c-header--div__SUBMENU_BOTTOM_IMAGE">
-                    <img src="images/header/header_device1.png" alt="Устройство 1">
-                </div>
+                <? if ($item['menuData']['img_src']): ?>
+                    <div class="c-header--div__SUBMENU_BOTTOM_IMAGE">
+                        <img src="<?= $item['menuData']['img_src'] ?>" alt="Устройство 1">
+                    </div>
+                <?endif; ?>
+
                 <p class="c-header--p__SUBMENU_BOTTOM">
-                    Аппаратные платформы для обеспечения
-                    Критической информационной инфраструктуры (КИИ)
-                    и Информационной безопасности Аппаратные платформы для обеспечения
-                    Критической информационной инфраструктуры (КИИ)
-                    и Информационной безопасности
+                    <?= $item['menuData']['text'] ?? '' ?>
                 </p>
-                <a class="c-header--a__SUBMENU_BOTTOM" href="<?=$link?>">
+                <a class="c-header--a__SUBMENU_BOTTOM" href="<?= $link ?>">
                     ПЕРЕЙТИ В РАЗДЕЛ
                 </a>
             </div>
