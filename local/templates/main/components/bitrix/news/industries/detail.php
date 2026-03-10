@@ -82,7 +82,9 @@ if ($element) {
 }
 
 
-$otrosli = $arProps['OTRASLI']['VALUE'] ?? '';
+$otrosli = $arProps['OTRASLI_NAME']['VALUE'] ?? '';
+
+$detailPicture = CFile::GetFileArray($arFields['DETAIL_PICTURE']);
 
 
 ?>
@@ -125,7 +127,7 @@ $otrosli = $arProps['OTRASLI']['VALUE'] ?? '';
 
         <div class="in-hero--div__BODY">
             <div class="in-hero--div__IMAGE __C-SCRL DOWN">
-                <img src="images/home/hm-ind_1.png" alt="" loading="lazy">
+                <img src="<?= $detailPicture['SRC'] ?? '' ?>" alt="" loading="lazy">
             </div>
             <div class="in-hero--div__BODY_TEXT __C-SCRL DOWN">
                 <p class="in-hero--p__BODY_TITLE">
@@ -139,6 +141,23 @@ $otrosli = $arProps['OTRASLI']['VALUE'] ?? '';
     </div>
 </section>
 
+
+<?php
+$properties = [
+        'PREI_TEXT_1',
+        'PREI_TEXT_2',
+        'ELEMENTY_PREIM',
+        'TASK_TEXT_1',
+        'TASK_TEXT_2',
+        'TASK_TEXT_3',
+        'TASK_TEXT_4',
+        'SOLUTION_TEXT',
+        'PRODUCTS',
+        'OTRASLI_ELEMENTS',
+];
+
+$arParams["DETAIL_PROPERTY_CODE"] = array_merge($arParams["DETAIL_PROPERTY_CODE"], $properties);
+?>
 
 <?php
 $APPLICATION->IncludeComponent(
