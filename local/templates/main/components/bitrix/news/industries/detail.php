@@ -14,6 +14,8 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
+$APPLICATION->SetPageProperty('mainid', 'ind');
+
 
 $ElementID = $APPLICATION->IncludeComponent(
         "bitrix:news.detail",
