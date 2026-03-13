@@ -84,8 +84,10 @@ window.addEventListener ("load", function () {
 
 
         // 1.5 Открытие первого субменю при загрузке страницы
+        if(hmHstButtonMenuItem.length > 0){
+            hmHstButtonMenuItem[0].click ();
+        }
 
-        hmHstButtonMenuItem[0].click ();
 
 
         // 1.6 Выравнивание высоты form для десктопов по блоку с контентом

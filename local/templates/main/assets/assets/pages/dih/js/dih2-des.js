@@ -42,10 +42,10 @@ window.addEventListener ("load", function () {
 
         // 1.1 Выбор первой радиокнопки в субменю при загрузке страницы
 
-        hmDesFormSubmenu.querySelector (".hm-des--label__SUBMENU:first-of-type").click ();
+        hmDesFormSubmenu?.querySelector (".hm-des--label__SUBMENU:first-of-type").click ();
 
 
-        hmDesDivHead.addEventListener ("click", () => {
+        hmDesDivHead?.addEventListener ("click", () => {
         
             // 1.2 Открытие / закрытие субменю
 
@@ -64,12 +64,20 @@ window.addEventListener ("load", function () {
         function hmDesFormHeight () {
             if (window.innerWidth > 1439) {
                 setTimeout (() => {
-                    hmDesFormSubmenu.style.maxHeight = `${parseInt (getComputedStyle (hmDesDivContent).height) - 64}px`;
-                    dhDesDivSubmenuBack.style.top = `${parseInt (getComputedStyle (hmDesDivContent).height) + 44}px`;
+                    if(hmDesFormSubmenu){
+                        hmDesFormSubmenu.style.maxHeight = `${parseInt (getComputedStyle (hmDesDivContent).height) - 64}px`;
+
+                    }
+                    if(dhDesDivSubmenuBack){
+                        dhDesDivSubmenuBack.style.top = `${parseInt (getComputedStyle (hmDesDivContent).height) + 44}px`;
+                    }
                 }, 900);
             } else {
                 setTimeout (() => {
-                    hmDesFormSubmenu.style.maxHeight = null;
+                    if(hmDesFormSubmenu){
+                        hmDesFormSubmenu.style.maxHeight = null;
+                    }
+
                 }, 50);
             }
         }
