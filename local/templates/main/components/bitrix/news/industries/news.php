@@ -70,7 +70,7 @@ $APPLICATION->IncludeComponent(
                 "SHOW_PARENT_NAME" => "Y",
                 "TOP_DEPTH" => "2",
                 "VIEW_MODE" => "LINE",
-                "COMPONENT_TEMPLATE" => "section_list_home"
+                "COMPONENT_TEMPLATE" => "page_industries_list"
         ),
         $component
 );

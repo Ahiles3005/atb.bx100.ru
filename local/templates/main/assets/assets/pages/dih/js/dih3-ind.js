@@ -38,8 +38,9 @@ window.addEventListener ("load", function () {
 
         // 1.1 Выбор первой радиокнопки в субменю при загрузке страницы
 
-        hmIndFormSubmenu.querySelector (".hm-ind--label__SUBMENU:first-of-type").click ();
-        
+        // hmIndFormSubmenu.querySelector (".hm-ind--label__SUBMENU:first-of-type").click ();
+        hmIndFormSubmenu.querySelector (".hm-ind--label__SUBMENU.active").click ();
+
 
         hmIndDivHead.addEventListener ("click", () => {
         

@@ -13,6 +13,11 @@
 $this->setFrameMode(true);
 
 $strTitle = "";
+$thisSectionsId = $arResult["SECTIONS"][0]['ID'] ?? 0;
+if ($arParams['THIS_SECTION_ID']) {
+    $thisSectionsId = $arParams['THIS_SECTION_ID'];
+}
+
 ?>
 
 
@@ -41,7 +46,8 @@ $strTitle = "";
                     $this->AddDeleteAction($arSection['ID'], $arSection['DELETE_LINK'], CIBlock::GetArrayByID($arSection["IBLOCK_ID"], "SECTION_DELETE"), ["CONFIRM" => GetMessage('CT_BCSL_ELEMENT_DELETE_CONFIRM')]);
 
                     ?>
-                    <label class="hm-ind--label__SUBMENU" id="<?= $this->GetEditAreaId($arSection['ID']); ?>"
+                    <label class="hm-ind--label__SUBMENU <?= $thisSectionsId == $arSection['ID'] ? 'active' : '' ?>"
+                           id="<?= $this->GetEditAreaId($arSection['ID']); ?>"
                            data-sectionid="<?= $arSection['ID'] ?>">
                         <input class="hm-ind--input__SUBMENU" type="radio" name="1" value="">
                         <span class="hm-ind--span__SUBMENU">
@@ -89,7 +95,8 @@ $strTitle = "";
                                                         </p>
 
                                                         <div class="hm-ind--div__CARD_IMAGE">
-                                                            <a class="hm-ind--a__MORE" href="<?=$item['DETAIL_PAGE_URL']?>">
+                                                            <a class="hm-ind--a__MORE"
+                                                               href="<?= $item['DETAIL_PAGE_URL'] ?>">
                                                                 <span class="hm-ind--span__MORE">ПОДРОБНЕЕ</span>
                                                                 <svg width="27" height="20" viewBox="0 0 27 20"
                                                                      fill="none"
