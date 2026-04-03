@@ -43,7 +43,7 @@ window.addEventListener ("load", function () {
         // 1.1 Выбор первой радиокнопки в субменю при загрузке страницы
 
         // hmDesFormSubmenu?.querySelector (".hm-des--label__SUBMENU:first-of-type").click ();
-        hmDesFormSubmenu?.querySelector (".hm-des--label__SUBMENU.active").click ();
+        hmDesFormSubmenu?.querySelector(".hm-des--label__SUBMENU.active")?.click();
 
 
         hmDesDivHead?.addEventListener ("click", () => {
