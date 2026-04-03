@@ -13,6 +13,11 @@
 $this->setFrameMode(true);
 
 $strTitle = "";
+$thisSectionsId = $arResult["SECTIONS"][0]['ID'] ?? 0;
+if ($arParams['THIS_SECTION_ID']) {
+    $thisSectionsId = $arParams['THIS_SECTION_ID'];
+}
+
 ?>
 
 
@@ -48,7 +53,7 @@ $strTitle = "";
 
                     ?>
 
-                    <label class="hm-des--label__SUBMENU">
+                    <label class="hm-des--label__SUBMENU <?= $thisSectionsId == $arSection['ID'] ? 'active' : '' ?>">
                         <input class="hm-des--input__SUBMENU" type="radio" name="1" value="">
                         <span class="hm-des--span__SUBMENU">
                             <?= $arSection['NAME'] ?>
