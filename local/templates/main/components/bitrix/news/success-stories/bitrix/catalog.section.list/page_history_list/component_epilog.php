@@ -130,7 +130,7 @@
 
 
                                                         ],
-                                                                $component
+                                                                $component->GetParent()
                                                         );
                                                         ?>
 

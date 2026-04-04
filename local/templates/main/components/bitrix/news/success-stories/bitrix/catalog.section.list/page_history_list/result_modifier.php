@@ -18,3 +18,13 @@ foreach ($arResult["SECTIONS"] as $section) {
 }
 $arResult["SECTIONS"] = array_values($sections);
 
+// Сохраняем данные для использования в component_epilog.php
+$cp = $this->__component;
+if (method_exists($cp, 'SetResultCacheKeys')) {
+    $cp->SetResultCacheKeys(['SECTIONS']);
+}
+
+
+if (isset($arResult['SECTIONS'])) {
+    $cp->arResult['SECTIONS'] = $arResult['SECTIONS'];
+}
