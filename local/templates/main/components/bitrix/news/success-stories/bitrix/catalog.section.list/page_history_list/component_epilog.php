@@ -82,16 +82,7 @@
                                     }
                                     ?>
                                     <? if (isset($arSection['childs']) && !empty($arSection['childs'])): ?>
-
                                         <? foreach ($arSection['childs'] as $k => $childSection) : ?>
-                                            <label class="hm-hst--label__SUBMENU"
-                                                   data-sectionid="<?= $childSection['ID'] ?>">
-                                                <input class="hm-hst--input__SUBMENU" type="radio" name="1" value="">
-                                                <span class="hm-hst--span__SUBMENU"><?= $childSection['NAME'] ?></span>
-                                                <a class="hm-hst--a__SUBMENU"
-                                                   href="<?= $childSection['SECTION_PAGE_URL'] ?>">Перейти в раздел</a>
-                                            </label>
-
                                             <div class="dh-hst--div__SWIPER_SLIDE swiper-slide">
                                                 <div class="cd-use--div__SWIPER23 swiper">
                                                     <div class="cd-use--div__SWIPER23_WRAPPER swiper-wrapper">
