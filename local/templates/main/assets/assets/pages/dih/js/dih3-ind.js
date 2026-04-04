@@ -42,7 +42,7 @@ window.addEventListener ("load", function () {
         hmIndFormSubmenu?.querySelector(".hm-ind--label__SUBMENU.active")?.click();
 
 
-        hmIndDivHead.addEventListener ("click", () => {
+        hmIndDivHead?.addEventListener ("click", () => {
         
             // 1.2 Открытие / закрытие субменю
 
