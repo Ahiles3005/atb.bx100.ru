@@ -1,4 +1,4 @@
-<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
+<? if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 /** @var array $arParams */
 /** @var array $arResult */
 /** @global CMain $APPLICATION */
@@ -13,6 +13,25 @@
 $this->setFrameMode(true);
 
 $APPLICATION->SetPageProperty('mainid', 'dih');
+?>
+
+    <section class="dh-hero">
+        <div class="dh-hero--div__CONT C-CONTAINER">
+            <? $APPLICATION->IncludeComponent(
+                    "bitrix:breadcrumb",
+                    ".default",
+                    [
+                            "PATH" => "",
+                            "SITE_ID" => "s1",
+                            "START_FROM" => "0"
+                    ]
+            ); ?>
+        </div>
+    </section>
+    <!-- ---------- ********** СЕКЦИЯ IND ********** ---------- -->
+
+
+<?php
 $APPLICATION->IncludeComponent(
         "bitrix:catalog.section.list",
         "page_solutions_list",
@@ -43,10 +62,9 @@ $APPLICATION->IncludeComponent(
                 "SHOW_PARENT_NAME" => "Y",
                 "TOP_DEPTH" => "2",
                 "VIEW_MODE" => "LINE",
-                "COMPONENT_TEMPLATE" => "section_list_home",
-                "THIS_SECTION_ID" => $arResult["VARIABLES"]["SECTION_ID"],
-
+                "COMPONENT_TEMPLATE" => "section_list_home"
         ],
         $component
 );
 
+?>
