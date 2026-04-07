@@ -24,7 +24,7 @@ $strTitle = "";
                     Истории успеха
                 </h2>
 
-                <a class="c-common--a__ALL __C-SCRL DOWN" href="#">
+                <a class="c-common--a__ALL __C-SCRL DOWN" href="/success-stories/">
                     СМОТРЕТЬ ВСЕ
                 </a>
             </div>
