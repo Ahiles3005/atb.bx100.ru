@@ -233,6 +233,25 @@ switch ($mainId) {
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/dih/css/dih4-hst.css');
         break;
 
+    case 'hst':
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/home/css/home2-cat.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/home/css/home3-ind.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/home/css/home4-des.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/card/css/card7-use.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/card-n/css/card-n4-reg.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/card-n/css/card-n5-rec.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/ind/css/in3-tsk.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/ind/css/in2-adv.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/ind/css/in3-tsk.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/ind/css/in4-des.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/hst/css/hs1-hero.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/hst/css/hs2-org.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/hst/css/hs3-sit.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/hst/css/hs4-tsk.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/hst/css/hs5-des.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/hst/css/hs6-res.css');
+        break;
+
 }
 
 
@@ -302,11 +321,17 @@ switch ($mainId) {
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/des/js/des4-des.js');
         break;
 
-        case 'dih':
+    case 'dih':
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/dih/js/dih0-common.js');
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/dih/js/dih2-des.js');
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/dih/js/dih3-ind.js');
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/dih/js/dih4-hst.js');
+        break;
+
+    case 'hst':
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/hst/js/hs0-common.js');
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/hst/js/hs1-hero.js');
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/hst/js/hs5-des.js');
         break;
 }
 ?>

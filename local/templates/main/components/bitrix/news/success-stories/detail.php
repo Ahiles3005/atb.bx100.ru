@@ -14,7 +14,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
-$APPLICATION->SetPageProperty('mainid', 'ind');
+$APPLICATION->SetPageProperty('mainid', 'hst');
 
 
 $ElementID = $APPLICATION->IncludeComponent(
@@ -84,7 +84,9 @@ if ($element) {
 }
 
 
-$otrosli = $arProps['OTRASLI_NAME']['VALUE'] ?? '';
+$organizacia = $arProps['ORGANIZACIA']['VALUE'] ?? '';
+$otrosl = $arProps['OTRASAL']['VALUE'] ?? '';
+$reshenie = $arProps['RESHENIE']['VALUE']['TEXT'] ?? '';
 
 $detailPicture = CFile::GetFileArray($arFields['DETAIL_PICTURE']);
 
@@ -95,8 +97,8 @@ $detailPicture = CFile::GetFileArray($arFields['DETAIL_PICTURE']);
 <!-- ---------- ********** СЕКЦИЯ HERO ********** ---------- -->
 
 
-<section class="in-hero">
-    <div class="in-hero--div__CONT C-CONTAINER">
+<section class="hs-hero">
+    <div class="hs-hero--div__CONT C-CONTAINER">
         <? $APPLICATION->IncludeComponent(
                 "bitrix:breadcrumb",
                 ".default",
@@ -107,55 +109,102 @@ $detailPicture = CFile::GetFileArray($arFields['DETAIL_PICTURE']);
                 ]
         ); ?>
 
-
-        <div class="in-hero--div__TOP __C-SCRL LEFT">
-            <div class="in-hero--div__IND_TYPE">
-                <p class="in-hero--p__IND_TYPE">
-                    Отрасль
-                </p>
-                <a class="in-hero--a__TAG color-green-dark" href="#">
-                    <div class="in-hero--div__TAG_CIRCLE"></div>
-                    <span class="in-hero--span__TAG">
-                                <?= $otrosli ?>
-                            </span>
-                </a>
-            </div>
-
-            <h1 class="in-hero--h1">
+        <div class="hs-hero--div__MAIN">
+            <h1 class="hs-hero--h1 __C-SCRL LEFT">
                 <? $APPLICATION->ShowTitle(false); ?>
             </h1>
+
+            <div class="hs-hero--div__INFO __C-SCRL DOWN">
+                <div class="hs-hero--div__INFO_TOP">
+                    <p class="hs-hero--p__INFO_TOP">
+                        Информация о проекте
+                    </p>
+                    <div class="hs-hero--div__LINE"></div>
+                    <div class="hs-hero--div__LINE2"></div>
+                </div>
+
+                <div class="hs-hero--div__INFO_FIRST">
+                    <div class="hs-hero--div__INFO_TEXT">
+                        <div class="hs-hero--div__INFO_ITEM">
+                            <p class="hs-hero--p__TITLE">
+                                Организация
+                            </p>
+                            <p class="hs-hero--p__NAME">
+                                <?= $organizacia ?>
+                            </p>
+                        </div>
+                        <div class="hs-hero--div__INFO_ITEM">
+                            <p class="hs-hero--p__TITLE">
+                                Отрасль
+                            </p>
+                            <p class="hs-hero--p__NAME">
+                                <?= $otrosl ?>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="hs-hero--div__IMAGE">
+                        <img class="hs-hero--img__IMAGE"
+                             src="<?= SITE_TEMPLATE_PATH ?>/assets/images/home/menu/Аппаратные-платформы.png" alt="">
+                    </div>
+                </div>
+                <div class="hs-hero--div__INFO_ITEM">
+                    <p class="hs-hero--p__TITLE">
+                        Решение
+                    </p>
+                    <p class="hs-hero--p__NAME">
+                        <?= $reshenie ?>
+                    </p>
+                </div>
+            </div>
         </div>
 
-
-        <div class="in-hero--div__BODY">
-            <div class="in-hero--div__IMAGE __C-SCRL DOWN">
-                <img src="<?= $detailPicture['SRC'] ?? '' ?>" alt="" loading="lazy">
+        <div class="c-common--div__TABS __C-SCRL DOWN">
+            <div class="c-common--div__TABS_TOP">
+                <a class="c-common--a__TABS _ACT _MARK" href="#hs-org">
+                    организация
+                </a>
+                <a class="c-common--a__TABS" href="#hs-sit">
+                    описание ситуации
+                </a>
+                <a class="c-common--a__TABS" href="#hs-tsk">
+                    задача
+                </a>
+                <a class="c-common--a__TABS" href="#hs-des">
+                    решение
+                </a>
+                <a class="c-common--a__TABS" href="#hs-res">
+                    результат
+                </a>
+                <div class="c-common--div__TABS_FRAME"></div>
             </div>
-            <div class="in-hero--div__BODY_TEXT __C-SCRL DOWN">
-                <p class="in-hero--p__BODY_TITLE">
-                    Основная информация
-                </p>
-                <p class="st-main--p__DESCR2 __C-SCRL DOWN">
-                    <?= $arFields['DETAIL_TEXT'] ?>
-                </p>
-            </div>
+            <button class="c-common--button__TABS_LEFT">
+                <svg width="54" height="20" viewBox="0 0 54 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M36 4.5L41 10L36 15.5" stroke="#005792" stroke-width="1.5" stroke-linecap="round"></path>
+                </svg>
+            </button>
+            <button class="c-common--button__TABS_RIGHT">
+                <svg width="54" height="20" viewBox="0 0 54 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M36 4.5L41 10L36 15.5" stroke="#005792" stroke-width="1.5" stroke-linecap="round"></path>
+                </svg>
+            </button>
         </div>
     </div>
 </section>
 
-
 <?php
 $properties = [
-        'PREI_TEXT_1',
-        'PREI_TEXT_2',
-        'ELEMENTY_PREIM',
-        'TASK_TEXT_1',
-        'TASK_TEXT_2',
-        'TASK_TEXT_3',
-        'TASK_TEXT_4',
-        'SOLUTION_TEXT',
+        'ORGANIZACIA_2_1',
+        'ORGANIZACIA_2_2',
+        'SITTYACIA_1',
+        'TASK_1',
+        'RESHENIE_1',
         'PRODUCTS',
         'OTRASLI_ELEMENTS',
+        'RESHENIA',
+        'ELEMENTY_PREIM',
+        'RESULT_1',
+        'RESULT_2',
+
 ];
 
 $arParams["DETAIL_PROPERTY_CODE"] = array_merge($arParams["DETAIL_PROPERTY_CODE"], $properties);
@@ -217,5 +266,8 @@ $APPLICATION->IncludeComponent(
         ],
         $component
 ); ?>
+
+
+
 
 
