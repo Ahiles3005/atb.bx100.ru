@@ -57,15 +57,19 @@ window.addEventListener ("load", function () {
 
 
         // 1.3 Выравнивание высоты form для десктопов по блоку с контентом
-        
-        function hmIndFormHeight () {
+
+        function hmIndFormHeight() {
             if (window.innerWidth > 1439) {
-                setTimeout (() => {
-                    hmIndFormSubmenu.style.maxHeight = `${parseInt (getComputedStyle (hmIndDivContent).height) - 64}px`;
-                    hmIndDivSubmenuBack.style.top = `${parseInt (getComputedStyle (hmIndDivContent).height) + 44}px`;
+                setTimeout(() => {
+                    if (hmIndFormSubmenu) {
+                        hmIndFormSubmenu.style.maxHeight = `${parseInt(getComputedStyle(hmIndDivContent).height) - 64}px`;
+                    }
+                    if (hmIndDivSubmenuBack) {
+                        hmIndDivSubmenuBack.style.top = `${parseInt(getComputedStyle(hmIndDivContent).height) + 44}px`;
+                    }
                 }, 800);
             } else {
-                setTimeout (() => {
+                setTimeout(() => {
                     hmIndFormSubmenu.style.maxHeight = null;
                 }, 50);
             }

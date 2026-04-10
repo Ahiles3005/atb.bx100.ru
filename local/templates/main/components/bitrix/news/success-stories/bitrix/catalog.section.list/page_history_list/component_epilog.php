@@ -13,7 +13,6 @@
             <div class="hm-hst--div__BODY">
                 <ul class="hm-hst--ul__MENU __C-SCRL LEFT">
 
-
                     <? foreach ($arResult["SECTIONS"] as $ksection => $arSection) : ?>
                         <?
                         if ($arSection["ELEMENT_CNT"] == 0) {
@@ -26,7 +25,7 @@
                         ?>
 
                         <li class="hm-hst--li__MENU_ITEM" id="<?= $this->GetEditAreaId($arSection['ID']); ?>">
-                            <button class="hm-hst--button__MENU_ITEM">
+                            <button class="hm-hst--button__MENU_ITEM" data-path="<?=$arSection['SECTION_PAGE_URL']?>">
                         <span class="hm-hst--span__MENU_ITEM">
                             <?= $arSection['NAME'] ?>
                         </span>
@@ -44,7 +43,7 @@
 
                                     <? foreach ($arSection['childs'] as $k => $childSection) : ?>
                                         <label class="hm-hst--label__SUBMENU"
-                                               data-sectionid="<?= $childSection['ID'] ?>">
+                                               data-sectionid="<?= $childSection['ID'] ?>"  data-path="<?=$childSection['SECTION_PAGE_URL']?>">
                                             <input class="hm-hst--input__SUBMENU" type="radio" name="1" value="">
                                             <span class="hm-hst--span__SUBMENU"><?= $childSection['NAME'] ?></span>
                                             <a class="hm-hst--a__SUBMENU"

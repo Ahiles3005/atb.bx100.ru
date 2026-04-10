@@ -18,11 +18,11 @@ window.addEventListener ("load", function () {
         const cdCommonMedia1920 = window.matchMedia ("(min-width: 1920px)");
 
 
-        
 
 
 
-        
+
+
         /* ---------- ********** СЕКЦИЯ HST ********** ---------- */
 
 
@@ -35,12 +35,12 @@ window.addEventListener ("load", function () {
         const hmHstFormSubmenu = Array.from (document.querySelectorAll (".hm-hst--form__SUBMENU"));
         const hmHstDivContent = document.querySelector (".hm-hst--div__CONTENT");
         const hmHstDivSubmenuBack = document.querySelector (".hm-hst--div__SUBMENU_BACK");
-        
-    
+
+
 
         hmHstButtonMenuItem.forEach ((v, i, a) => {
             a[i].addEventListener ("click", () => {
-                
+
                 // 1.1 Открытие субменю
 
                 if (!hmHstLiMenuItem[i].classList.contains ("__hm-hst--li__MENU_ITEM")) {
@@ -52,14 +52,14 @@ window.addEventListener ("load", function () {
                         hmHstLiMenuItem[i].classList.add ("__hm-hst--li__MENU_ITEM");
                         hmHstFormSubmenu[i].classList.add ("__hm-hst--form__SUBMENU");
                     }
-                    
 
-                    // 1.2 Выбор первой радиокнопки в открывшемся субменю
+
+                    // 1.2 Выбор  радиокнопки в открывшемся субменю
 
                     if (hmHstLiMenuItem[i].querySelector (".hm-hst--label__SUBMENU:first-of-type > .hm-hst--input__SUBMENU")) {
                         hmHstLiMenuItem[i].querySelector (".hm-hst--label__SUBMENU:first-of-type").click ();
                     }
-                    
+
                     // 1.3 Закрытие остальных субменю
 
                     hmHstLiMenuItem.filter (x => x !== hmHstLiMenuItem[i]).forEach ((v1, i1, a1) => {
@@ -84,8 +84,17 @@ window.addEventListener ("load", function () {
 
 
         // 1.5 Открытие первого субменю при загрузке страницы
-        if(hmHstButtonMenuItem.length > 0){
-            hmHstButtonMenuItem[0].click ();
+        hmHstButtonMenuItemClick = false;
+        hmHstButtonMenuItem.forEach(function (hmHstButtonMenuItemValue) {
+            if (window.location.pathname.includes(hmHstButtonMenuItemValue.dataset.path)) {
+                hmHstButtonMenuItemValue.click();
+                hmHstButtonMenuItemClick = true;
+            }
+        })
+
+
+        if (hmHstButtonMenuItem.length > 0 && !hmHstButtonMenuItemClick) {
+            hmHstButtonMenuItem[0].click();
         }
 
 
@@ -97,7 +106,9 @@ window.addEventListener ("load", function () {
                 hmHstFormSubmenu.forEach ((v, i, a) => {
                     setTimeout (() => {
                         a[i].style.maxHeight = `${parseInt (getComputedStyle (hmHstDivContent).height) - 64}px`;
-                        hmHstDivSubmenuBack.style.top = `${parseInt (getComputedStyle (hmHstDivContent).height) + 52}px`;
+                        if(hmHstDivSubmenuBack){
+                            hmHstDivSubmenuBack.style.top = `${parseInt (getComputedStyle (hmHstDivContent).height) + 52}px`;
+                        }
                     }, 800);
                 });
             } else {
@@ -127,12 +138,12 @@ window.addEventListener ("load", function () {
 
 
         // 1.7 Скролл элементов субменю до видимой части
-        
+
         const hmHstLabelSubmenu = Array.from (document.querySelectorAll (".hm-hst--label__SUBMENU"));
 
 
         hmHstLabelSubmenu.forEach ((v, i, a) => {
-            a[i].addEventListener ("click", () => {    
+            a[i].addEventListener ("click", () => {
                 if (a[i].parentNode.scrollHeight > a[i].parentNode.offsetHeight) {
 
                     let k = a[i].offsetTop - a[i].parentNode.scrollTop;
@@ -154,7 +165,7 @@ window.addEventListener ("load", function () {
         // 2. СЛАЙДЕРЫ РЕШЕНИЯ
 
         // 2.1 Основной слайдер - переключатель между слайдерами
-        
+
         const dhHstDivSwiper = new Swiper (".dh-hst--div__SWIPER", {
             effect: "fade",
             allowTouchMove: false,
@@ -196,7 +207,7 @@ window.addEventListener ("load", function () {
                         spaceBetween: 44,
                         slidesPerGroup: 1,
                     },
-    
+
                     1920: {
                         slidesPerView: 2,
                         spaceBetween: 44,
@@ -205,5 +216,11 @@ window.addEventListener ("load", function () {
                 },
             });
         });
+
+        if (document.querySelector(`.hm-hst--label__SUBMENU[data-path="${window.location.pathname}"] > .hm-hst--input__SUBMENU `)) {
+            document.querySelector(`.hm-hst--label__SUBMENU[data-path="${window.location.pathname}"] > .hm-hst--input__SUBMENU `).click();
+        }
+
+
     }
 });
