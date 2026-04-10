@@ -125,7 +125,7 @@ if ($arParams['THIS_SECTION_ID']) {
                                                                           stroke="white" stroke-width="0.55"/>
                                                                 </svg>
                                                             </a>
-                                                            <img src="<?= $item['DETAIL_PICTURE_SRC'] ?>"
+                                                            <img src="<?= $item['DETAIL_PICTURE_SRC'] ?? AHILES3005_NO_IMAGE ?>"
                                                                  alt="Решение 1" loading="lazy">
                                                         </div>
                                                     </article>

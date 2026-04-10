@@ -129,7 +129,7 @@ $detailPicture = CFile::GetFileArray($arFields['DETAIL_PICTURE']);
 
         <div class="in-hero--div__BODY">
             <div class="in-hero--div__IMAGE __C-SCRL DOWN">
-                <img src="<?= $detailPicture['SRC'] ?? '' ?>" alt="" loading="lazy">
+                <img src="<?= $detailPicture['SRC'] ?? AHILES3005_NO_IMAGE ?>" alt="" loading="lazy">
             </div>
             <div class="in-hero--div__BODY_TEXT __C-SCRL DOWN">
                 <p class="in-hero--p__BODY_TITLE">

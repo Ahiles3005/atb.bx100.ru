@@ -84,7 +84,7 @@ if (!empty($arResult['ITEMS'])) {
                                     <article class="hm-pre--article__CARD DOWN">
                                         <a class="hm-pre--a__CARD" href="<?= $item['DETAIL_PAGE_URL'] ?>"></a>
                                         <div class="hm-pre--div__CARD_IMAGE">
-                                            <img src="<?= $item['DETAIL_PICTURE']['SRC'] ?>" alt="<?= $item['NAME'] ?>"
+                                            <img src="<?= $item['DETAIL_PICTURE']['SRC'] ?? AHILES3005_NO_IMAGE ?>" alt="<?= $item['NAME'] ?>"
                                                  loading="lazy">
                                         </div>
                                         <a class="hm-pre--a__CARD_TAG1" href="#">

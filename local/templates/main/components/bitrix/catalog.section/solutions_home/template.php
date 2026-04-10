@@ -79,7 +79,7 @@ if (!empty($arResult['ITEMS'])) {
                               stroke-width="0.55"/>
                     </svg>
                 </a>
-                <img src="<?= $item['DETAIL_PICTURE']['SRC'] ?>" alt="<?= $item['NAME'] ?>"
+                <img src="<?= $item['DETAIL_PICTURE']['SRC'] ?? AHILES3005_NO_IMAGE ?>" alt="<?= $item['NAME'] ?>"
                      loading="lazy">
             </div>
         </article>
