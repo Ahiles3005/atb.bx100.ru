@@ -13,6 +13,9 @@ setlocale(LC_TIME, 'ru_RU.UTF-8');
 require_once $_SERVER['DOCUMENT_ROOT'] . '/local/php_interface/autoload.php';
 
 
+define('AHILES3005_NO_IMAGE','/local/templates/main/assets/images/home/hm-ind_3.png');
+
+
 if (file_exists($_SERVER['DOCUMENT_ROOT'] . '/local/php_interface/ahiles3005/property_code_link.php')) {
     require_once $_SERVER['DOCUMENT_ROOT'] . '/local/php_interface/ahiles3005/property_code_link.php';
 }
