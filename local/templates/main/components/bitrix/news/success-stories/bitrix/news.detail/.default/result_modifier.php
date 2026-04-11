@@ -44,8 +44,7 @@ if (CModule::IncludeModule("highloadblock")) {
 // Сохраняем данные для использования в component_epilog.php
 $cp = $this->__component;
 if (method_exists($cp, 'SetResultCacheKeys')) {
-    $cp->SetResultCacheKeys(['PROPERTIES']);
-    $cp->SetResultCacheKeys(['DISPLAY_PROPERTIES']);
+    $cp->SetResultCacheKeys(['PROPERTIES','DISPLAY_PROPERTIES']);
 }
 
 
