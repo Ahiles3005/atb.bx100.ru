@@ -8,6 +8,22 @@ $arUrlRewrite=array (
     'PATH' => '/bitrix/services/mobileapp/jn.php',
     'SORT' => 100,
   ),
+  5 => 
+  array (
+    'CONDITION' => '#^/success-stories/#',
+    'RULE' => '',
+    'ID' => 'bitrix:news',
+    'PATH' => '/success-stories/index.php',
+    'SORT' => 100,
+  ),
+  6 => 
+  array (
+    'CONDITION' => '#^/press-center/#',
+    'RULE' => '',
+    'ID' => 'bitrix:news',
+    'PATH' => '/press-center/index.php',
+    'SORT' => 100,
+  ),
   3 => 
   array (
     'CONDITION' => '#^/industries/#',
@@ -16,22 +32,14 @@ $arUrlRewrite=array (
     'PATH' => '/industries/index.php',
     'SORT' => 100,
   ),
-    4 =>
-        array (
-            'CONDITION' => '#^/solutions/#',
-            'RULE' => '',
-            'ID' => 'bitrix:news',
-            'PATH' => '/solutions/index.php',
-            'SORT' => 100,
-        ),
-    5 =>
-        array (
-            'CONDITION' => '#^/success-stories/#',
-            'RULE' => '',
-            'ID' => 'bitrix:news',
-            'PATH' => '/success-stories/index.php',
-            'SORT' => 100,
-        ),
+  4 => 
+  array (
+    'CONDITION' => '#^/solutions/#',
+    'RULE' => '',
+    'ID' => 'bitrix:news',
+    'PATH' => '/solutions/index.php',
+    'SORT' => 100,
+  ),
   2 => 
   array (
     'CONDITION' => '#^/catalog/#',
