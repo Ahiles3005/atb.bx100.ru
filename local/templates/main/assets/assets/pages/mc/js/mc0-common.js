@@ -137,20 +137,30 @@ window.addEventListener ("load", function () {
                 const ctCatArticlesVis = ctCatArticles.filter (x => {
                     return getComputedStyle (x).display == "grid";
                 });
-                ctCatSpanInd1.textContent = ctCatArticlesVis.length;
-                ctCatSpanInd2.textContent = ctCatArticles.length;
+                if (ctCatSpanInd1 && ctCatSpanInd1.textContent) {
+                    ctCatSpanInd1.textContent = ctCatArticlesVis.length;
+                }
+
+                if (ctCatSpanInd2 && ctCatSpanInd2.textContent) {
+                    ctCatSpanInd2.textContent = ctCatArticles.length;
+                }
 
                 // 3.2.2 Линия
 
-                ctCatDivLine1.style.width = `${(parseFloat (ctCatSpanInd1.textContent) / parseFloat (ctCatSpanInd2.textContent)) * 100}%`;
+                if(ctCatDivLine1){
+                    ctCatDivLine1.style.width = `${(parseFloat (ctCatSpanInd1.textContent) / parseFloat (ctCatSpanInd2.textContent)) * 100}%`;
+                }
 
                 // 3.2.3 Уборка кнопки "Показать еще", если все карточки показаны
 
-                if (ctCatArticlesVis.length === ctCatArticles.length) {
-                    ctCatButtonElse.classList.add ("__ct-cat--button__ELSE");
-                } else {
-                    ctCatButtonElse.classList.remove ("__ct-cat--button__ELSE");
+                if (ctCatButtonElse) {
+                    if (ctCatArticlesVis.length === ctCatArticles.length) {
+                        ctCatButtonElse.classList.add("__ct-cat--button__ELSE");
+                    } else {
+                        ctCatButtonElse.classList.remove("__ct-cat--button__ELSE");
+                    }
                 }
+
             }
 
 
@@ -251,7 +261,7 @@ window.addEventListener ("load", function () {
                 ctCatVisCounter ();
             }
 
-            ctCatButtonElse.addEventListener ("click", ctCatCardsAdd);
+            ctCatButtonElse?.addEventListener ("click", ctCatCardsAdd);
 
 
 
