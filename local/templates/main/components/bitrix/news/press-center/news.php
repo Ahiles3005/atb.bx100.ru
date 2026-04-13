@@ -15,64 +15,113 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
-
-if($arParams["USE_RSS"]=="Y"):
-	if(method_exists($APPLICATION, 'addheadstring'))
-		$APPLICATION->AddHeadString('<link rel="alternate" type="application/rss+xml" title="'.$arResult["FOLDER"].$arResult["URL_TEMPLATES"]["rss"].'" href="'.$arResult["FOLDER"].$arResult["URL_TEMPLATES"]["rss"].'" />');
-	?>
-	<a href="<?=$arResult["FOLDER"].$arResult["URL_TEMPLATES"]["rss"]?>" title="rss" target="_self"><img alt="RSS" src="<?=$templateFolder?>/images/gif-light/feed-icon-16x16.gif" border="0" align="right" /></a>
-<?
-endif;
-
-if($arParams["USE_SEARCH"]=="Y"):?>
-<?=GetMessage("SEARCH_LABEL")?><?php
-	$APPLICATION->IncludeComponent(
-	"bitrix:search.form",
-	"flat",
-	[
-		"PAGE" => $arResult["FOLDER"].$arResult["URL_TEMPLATES"]["search"]
-	],
-	$component,
-		['HIDE_ICONS' => 'Y']
-);?>
-<br />
-<?php
-endif;
-if($arParams["USE_FILTER"]=="Y"):
-$APPLICATION->IncludeComponent(
-	"bitrix:catalog.filter",
-	"",
-	[
-		"IBLOCK_TYPE" => $arParams["IBLOCK_TYPE"],
-		"IBLOCK_ID" => $arParams["IBLOCK_ID"],
-		"FILTER_NAME" => $arParams["FILTER_NAME"],
-		"FIELD_CODE" => $arParams["FILTER_FIELD_CODE"],
-		"PROPERTY_CODE" => $arParams["FILTER_PROPERTY_CODE"],
-		"CACHE_TYPE" => $arParams["CACHE_TYPE"],
-		"CACHE_TIME" => $arParams["CACHE_TIME"],
-		"CACHE_GROUPS" => $arParams["CACHE_GROUPS"],
-		"PAGER_PARAMS_NAME" => $arParams["PAGER_PARAMS_NAME"],
-	],
-	$component,
-	['HIDE_ICONS' => 'Y']
-);
+$APPLICATION->SetPageProperty('mainid', 'mc');
 ?>
-<br />
+
+
+    <section class="mc-hero">
+        <div class="mc-hero--div__CONT C-CONTAINER">
+            <? $APPLICATION->IncludeComponent(
+                "bitrix:breadcrumb",
+                ".default",
+                [
+                    "PATH" => "",
+                    "SITE_ID" => "s1",
+                    "START_FROM" => "0"
+                ]
+            ); ?>
+
+
+
+            <h1 class="mc-hero--h1 __C-SCRL RIGHT">
+                <? $APPLICATION->ShowTitle(false); ?>
+            </h1>
+
+
+
+            <div class="mc-hero--div__IMAGES __C-SCRL DOWN">
+                <div class="mc-hero--div__IMAGES1">
+                    <div class="mc-hero--div__IMAGE _1 __C-SCRL RIGHT">
+                        <img class="mc-hero--img__IMAGE" src="/local/templates/main/assets/images/mc/mc-hero_1.png" alt="" loading="lazy">
+                    </div>
+
+                    <div class="mc-hero--div__IMAGES1_1">
+                        <div class="mc-hero--div__IMAGE _2 __C-SCRL TOP">
+                            <img class="mc-hero--img__IMAGE" src="/local/templates/main/assets/images/mc/mc-hero_2.png" alt="" loading="lazy">
+                        </div>
+                        <div class="mc-hero--div__IMAGE _3 __C-SCRL LEFT">
+                            <img class="mc-hero--img__IMAGE" src="/local/templates/main/assets/images/mc/mc-hero_3.png" alt="" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="mc-hero--div__IMAGES2">
+                    <div class="mc-hero--div__IMAGE _4 __C-SCRL DOWN">
+                        <img class="mc-hero--img__IMAGE" src="/local/templates/main/assets/images/mc/mc-hero_4.png" alt="" loading="lazy">
+                    </div>
+
+                    <div class="mc-hero--div__IMAGES2_1">
+                        <div class="mc-hero--div__IMAGE _5 __C-SCRL LEFT">
+                            <img class="mc-hero--img__IMAGE" src="/local/templates/main/assets/images/mc/mc-hero_5.png" alt="" loading="lazy">
+                        </div>
+                        <div class="mc-hero--div__IMAGE _6 __C-SCRL RIGHT">
+                            <img class="mc-hero--img__IMAGE" src="/local/templates/main/assets/images/mc/mc-hero_6.png" alt="" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="c-common--div__TABS __C-SCRL DOWN">
+                <div class="c-common--div__TABS_TOP">
+                    <a class="c-common--a__TABS " href="/novosti/">
+                        новости
+                    </a>
+                    <a class="c-common--a__TABS" href="/meropriyatiya/">
+                        мероприятия
+                    </a>
+                    <a class="c-common--a__TABS" href="/stati/">
+                        статьи
+                    </a>
+<!--                    <a class="c-common--a__TABS" href="#mc-video">-->
+<!--                        видео-->
+<!--                    </a>-->
+<!--                    <a class="c-common--a__TABS" href="#mc-pk">-->
+<!--                        пресс-кит-->
+<!--                    </a>-->
+                    <div class="c-common--div__TABS_FRAME"></div>
+                </div>
+                <button class="c-common--button__TABS_LEFT">
+                    <svg width="54" height="20" viewBox="0 0 54 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M36 4.5L41 10L36 15.5" stroke="#005792" stroke-width="1.5" stroke-linecap="round"></path>
+                    </svg>
+                </button>
+                <button class="c-common--button__TABS_RIGHT">
+                    <svg width="54" height="20" viewBox="0 0 54 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M36 4.5L41 10L36 15.5" stroke="#005792" stroke-width="1.5" stroke-linecap="round"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
 <?php
-endif;
 $APPLICATION->IncludeComponent(
 	"bitrix:news.list",
-	"",
+	"index",
 	[
 		"IBLOCK_TYPE" => $arParams["IBLOCK_TYPE"],
 		"IBLOCK_ID" => $arParams["IBLOCK_ID"],
-		"NEWS_COUNT" => $arParams["NEWS_COUNT"],
+//		"NEWS_COUNT" => $arParams["NEWS_COUNT"],
+		"NEWS_COUNT" => 10,
 		"SORT_BY1" => $arParams["SORT_BY1"],
 		"SORT_ORDER1" => $arParams["SORT_ORDER1"],
 		"SORT_BY2" => $arParams["SORT_BY2"],
 		"SORT_ORDER2" => $arParams["SORT_ORDER2"],
 		"FIELD_CODE" => $arParams["LIST_FIELD_CODE"],
-		"PROPERTY_CODE" => $arParams["LIST_PROPERTY_CODE"],
+		"PROPERTY_CODE" => ['TAG_KRASOTA','PRESS_TYPE'],
 		"DETAIL_URL" => $arResult["FOLDER"].$arResult["URL_TEMPLATES"]["detail"],
 		"SECTION_URL" => $arResult["FOLDER"].$arResult["URL_TEMPLATES"]["section"],
 		"IBLOCK_URL" => $arResult["FOLDER"].$arResult["URL_TEMPLATES"]["news"],
@@ -103,7 +152,7 @@ $APPLICATION->IncludeComponent(
 		"DISPLAY_PICTURE" => $arParams["DISPLAY_PICTURE"],
 		"DISPLAY_PREVIEW_TEXT" => $arParams["DISPLAY_PREVIEW_TEXT"],
 		"PREVIEW_TRUNCATE_LEN" => $arParams["PREVIEW_TRUNCATE_LEN"],
-		"ACTIVE_DATE_FORMAT" => $arParams["LIST_ACTIVE_DATE_FORMAT"],
+		"ACTIVE_DATE_FORMAT" => 'd.m.Y',
 		"USE_PERMISSIONS" => $arParams["USE_PERMISSIONS"],
 		"GROUP_PERMISSIONS" => $arParams["GROUP_PERMISSIONS"],
 		"FILTER_NAME" => $arParams["FILTER_NAME"],
