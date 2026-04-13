@@ -303,6 +303,14 @@ switch ($mainId) {
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/ane/css/ane2-main.css');
         break;
 
+    case 'mc':
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/common/css/gallery.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/home/css/home6-pre.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/mc/css/mc0-common.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/mc/css/mc1-hero.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/mc/css/mc6-pk.css');
+        break;
+
 }
 
 
@@ -408,6 +416,13 @@ switch ($mainId) {
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/ane/js/ane0-common.js');
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/ane/js/ane1-hero.js');
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/libs/dragscroll/dragscroll.js');
+        break;
+
+    case 'mc':
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/mc/js/mc0-common.js');
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/mc/js/mc1-hero.js');
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/mc/js/mc6-pk.js');
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/libs/dragscroll/dragscroll.js');
         break;
 }
 ?>
