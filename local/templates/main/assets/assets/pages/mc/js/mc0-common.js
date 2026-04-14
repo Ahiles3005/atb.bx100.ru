@@ -11,7 +11,7 @@ window.addEventListener ("load", function () {
 
     if (document.querySelector ("#mc")) {
 
-        
+
         /* ---------- ********** ОБЩИЕ ДЛЯ ВСЕЙ СТРАНИЦЫ ********** ---------- */
 
 
@@ -24,7 +24,7 @@ window.addEventListener ("load", function () {
 
 
 
-        // 1. АНИМАЦИЯ ПРИ СКРОЛЛЕ 
+        // 1. АНИМАЦИЯ ПРИ СКРОЛЛЕ
 
         const scrolls = document.querySelectorAll('.__C-SCRL');
 
@@ -53,10 +53,6 @@ window.addEventListener ("load", function () {
 
 
 
-
-
-
-
         // 2. СЕЛЕКТЫ
 
         const mcCommonFieldsetSelect = Array.from (document.querySelectorAll (".mc-common--fieldset__SELECT"));
@@ -71,7 +67,6 @@ window.addEventListener ("load", function () {
                 mcCommonDivSelect[i].classList.toggle ("__mc-common--div__SELECT");
             });
         });
-
 
         mcCommonFieldsetSelect.forEach ((v, i, a) => {
 
@@ -98,21 +93,14 @@ window.addEventListener ("load", function () {
             });
         });
 
-
-
-
-
-
-
         // 3. РАСКРЫТИЕ КАРТОЧЕК
- 
 
         // Функция для любой из секций. Первым аргументом (строка) должен быть класс секции, 
         // вторым (число) - тип выдачи карточек - 
         // по 3 и 6 (для мобилок и десктопа соответственно) - 1 
         // или по 2 и 3 - 2.
 
-        function mcCommonCardOpener (x, y) {
+        window.mcCommonCardOpener = function (x, y) {
 
             const mcCommonDivGrid = document.querySelector (`${x} .mc-common--div__GRID`);
             const ctCatArticles = Array.from (document.querySelectorAll (`${x} article`));
@@ -134,16 +122,15 @@ window.addEventListener ("load", function () {
 
                 // 3.2.1 Числа
 
-                const ctCatArticlesVis = ctCatArticles.filter (x => {
+                const ctCatArticlesVis = Array.from (document.querySelectorAll (`${x} article`)).filter (x => {
                     return getComputedStyle (x).display == "grid";
                 });
-                if (ctCatSpanInd1 && ctCatSpanInd1.textContent) {
-                    ctCatSpanInd1.textContent = ctCatArticlesVis.length;
-                }
 
-                if (ctCatSpanInd2 && ctCatSpanInd2.textContent) {
-                    ctCatSpanInd2.textContent = ctCatArticles.length;
-                }
+                ctCatSpanInd1.textContent = parseInt(ctCatSpanInd1.textContent) + parseInt(y);
+
+                // ctCatSpanInd2.textContent = ctCatArticles.length;
+                ctCatArticles.length = ctCatSpanInd2.textContent;
+
 
                 // 3.2.2 Линия
 
@@ -154,10 +141,10 @@ window.addEventListener ("load", function () {
                 // 3.2.3 Уборка кнопки "Показать еще", если все карточки показаны
 
                 if (ctCatButtonElse) {
-                    if (ctCatArticlesVis.length === ctCatArticles.length) {
-                        ctCatButtonElse.classList.add("__ct-cat--button__ELSE");
-                    } else {
+                    if (parseInt(ctCatSpanInd1.textContent) < parseInt(ctCatSpanInd2.textContent)) {
                         ctCatButtonElse.classList.remove("__ct-cat--button__ELSE");
+                    } else {
+                        ctCatButtonElse.classList.add("__ct-cat--button__ELSE");
                     }
                 }
 
@@ -168,6 +155,7 @@ window.addEventListener ("load", function () {
             // 3.3 Начальное / текущее количество видимых карточек (для начальной загрузки и изменения количества при ресайзе или переключении видов)
 
             function ctCatCardsCur () {
+
                 if (y === 1) {
                     if (window.innerWidth < 1440) {
                         ctCatArticles.forEach ((v, i, a) => {
@@ -205,8 +193,8 @@ window.addEventListener ("load", function () {
                         });
                     }
                 }
-                
-                
+
+
                 ctCatVisCounter ();
             }
 
@@ -217,7 +205,10 @@ window.addEventListener ("load", function () {
             // 3.4 Добавление карточек по клику по кнопке
 
             function ctCatCardsAdd () {
-                
+
+
+
+
                 ctCatCounter++;
 
                 if (y === 1) {
@@ -261,7 +252,7 @@ window.addEventListener ("load", function () {
                 ctCatVisCounter ();
             }
 
-            ctCatButtonElse?.addEventListener ("click", ctCatCardsAdd);
+            ctCatButtonElse.addEventListener ("click", ctCatCardsAdd);
 
 
 
@@ -273,27 +264,26 @@ window.addEventListener ("load", function () {
             cdCommonMedia1920.addEventListener ("change", ctCatCardsCur);
 
         }
-        
-        
+
 
         // Вызов функции для секции "Новости"
 
-        mcCommonCardOpener (".mc-news", 1);
+         // mcCommonCardOpener (".mc-news", 10);
+        //
+        // // Вызов функции для секции "Мероприятия"
+        //
+        // mcCommonCardOpener (".mc-events", 2);
+        //
+        // // Вызов функции для секции "Статьи"
+        //
+        // mcCommonCardOpener (".mc-articles", 2);
+        //
+        // // Вызов функции для секции "Видео"
+        //
+        // mcCommonCardOpener (".mc-video", 2);
 
-        // Вызов функции для секции "Мероприятия"
 
-        mcCommonCardOpener (".mc-events", 2);
 
-        // Вызов функции для секции "Статьи"
 
-        mcCommonCardOpener (".mc-articles", 2);
-
-        // Вызов функции для секции "Видео"
-
-        mcCommonCardOpener (".mc-video", 2);
-
-        
-
-        
     }
 });

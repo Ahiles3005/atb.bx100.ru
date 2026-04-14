@@ -35,7 +35,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
         <div class="c-header--div__SUBMENU_BACK2_MOB"></div>
         <div class="c-header--div__SUBMENU_BACK2_DESC"></div>
         <nav class="c-header--nav C-CONTAINER">
-            <a class="c-header--a__LOGO" href="#">
+            <a class="c-header--a__LOGO" href="/">
                 <img class="c-header--img__LOGO" src="<?= SITE_TEMPLATE_PATH ?>/assets/images/header/c-header_logo.svg"
                      alt="логотип">
             </a>

@@ -74,24 +74,25 @@ window.addEventListener ("load", function () {
 
         // 2.3 Выбор уже выбранного слайда при ресайзе для избежания бага с обрезанием главного слайдера
 
-        function mcPkDebounce (cB, time) {
+        function mcPkDebounce(cB, time) {
             let idTimer;
             return function () {
-                clearTimeout (idTimer);
-                idTimer = setTimeout (() => {
-                    cB();
+                clearTimeout(idTimer);
+                idTimer = setTimeout(() => {
+                    try {
+                        cB();
+                    } catch (e) {
+                        console.log('error')
+                    }
                 }, time);
             }
         }
 
-        const mcPk1Debounce = mcPkDebounce (() => {
-            mcPkDivSwiper1v.slideTo (mcPkDivSwiper1v.activeIndex);
+        const mcPk1Debounce = mcPkDebounce(() => {
+            mcPkDivSwiper1v.slideTo(mcPkDivSwiper1v.activeIndex);
         }, 150);
 
-        window.addEventListener ("resize", mcPk1Debounce);
-
-
-
+        window.addEventListener("resize", mcPk1Debounce);
 
 
 
