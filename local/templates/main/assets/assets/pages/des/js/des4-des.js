@@ -185,12 +185,12 @@ window.addEventListener ("load", function () {
 
 
 
-        // 6. СЛАЙДЕР РЕШЕНИЯ
-        
-        const cdUseDivSwiper22 = new Swiper (".cd-use--div__SWIPER22", {
+        // 6. СЛАЙДЕР ОТРАСЛИ
+
+        const cdUseDivSwiper21 = new Swiper (".cd-use--div__SWIPER21", {
             navigation: {
-                nextEl: '.cd-use--button__SWIPER22_NEXT',
-                prevEl: '.cd-use--button__SWIPER22_PREV',
+                nextEl: '.cd-use--button__SWIPER21_NEXT',
+                prevEl: '.cd-use--button__SWIPER21_PREV',
             },
             breakpoints: {
                 200: {
@@ -208,13 +208,13 @@ window.addEventListener ("load", function () {
                     slidesPerGroup: 1,
                 },
                 1440: {
-                    slidesPerView: 1,
+                    slidesPerView: 3,
                     spaceBetween: 44,
                     slidesPerGroup: 1,
                 },
 
                 1920: {
-                    slidesPerView: 1,
+                    slidesPerView: 4,
                     spaceBetween: 44,
                     slidesPerGroup: 1,
                 },
