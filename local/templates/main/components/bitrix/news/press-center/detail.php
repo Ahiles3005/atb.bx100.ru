@@ -578,7 +578,7 @@ $detailText = $arFields['DETAIL_TEXT'];
             <div class="ane-hero--div__TOP">
                 <div class="ane-hero--div__TAGS __C-SCRL LEFT">
                     <? if (!empty($otrosli)): ?>
-                        <a class="ane-hero--a__TAG color-orange" href="#">
+                        <a class="ane-hero--a__TAG color-orange _DES" href="#">
                             <div class="ane-hero--div__TAG_CIRCLE"></div>
                             <span class="ane-hero--span__TAG">
                                 <?= $otrosli ?>
