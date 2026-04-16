@@ -93,7 +93,7 @@
     display: flex;
     /* align-items: center; */
     gap: 14px;
-    font-weight: 700;
+    font-weight: 300;
     font-size: 14px;
     line-height: 18px;
     transition: all 0.2s;

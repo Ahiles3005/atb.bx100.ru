@@ -40,6 +40,29 @@
         margin-top: 42px;
     }
 }
+@media (min-width: 1920px) {
+    .in-tsk .st-main--p__DESCR1 {
+        max-width: 1210px;
+    }
+}
+
+
+
+
+@media (min-width: 1920px) {
+    .in-tsk .st-main--p__DESCR2 {
+        max-width: 1210px;
+    }
+}
+
+
+
+
+@media (min-width: 1920px) {
+    .in-tsk .st-main--div__DESCR3 {
+        max-width: 1210px;
+    }
+}
 
 
 
