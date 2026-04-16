@@ -696,6 +696,18 @@
     position: relative;
     background-color: var(--color-gray);
 }
+@media not all and (min-resolution:.001dpcm) { 
+    @supports (-webkit-appearance: none) {
+        .c-footer--div__LINE {
+            height: 1px;
+        }
+    }
+}
+@-moz-document url-prefix() {
+    .c-footer--div__LINE {
+        height: 1px;
+    }
+}
 @media (min-width: 1440px) {
     .c-footer--div__BOTTOM .c-footer--div__LINE::before {
         display: none;
