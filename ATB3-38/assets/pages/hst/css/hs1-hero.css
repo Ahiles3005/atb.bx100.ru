@@ -228,6 +228,15 @@
 
 
 
+@media (min-width: 1440px) {
+    .hs-hero--div__INFO_ITEM .hs-hero--p__NAME {
+        margin-right: 148px;
+    }
+}
+
+
+
+
 .hs-hero--div__IMAGE {
     height: 80px;
     width: 80px;
