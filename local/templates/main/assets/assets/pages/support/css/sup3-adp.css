@@ -1,0 +1,86 @@
+
+/* ---------- ********** |||||||||| СТРАНИЦА SUP |||||||||| ********** ---------- */
+
+
+/* ---------- ********** СЕКЦИЯ ADP ********** ---------- */
+
+
+.sup-adp {
+    padding: 0px 16px 58px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+@media (min-width: 1440px) {
+    .sup-adp {
+        padding: 0px 80px 90px;
+    } 
+}
+
+
+
+
+.sup-adp--div__CONT {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+.sup-adp .c-common--h2 {
+    max-width: none;
+}
+
+
+
+
+.sup-adp--div__MAIN {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+@media (min-width: 1440px) {
+    .sup-adp--div__MAIN {
+        margin-top: 42px;
+    }
+}
+
+
+
+
+.sup-adp .st-main--p__DESCR3_TOP {
+    margin-top: 30px;
+}
+@media (min-width: 1440px) {
+    .sup-adp .st-main--p__DESCR3_TOP {
+        margin-top: 44px;
+    }
+}
+
+
+
+
+.sup-adp .st-main--div__GRID1 {
+    margin-top: 14px;
+    gap: 0px;
+}
+@media (min-width: 1440px) {
+    .sup-adp .st-main--div__GRID1 {
+        margin-top: 24px;
+    }
+}
+
+
+
+
+.sup-adp .st-main--div__GRID1_ITEM {
+    padding: 26px 0px 31px 35px;
+}
+@media (min-width: 1440px) {
+    .sup-adp .st-main--div__GRID1_ITEM {
+        padding: 32px 48px 61px 64px;
+    }
+}

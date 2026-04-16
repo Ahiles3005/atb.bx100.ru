@@ -1,0 +1,212 @@
+
+/* ---------- ********** |||||||||| СТРАНИЦА SUP |||||||||| ********** ---------- */
+
+
+/* ---------- ********** СЕКЦИЯ ORG ********** ---------- */
+
+
+.sup-org {
+    padding: 0px 16px 58px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+@media (min-width: 1440px) {
+    .sup-org {
+        padding: 0px 80px 90px;
+    } 
+}
+
+
+
+
+.sup-org--div__CONT {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+.sup-org .c-common--h2 {
+    max-width: none;
+}
+
+
+
+
+.sup-org--div__MAIN {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+@media (min-width: 1440px) {
+    .sup-org--div__MAIN {
+        margin-top: 42px;
+    }
+}
+
+
+
+
+.sup-org--ul__LIST {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+}
+
+
+
+
+.sup-org--li__LIST {
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 0.5px solid var(--color-blue-light);
+    transition: opacity 0.7s, transform 0.7s, border 0.25s;
+}
+@media (min-width: 1440px) {
+    .sup-org--li__LIST {
+        padding: 30px 0px;
+    }
+}
+
+.__sup-org--li__LIST {
+    border-bottom: 0.5px solid var(--color-blue);
+}
+
+
+
+
+.sup-org--li__LIST:first-of-type {
+    border-top: 0.5px solid var(--color-blue-light);
+}
+
+.__sup-org--li__LIST.sup-org--li__LIST:first-of-type {
+    border-top: 0.5px solid var(--color-blue);
+}
+
+
+
+
+.sup-org--button__LIST_TOP {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 16px;
+}
+@media (min-width: 1440px) {
+    .sup-org--button__LIST_TOP {
+        gap: 20px;
+    }
+}
+
+
+
+
+.sup-org--span__LIST_TOP {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--color-black1);
+    text-align: start;
+    text-transform: uppercase;
+}
+@media (min-width: 1440px) {
+    .sup-org--span__LIST_TOP {
+        font-size: 18px;
+        line-height: 28px;
+    }
+}
+
+
+
+
+.sup-org--div__LIST_TOP {
+    margin-left: auto;
+    height: 20px;
+    width: 20px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-blue);
+    border: 0.5px solid var(--color-blue);
+    border-radius: 4px;
+    transition: background-color 0.25s;
+}
+@media (min-width: 1440px) {
+    .sup-org--div__LIST_TOP {
+        height: 34px;
+        width: 34px;
+        border-radius: 8px;
+    }
+}
+
+.__sup-org--li__LIST .sup-org--div__LIST_TOP {
+    background-color: hsl(0, 0%, 100%);
+}
+
+
+
+
+.sup-org--svg__LIST_TOP {
+    margin-top: 1px;
+    transition: transform 0.25s;
+}
+@media (min-width: 1440px) {
+    .sup-org--svg__LIST_TOP {
+        margin-top: 0px;
+        height: 9px;
+        width: 18px;
+    }
+}
+
+.__sup-org--li__LIST .sup-org--svg__LIST_TOP {
+    transform: rotate(180deg);
+}
+
+
+
+
+.sup-org--svg__LIST_TOP path {
+    transition: stroke 0.25s;
+}
+
+.__sup-org--li__LIST .sup-org--svg__LIST_TOP path {
+    stroke: var(--color-blue);
+}
+
+
+
+
+.sup-org--div__LIST_BODY {
+    margin-top: 0px;
+    max-height: 0px;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    overflow: hidden;
+    transition: margin-top 0.25s, max-height 0.25s, opacity 0.2s;
+}
+
+.__sup-org--li__LIST .sup-org--div__LIST_BODY {
+    margin-top: 20px;
+    max-height: 500px;
+    opacity: 1;
+    overflow: visible;
+}
+@media (min-width: 1440px) {
+    .__sup-org--li__LIST .sup-org--div__LIST_BODY {
+        margin-top: 44px;
+    }
+}
+
+
+
+
+.sup-org .st-main--div__DESCR3_POINT {
+    margin-top: 8px;
+}
