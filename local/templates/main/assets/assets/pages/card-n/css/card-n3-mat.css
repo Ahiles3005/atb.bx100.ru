@@ -316,13 +316,14 @@
 .cd-mat--div__CARDS {
     margin-top: 30px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     column-gap: 16px;
     row-gap: 16px;
     transition: transform 0.7s, opacity 0.7s;
 }
 @media (min-width: 768px) {
     .cd-mat--div__CARDS {
+        grid-template-columns: 1fr 1fr;
         column-gap: 44px;
         row-gap: 44px;
     }
@@ -343,17 +344,15 @@
 .cd-mat--a__CARD {
     padding: 20px;
     display: flex;
-    flex-direction: column;
-    gap: 16px;
+    align-items: flex-start;
+    gap: 20px;
     border: 0.25px solid var(--color-gray);
     border-radius: 10px;
     transition: box-shadow 0.3s;
 }
-@media (min-width: 1440px) {
+@media (min-width: 768px) {
     .cd-mat--a__CARD {
-        flex-direction: row;
         align-items: center;
-        gap: 20px;
     }
 }
 
@@ -365,8 +364,8 @@
 
 
 .cd-mat--div__CARD_IMAGES {
-    height: 25px;
-    width: 20px;
+    height: 46px;
+    width: 38px;
     position: relative;
     flex-shrink: 0;
     display: flex;
@@ -419,8 +418,8 @@
 
 .cd-mat--p__CARD_TEXT {
     font-weight: 300;
-    font-size: 10px;
-    line-height: 16px;
+    font-size: 16px;
+    line-height: 26px;
     color: var(--color-black1);
     transition: text-shadow 0.3s;
 }

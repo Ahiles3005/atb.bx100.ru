@@ -226,6 +226,13 @@
         background-color: var(--color-gray);
         transition: transform 0.7s, opacity 0.7s;
     }
+    @media not all and (min-resolution:.001dpcm) { 
+        @supports (-webkit-appearance: none) {
+            .cd-med--div__LINE1 {
+                height: 1px;
+            }
+        }
+    }
     @-moz-document url-prefix() {
         .cd-med--div__LINE1 {
             height: 1px;
