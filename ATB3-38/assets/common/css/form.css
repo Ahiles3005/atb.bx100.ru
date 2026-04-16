@@ -419,6 +419,16 @@
 
 
 .c-common--p__FB_INN_ADR {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    color: var(--color-gray4);
+}
+
+
+
+
+.c-common--p__FB_INN_ADR span {
     font-weight: 300;
     font-size: 14px;
     line-height: 14px;
@@ -525,17 +535,17 @@
 
 
 
-.c-common--p__FB_ADR {
+.c-common--div__FB_ADR {
     position: relative;
     top: -4px;
     display: none;
-    font-weight: 300;
+    /* font-weight: 300;
     font-size: 14px;
     line-height: 14px;
-    color: var(--color-gray4);
+    color: var(--color-gray4); */
 }
 
-.__c-common--p__FB_ADR {
+.__c-common--div__FB_ADR {
     display: block;
 }
 
@@ -1050,6 +1060,8 @@
 
 .c-common--a__FB_APPR {
     color: var(--color-blue);
+    text-decoration: underline;
+    text-underline-offset: 3px;
 }
 
 
@@ -1062,8 +1074,6 @@
     left: 40px;
     bottom: 40px;
     display: none;
-    justify-content: center;
-    align-items: center;
     background: var(--color-gray);
     border-radius: 20px;
     overflow: hidden;
@@ -1247,10 +1257,14 @@
 
 .c-common--svg__FB_RESM {
     position: absolute;
-    top: 50%;
+    top: 15px;
     right: 12px;
     display: none;
-    transform: translateY(-50%);
+}
+@media (min-width: 1440px) {
+    .c-common--svg__FB_RESM {
+        top: 20px;
+    }
 }
 
 
@@ -1373,7 +1387,7 @@
 
 
 .c-common--span__FB_RESM5 {
-    font-size: 300px;
+    font-weight: 300;
     font-size: 11px;
     line-height: 16px;
     color: var(--color-gray4);
@@ -1442,6 +1456,289 @@
     .c-common--textarea__FB_TA_RESM::placeholder {
         font-size: 18px;
         line-height: 18px;
+    }
+}
+
+
+
+
+
+
+
+/* Форма для сервиса */
+
+.c-common--span__FB_COMP {
+    position: absolute;
+    top: 18px;
+    left: 82px;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 14px;
+    color: var(--color-red);
+}
+@media (min-width: 1440px) {
+    .c-common--span__FB_COMP {
+        top: 20px;
+        left: 101px;
+        font-size: 18px;
+        line-height: 18px;
+    }
+}
+
+.__c-common--span__FB_COMP {
+    visibility: hidden;
+}
+
+
+
+
+.c-common--span__FB_POST {
+    position: absolute;
+    top: 18px;
+    left: 89px;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 14px;
+    color: var(--color-red);
+}
+@media (min-width: 1440px) {
+    .c-common--span__FB_POST {
+        top: 20px;
+        left: 110px;
+        font-size: 18px;
+        line-height: 18px;
+    }
+}
+
+.__c-common--span__FB_POST {
+    visibility: hidden;
+}
+
+
+
+
+.c-common--span__FB_NUM {
+    position: absolute;
+    top: 18px;
+    left: 183px;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 14px;
+    color: var(--color-red);
+}
+@media (min-width: 1440px) {
+    .c-common--span__FB_NUM {
+        top: 20px;
+        left: 229px;
+        font-size: 18px;
+        line-height: 18px;
+    }
+}
+
+.__c-common--span__FB_NUM {
+    visibility: hidden;
+}
+
+
+
+
+.c-common--svg__FB_COMP,
+.c-common--svg__FB_POST,
+.c-common--svg__FB_NUM {
+    position: absolute;
+    top: 15px;
+    right: 12px;
+    display: none;
+}
+@media (min-width: 1440px) {
+    .c-common--svg__FB_COMP,
+    .c-common--svg__FB_POST,
+    .c-common--svg__FB_NUM {
+        top: 20px;
+    }
+}
+
+
+
+
+.c-common--label__FB_DOC {
+    padding: 16px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+@media (min-width: 1440px) {
+    .c-common--label__FB_DOC {
+        height: 59px;
+    }
+}
+
+
+
+
+.c-common--input__FB_DOC {
+    padding: 0px !important;
+    height: 1px;
+    width: 1px;
+    opacity: 0;
+}
+
+
+
+
+.c-common--svg__FB_DOC {
+    position: absolute;
+    top: 15px;
+    right: 12px;
+    display: none;
+}
+@media (min-width: 1440px) {
+    .c-common--svg__FB_DOC {
+        top: 20px;
+    }
+}
+
+
+
+
+.c-common--svg__FB_DOC1 {
+    height: 19px;
+    width: 19px;
+    position: absolute;
+    top: 50%;
+    right: 14px;
+    transform: translateY(-50%);
+}
+@media (min-width: 1440px) {
+    .c-common--svg__FB_DOC1 {
+        height: 26px;
+        width: 26px;
+        right: 12px;
+    }
+}
+.__c-common--svg__FB_DOC1 {
+    display: none;
+}
+
+
+
+
+.c-common--span__FB_DOC1 {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 14px;
+    color: var(--color-black1);
+}
+@media (min-width: 1440px) {
+    .c-common--span__FB_DOC1 {
+        position: absolute;
+        top: 50%;
+        left: 12px;
+        font-size: 18px;
+        line-height: 18px;
+        transform: translateY(-50%);
+    }
+}
+
+
+
+
+.c-common--span__FB_DOC2 {
+    position: absolute;
+    top: 20px;
+    left: 78px;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 14px;
+    color: var(--color-red);
+    
+}
+@media (min-width: 1440px) {
+    .c-common--span__FB_DOC2 {
+        top: 50%;
+        left: 98px;
+        font-size: 18px;
+        line-height: 18px;
+        transform: translateY(-50%);
+    }
+}
+
+
+
+
+.c-common--span__FB_DOC3 {
+    font-weight: 300;
+    font-size: 11px;
+    line-height: 16px;
+    color: var(--color-blue);
+    text-decoration: underline;
+}
+@media (min-width: 1440px) {
+    .c-common--span__FB_DOC3 {
+        position: absolute;
+        top: 50%;
+        left: 111px;
+        font-size: 14px;
+        line-height: 18px;
+        transform: translateY(-50%);
+    }
+}
+
+
+
+
+.c-common--p__FB_DOC {
+    margin-top: -6px;
+    display: flex;
+}
+@media (min-width: 1440px) {
+    .c-common--p__FB_DOC {
+        margin-top: -3.5px;
+    }
+}
+
+
+
+
+.c-common--span__FB_DOC4 {
+    display: none;
+}
+@media (min-width: 1440px) {
+    .c-common--span__FB_DOC4 {
+        margin-right: 6px;
+        display: inline;
+        font-size: 14px;
+        line-height: 18px;
+        color: var(--color-gray4);
+    }
+}
+
+
+
+
+
+.c-common--span__FB_DOC5 {
+    font-weight: 300;
+    font-size: 11px;
+    line-height: 16px;
+    color: var(--color-gray4);
+}
+@media (min-width: 1440px) {
+    .c-common--span__FB_DOC5 {
+        font-size: 14px;
+        line-height: 18px;
+    }
+}
+
+
+
+
+.c-common--span__FB_DOC5:nth-of-type(2) {
+    margin-right: 14px;
+}
+@media (min-width: 1440px) {
+    .c-common--span__FB_DOC5:nth-of-type(2) {
+        margin-right: 32px;
     }
 }
 
