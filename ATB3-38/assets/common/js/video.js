@@ -62,7 +62,7 @@ window.addEventListener ("load", function () {
             
             // 1.1.4 Изменение адресной строки при закрытии модального окна
             hashMark = true;
-            window.location.hash = `#`;
+            history.replaceState('', document.title, window.location.pathname + window.location.search);
 
             // Плеер из Rutube ставится на паузу
             if (cCommonDivVid[i].querySelector (".c-common--iframe__VID._RUTUBE")) {
@@ -89,7 +89,7 @@ window.addEventListener ("load", function () {
 
                 // 1.1.4 Изменение адресной строки при закрытии модального окна
                 hashMark = true;
-                window.location.hash = `#`;
+                history.replaceState('', document.title, window.location.pathname + window.location.search);
 
                 // Плеер из Rutube ставится на паузу
                 if (a[i].querySelector (".c-common--iframe__VID._RUTUBE")) {
@@ -131,171 +131,5 @@ window.addEventListener ("load", function () {
     showModal ();
 
     window.addEventListener ("hashchange", showModal);
-    
-    
-
-
-
-
-
-
-
-    // 1.3 Открытие / закрытие попапа "Поделиться"
-
-    const cCommonDivVidCont = Array.from (document.querySelectorAll (".c-common--div__VID_CONT"));
-    const cCommonButtonVidShare = Array.from (document.querySelectorAll (".c-common--button__VID_SHARE"));
-    const cCommonDivVidPopupCont = Array.from (document.querySelectorAll (".c-common--div__VID_POPUP_CONT"));
-    const cCommonDivVidPopupCont2 = Array.from (document.querySelectorAll (".c-common--div__VID_POPUP_CONT2"));
-    const cCommonButtonVidPopupClose = Array.from (document.querySelectorAll (".c-common--button__VID_POPUP_CLOSE"));
-    const cCommonDivVidPopupLinks = Array.from (document.querySelectorAll (".c-common--div__VID_POPUP_LINKS"));
-
-
-    // 1.3.1 Открытие
-
-    cCommonButtonVidShare.forEach ((v, i, a) => {
-        a[i].addEventListener ("click", () => {
-            cCommonDivVidPopupCont[i].classList.toggle ("__c-common--div__VID_POPUP_CONT");
-            setTimeout (() => {
-                cCommonDivVidPopupCont[i].classList.toggle ("__c-common--div__VID_POPUP_CONT1");
-                cCommonDivVidPopupCont2[i].classList.toggle ("__c-common--div__VID_POPUP_CONT2");
-            }, 50);
-        });
-    });
-
-
-    // 1.3.2 Закрытие
-
-    cCommonButtonVidPopupClose.forEach ((v, i, a) => {
-        a[i].addEventListener ("click", () => {
-            cCommonDivVidPopupCont[i].classList.remove ("__c-common--div__VID_POPUP_CONT");
-            cCommonDivVidPopupCont[i].classList.remove ("__c-common--div__VID_POPUP_CONT1");
-            cCommonDivVidPopupCont2[i].classList.remove ("__c-common--div__VID_POPUP_CONT2");
-        });
-    });
-
-    cCommonDivVidPopupCont.forEach ((v, i, a) => {
-        a[i].addEventListener ("click", (e) => {
-            if (e.target === a[i]) {
-                cCommonDivVidPopupCont[i].classList.remove ("__c-common--div__VID_POPUP_CONT");
-                cCommonDivVidPopupCont[i].classList.remove ("__c-common--div__VID_POPUP_CONT1");
-                cCommonDivVidPopupCont2[i].classList.remove ("__c-common--div__VID_POPUP_CONT2");
-            }
-        });
-    });
-
-    cCommonDivVidCont.forEach ((v, i, a) => {
-        a[i].addEventListener ("click", (e) => {
-            if (e.target === a[i]) {
-                cCommonDivVidPopupCont[i].classList.remove ("__c-common--div__VID_POPUP_CONT");
-                cCommonDivVidPopupCont[i].classList.remove ("__c-common--div__VID_POPUP_CONT1");
-                cCommonDivVidPopupCont2[i].classList.remove ("__c-common--div__VID_POPUP_CONT2");
-            }
-        });
-    });
-
-    cCommonDivVidPopupLinks.forEach ((v, i, a) => {
-        a[i].addEventListener ("click", () => {
-            cCommonDivVidPopupCont[i].classList.remove ("__c-common--div__VID_POPUP_CONT");
-            cCommonDivVidPopupCont[i].classList.remove ("__c-common--div__VID_POPUP_CONT1");
-            cCommonDivVidPopupCont2[i].classList.remove ("__c-common--div__VID_POPUP_CONT2");
-        });
-    });
-
-
-
-
-
-
-
-
-
-    // 1.4 Программирование ссылок
-
-    // 1.4.1 Копирование ссылки на страницу в буфер обмена (кнопка "Скопировать ссылку")
-
-    const cCommonAnyVidPopupLinkCopy = Array.from (document.querySelectorAll (".c-common--any__VID_POPUP_LINK._COPY"));
-
-    cCommonAnyVidPopupLinkCopy.forEach ((v, i, a) => {
-        a[i].addEventListener ("click", (e) => {
-            navigator.clipboard.writeText (document.location.href);
-        });
-    });
-
-
-
-
-    // 1.4.2 Отправка ссылки на страницу по почте
-
-    /// !!! ПРОВЕРИТЬ РАБОТОСПОСОБНОСТЬ ПРИ ИНТЕГРАЦИИ !!!
-    
-    const cCommonAnyVidPopupLinkMail = Array.from (document.querySelectorAll (".c-common--any__VID_POPUP_LINK._MAIL"));
-
-    cCommonAnyVidPopupLinkMail.forEach ((v, i, a) => {
-        a[i].addEventListener ("click", (e) => {
-            window.location.href = `mailto:ex@mail.pru?subject=${document.location.href}`;
-        });
-    });
-
-
-
-
-    // 1.4.3 Поделиться ссылкой на страницу во ВКонтакте
-
-    /// !!! ПРОВЕРИТЬ РАБОТОСПОСОБНОСТЬ ПРИ ИНТЕГРАЦИИ !!!
-
-    const cCommonAnyVidPopupLinkVk = Array.from (document.querySelectorAll (".c-common--any__VID_POPUP_LINK._VK"));
-
-    cCommonAnyVidPopupLinkVk.forEach ((v, i, a) => {
-        a[i].addEventListener ("click", (e) => {
-            window.location.href = `https://vk.com/share.php?url=${document.location.href}`;
-        });
-    });
-
-
-
-
-    // 1.4.4 Поделиться ссылкой на страницу в Дзене
-
-    /// !!! СПОСОБ НЕ НАЙДЕН !!!
-
-    
-
-
-    // 1.4.5 Поделиться ссылкой на страницу в Telegram
-
-    /// !!! ПРОВЕРИТЬ РАБОТОСПОСОБНОСТЬ ПРИ ИНТЕГРАЦИИ !!!
-
-    const cCommonAnyVidPopupLinkTg = Array.from (document.querySelectorAll (".c-common--any__VID_POPUP_LINK._TG"));
-
-    cCommonAnyVidPopupLinkTg.forEach ((v, i, a) => {
-        a[i].addEventListener ("click", (e) => {
-            window.location.href = `https://t.me/share/url?url=${document.location.href}`;
-        });
-    });
-
-
-
-
-    // 1.4.6 Поделиться ссылкой на страницу в Max
-
-    /// !!! СПОСОБ НЕ НАЙДЕН !!!
-
-
-
-    // 1.4.7 Поделиться ссылкой через стандартный интерфейс смартфона (кнопка "Еще")
-
-    /// !!! ПРОВЕРИТЬ РАБОТОСПОСОБНОСТЬ ПРИ ИНТЕГРАЦИИ !!!
-
-    const cCommonAnyVidPopupLinkElse = Array.from (document.querySelectorAll (".c-common--any__VID_POPUP_LINK._ELSE"));
-
-    cCommonAnyVidPopupLinkElse.forEach ((v, i, a) => {
-        a[i].addEventListener ("click", (e) => { 
-            if (navigator.share) {
-                navigator.share ({url: `${document.location.href}`}).then (() => {console.log ("Успех");}).catch (console.error ("Не успех"));  
-            } else {
-                console.error ("Не успех"); 
-            }  
-        });
-    });
     
 });

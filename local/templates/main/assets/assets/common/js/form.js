@@ -104,7 +104,7 @@ window.addEventListener ("load", function () {
                                     </svg>
                                 </label>
     
-                                <p class="c-common--p__FB_ADR"></p>
+                                <div class="c-common--div__FB_ADR"></div>
     
     
     
@@ -202,7 +202,7 @@ window.addEventListener ("load", function () {
                             </form>
     
                             <div class="c-common--div__FB_IMAGE __C-SCRL LEFT">
-                                <img src="images/home/hm-des_2.png" alt="">
+                                <img src="images/home/hm-des_2.png" alt="" loading="lazy">
                             </div>
                         </div>
                     </div>
@@ -388,7 +388,7 @@ window.addEventListener ("load", function () {
                 const cCommonLiFbInn = Array.from (cCommonDivFbCmrs.querySelectorAll (".c-common--li__FB_INN"));
                 const cCommonSpanFbInnNm = Array.from (cCommonDivFbCmrs.querySelectorAll (".c-common--span__FB_INN_NM"));
                 const cCommonPFbInnAdr = Array.from (cCommonDivFbCmrs.querySelectorAll (".c-common--p__FB_INN_ADR"));
-                const cCommonPFbAdr = cCommonDivFbCmrs.querySelector (".c-common--p__FB_ADR");
+                const cCommonDivFbAdr = cCommonDivFbCmrs.querySelector (".c-common--div__FB_ADR");
     
     
                 cCommonInputFbInn.addEventListener ("input", () => {
@@ -415,8 +415,9 @@ window.addEventListener ("load", function () {
                         cCommonInputFbOrg.value = cCommonSpanFbInnNm[i].textContent;
                         cCommonSpanFbOrg1.classList.add ("__c-common--span__FB_ORG1");
                         cCommonLabelFbOrg.classList.add ("__c-common--label__FB_ORG");
-                        cCommonPFbAdr.classList.add ("__c-common--p__FB_ADR");
-                        cCommonPFbAdr.textContent = cCommonPFbInnAdr[i].textContent;
+                        cCommonDivFbAdr.classList.add ("__c-common--div__FB_ADR");
+                        cCommonDivFbAdr.innerHTML = "";
+                        cCommonDivFbAdr.append (cCommonPFbInnAdr[i].cloneNode (true));
                         cCommonUlFbInn.classList.remove ("__c-common--ul__FB_INN");
                         cCommonLabelFbInn.classList.remove ("__c-common--label__FB_INN");
                     });
@@ -425,8 +426,8 @@ window.addEventListener ("load", function () {
     
                 cCommonInputFbOrg.addEventListener ("input", () => {
                     if (cCommonInputFbOrg.value === "") {
-                        cCommonPFbAdr.classList.remove ("__c-common--p__FB_ADR");
-                        cCommonPFbAdr.textContent = "";
+                        cCommonDivFbAdr.classList.remove ("__c-common--p__FB_ADR");
+                        cCommonDivFbAdr.innerHTML = "";
                     }
                 });
     
@@ -740,7 +741,7 @@ window.addEventListener ("load", function () {
                             </form>
             
                             <div class="c-common--div__FB_IMAGE __C-SCRL LEFT">
-                                <img src="images/home/hm-des_2.png" alt="">
+                                <img src="images/home/hm-des_2.png" alt="" loading="lazy">
                             </div>
                         </div>
                     </div>
@@ -1204,7 +1205,7 @@ window.addEventListener ("load", function () {
                             </form>
             
                             <div class="c-common--div__FB_IMAGE __C-SCRL LEFT">
-                                <img src="images/home/hm-des_2.png" alt="">
+                                <img src="images/home/hm-des_2.png" alt="" loading="lazy">
                             </div>
                         </div>
                     </div>
@@ -1670,7 +1671,7 @@ window.addEventListener ("load", function () {
             
             
                                 <button class="c-common--button__FB_SB" type="submit">
-                                    Отправить запрос
+                                    Откликнуться
                                 </button>
             
             
@@ -1703,7 +1704,7 @@ window.addEventListener ("load", function () {
                             </form>
             
                             <div class="c-common--div__FB_IMAGE __C-SCRL LEFT">
-                                <img src="images/home/hm-des_2.png" alt="">
+                                <img src="images/home/hm-des_2.png" alt="" loading="lazy">
                             </div>
                         </div>
                     </div>
@@ -2122,7 +2123,7 @@ window.addEventListener ("load", function () {
                             </form>
             
                             <div class="c-common--div__FB_IMAGE __C-SCRL LEFT">
-                                <img src="images/home/hm-des_2.png" alt="">
+                                <img src="images/home/hm-des_2.png" alt="" loading="lazy">
                             </div>
                         </div>
                     </div>
@@ -2358,4 +2359,624 @@ window.addEventListener ("load", function () {
     
     
     
+
+
+
+
+
+    /* --- ФОРМА ДЛЯ СЕРВИСА --- */
+
+
+    // 1. ОТКРЫТИЕ / ЗАКРЫТИЕ МОДАЛЬНЫХ ОКОН
+
+    const openFrmServ = Array.from (document.querySelectorAll ("._OPEN_FRM._FORM_SERVICE"));
+    
+
+    // 1.1 Открытие
+
+    
+    openFrmServ?.forEach ((v0, i0, a0) => {
+        a0[i0].addEventListener ("click", () => {
+            if (!document.querySelector (".c-common--div__FB._FORM_SERVICE")) {
+                document.querySelector ("main").insertAdjacentHTML ("beforeend", `
+                    <!-- ОБЩАЯ ФОРМА -->
+    
+                    <div class="c-common--div__FB _FORM_SERVICE">
+                        <div class="c-common--div__FB_CONT">
+                            <button class="c-common--button__FB_CLOSE">
+                                <svg class="c-common--svg__FB_CLOSE" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="19.6727" height="1.50269" rx="0.751343" transform="matrix(0.705843 -0.708368 0.705843 0.708368 0 13.9355)" fill="#005792"/>
+                                    <rect width="19.6727" height="1.50269" rx="0.751343" transform="matrix(-0.705843 -0.708368 -0.705843 0.708368 15 13.9355)" fill="#005792"/>
+                                </svg>
+                            </button>
+            
+                            <form class="c-common--form__FB _FORM_SERVICE __C-SCRL RIGHT" action="#" method="post" name="feedback" novalidate>
+                                <p class="c-common--p__FB_NAME">
+                                    Получите техническую консультацию
+                                </p>
+            
+            
+            
+                                <div class="c-common--div__FB_NAME_SURNAME">
+                                    <label class="c-common--label__FB_NAME">
+                                        <input class="c-common--input__FB_NAME" type="text" name="feedback-name" placeholder="Имя" required>
+                                        <span class="c-common--span__FB_NAME">
+                                            *
+                                        </span>
+                                        <svg class="c-common--svg__FB_NAME" width="21" height="17" viewBox="0 0 21 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.79301 17C1.00996 17 0.530726 16.1407 0.942216 15.4745L9.6492 1.37748C10.04 0.744805 10.96 0.744806 11.3508 1.37748L20.0578 15.4745C20.4693 16.1407 19.99 17 19.207 17H1.79301ZM1.91243 15.4487C1.70623 15.7818 1.94581 16.2119 2.33756 16.2119H18.6624C19.0542 16.2119 19.2938 15.7818 19.0876 15.4487L10.9251 2.26293C10.7297 1.94716 10.2703 1.94716 10.0749 2.26293L1.91243 15.4487ZM10.5 14.5232C10.67 14.5232 10.8125 14.4692 10.9275 14.3613C11.0425 14.2534 11.1 14.1198 11.1 13.9603C11.1 13.8008 11.0425 13.6671 10.9275 13.5592C10.8125 13.4513 10.67 13.3974 10.5 13.3974C10.33 13.3974 10.1875 13.4513 10.0725 13.5592C9.9575 13.6671 9.9 13.8008 9.9 13.9603C9.9 14.1198 9.9575 14.2534 10.0725 14.3613C10.1875 14.4692 10.33 14.5232 10.5 14.5232ZM10.08 11.8515C10.08 12.0835 10.268 12.2715 10.5 12.2715C10.732 12.2715 10.92 12.0835 10.92 11.8515V7.06238C10.92 6.83042 10.732 6.64238 10.5 6.64238C10.268 6.64238 10.08 6.83042 10.08 7.06238V11.8515Z" fill="#C82121"/>
+                                        </svg>
+                                    </label>
+                                    <label class="c-common--label__FB_SURNAME">
+                                        <input class="c-common--input__FB_SURNAME" type="text" name="feedback-surname" placeholder="Фамилия" required>
+                                        <span class="c-common--span__FB_SURNAME">
+                                            *
+                                        </span>
+                                        <svg class="c-common--svg__FB_SURNAME" width="21" height="17" viewBox="0 0 21 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.79301 17C1.00996 17 0.530726 16.1407 0.942216 15.4745L9.6492 1.37748C10.04 0.744805 10.96 0.744806 11.3508 1.37748L20.0578 15.4745C20.4693 16.1407 19.99 17 19.207 17H1.79301ZM1.91243 15.4487C1.70623 15.7818 1.94581 16.2119 2.33756 16.2119H18.6624C19.0542 16.2119 19.2938 15.7818 19.0876 15.4487L10.9251 2.26293C10.7297 1.94716 10.2703 1.94716 10.0749 2.26293L1.91243 15.4487ZM10.5 14.5232C10.67 14.5232 10.8125 14.4692 10.9275 14.3613C11.0425 14.2534 11.1 14.1198 11.1 13.9603C11.1 13.8008 11.0425 13.6671 10.9275 13.5592C10.8125 13.4513 10.67 13.3974 10.5 13.3974C10.33 13.3974 10.1875 13.4513 10.0725 13.5592C9.9575 13.6671 9.9 13.8008 9.9 13.9603C9.9 14.1198 9.9575 14.2534 10.0725 14.3613C10.1875 14.4692 10.33 14.5232 10.5 14.5232ZM10.08 11.8515C10.08 12.0835 10.268 12.2715 10.5 12.2715C10.732 12.2715 10.92 12.0835 10.92 11.8515V7.06238C10.92 6.83042 10.732 6.64238 10.5 6.64238C10.268 6.64238 10.08 6.83042 10.08 7.06238V11.8515Z" fill="#C82121"/>
+                                        </svg>
+                                    </label>
+                                </div>
+                                
+            
+            
+                                <div class="c-common--div__FB_MAIL_TEL">
+                                    <label class="c-common--label__FB_MAIL">
+                                        <input class="c-common--input__FB_MAIL" type="email" name="feedback-mail" placeholder="Email" required>
+                                        <span class="c-common--span__FB_MAIL">
+                                            *
+                                        </span>
+                                        <svg class="c-common--svg__FB_MAIL" width="21" height="17" viewBox="0 0 21 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.79301 17C1.00996 17 0.530726 16.1407 0.942216 15.4745L9.6492 1.37748C10.04 0.744805 10.96 0.744806 11.3508 1.37748L20.0578 15.4745C20.4693 16.1407 19.99 17 19.207 17H1.79301ZM1.91243 15.4487C1.70623 15.7818 1.94581 16.2119 2.33756 16.2119H18.6624C19.0542 16.2119 19.2938 15.7818 19.0876 15.4487L10.9251 2.26293C10.7297 1.94716 10.2703 1.94716 10.0749 2.26293L1.91243 15.4487ZM10.5 14.5232C10.67 14.5232 10.8125 14.4692 10.9275 14.3613C11.0425 14.2534 11.1 14.1198 11.1 13.9603C11.1 13.8008 11.0425 13.6671 10.9275 13.5592C10.8125 13.4513 10.67 13.3974 10.5 13.3974C10.33 13.3974 10.1875 13.4513 10.0725 13.5592C9.9575 13.6671 9.9 13.8008 9.9 13.9603C9.9 14.1198 9.9575 14.2534 10.0725 14.3613C10.1875 14.4692 10.33 14.5232 10.5 14.5232ZM10.08 11.8515C10.08 12.0835 10.268 12.2715 10.5 12.2715C10.732 12.2715 10.92 12.0835 10.92 11.8515V7.06238C10.92 6.83042 10.732 6.64238 10.5 6.64238C10.268 6.64238 10.08 6.83042 10.08 7.06238V11.8515Z" fill="#C82121"/>
+                                        </svg>
+                                        <span class="c-common--span__FB_TEL">
+                                            *
+                                        </span>
+                                        <svg class="c-common--svg__FB_TEL" width="21" height="17" viewBox="0 0 21 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.79301 17C1.00996 17 0.530726 16.1407 0.942216 15.4745L9.6492 1.37748C10.04 0.744805 10.96 0.744806 11.3508 1.37748L20.0578 15.4745C20.4693 16.1407 19.99 17 19.207 17H1.79301ZM1.91243 15.4487C1.70623 15.7818 1.94581 16.2119 2.33756 16.2119H18.6624C19.0542 16.2119 19.2938 15.7818 19.0876 15.4487L10.9251 2.26293C10.7297 1.94716 10.2703 1.94716 10.0749 2.26293L1.91243 15.4487ZM10.5 14.5232C10.67 14.5232 10.8125 14.4692 10.9275 14.3613C11.0425 14.2534 11.1 14.1198 11.1 13.9603C11.1 13.8008 11.0425 13.6671 10.9275 13.5592C10.8125 13.4513 10.67 13.3974 10.5 13.3974C10.33 13.3974 10.1875 13.4513 10.0725 13.5592C9.9575 13.6671 9.9 13.8008 9.9 13.9603C9.9 14.1198 9.9575 14.2534 10.0725 14.3613C10.1875 14.4692 10.33 14.5232 10.5 14.5232ZM10.08 11.8515C10.08 12.0835 10.268 12.2715 10.5 12.2715C10.732 12.2715 10.92 12.0835 10.92 11.8515V7.06238C10.92 6.83042 10.732 6.64238 10.5 6.64238C10.268 6.64238 10.08 6.83042 10.08 7.06238V11.8515Z" fill="#C82121"/>
+                                        </svg>
+                                    </label>
+                
+            
+            
+                                    <input class="c-common--input__FB_TEL" type="tel" name="feedback-tel" required>
+                                </div>
+            
+            
+            
+                                <div class="c-common--div__FB_COMP_POST">
+                                    <label class="c-common--label__FB_COMP">
+                                        <input class="c-common--input__FB_COMP" type="text" name="feedback-comp" placeholder="Компания" required>
+                                        <span class="c-common--span__FB_COMP">
+                                            *
+                                        </span>
+                                        <svg class="c-common--svg__FB_COMP" width="21" height="17" viewBox="0 0 21 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.79301 17C1.00996 17 0.530726 16.1407 0.942216 15.4745L9.6492 1.37748C10.04 0.744805 10.96 0.744806 11.3508 1.37748L20.0578 15.4745C20.4693 16.1407 19.99 17 19.207 17H1.79301ZM1.91243 15.4487C1.70623 15.7818 1.94581 16.2119 2.33756 16.2119H18.6624C19.0542 16.2119 19.2938 15.7818 19.0876 15.4487L10.9251 2.26293C10.7297 1.94716 10.2703 1.94716 10.0749 2.26293L1.91243 15.4487ZM10.5 14.5232C10.67 14.5232 10.8125 14.4692 10.9275 14.3613C11.0425 14.2534 11.1 14.1198 11.1 13.9603C11.1 13.8008 11.0425 13.6671 10.9275 13.5592C10.8125 13.4513 10.67 13.3974 10.5 13.3974C10.33 13.3974 10.1875 13.4513 10.0725 13.5592C9.9575 13.6671 9.9 13.8008 9.9 13.9603C9.9 14.1198 9.9575 14.2534 10.0725 14.3613C10.1875 14.4692 10.33 14.5232 10.5 14.5232ZM10.08 11.8515C10.08 12.0835 10.268 12.2715 10.5 12.2715C10.732 12.2715 10.92 12.0835 10.92 11.8515V7.06238C10.92 6.83042 10.732 6.64238 10.5 6.64238C10.268 6.64238 10.08 6.83042 10.08 7.06238V11.8515Z" fill="#C82121"/>
+                                        </svg>
+                                    </label>
+                                    <label class="c-common--label__FB_POST">
+                                        <input class="c-common--input__FB_POST" type="text" name="feedback-post" placeholder="Должность" required>
+                                        <span class="c-common--span__FB_POST">
+                                            *
+                                        </span>
+                                        <svg class="c-common--svg__FB_POST" width="21" height="17" viewBox="0 0 21 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.79301 17C1.00996 17 0.530726 16.1407 0.942216 15.4745L9.6492 1.37748C10.04 0.744805 10.96 0.744806 11.3508 1.37748L20.0578 15.4745C20.4693 16.1407 19.99 17 19.207 17H1.79301ZM1.91243 15.4487C1.70623 15.7818 1.94581 16.2119 2.33756 16.2119H18.6624C19.0542 16.2119 19.2938 15.7818 19.0876 15.4487L10.9251 2.26293C10.7297 1.94716 10.2703 1.94716 10.0749 2.26293L1.91243 15.4487ZM10.5 14.5232C10.67 14.5232 10.8125 14.4692 10.9275 14.3613C11.0425 14.2534 11.1 14.1198 11.1 13.9603C11.1 13.8008 11.0425 13.6671 10.9275 13.5592C10.8125 13.4513 10.67 13.3974 10.5 13.3974C10.33 13.3974 10.1875 13.4513 10.0725 13.5592C9.9575 13.6671 9.9 13.8008 9.9 13.9603C9.9 14.1198 9.9575 14.2534 10.0725 14.3613C10.1875 14.4692 10.33 14.5232 10.5 14.5232ZM10.08 11.8515C10.08 12.0835 10.268 12.2715 10.5 12.2715C10.732 12.2715 10.92 12.0835 10.92 11.8515V7.06238C10.92 6.83042 10.732 6.64238 10.5 6.64238C10.268 6.64238 10.08 6.83042 10.08 7.06238V11.8515Z" fill="#C82121"/>
+                                        </svg>
+                                    </label>
+                                </div>
+
+
+
+                                <label class="c-common--label__FB_NUM">
+                                    <input class="c-common--input__FB_NUM" type="text" name="feedback-num" placeholder="Серийный номер изделия" required>
+                                    <span class="c-common--span__FB_NUM">
+                                        *
+                                    </span>
+                                    <svg class="c-common--svg__FB_NUM" width="21" height="17" viewBox="0 0 21 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.79301 17C1.00996 17 0.530726 16.1407 0.942216 15.4745L9.6492 1.37748C10.04 0.744805 10.96 0.744806 11.3508 1.37748L20.0578 15.4745C20.4693 16.1407 19.99 17 19.207 17H1.79301ZM1.91243 15.4487C1.70623 15.7818 1.94581 16.2119 2.33756 16.2119H18.6624C19.0542 16.2119 19.2938 15.7818 19.0876 15.4487L10.9251 2.26293C10.7297 1.94716 10.2703 1.94716 10.0749 2.26293L1.91243 15.4487ZM10.5 14.5232C10.67 14.5232 10.8125 14.4692 10.9275 14.3613C11.0425 14.2534 11.1 14.1198 11.1 13.9603C11.1 13.8008 11.0425 13.6671 10.9275 13.5592C10.8125 13.4513 10.67 13.3974 10.5 13.3974C10.33 13.3974 10.1875 13.4513 10.0725 13.5592C9.9575 13.6671 9.9 13.8008 9.9 13.9603C9.9 14.1198 9.9575 14.2534 10.0725 14.3613C10.1875 14.4692 10.33 14.5232 10.5 14.5232ZM10.08 11.8515C10.08 12.0835 10.268 12.2715 10.5 12.2715C10.732 12.2715 10.92 12.0835 10.92 11.8515V7.06238C10.92 6.83042 10.732 6.64238 10.5 6.64238C10.268 6.64238 10.08 6.83042 10.08 7.06238V11.8515Z" fill="#C82121"/>
+                                    </svg>
+                                </label>
+
+
+
+                                <label class="c-common--label__FB_DOC">
+                                    <input class="c-common--input__FB_DOC" type="file" name="feedback-doc" accept=".pdf, .doc, .docx, .rtf" placeholder="Документ" required>
+                                    <svg class="c-common--svg__FB_DOC" width="21" height="17" viewBox="0 0 21 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.79301 17C1.00996 17 0.530726 16.1407 0.942216 15.4745L9.6492 1.37748C10.04 0.744805 10.96 0.744806 11.3508 1.37748L20.0578 15.4745C20.4693 16.1407 19.99 17 19.207 17H1.79301ZM1.91243 15.4487C1.70623 15.7818 1.94581 16.2119 2.33756 16.2119H18.6624C19.0542 16.2119 19.2938 15.7818 19.0876 15.4487L10.9251 2.26293C10.7297 1.94716 10.2703 1.94716 10.0749 2.26293L1.91243 15.4487ZM10.5 14.5232C10.67 14.5232 10.8125 14.4692 10.9275 14.3613C11.0425 14.2534 11.1 14.1198 11.1 13.9603C11.1 13.8008 11.0425 13.6671 10.9275 13.5592C10.8125 13.4513 10.67 13.3974 10.5 13.3974C10.33 13.3974 10.1875 13.4513 10.0725 13.5592C9.9575 13.6671 9.9 13.8008 9.9 13.9603C9.9 14.1198 9.9575 14.2534 10.0725 14.3613C10.1875 14.4692 10.33 14.5232 10.5 14.5232ZM10.08 11.8515C10.08 12.0835 10.268 12.2715 10.5 12.2715C10.732 12.2715 10.92 12.0835 10.92 11.8515V7.06238C10.92 6.83042 10.732 6.64238 10.5 6.64238C10.268 6.64238 10.08 6.83042 10.08 7.06238V11.8515Z" fill="#C82121"/>
+                                    </svg>
+                                    <svg class="c-common--svg__FB_DOC1" width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16.1868 23.4131C14.6397 24.9602 12.8112 25.7645 10.701 25.8262C8.59105 25.888 6.7956 25.1784 5.31469 23.6975C3.83377 22.2166 3.12103 20.418 3.17647 18.3016C3.2319 16.1853 4.03315 14.3536 5.58019 12.8065L14.4976 3.88915C15.5778 2.80887 16.8531 2.24755 18.3234 2.20518C19.7937 2.16314 21.0478 2.66112 22.0858 3.6991C23.1238 4.73708 23.6217 5.99113 23.5795 7.46125C23.5373 8.9317 22.976 10.2071 21.8958 11.2873L13.4498 19.7334C12.85 20.3331 12.1324 20.6485 11.2968 20.6797C10.4613 20.7111 9.75457 20.4378 9.17654 19.8597C8.5985 19.2817 8.31456 18.5712 8.32471 17.7281C8.33487 16.8851 8.64662 16.1569 9.25996 15.5436L17.7453 7.05823L18.7267 8.03962L10.2413 16.525C9.91536 16.8509 9.74468 17.2361 9.7293 17.6803C9.71409 18.1247 9.86309 18.5035 10.1763 18.8168C10.4897 19.1301 10.8685 19.2792 11.3128 19.2638C11.7572 19.2486 12.1424 19.078 12.4684 18.752L20.934 10.2863C21.7239 9.48892 22.1348 8.55364 22.1667 7.48045C22.1988 6.40742 21.8314 5.48743 21.0644 4.72048C20.3034 3.95941 19.3806 3.59579 18.296 3.62962C17.2116 3.66329 16.2726 4.07693 15.479 4.87053L6.56158 13.7879C5.29676 15.0452 4.64164 16.5396 4.59622 18.271C4.55065 20.0023 5.13288 21.473 6.34294 22.683C7.53565 23.8757 8.99372 24.4454 10.7171 24.3919C12.4406 24.3385 13.9367 23.6851 15.2054 22.4317L24.1621 13.475L25.1435 14.4564L16.1868 23.4131Z" fill="#005792" fill-opacity="0.2"/>
+                                    </svg>
+                                    <span class="c-common--span__FB_DOC1">
+                                        Документ
+                                    </span>
+                                    <span class="c-common--span__FB_DOC2">
+                                        *
+                                    </span>
+                                    <span class="c-common--span__FB_DOC3">
+                                        (загрузите файл)
+                                    </span>
+                                </label>
+                                <p class="c-common--p__FB_DOC">
+                                    <span class="c-common--span__FB_DOC4">
+                                        Формат файла:
+                                    </span>
+                                    <span class="c-common--span__FB_DOC5">
+                                        pdf, doc, docx, rtf
+                                    </span>
+                                    <span class="c-common--span__FB_DOC4">
+                                        Максимальный размер:
+                                    </span>
+                                    <span class="c-common--span__FB_DOC5">
+                                        не более 10 МБ
+                                    </span>
+                                </p>
+                                
+            
+            
+                                <label class="c-common--label__FB_TA">
+                                    <textarea class="c-common--textarea__FB_TA" name="feedback-textarea" placeholder="Ваш вопрос" required></textarea>
+                                    <span class="c-common--span__FB_TA">
+                                        *
+                                    </span>
+                                    <svg class="c-common--svg__FB_TA" width="21" height="17" viewBox="0 0 21 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.79301 17C1.00996 17 0.530726 16.1407 0.942216 15.4745L9.6492 1.37748C10.04 0.744805 10.96 0.744806 11.3508 1.37748L20.0578 15.4745C20.4693 16.1407 19.99 17 19.207 17H1.79301ZM1.91243 15.4487C1.70623 15.7818 1.94581 16.2119 2.33756 16.2119H18.6624C19.0542 16.2119 19.2938 15.7818 19.0876 15.4487L10.9251 2.26293C10.7297 1.94716 10.2703 1.94716 10.0749 2.26293L1.91243 15.4487ZM10.5 14.5232C10.67 14.5232 10.8125 14.4692 10.9275 14.3613C11.0425 14.2534 11.1 14.1198 11.1 13.9603C11.1 13.8008 11.0425 13.6671 10.9275 13.5592C10.8125 13.4513 10.67 13.3974 10.5 13.3974C10.33 13.3974 10.1875 13.4513 10.0725 13.5592C9.9575 13.6671 9.9 13.8008 9.9 13.9603C9.9 14.1198 9.9575 14.2534 10.0725 14.3613C10.1875 14.4692 10.33 14.5232 10.5 14.5232ZM10.08 11.8515C10.08 12.0835 10.268 12.2715 10.5 12.2715C10.732 12.2715 10.92 12.0835 10.92 11.8515V7.06238C10.92 6.83042 10.732 6.64238 10.5 6.64238C10.268 6.64238 10.08 6.83042 10.08 7.06238V11.8515Z" fill="#C82121"/>
+                                    </svg>
+                                </label>
+            
+            
+            
+                                <button class="c-common--button__FB_SB" type="submit">
+                                    Отправить запрос
+                                </button>
+            
+            
+            
+                                <label class="c-common--label__FB_APPR">
+                                    <input class="c-common--input__FB_APPR _REQ" type="checkbox" name="feedback-approve1" value="1" required>
+                                    <div class="c-common--div__FB_APPR">
+                                        <svg class="c-common--svg__FB_APPR" width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.33398 6L5.77843 11L14.6673 1" stroke="#005792" stroke-linecap="round"></path>
+                                        </svg>
+                                    </div>
+                                    <p class="c-common--p__FB_APPR">
+                                        Я даю ООО «АТБ Электроника» согласие на <a class="c-common--a__FB_APPR" href="#">Обработку моих персональных данных</a> для цели ответа на мою заявку.
+                                    </p>
+                                </label>
+            
+            
+            
+                                <label class="c-common--label__FB_APPR">
+                                    <input class="c-common--input__FB_APPR" type="checkbox" name="feedback-approve2" value="1">
+                                    <div class="c-common--div__FB_APPR">
+                                        <svg class="c-common--svg__FB_APPR" width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.33398 6L5.77843 11L14.6673 1" stroke="#005792" stroke-linecap="round"></path>
+                                        </svg>
+                                    </div>
+                                    <p class="c-common--p__FB_APPR">
+                                        Я даю согласие на получение рекламных и иных маркетинговых сообщений от ООО «АТБ Электроника» и <a class="c-common--a__FB_APPR" href="#">обработку моих персональных данных</a> для указанной цели.                        
+                                    </p>
+                                </label>
+                            </form>
+            
+                            <div class="c-common--div__FB_IMAGE __C-SCRL LEFT">
+                                <img src="images/home/hm-des_2.png" alt="" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+    
+    
+                    <!-- ОТЧЕТ ОБ ОТПРАВКЕ ФОРМЫ (ОБЩЕЙ) -->
+    
+                    <div class="c-common--div__FB_DONE _FORM_COMMON">
+                        <div class="c-common--div__FB_DONE_CONT">
+                            <button class="c-common--button__FB_DONE_CLOSE">
+                                <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="19.6727" height="1.50269" rx="0.751343" transform="matrix(0.705843 -0.708368 0.705843 0.708368 0 13.9355)" fill="#BFBFBF"/>
+                                    <rect width="19.6727" height="1.50269" rx="0.751343" transform="matrix(-0.705843 -0.708368 -0.705843 0.708368 15 13.9355)" fill="#BFBFBF"/>
+                                </svg>
+                            </button>
+                            <div class="c-common--div__FB_DONE_TOP">
+                                <p class="c-common--p__FB_DONE_TOP">
+                                    Спасибо
+                                </p>
+                                <p class="c-common--p__FB_DONE_TOP">
+                                    за обращение!
+                                </p>
+                            </div>
+    
+    
+                            <svg class="c-common--svg__FB_DONE" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <mask id="mask0_5522_2984" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="50" height="50">
+                                <rect width="50" height="50" fill="#D9D9D9"/>
+                                </mask>
+                                <g mask="url(#mask0_5522_2984)">
+                                <path d="M24.9932 43.1289C22.4873 43.1289 20.1309 42.6534 17.924 41.7024C15.717 40.7513 13.7974 39.4605 12.1651 37.83C10.5325 36.1994 9.24011 34.2822 8.28802 32.0784C7.33559 29.8742 6.85938 27.519 6.85938 25.0128C6.85938 22.5069 7.33507 20.1504 8.28646 17.9435C9.2382 15.7366 10.5297 13.8169 12.1609 12.1846C13.7922 10.552 15.7104 9.25964 17.9156 8.30755C20.1208 7.35512 22.4771 6.87891 24.9844 6.87891C27.0792 6.87891 29.0613 7.20877 30.9307 7.86849C32.7998 8.52821 34.4983 9.44835 36.0261 10.6289L34.9844 11.7227C33.5955 10.6463 32.0542 9.81294 30.3604 9.22266C28.667 8.63238 26.875 8.33724 24.9844 8.33724C20.3663 8.33724 16.434 9.96051 13.1875 13.207C9.94097 16.4536 8.31771 20.3859 8.31771 25.0039C8.31771 29.622 9.94097 33.5543 13.1875 36.8008C16.434 40.0473 20.3663 41.6706 24.9844 41.6706C29.6024 41.6706 33.5347 40.0473 36.7813 36.8008C40.0278 33.5543 41.6511 29.622 41.6511 25.0039C41.6511 24.1011 41.5816 23.2194 41.4427 22.3586C41.3038 21.4978 41.0955 20.6609 40.8177 19.8477L41.9636 18.6497C42.3455 19.6567 42.632 20.6879 42.8229 21.7435C43.0139 22.7994 43.1094 23.8862 43.1094 25.0039C43.1094 27.5112 42.6339 29.8675 41.6828 32.0727C40.7318 34.2779 39.441 36.1961 37.8104 37.8274C36.1799 39.4586 34.2627 40.7501 32.0589 41.7019C29.8547 42.6532 27.4995 43.1289 24.9932 43.1289ZM21.9636 32.7123L14.9844 25.7331L16.026 24.6914L21.9636 30.6289L42.0677 10.5247L43.1094 11.5664L21.9636 32.7123Z" fill="#005792"/>
+                                </g>
+                            </svg>
+    
+    
+                            <p class="c-common--p__FB_DONE_BOTTOM">
+                                Мы получили ваше сообщение и постараемся ответить в ближайшее время.
+                            </p>
+                        </div>
+                    </div>
+                `);
+    
+    
+                const cCommonDivFbServ = document.querySelector (".c-common--div__FB._FORM_SERVICE");
+                const cCommonButtonFbCloseServ = cCommonDivFbServ.querySelector (".c-common--button__FB_CLOSE");
+                const cCommonFormFb = cCommonDivFbServ.querySelector (".c-common--form__FB");
+    
+    
+                setTimeout (() => {
+                    cCommonDivFbServ.classList.add ("__c-common--div__FB");
+                }, 50);
+                
+    
+    
+    
+                // 1.2 Закрытие
+    
+                cCommonButtonFbCloseServ.addEventListener ("click", () => {
+                    cCommonDivFbServ.classList.remove ("__c-common--div__FB");
+                });
+                
+                
+                cCommonDivFbServ.addEventListener ("click", (e) => {
+                    if (e.target === cCommonDivFbServ) {
+                        cCommonDivFbServ.classList.remove ("__c-common--div__FB");
+                    }
+                });
+    
+    
+    
+    
+                // 2. ИСЧЕЗАНИЕ / ПОЯВЛЕНИЕ ЗВЕЗДОЧКИ И/ИЛИ ПОДПИСЕЙ В ПОЛЯХ ПРИ НАБОРЕ
+    
+    
+                // 2.1 Поля имени и фамилии
+    
+                const cCommonInputFbName = cCommonDivFbServ.querySelector (".c-common--input__FB_NAME");
+                const cCommonLabelFbName = cCommonDivFbServ.querySelector (".c-common--label__FB_NAME");
+                const cCommonSvgFbName = cCommonDivFbServ.querySelector (".c-common--svg__FB_NAME");
+                const cCommonSpanFbName = cCommonDivFbServ.querySelector (".c-common--span__FB_NAME");
+                const cCommonInputFbSurName = cCommonDivFbServ.querySelector (".c-common--input__FB_SURNAME");
+                const cCommonLabelFbSurName = cCommonDivFbServ.querySelector (".c-common--label__FB_SURNAME");
+                const cCommonSvgFbSurName = cCommonDivFbServ.querySelector (".c-common--svg__FB_SURNAME");
+                const cCommonSpanFbSurName = cCommonDivFbServ.querySelector (".c-common--span__FB_SURNAME");
+    
+                cCommonInputFbName.addEventListener ("input", () => {
+                    if (cCommonInputFbName.value !== "") {
+                        cCommonSpanFbName.classList.add ("__c-common--span__FB_NAME");
+                    } else {
+                        cCommonSpanFbName.classList.remove ("__c-common--span__FB_NAME");
+                    }
+                });
+                
+                
+                cCommonInputFbSurName.addEventListener ("input", () => {
+                    if (cCommonInputFbSurName.value !== "") {
+                        cCommonSpanFbSurName.classList.add ("__c-common--span__FB_SURNAME");
+                    } else {
+                        cCommonSpanFbSurName.classList.remove ("__c-common--span__FB_SURNAME");
+                    }
+                });
+                
+    
+    
+                // 2.2 Поле электронной почты
+    
+                const cCommonInputFbMail = cCommonDivFbServ.querySelector (".c-common--input__FB_MAIL");
+                const cCommonLabelFbMail = cCommonDivFbServ.querySelector (".c-common--label__FB_MAIL");
+                const cCommonSvgFbMail = cCommonDivFbServ.querySelector (".c-common--svg__FB_MAIL");
+                const cCommonSpanFbMail = cCommonDivFbServ.querySelector (".c-common--span__FB_MAIL");
+    
+                
+                cCommonInputFbMail.addEventListener ("input", () => {
+                    if (cCommonInputFbMail.value !== "") {
+                        cCommonSpanFbMail.classList.add ("__c-common--span__FB_MAIL");
+                    } else {
+                        cCommonSpanFbMail.classList.remove ("__c-common--span__FB_MAIL");
+                    }
+                });
+    
+    
+    
+                // 2.3 Поле телефона
+    
+                const cCommonInputFbTel = cCommonDivFbServ.querySelector (".c-common--input__FB_TEL");
+                const cCommonSvgFbTel = cCommonDivFbServ.querySelector (".c-common--svg__FB_TEL");
+                const cCommonSpanFbTel = cCommonDivFbServ.querySelector (".c-common--span__FB_TEL");
+    
+                
+                cCommonInputFbTel.addEventListener ("input", () => {
+                    if (cCommonInputFbTel.value !== "") {
+                        cCommonSpanFbTel.classList.add ("__c-common--span__FB_TEL");
+                    } else {
+                        cCommonSpanFbTel.classList.remove ("__c-common--span__FB_TEL");
+                    }
+                });
+
+
+
+                // 2.4 Поле компании
+
+                const cCommonInputFbComp = cCommonDivFbServ.querySelector (".c-common--input__FB_COMP");
+                const cCommonLabelFbComp = cCommonDivFbServ.querySelector (".c-common--label__FB_COMP");
+                const cCommonSvgFbComp = cCommonDivFbServ.querySelector (".c-common--svg__FB_COMP");
+                const cCommonSpanFbComp = cCommonDivFbServ.querySelector (".c-common--span__FB_COMP");
+    
+                
+                cCommonInputFbComp.addEventListener ("input", () => {
+                    if (cCommonInputFbComp.value !== "") {
+                        cCommonSpanFbComp.classList.add ("__c-common--span__FB_COMP");
+                    } else {
+                        cCommonSpanFbComp.classList.remove ("__c-common--span__FB_COMP");
+                    }
+                });
+
+
+
+                // 2.4 Поле должности
+
+                const cCommonInputFbPost = cCommonDivFbServ.querySelector (".c-common--input__FB_POST");
+                const cCommonLabelFbPost = cCommonDivFbServ.querySelector (".c-common--label__FB_POST");
+                const cCommonSvgFbPost = cCommonDivFbServ.querySelector (".c-common--svg__FB_POST");
+                const cCommonSpanFbPost = cCommonDivFbServ.querySelector (".c-common--span__FB_POST");
+    
+                
+                cCommonInputFbPost.addEventListener ("input", () => {
+                    if (cCommonInputFbPost.value !== "") {
+                        cCommonSpanFbPost.classList.add ("__c-common--span__FB_POST");
+                    } else {
+                        cCommonSpanFbPost.classList.remove ("__c-common--span__FB_POST");
+                    }
+                });
+
+
+
+                // 2.5 Поле серийного номера изделия
+
+                const cCommonInputFbNum = cCommonDivFbServ.querySelector (".c-common--input__FB_NUM");
+                const cCommonLabelFbNum = cCommonDivFbServ.querySelector (".c-common--label__FB_NUM");
+                const cCommonSvgFbNum = cCommonDivFbServ.querySelector (".c-common--svg__FB_NUM");
+                const cCommonSpanFbNum = cCommonDivFbServ.querySelector (".c-common--span__FB_NUM");
+    
+                
+                cCommonInputFbNum.addEventListener ("input", () => {
+                    if (cCommonInputFbNum.value !== "") {
+                        cCommonSpanFbNum.classList.add ("__c-common--span__FB_NUM");
+                    } else {
+                        cCommonSpanFbNum.classList.remove ("__c-common--span__FB_NUM");
+                    }
+                });
+    
+    
+    
+                // 2.7 Поле комментария
+    
+                const cCommonTextareaFbTa = cCommonDivFbServ.querySelector (".c-common--textarea__FB_TA");
+                const cCommonLabelFbTa = cCommonDivFbServ.querySelector (".c-common--label__FB_TA");
+                const cCommonSvgFbTa = cCommonDivFbServ.querySelector (".c-common--svg__FB_TA");
+                const cCommonSpanFbTa = cCommonDivFbServ.querySelector (".c-common--span__FB_TA");
+    
+    
+                cCommonTextareaFbTa.addEventListener ("input", () => {
+                    if (cCommonTextareaFbTa.value !== "") {
+                        cCommonSpanFbTa.classList.add ("__c-common--span__FB_TA");
+                    } else {
+                        cCommonSpanFbTa.classList.remove ("__c-common--span__FB_TA");
+                    }
+                });
+    
+    
+    
+    
+                // 4. ИНИЦИАЛИЗАЦИЯ ПЛАГИНА intlTelInput
+    
+                window.intlTelInput(cCommonInputFbTel, {
+                    loadUtils: () => import("https://cdn.jsdelivr.net/npm/intl-tel-input@25.12.4/build/js/utils.js"),
+                    initialCountry: "ru",
+                });
+
+
+
+
+                // 5. ОГРАНИЧЕНИЕ РАЗМЕРА ЗАГРУЖАЕМОГО ФАЙЛА (!!! ЖЕЛАТЕЛЬНО СДЕЛАТЬ ПРОВЕРКУ И НА СТОРОНЕ СЕРВЕРА)
+    
+                const cCommonInputFbDoc = document.querySelector (".c-common--input__FB_DOC");
+                const cCommonSvgFbDoc1 = document.querySelector (".c-common--svg__FB_DOC1");
+    
+                cCommonInputFbDoc.addEventListener ("change", () => {
+                    if (cCommonInputFbDoc.files[0].size > 10485760) {
+                        cCommonInputFbDoc.setCustomValidity ("Превышен допустимый размер файла");
+                    }
+                });
+    
+    
+    
+    
+                // 6. ВАЛИДАЦИЯ, ОТПРАВКА И ОТБИВКА (!!! ПРИ ИНТЕГРАЦИИ ВОЗМОЖНО БУДЕТ НЕОБХОДИМО ИЗМЕНЕНИЕ В ЧАСТИ ОТПРАВКИ)
+    
+                const cCommonDivFbDoneComm = document.querySelector (".c-common--div__FB_DONE._FORM_COMMON");
+                const cCommonButtonFbDoneClose = cCommonDivFbDoneComm.querySelector (".c-common--button__FB_DONE_CLOSE");
+    
+                
+                cCommonFormFb.addEventListener ("submit", (e) => {
+                    e.preventDefault ();
+                    
+    
+                    if (cCommonInputFbName.checkValidity ()) {
+                        cCommonLabelFbName.classList.remove ("__c-common--label__FB");
+                        cCommonSvgFbName.classList.remove ("__c-common--svg__FB");
+                    } else {
+                        cCommonLabelFbName.classList.add ("__c-common--label__FB");
+                        cCommonSvgFbName.classList.add ("__c-common--svg__FB");
+                    }
+                    
+                    
+                    
+                    if (cCommonInputFbSurName.checkValidity ()) {
+                        cCommonLabelFbSurName.classList.remove ("__c-common--label__FB");
+                        cCommonSvgFbSurName.classList.remove ("__c-common--svg__FB");
+                    } else {
+                        cCommonLabelFbSurName.classList.add ("__c-common--label__FB");
+                        cCommonSvgFbSurName.classList.add ("__c-common--svg__FB");
+                    }
+                    
+            
+                    
+                    if (cCommonInputFbMail.checkValidity ()) {
+                        cCommonLabelFbMail.classList.remove ("__c-common--label__FB");
+                        cCommonSvgFbMail.classList.remove ("__c-common--svg__FB");
+                    } else {
+                        cCommonLabelFbMail.classList.add ("__c-common--label__FB");
+                        cCommonSvgFbMail.classList.add ("__c-common--svg__FB");
+                    }
+                    
+                    
+                    
+                    if (cCommonInputFbTel.checkValidity ()) {
+                        cCommonInputFbTel.classList.remove ("__c-common--input__FB_TEL");
+                        cCommonSvgFbTel.classList.remove ("__c-common--svg__FB");
+                    } else {
+                        cCommonInputFbTel.classList.add ("__c-common--input__FB_TEL");
+                        cCommonSvgFbTel.classList.add ("__c-common--svg__FB");
+                    }
+
+
+
+                    if (cCommonInputFbComp.checkValidity ()) {
+                        cCommonLabelFbComp.classList.remove ("__c-common--label__FB");
+                        cCommonSvgFbComp.classList.remove ("__c-common--svg__FB");
+                    } else {
+                        cCommonLabelFbComp.classList.add ("__c-common--label__FB");
+                        cCommonSvgFbComp.classList.add ("__c-common--svg__FB");
+                    }
+
+
+
+                    if (cCommonInputFbPost.checkValidity ()) {
+                        cCommonLabelFbPost.classList.remove ("__c-common--label__FB");
+                        cCommonSvgFbPost.classList.remove ("__c-common--svg__FB");
+                    } else {
+                        cCommonLabelFbPost.classList.add ("__c-common--label__FB");
+                        cCommonSvgFbPost.classList.add ("__c-common--svg__FB");
+                    }
+
+
+
+                    if (cCommonInputFbNum.checkValidity ()) {
+                        cCommonLabelFbNum.classList.remove ("__c-common--label__FB");
+                        cCommonSvgFbNum.classList.remove ("__c-common--svg__FB");
+                    } else {
+                        cCommonLabelFbNum.classList.add ("__c-common--label__FB");
+                        cCommonSvgFbNum.classList.add ("__c-common--svg__FB");
+                    }
+
+
+
+                    if (cCommonDivFbServ.querySelector (".c-common--input__FB_DOC").checkValidity ()) {
+                        cCommonDivFbServ.querySelector (".c-common--label__FB_DOC").classList.remove ("__c-common--label__FB");
+                        cCommonDivFbServ.querySelector (".c-common--svg__FB_DOC").classList.remove ("__c-common--svg__FB");
+                        cCommonDivFbServ.querySelector (".c-common--svg__FB_DOC1").classList.remove ("__c-common--svg__FB_DOC1");
+                    } else {
+                        cCommonDivFbServ.querySelector (".c-common--label__FB_DOC").classList.add ("__c-common--label__FB");
+                        cCommonDivFbServ.querySelector (".c-common--svg__FB_DOC").classList.add ("__c-common--svg__FB");
+                        cCommonDivFbServ.querySelector (".c-common--svg__FB_DOC1").classList.add ("__c-common--svg__FB_DOC1");
+                    }
+                    
+            
+                    
+                    if (cCommonTextareaFbTa.checkValidity ()) {
+                        cCommonLabelFbTa.classList.remove ("__c-common--label__FB");
+                        cCommonSvgFbTa.classList.remove ("__c-common--svg__FB");
+                    } else {
+                        cCommonLabelFbTa.classList.add ("__c-common--label__FB");
+                        cCommonSvgFbTa.classList.add ("__c-common--svg__FB");
+                    }
+                    
+                    
+                    
+                    if (cCommonDivFbServ.querySelector (".c-common--input__FB_APPR").checkValidity ()) {
+                        cCommonDivFbServ.querySelector (".c-common--div__FB_APPR").classList.remove ("__c-common--div__FB_APPR");
+                        cCommonDivFbServ.querySelector (".c-common--p__FB_APPR").classList.remove ("__c-common--p__FB_APPR");
+                    } else {
+                        cCommonDivFbServ.querySelector (".c-common--div__FB_APPR").classList.add ("__c-common--div__FB_APPR");
+                        cCommonDivFbServ.querySelector (".c-common--p__FB_APPR").classList.add ("__c-common--p__FB_APPR");
+                    }
+                    
+    
+            
+                    setTimeout (() => {
+                        if (!cCommonDivFbServ.querySelector (".__c-common--label__FB") && !cCommonDivFbServ.querySelector (".__c-common--input__FB_TEL") && !cCommonDivFbServ.querySelector (".__c-common--div__FB_APPR")) {
+                            cCommonFormFb.reset ();
+                            cCommonDivFbServ.classList.remove ("__c-common--div__FB");
+                            cCommonDivFbDoneComm.classList.add ("__c-common--div__FB_DONE");
+                        }
+                    }, 50)
+                });
+    
+    
+                
+                cCommonButtonFbDoneClose.addEventListener ("click", () => {
+                    cCommonDivFbDoneComm.classList.remove ("__c-common--div__FB_DONE");
+                    cCommonSpanFbName.classList.remove ("__c-common--span__FB_NAME");
+                    cCommonSpanFbSurName.classList.remove ("__c-common--span__FB_SURNAME");
+                    cCommonSpanFbMail.classList.remove ("__c-common--span__FB_MAIL");
+                    cCommonSpanFbTel.classList.remove ("__c-common--span__FB_TEL");
+                    cCommonSpanFbComp.classList.remove ("__c-common--span__FB_COMP");
+                    cCommonSpanFbPost.classList.remove ("__c-common--span__FB_POST");
+                    cCommonSpanFbNum.classList.remove ("__c-common--span__FB_NUM");
+                    cCommonSpanFbTa.classList.remove ("__c-common--span__FB_TA");
+                });
+                
+                
+                
+                cCommonDivFbDoneComm.addEventListener ("click", (e) => {
+                    if (e.target === cCommonDivFbDoneComm) {
+                        cCommonDivFbDoneComm.classList.remove ("__c-common--div__FB_DONE");
+                        cCommonSpanFbName.classList.remove ("__c-common--span__FB_NAME");
+                        cCommonSpanFbSurName.classList.remove ("__c-common--span__FB_SURNAME");
+                        cCommonSpanFbMail.classList.remove ("__c-common--span__FB_MAIL");
+                        cCommonSpanFbTel.classList.remove ("__c-common--span__FB_TEL");
+                        cCommonSpanFbComp.classList.remove ("__c-common--span__FB_COMP");
+                        cCommonSpanFbPost.classList.remove ("__c-common--span__FB_POST");
+                        cCommonSpanFbNum.classList.remove ("__c-common--span__FB_NUM");
+                        cCommonSpanFbTa.classList.remove ("__c-common--span__FB_TA");
+                    }
+                });
+    
+    
+    
+    
+                // 6. АНИМАЦИЯ ПРИ СКРОЛЛЕ 
+    
+                const scrolls = cCommonDivFbServ.querySelectorAll('.__C-SCRL');
+    
+                const callback = (entries, observer) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.remove ("__C-SCRL");
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }
+    
+                const options = {
+                    rootMargin: '-40px 0px 0px 0px',
+                    threshold: 0,
+                }
+    
+                const observer = new IntersectionObserver(callback, options)
+    
+                scrolls.forEach((v) => observer.observe(v));
+                
+            } else {
+                document.querySelector (".c-common--div__FB._FORM_SERVICE").classList.add ("__c-common--div__FB");
+            }
+            
+        });
+    });
 });
