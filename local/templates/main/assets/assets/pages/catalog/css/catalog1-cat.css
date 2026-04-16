@@ -45,6 +45,7 @@
     gap: 6px;
     overflow-x: auto;
     scrollbar-color: transparent transparent;
+    -ms-overflow-style: none !important;
     transition: transform 0.7s, opacity 0.7s;
 }
 @media (min-width: 1440px) {
@@ -56,6 +57,10 @@
         gap: 16px;
         overflow-y: hidden;
     }
+}
+
+.ct-cat--ul__TAGS::-webkit-scrollbar {
+    display: none !important;
 }
 
 .__ct-cat--ul__TAGS {
@@ -119,13 +124,11 @@
 
 @media (any-hover: hover) {
     .ct-cat--a__TAGS:hover {
-        text-shadow: 0px 0px 1px var(--color-black1);
         border: 0.5px solid var(--color-blue);
         box-shadow: var(--blue-shadow);
     }
 }
 .ct-cat--a__TAGS:active {
-    text-shadow: 0px 0px 1px var(--color-black1);
     border: 0.5px solid var(--color-blue);
     box-shadow: var(--blue-shadow);
 }
