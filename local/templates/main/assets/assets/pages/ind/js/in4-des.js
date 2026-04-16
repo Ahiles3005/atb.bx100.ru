@@ -30,36 +30,7 @@ window.addEventListener ("load", function () {
         /* ---------- ********** СЕКЦИЯ DES (РЕШЕНИЕ) ********** ---------- */
 
 
-        // 1. ШИРИНА БЛОКА
-
-        const inDesDivBottom = Array.from (document.querySelectorAll (".in-des--div__BOTTOM"));
-
-        function inDesDivBottomWidth () {
-            inDesDivBottom.forEach ((v, i, a) => {
-                a[i].style.width = `${document.documentElement.clientWidth}px`;
-            });
-        }
-
-        inDesDivBottomWidth ();
-
-        function inDesDivBottomWidthDebounce0 (cB, time) {
-            let idTimer;
-            return function () {
-                clearTimeout (idTimer);
-                idTimer = setTimeout (() => {
-                    cB();
-                }, time);
-            }
-        }
-
-        const inDesDivBottomWidthDebounce1 = inDesDivBottomWidthDebounce0 (inDesDivBottomWidth, 150);
-
-        window.addEventListener ("resize", inDesDivBottomWidthDebounce1);
-
-
-
-
-        // 2. СЛАЙДЕР
+        // 1. СЛАЙДЕР
 
         const cdRecDivSwiper = new Swiper (".cd-rec--div__SWIPER", {
             navigation: {
@@ -185,12 +156,12 @@ window.addEventListener ("load", function () {
 
 
 
-        // 5. СЛАЙДЕР ОТРАСЛИ
+        // 5. СЛАЙДЕР РЕШЕНИЯ
         
-        const cdUseDivSwiper21 = new Swiper (".cd-use--div__SWIPER21", {
+        const cdUseDivSwiper22 = new Swiper (".cd-use--div__SWIPER22", {
             navigation: {
-                nextEl: '.cd-use--button__SWIPER21_NEXT',
-                prevEl: '.cd-use--button__SWIPER21_PREV',
+                nextEl: '.cd-use--button__SWIPER22_NEXT',
+                prevEl: '.cd-use--button__SWIPER22_PREV',
             },
             breakpoints: {
                 200: {
@@ -208,13 +179,13 @@ window.addEventListener ("load", function () {
                     slidesPerGroup: 1,
                 },
                 1440: {
-                    slidesPerView: 3,
+                    slidesPerView: 1,
                     spaceBetween: 44,
                     slidesPerGroup: 1,
                 },
 
                 1920: {
-                    slidesPerView: 4,
+                    slidesPerView: 1,
                     spaceBetween: 44,
                     slidesPerGroup: 1,
                 },
