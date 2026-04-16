@@ -290,7 +290,8 @@
     /* width: 328px; */
     width: 100%;
     min-width: 0px;
-    display: grid;
+    /* display: flex;
+    flex-direction: column; */
     grid-template-columns: 1fr;
     grid-template-rows: subgrid;
     grid-row: span 4;
@@ -303,8 +304,16 @@
 }
 @media (min-width: 1440px) {
     .hm-ind--article__CARD {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: subgrid;
+        grid-row: span 4;
+        gap: 0px;
+    }
+}
+@media (min-width: 1440px) {
+    .hm-ind--article__CARD {
         padding-top: 32px;
-        /* width: auto; */
     }
 }
 
@@ -394,6 +403,7 @@
 .hm-ind--p__CARD_TEXT {
     margin-top: 16px;
     padding: 0px 20px;
+    max-width: inherit;
     /* max-height: calc(20px * 2); */
     /* width: 100%; */
     /* min-width: 0; */
