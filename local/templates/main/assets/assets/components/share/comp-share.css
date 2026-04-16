@@ -39,7 +39,7 @@
 }
 @media (min-width: 1440px) {
     .c-common--button__SHARE {
-        padding: 17px 54px;
+        padding: 14px 54px;
         height: auto;
         width: auto;
         justify-content: space-between;
@@ -120,7 +120,7 @@
         height: auto;
         max-height: 0px;
         position: absolute;
-        inset: 80px 0px auto;
+        inset: 74px 0px auto;
         display: flex !important;
         flex-direction: column;
         background-color: transparent !important;
@@ -205,6 +205,7 @@
     gap: 10px;
     overflow-x: auto;
     scrollbar-color: transparent transparent;
+    -ms-overflow-style: none !important;
 }
 @media (min-width: 1440px) {
     .c-common--div__SHARE_POPUP_LINKS {
@@ -213,6 +214,13 @@
         flex-direction: column;
         gap: 0px;
     }
+}
+
+
+
+
+.c-common--div__SHARE_POPUP_LINKS::-webkit-scrollbar {
+    display: none !important;
 }
 
 
@@ -337,6 +345,7 @@
     font-size: 13px;
     line-height: 32px;
     text-transform: uppercase;
+    color: var(--color-blue);
     background-color: var(--color-gray3);
     border-radius: 10px;
 }
