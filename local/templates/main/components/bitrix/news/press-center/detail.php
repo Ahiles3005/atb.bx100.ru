@@ -598,7 +598,7 @@ $detailText = $arFields['DETAIL_TEXT'];
                 </div>
 
                 <div class="ane-hero--div__TEXT">
-                    <div class="ane-hero--div__PARAMS">
+                    <div class="ane-hero--div__PARAMS __C-SCRL DOWN">
                         <div class="ane-hero--div__PARAMS_ITEM _DATE __C-SCRL DOWN">
                             <svg class="ane-hero--svg__PARAMS" width="28" height="28" viewBox="0 0 28 28" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
