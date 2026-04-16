@@ -28,6 +28,11 @@ window.addEventListener ("load", function () {
                             entry.target.classList.add ("__hm-cat--article__CARD");
                         }, 700);
                     }
+                    if (entry.target.classList.contains ("cd-adv--article")) {
+                        setTimeout (() => {
+                            entry.target.classList.add ("__cd-adv--article");
+                        }, 700);
+                    }
                     observer.unobserve(entry.target);
                 }
             });

@@ -36,19 +36,22 @@ window.addEventListener ("load", function () {
 
         function cdAdvFindParams () {
             cdAdvArticle.forEach ((v, i, a) => {
-                a[i].addEventListener ("mouseover", () => {
+                a[i].addEventListener ("mouseenter", () => {
                     a[i].classList.add ("hov");
                     if (window.innerWidth < 1440 && window.innerWidth > 767) {
                         cdAdvPText[i].style.top = `${cdAdvDivImage[i].offsetHeight + cdAdvPName[i].offsetHeight + 63}px`;
                         cdAdvDivBorder[i].style.bottom = `${a[i].offsetHeight - (cdAdvDivImage[i].offsetHeight + cdAdvPName[i].offsetHeight + cdAdvPText[i].scrollHeight + 80)}px`;
+                        a[i].style.transform = `translate(0px, ${parseFloat (cdAdvDivBorder[i].style.bottom) / 2}px)`;
                     } else if (window.innerWidth > 1439) {
                         cdAdvPText[i].style.top = `${cdAdvDivImage[i].offsetHeight + cdAdvPName[i].offsetHeight + 84}px`;
                         cdAdvDivBorder[i].style.bottom = `${a[i].offsetHeight - (cdAdvDivImage[i].offsetHeight + cdAdvPName[i].offsetHeight + cdAdvPText[i].scrollHeight + 116)}px`;
+                        a[i].style.transform = `translate(0px, ${parseFloat (cdAdvDivBorder[i].style.bottom) / 2}px)`;
                     }
                 });
-                a[i].addEventListener ("mouseout", () => {
-                    cdAdvDivBorder[i].style.bottom = `0px`;
+                a[i].addEventListener ("mouseleave", () => {
                     a[i].classList.remove ("hov");
+                    cdAdvDivBorder[i].style.bottom = `0px`;
+                    a[i].style.transform = `translate(0px, 0px)`;
                 });
             });
         }
