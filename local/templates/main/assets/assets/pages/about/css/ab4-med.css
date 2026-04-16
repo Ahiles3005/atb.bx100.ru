@@ -1,0 +1,105 @@
+
+/* ---------- ********** |||||||||| СТРАНИЦА ABOUT |||||||||| ********** ---------- */
+
+
+/* ---------- ********** СЕКЦИЯ MED ********** ---------- */
+
+
+.ab-med {
+    padding: 0px 16px 58px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+@media (min-width: 1440px) {
+    .ab-med {
+        padding: 0px 80px 76px;
+    } 
+}
+
+
+
+
+.ab-med--div__CONT {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+.ab-med .c-common--h2 {
+    max-width: none;
+}
+
+
+
+
+.ab-med .mc-pk--div__SWIPER1 {
+    margin-top: 20px;
+    max-height: none;
+    opacity: 1;
+}
+
+
+
+
+.ab-med .mc-pk--div__BODY {
+    transition: transform 0.7s, opacity 0.7s, margin-top 0.4s, padding 0.4s, max-height 0.4s, opacity 0.2s;
+}
+@media (max-width: 1439px) {
+    .ab-med .__mc-pk--div__BODY {
+        margin-top: 30px;
+    }
+}
+
+
+
+
+@media (max-width: 1439px) {
+    .ab-med .mc-pk--div__BODY.__C-SCRL {
+        transform: translate(0px, 150px) !important;
+    }
+}
+
+
+
+
+@media (min-width: 1440px) {
+    .ab-med .mc-pk--div__GALLERY {
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+        gap: 0px;
+    }
+}
+
+
+
+
+@media (min-width: 1440px) {
+    .ab-med .mc-pk--div__GALLERY .c-common--div__GLR_CONT2 {
+        max-width: 830px;
+    }
+}
+
+
+
+
+@media (min-width: 1440px) {
+    .ab-med .mc-pk--div__GALLERY .c-common--div__GLR_SWIPER_PAGINATION .swiper-pagination-bullet {
+        height: 72px;
+        width: 72px;
+    }
+}
+
+
+
+
+@media (min-width: 1440px) {
+    .ab-med .mc-pk--div__BODY:has(.mc-pk--label__SUBMENU:nth-of-type(2) > .mc-pk--input__SUBMENU:checked) .mc-pk--div__LINE2 {
+        transform: translateX(310px);
+    }
+}

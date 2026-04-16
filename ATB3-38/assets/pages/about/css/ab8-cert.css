@@ -1,0 +1,360 @@
+
+/* ---------- ********** |||||||||| СТРАНИЦА ABOUT |||||||||| ********** ---------- */
+
+
+/* ---------- ********** СЕКЦИЯ CERT ********** ---------- */
+
+
+.ab-cert {
+    padding: 0px 16px 68px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+@media (min-width: 1440px) {
+    .ab-cert {
+        padding: 0px 80px 100px;
+    } 
+}
+
+
+
+
+.ab-cert--div__CONT {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+.ab-cert .c-common--h2 {
+    max-width: none;
+}
+
+
+
+
+.ab-cert--div__SWIPER {
+    margin: 20px 0px 0px -10px;
+    padding: 10px 10px 60px 10px;
+    width: calc(100% + 20px);
+    transition: opacity 0.7s, transform 0.7s;
+}
+@media (min-width: 1440px) {
+    .ab-cert--div__SWIPER {
+        margin: 32px 0px 0px -10px;
+        padding: 10px 10px 64px 10px;
+    }
+}
+
+
+
+
+.ab-cert--div__SWIPER_WRAPPER {
+    box-sizing: border-box;
+    align-items: stretch;
+}
+
+
+
+
+.ab-cert--div__SWIPER_SLIDE {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+.ab-cert--button__ITEM {
+    padding: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    border: 0.25px solid var(--color-gray);
+    border-radius: 10px;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+
+.ab-cert--button__ITEM:hover {
+    border: 0.25px solid var(--color-blue);
+    box-shadow: var(--block-shadow);
+}
+
+
+
+
+
+.ab-cert--div__ITEM_IMAGE {
+    padding: 30px 0px;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-bluegray);
+    border: 0.25px solid var(--color-gray);
+    border-radius: 10px;
+}
+
+
+
+
+.ab-cert--img__ITEM_IMAGE {
+    width: 46.5%;
+    pointer-events: none;
+}
+
+
+
+
+.ab-cert--p__ITEM_TEXT {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--color-black1);
+    text-align: start;
+    transition: text-shadow 0.3s;
+}
+@media (min-width: 1440px) {
+    .ab-cert--p__ITEM_TEXT {
+        line-height: 22px;
+    }
+}
+
+.ab-cert--button__ITEM:hover .ab-cert--p__ITEM_TEXT {
+    text-shadow: 0px 0px 1px var(--color-black1);
+}
+
+
+
+
+.ab-cert--div__SWIPER_NAV {
+    margin-left: auto;
+    height: 38px;
+    position: absolute;
+    right: 10px;
+    bottom: 2px;
+    display: flex;
+    align-items: center;
+    border: 0.25px solid var(--color-gray);
+    border-radius: 12px;
+}
+@media (min-width: 1440px) {
+    .ab-cert--div__SWIPER_NAV {
+        display: flex;
+    }
+}
+
+
+
+
+.ab-cert--button__SWIPER_PREV,
+.ab-cert--button__SWIPER_NEXT {
+    padding: 9px 14px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s;
+}
+
+
+
+
+.ab-cert--button__SWIPER_PREV.swiper-button-disabled,
+.ab-cert--button__SWIPER_NEXT.swiper-button-disabled {
+    opacity: 0.4;
+    cursor: auto;
+}
+
+
+
+
+.ab-cert--button__SWIPER_PREV svg {
+    transform: rotate(180deg);
+}
+
+
+
+
+.ab-cert--div__SWIPER_NAV_LINE {
+    height: 16px;
+    width: 0.25px;
+    flex-shrink: 0;
+    background-color: var(--color-gray);
+}
+@media not all and (min-resolution:.001dpcm) { 
+    @supports (-webkit-appearance: none) {
+        .ab-cert--div__SWIPER_NAV_LINE {
+            width: 1px;
+        }
+    }
+}
+@-moz-document url-prefix() {
+    .ab-cert--div__SWIPER_NAV_LINE {
+        width: 1px;
+    }
+}
+
+
+
+
+.ab-cert--div__POPUP {
+    padding: 20px 10px;
+    height: calc(100 * var(--uservh));
+    position: fixed;
+    inset: 0px 0px auto 0px;
+    z-index: 12;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsla(0, 0%, 0%, 50%);
+    backdrop-filter: blur(27px);
+    opacity: 0;
+    transform: translateX(-120%);
+    transition: transform 0.7s, opacity 0.7s;
+}
+@media (min-width: 1440px) {
+    .ab-cert--div__POPUP {
+        padding: 75px;
+    }
+}
+@media (min-width: 1920px) {
+    .ab-cert--div__POPUP {
+        padding: 94px;
+    }
+}
+
+.__ab-cert--div__POPUP {
+    opacity: 1;
+    transform: translateX(0%);
+}
+
+
+
+
+.ab-cert--div__POPUP_CONT {
+    padding: 45px 10px 14px;
+    max-height: 100%;
+    width: 100%;
+    max-width: 500px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 10px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+@media (min-width: 1440px) {
+    .ab-cert--div__POPUP_CONT {
+        padding: 50px 80px 14px;
+        height: 100%;
+        width: auto;
+        max-width: none;
+        aspect-ratio: 1 / 1;
+        border-radius: 30px;
+    }
+}
+@media (min-width: 1920px) {
+    .ab-cert--div__POPUP_CONT {
+        padding: 50px 81px 20px;
+    }
+}
+
+
+
+
+.ab-cert--button__POPUP_CLOSE {
+    position: absolute;
+    top: 22px;
+    right: 16px;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media (min-width: 1440px) {
+    .ab-cert--button__POPUP_CLOSE {
+        top: 0px;
+        right: 0px;
+        height: 60px;
+        width: 60px;
+    }
+}
+
+
+
+
+@media (min-width: 1440px) {
+    .ab-cert--svg__POPUP_CLOSE {
+        height: 20px;
+        width: 20px;
+    }
+}
+
+
+
+
+.ab-cert--img__POPUP {
+    width: 70%;
+    max-width: 400px;
+    pointer-events: none;
+}
+@media (min-width: 1440px) {
+    .ab-cert--img__POPUP {
+        max-width: none;
+    }
+}
+
+
+
+
+.ab-cert--p__POPUP {
+    margin-top: 16px;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--color-black1);
+    text-align: center;
+}
+@media (min-width: 1440px) {
+    .ab-cert--p__POPUP {
+        line-height: 22px;
+    }
+}
+
+
+
+
+.ab-cert--a__DOWNLOAD {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+
+
+
+.ab-cert--span__DOWNLOAD {
+    font-size: 16px;
+    line-height: 16px;
+    color: var(--color-black1);
+}
+
+
+
+
+.ab-cert--svg__DOWNLOAD {
+    flex-shrink: 0;
+}

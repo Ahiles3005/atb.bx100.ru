@@ -1,0 +1,360 @@
+
+/* ---------- ********** |||||||||| СТРАНИЦА ABOUT |||||||||| ********** ---------- */
+
+
+/* ---------- ********** СЕКЦИЯ HERO ********** ---------- */
+
+
+.ab-hero {
+    margin-top: 53px;
+    padding: 0px 16px 68px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+@media (min-width: 1440px) {
+    .ab-hero {
+        margin-top: 90px;
+        padding: 0px 80px 100px;
+    } 
+}
+
+
+
+
+.ab-hero--div__CONT {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+.ab-hero .c-common--div__TABS {
+    margin: 30px 0px 0px;
+    padding: 3px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-radius: 18px;
+    background-color: hsl(0, 0%, 90%);
+    overflow: hidden;
+    transition: transform 0.7s, opacity 0.7s;
+}
+@media (min-width: 1440px) {
+    .ab-hero .c-common--div__TABS {
+        margin: 57px auto 0px;
+        padding: 6px;
+        width: 100%;
+        max-width: 1286px;
+        border-radius: 35px;
+    }
+}
+
+
+
+.ab-hero .c-common--div__TABS.__C-SCRL.DOWN {
+    transform: translate(0px, 50px) !important;
+}
+@media (min-width: 1440px) {
+    .ab-hero .c-common--div__TABS.__C-SCRL.DOWN {
+        transform: translate(0px, 70px) !important;
+    }
+}
+
+
+
+
+.ab-hero .c-common--div__TABS_TOP {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    border-radius: 18px;
+    overflow-x: auto;
+    scrollbar-color: transparent transparent;
+    pointer-events: none;
+}
+@media (min-width: 1440px) {
+    .ab-hero .c-common--div__TABS_TOP {
+        justify-content: space-between;
+        gap: 0px;
+    }
+}
+
+
+
+
+.ab-hero .c-common--a__TABS {
+    padding: 10.5px 13px;
+    position: relative;
+    z-index: 1;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 13px;
+    color: var(--color-black1);
+    white-space: nowrap;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s;
+    pointer-events: all;
+}
+@media (min-width: 1440px) {
+    .ab-hero .c-common--a__TABS {
+        padding: 22px 25px;
+        font-size: 21px;
+        line-height: 21px;
+    }
+}
+@media (min-width: 1920px) {
+    .ab-hero .c-common--a__TABS {
+        padding: 22px 32px;
+    }
+}
+
+
+
+
+.ab-hero .c-common--a__TABS._ACT {
+    color: hsl(0, 0%, 100%);
+}
+
+
+
+
+.ab-hero .c-common--div__TABS_FRAME {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    z-index: 0;
+    background-color: var(--color-blue);
+    border-radius: 16px;
+    transition: width 0.3s, transform 0.3s;
+}
+@media (min-width: 1440px) {
+    .ab-hero .c-common--div__TABS_FRAME {
+        border-radius: 30px;
+    }
+}
+
+
+
+
+.ab-hero .c-common--button__TABS_LEFT, 
+.ab-hero .c-common--button__TABS_RIGHT {
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: -1px;
+    z-index: 2;
+    display: none;
+    align-items: center;
+    transform: translateY(-50%);
+}
+
+.ab-hero .c-common--button__TABS_LEFT {
+    background: linear-gradient(270deg, transparent, hsl(0, 0%, 90%) 40%);
+}
+.ab-hero .c-common--button__TABS_RIGHT {
+    left: auto;
+    right: -1px;
+    background: linear-gradient(90deg, transparent, hsl(0, 0%, 90%) 40%);
+}
+
+.ab-hero .__c-common--button__TABS_LEFT, 
+.ab-hero .__c-common--button__TABS_RIGHT {
+    display: flex;
+}
+
+
+
+
+.ab-hero .c-common--button__TABS_LEFT svg {
+    transform: rotate(180deg);
+}
+
+
+
+
+.ab-hero .c-common--h2 {
+    margin-top: 38px;
+}
+@media (min-width: 1440px) {
+    .ab-hero .c-common--h2 {
+        margin-top: 100px;
+    }
+}
+
+
+
+
+.ab-hero--p__TOP {
+    margin-top: 30px;
+    font-weight: 600;
+    font-size: 19px;
+    line-height: 27px;
+    color: var(--color-blue);
+    transition: opacity 0.7s, transform 0.7s;
+}
+@media (min-width: 1440px) {
+    .ab-hero--p__TOP {
+        margin-top: 42px;
+        font-size: 42px;
+        line-height: 54px;
+    }
+}
+
+
+
+
+.ab-hero--div__MAIN {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+@media (min-width: 1440px) {
+    .ab-hero--div__MAIN {
+        margin-top: 62px;
+        max-width: 1405px;
+        align-self: flex-end;
+    }
+}
+
+
+
+
+.ab-hero--div__IMAGES {
+    width: 100%;
+    max-width: 500px;
+    position: relative;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    transition: opacity 0.7s, transform 0.7s;
+}
+@media (min-width: 1440px) {
+    .ab-hero--div__IMAGES {
+        max-width: none;
+    }
+}
+
+
+
+
+@media (min-width: 1440px) {
+    .ab-hero--div__IMAGES.__C-SCRL {
+        transform: translate(0px, 0px) !important;
+        opacity: 1 !important;
+    }
+}
+
+
+
+
+.ab-hero--div__IMAGE_MAIN {
+    margin: 0px 0px 16px 0px;
+    width: 79.8%;
+    aspect-ratio: 262 / 118;
+    align-self: flex-end;
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+}
+@media (min-width: 1440px) {
+    .ab-hero--div__IMAGE_MAIN {
+        margin: 0px 0px 229px 0px;
+        width: 77.5%;
+        aspect-ratio: 992 / 446;
+        border-radius: 24px;
+        transition: opacity 0.7s, transform 0.7s;
+    }
+}
+
+
+
+
+.ab-hero--div__IMAGE_ADD {
+    width: 26.5%;
+    aspect-ratio: 1 / 1;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    z-index: -1;
+    border-radius: 10px;
+    overflow: hidden;
+}
+@media (min-width: 1440px) {
+    .ab-hero--div__IMAGE_ADD {
+        width: 29.9%;
+        transition: opacity 0.7s, transform 0.7s;
+    }
+}
+
+
+
+
+@media (max-width: 1439px) {
+    .ab-hero--div__IMAGE_MAIN.__C-SCRL,
+    .ab-hero--div__IMAGE_ADD.__C-SCRL {
+        transform: translate(0px, 0px) !important;
+        opacity: 1 !important;
+    }
+}
+
+
+
+
+.ab-hero--img__IMAGE_MAIN,
+.ab-hero--img__IMAGE_ADD {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    pointer-events: none;
+}
+
+
+
+
+.ab-hero--div__TEXT {
+    margin-top: 30px;
+    flex-direction: column;
+    display: flex;
+}
+@media (min-width: 1440px) {
+    .ab-hero--div__TEXT {
+        margin-top: -130px;
+        width: 100%;
+        max-width: 60%;
+        align-self: flex-end;
+    }
+}
+
+
+
+
+.ab-hero--div__TEXT_BOTTOM {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    transition: opacity 0.7s, transform 0.7s;
+}
+@media (min-width: 1440px) {
+    .ab-hero--div__TEXT_BOTTOM {
+        margin-top: 24px;
+        gap: 10px;
+    }
+}
+
+
+
+
+.ab-hero .st-main--p__DESCR2 {
+    margin: 0px;
+}
