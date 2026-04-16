@@ -5,29 +5,24 @@
 /* ---------- ********** СЕКЦИЯ РЕШЕНИЯ ********** ---------- */
 
 
-#des .cd-use--div__SWIPER22 {
-    margin-top: 20px;
+#des .cd-use--div__SWIPER21 {
+    margin-top: 30px;
     margin-left: -10px;
     padding: 10px 10px 60px 10px;
     width: calc(100% + 20px);
     transition: transform 0.7s, opacity 0.7s;
 }
 @media (min-width: 1440px) {
-    #des .cd-use--div__SWIPER22 {
+    #des .cd-use--div__SWIPER21 {
         margin-top: 42px;
         padding: 10px 10px 64px 10px;
     }
 }
-@media (min-width: 1920px) {
-    #des .cd-use--div__SWIPER22 {
-        width: 84%;
-    }
-}
 
 
 
 
-#des .cd-use--div__SWIPER22_WRAPPER {
+#des .cd-use--div__SWIPER21_WRAPPER {
     box-sizing: border-box;
     display: grid;
     grid-auto-flow: column;
@@ -36,7 +31,7 @@
     row-gap: 0px;
 }
 @media (min-width: 768px) {
-    #des .cd-use--div__SWIPER22_WRAPPER {
+    #des .cd-use--div__SWIPER21_WRAPPER {
         grid-auto-flow: column;
         grid-template-columns: auto;
         column-gap: 0px;
@@ -44,12 +39,12 @@
     }
 }
 @media (min-width: 1200px) {
-    #des .cd-use--div__SWIPER22_WRAPPER {
+    #des .cd-use--div__SWIPER21_WRAPPER {
         grid-template-columns: auto;
     }
 }
 @media (min-width: 1440px) {
-    #des .cd-use--div__SWIPER22_WRAPPER {
+    #des .cd-use--div__SWIPER21_WRAPPER {
         grid-auto-flow: column;
         grid-template-columns: auto;
         column-gap: 0px;
@@ -60,65 +55,7 @@
 
 
 
-#des .cd-use--div__SWIPER22_SLIDE {
-    grid-template-columns: 1fr;
-    row-gap: 0px;
-    grid-row: span 1;
-}
-@media (min-width: 768px) {
-    #des .cd-use--div__SWIPER22_SLIDE {
-        grid-template-columns: 1fr;
-        row-gap: 0px;
-        grid-row: span 1;
-    }
-}
-@media (min-width: 1440px) {
-    #des .cd-use--div__SWIPER22_SLIDE {
-        grid-template-columns: 1fr;
-        grid-row: span 1;
-    }
-}
-
-
-
-
-@media (min-width: 1440px) {
-    #des .cd-use--div__SWIPER22_SLIDE .hm-des--ul__CARD_LIST {
-        margin-top: 30px;
-        display: flex;
-        flex-direction: row;
-        gap: 40px;
-    }
-}
-
-
-
-
-
-@media (min-width: 1440px) {
-    #des .cd-use--div__SWIPER22_SLIDE .hm-des--li__CARD_LIST {
-        margin-left: 0px;
-        flex: 1 1 auto;
-        display: flex;
-        align-items: center;
-        line-height: 24px;
-        text-transform: uppercase;
-    }
-}
-
-
-
-
-@media (min-width: 1440px) {
-    #des .cd-use--div__SWIPER22_SLIDE .hm-des--li__CARD_LIST::before {
-        display: none;
-    }
-}
-
-
-
-
-.cd-use--div__SWIPER22_NAV {
+.cd-use--div__SWIPER21_NAV {
     margin-left: auto;
     height: 38px;
     position: absolute;
