@@ -311,6 +311,21 @@ switch ($mainId) {
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/mc/css/mc6-pk.css');
         break;
 
+    case 'hr':
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/styles/css/st-common.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/mc/css/mc6-pk.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/ane/css/ane2-main.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/hr/css/hr1-hero.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/hr/css/hr2-vals.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/hr/css/hr3-polt.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/hr/css/hr4-word.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/hr/css/hr5-adv.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/hr/css/hr6-hst.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/hr/css/hr7-faq.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/hr/css/hr8-blog.css');
+
+        break;
+
 }
 
 
@@ -422,6 +437,18 @@ switch ($mainId) {
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/mc/js/mc0-common.js');
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/mc/js/mc1-hero.js');
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/mc/js/mc6-pk.js');
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/libs/dragscroll/dragscroll.js');
+        break;
+
+    case 'hr':
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/hr/js/hr0-common.js');
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/hr/js/hr1-hero.js');
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/hr/js/hr3-polt.js');
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/hr/js/hr4-word.js');
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/hr/js/hr5-adv.js');
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/hr/js/hr6-hst.js');
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/hr/js/hr7-faq.js');
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/hr/js/hr8-blog.js');
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/libs/dragscroll/dragscroll.js');
         break;
 }
