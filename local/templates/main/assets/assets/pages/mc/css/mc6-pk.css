@@ -915,6 +915,18 @@
     flex-shrink: 0;
     background-color: var(--color-gray);
 }
+@media not all and (min-resolution:.001dpcm) { 
+    @supports (-webkit-appearance: none) {
+        .mc-pk--div__SWIPER11_NAV_LINE {
+            width: 1px;
+        }
+    }
+}
+@-moz-document url-prefix() {
+    .mc-pk--div__SWIPER11_NAV_LINE {
+        width: 1px;
+    }
+}
 
 
 
@@ -954,6 +966,16 @@
     .mc-pk--div__GALLERY .c-common--div__GLR_CONT2 {
         max-width: 52.8%;
         flex: 1 1 52.8%;
+    }
+}
+
+
+
+
+@media (min-width: 1440px) {
+    .mc-pk--div__GALLERY .c-common--div__GLR_SWIPER_PAGINATION .swiper-pagination-bullet {
+        height: 68.64px;
+        width: 68.64px;
     }
 }
 
