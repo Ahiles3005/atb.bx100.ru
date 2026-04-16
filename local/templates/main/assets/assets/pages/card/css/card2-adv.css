@@ -110,6 +110,10 @@
     }
 }
 
+.__cd-adv--article {
+    transition: transform 0.25s;
+}
+
 
 
 

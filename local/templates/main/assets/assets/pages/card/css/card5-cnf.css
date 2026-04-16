@@ -768,9 +768,18 @@
 
 
 
+.cd-cnf--fieldset__DES {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
 .cd-cnf--label__DES {
     margin-left: 38px;
     position: relative;
+    align-self: flex-start;
     display: flex;
     align-items: center;
     gap: 12px;

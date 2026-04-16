@@ -85,7 +85,7 @@
 .ane-hero--a__TAG {
     display: flex;
     gap: 14px;
-    font-weight: 700;
+    font-weight: 300;
     font-size: 14px;
     line-height: 18px;
     transition: all 0.2s;
@@ -104,14 +104,17 @@
     margin-top: 5px;
     height: 8px;
     width: 8px;
+    position: relative;
+    display: flex;
     flex-shrink: 0;
-    border-radius: 50%;
+    border-radius: 4px;
 }
 @media (min-width: 1440px) {
     .ane-hero--div__TAG_CIRCLE {
         margin-top: 7px;
         height: 12px;
         width: 12px;
+        border-radius: 6px;
     }
 }
 
@@ -244,6 +247,7 @@
     gap: 12px;
     border: 0.25px solid var(--color-gray);
     border-radius: 10px;
+    transition: transform 0.7s, opacity 0.7s;
 }
 @media (min-width: 1440px) {
     .ane-hero--div__PARAMS {
@@ -285,6 +289,22 @@
 
 
 
+/* .ane-hero--div__PARAMS_ITEM:nth-of-type(2) {
+    transition: opacity 0.7s 0.3s, transform 0.7s 0.3s;
+}
+.ane-hero--div__PARAMS_ITEM:nth-of-type(3) {
+    transition: opacity 0.7s 0.6s, transform 0.7s 0.6s;
+}
+.ane-hero--div__PARAMS_ITEM:nth-of-type(4) {
+    transition: opacity 0.7s 0.9s, transform 0.7s 0.9s;
+}
+.ane-hero--div__PARAMS_ITEM:nth-of-type(5) {
+    transition: opacity 0.7s 1.2s, transform 0.7s 1.2s;
+} */
+
+
+
+
 .ane-hero--svg__PARAMS {
     flex-shrink: 0;
 }
@@ -316,7 +336,7 @@
 
 
 .ane-hero--div__PARAMS_ITEM .c-common--div__LINE1 {
-    margin-bottom: 0px;
+    margin-bottom: 1px;
     position: absolute;
     inset: auto 0px 0px 0px;
 }
@@ -329,7 +349,7 @@
     font-size: 14px;
     line-height: 20px;
     color: var(--color-black1);
-    transition: opacity 0.7s, transform 0.7s;
+    transition: opacity 0.7s 0.2s, transform 0.7s 0.2s;
 }
 @media (min-width: 1440px) {
     .ane-hero--p__TEXT {
