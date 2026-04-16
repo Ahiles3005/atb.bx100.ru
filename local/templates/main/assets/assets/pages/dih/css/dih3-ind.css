@@ -142,3 +142,18 @@
         row-gap: 0px;
     }
 }
+
+
+
+
+#dih .cd-use--div__SWIPER21_NAV {
+    margin-left: auto;
+    height: 38px;
+    position: absolute;
+    right: 10px;
+    bottom: 2px;
+    display: flex;
+    align-items: center;
+    border: 0.25px solid var(--color-gray);
+    border-radius: 12px;
+}
