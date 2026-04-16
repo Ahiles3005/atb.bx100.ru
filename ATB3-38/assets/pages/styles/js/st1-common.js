@@ -9,6 +9,9 @@ window.addEventListener ("load", function () {
     /* ---------- ********** |||||||||| СТРАНИЦА СТИЛИ |||||||||| ********** ---------- */
 
 
+    const cCommonMedia1440 = window.matchMedia ("(min-width: 1440px)");
+
+
 
     // 1. ЗАКРЫТИЕ / РАСКРЫТИЕ ТАБЛИЦ TABLE
 
@@ -89,6 +92,45 @@ window.addEventListener ("load", function () {
 
     }
 
+
+
+
+
+
+
+    // 3. ПЕРЕНОС ИЗОБРАЖЕНИЙ ПРИ ПЕРЕХОДЕ ЧЕРЕЗ 1440 В IMAGE6
+
+    if (document.querySelector (".st-main--div__IMAGE6")) {
+        const stMainDivImage6MainImageCont = Array.from (document.querySelectorAll (".st-main--div__IMAGE6 .st-main--div__IMAGE6_MAIN_IMAGE_CONT"));
+        const stMainImgImage6MainImage = Array.from (document.querySelectorAll (".st-main--div__IMAGE6 .st-main--img__IMAGE6_MAIN_IMAGE"));
+        const stMainDivImage6BigImageCont = Array.from (document.querySelectorAll (".st-main--div__IMAGE6 .st-main--div__IMAGE6_BIG_IMAGE_CONT"));
+        const stMainImgImage6BigImage = Array.from (document.querySelectorAll (".st-main--div__IMAGE6 .st-main--img__IMAGE6_BIG_IMAGE"));
+
+        function stMainDivImage6Replace () {
+            if (cCommonMedia1440.matches) {
+                stMainDivImage6MainImageCont.forEach ((v, i, a) => {
+                    a[i].append (stMainImgImage6BigImage[i]);
+                });
+                stMainDivImage6BigImageCont.forEach ((v, i, a) => {
+                    a[i].append (stMainImgImage6MainImage[i]);
+                });
+            } else {
+                stMainDivImage6MainImageCont.forEach ((v, i, a) => {
+                    a[i].append (stMainImgImage6MainImage[i]);
+                });
+                stMainDivImage6BigImageCont.forEach ((v, i, a) => {
+                    a[i].append (stMainImgImage6BigImage[i]);
+                });
+            }
+        }
+
+        stMainDivImage6Replace ();
+        
+        cCommonMedia1440.addEventListener ("change", () => {
+            setTimeout (stMainDivImage6Replace, 100);
+        });
+    }
+
     
 
 
@@ -104,9 +146,17 @@ window.addEventListener ("load", function () {
         const stMainDivImglist = Array.from (document.querySelectorAll (".st-main--div__IMGLIST"));
 
         function stMainDivImglistWidth () {
+            
             stMainDivImglist.forEach ((v, i, a) => {
-                a[i].style.width = `${document.documentElement.clientWidth}px`;
+                if (window.innerWidth < 1440) {
+                    a[i].style.width = `${document.documentElement.clientWidth}px`;
+                } else {
+                    a[i].style.width = `100%`;
+                }
+                
             });
+            
+            
         }
 
         stMainDivImglistWidth ();
@@ -174,19 +224,20 @@ window.addEventListener ("load", function () {
     if (document.querySelector (".st-main--div__GRID2_ITEM")) {
         const stMainDivGrid2Item = Array.from (document.querySelectorAll (".st-main--div__GRID2_ITEM"));
         const stMainButtonGrid2ItemTop = Array.from (document.querySelectorAll (".st-main--button__GRID2_ITEM_TOP"));
-        const cdCommonMedia1440 = window.matchMedia ("(min-width: 1440px)");
 
+        
         stMainButtonGrid2ItemTop.forEach ((v, i, a) => {
             a[i].addEventListener ("click", () => {
-                if (!cdCommonMedia1440.matches) {
-                    stMainDivGrid2Item[i].classList.toggle ("__st-main--div__GRID2_ITEM");
-                }
+                stMainDivGrid2Item[i].classList.toggle ("__st-main--div__GRID2_ITEM");
+                stMainDivGrid2Item.filter (x => x !== stMainDivGrid2Item[i]).forEach ((v1, i1, a1) => {
+                    a1[i1].classList.remove ("__st-main--div__GRID2_ITEM");
+                });
             });
         });
+            
+        
 
-
-
-
+    
 
 
 
