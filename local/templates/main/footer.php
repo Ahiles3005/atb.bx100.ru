@@ -121,9 +121,12 @@ $mainId = $APPLICATION->GetProperty('mainid', 'other');
 Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/libs/swiper/swiper-bundle.min.css');
 Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/common/css/common.css');
 Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/styles/css/st-common.css');
+Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/common/css/form.css');
+Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/common/css/gallery.css');
 Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/header/css/header.css');
 Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/footer/css/footer.css');
 Asset::getInstance()->addCss('https://cdn.jsdelivr.net/npm/intl-tel-input@25.12.4/build/css/intlTelInput.css');
+
 
 switch ($mainId) {
     case 'home':
@@ -253,7 +256,6 @@ switch ($mainId) {
         break;
 
     case 'ne':
-        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/common/css/gallery.css');
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/components/share/comp-share.css');
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/home/css/home2-cat.css');
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/home/css/home3-ind.css');
@@ -262,7 +264,6 @@ switch ($mainId) {
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/card-n/css/card-n4-reg.css');
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/card-n/css/card-n5-rec.css');
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/ind/css/in4-des.css');
-        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/styles/css/st-common.css');
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/mc/css/mc6-pk.css');
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/ane/css/ane0-common.css');
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/ane/css/ane1-hero.css');
@@ -270,7 +271,6 @@ switch ($mainId) {
         break;
 
     case 'ar':
-        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/common/css/gallery.css');
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/components/share/comp-share.css');
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/home/css/home2-cat.css');
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/home/css/home3-ind.css');
@@ -279,7 +279,6 @@ switch ($mainId) {
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/card-n/css/card-n4-reg.css');
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/card-n/css/card-n5-rec.css');
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/ind/css/in4-des.css');
-        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/styles/css/st-common.css');
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/mc/css/mc6-pk.css');
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/ane/css/ane0-common.css');
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/ane/css/ane1-hero.css');
@@ -287,7 +286,6 @@ switch ($mainId) {
         break;
 
     case 'ev':
-        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/common/css/gallery.css');
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/components/share/comp-share.css');
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/home/css/home2-cat.css');
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/home/css/home3-ind.css');
@@ -296,7 +294,6 @@ switch ($mainId) {
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/card-n/css/card-n4-reg.css');
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/card-n/css/card-n5-rec.css');
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/ind/css/in4-des.css');
-        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/styles/css/st-common.css');
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/mc/css/mc6-pk.css');
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/ane/css/ane0-common.css');
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/ane/css/ane1-hero.css');
@@ -304,7 +301,6 @@ switch ($mainId) {
         break;
 
     case 'mc':
-        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/common/css/gallery.css');
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/home/css/home6-pre.css');
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/mc/css/mc0-common.css');
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/mc/css/mc1-hero.css');
@@ -312,7 +308,6 @@ switch ($mainId) {
         break;
 
     case 'hr':
-        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/styles/css/st-common.css');
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/mc/css/mc6-pk.css');
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/ane/css/ane2-main.css');
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/hr/css/hr1-hero.css');
@@ -323,7 +318,19 @@ switch ($mainId) {
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/hr/css/hr6-hst.css');
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/hr/css/hr7-faq.css');
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/hr/css/hr8-blog.css');
+        break;
 
+    case 'hrv1':
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/components/share/comp-share.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/hrv1/css/hrv11-hero.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/hrv1/css/hrv12-main.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/hrv1/css/hrv12-main.css');
+        break;
+
+    case 'hrx':
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/hrv1/css/hrv11-hero.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/hrx/css/hrx1-hero.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/hrx/css/hrx2-vac.css');
         break;
 
 }
@@ -449,6 +456,33 @@ switch ($mainId) {
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/hr/js/hr6-hst.js');
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/hr/js/hr7-faq.js');
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/hr/js/hr8-blog.js');
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/libs/dragscroll/dragscroll.js');
+        break;
+
+    case 'hr':
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/hr/js/hr0-common.js');
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/hr/js/hr1-hero.js');
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/hr/js/hr3-polt.js');
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/hr/js/hr4-word.js');
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/hr/js/hr5-adv.js');
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/hr/js/hr6-hst.js');
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/hr/js/hr7-faq.js');
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/hr/js/hr8-blog.js');
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/libs/dragscroll/dragscroll.js');
+        break;
+
+    case 'hrv1':
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/components/share/comp-share.js');
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/hrv1/js/hrv10-common.js');
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/hrv1/js/hrv11-hero.js');
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/hrv1/js/hrv12-main.js');
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/libs/dragscroll/dragscroll.js');
+        break;
+
+    case 'hrx':
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/hrx/js/hrx0-common.js');
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/hrx/js/hrx1-hero.js');
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/hrx/js/hrx2-vac.js');
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/libs/dragscroll/dragscroll.js');
         break;
 }
