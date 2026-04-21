@@ -21,7 +21,7 @@ $arUrlRewrite=array (
     'CONDITION' => '#^/about/press-center/#',
     'RULE' => '',
     'ID' => 'bitrix:news',
-    'PATH' => '/press-center/index.php',
+    'PATH' => '/about/press-center/index.php',
     'SORT' => 100,
   ),
   3 => 

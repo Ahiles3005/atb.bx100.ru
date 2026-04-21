@@ -24,7 +24,7 @@ $strTitle = "";
                     Пресс-центр
                 </h2>
 
-                <a class="c-common--a__ALL __C-SCRL DOWN" href="/press-center/">
+                <a class="c-common--a__ALL __C-SCRL DOWN" href="/about/press-center/">
                     СМОТРЕТЬ ВСЕ
                 </a>
             </div>

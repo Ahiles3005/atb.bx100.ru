@@ -78,13 +78,13 @@ $APPLICATION->SetPageProperty('mainid', 'mc');
 
         <div class="c-common--div__TABS __C-SCRL DOWN">
             <div class="c-common--div__TABS_TOP">
-                <a class="c-common--a__TABS " href="/press-center/novosti/">
+                <a class="c-common--a__TABS " href="<?= $arParams['SEF_FOLDER'] ?>novosti/">
                     новости
                 </a>
-                <a class="c-common--a__TABS" href="/press-center/meropriyatiya/">
+                <a class="c-common--a__TABS" href="<?= $arParams['SEF_FOLDER'] ?>meropriyatiya/">
                     мероприятия
                 </a>
-                <a class="c-common--a__TABS" href="/press-center/stati/">
+                <a class="c-common--a__TABS" href="<?= $arParams['SEF_FOLDER'] ?>stati/">
                     статьи
                 </a>
                 <!--                    <a class="c-common--a__TABS" href="#mc-video">-->
@@ -111,194 +111,194 @@ $APPLICATION->SetPageProperty('mainid', 'mc');
 <section class="mc-news" id="mc-news">
     <div class="mc-news--div__CONT C-CONTAINER">
         <h1 class="c-common--h2 RIGHT">  <? $APPLICATION->ShowTitle(false); ?></h1>
-<!--        <form class="mc-common--form__SELECT _NEWS" action="#" method="post" name="mc-news">-->
-<!--            <fieldset class="mc-common--fieldset__SELECT _NEWS _YEAR __C-SCRL DOWN">-->
-<!--                <button class="mc-common--button__SELECT" type="button">-->
-<!--                            <span class="mc-common--span__SELECT">-->
-<!--                                Год-->
-<!--                            </span>-->
-<!--                    <svg class="mc-common--svg__SELECT" width="19" height="9" viewBox="0 0 19 9" fill="none"-->
-<!--                         xmlns="http://www.w3.org/2000/svg">-->
-<!--                        <path d="M0.125 0.125L9.125 8.59559L18.125 0.125" stroke="#0C0C0C" stroke-width="0.25"-->
-<!--                              stroke-linecap="round"/>-->
-<!--                    </svg>-->
-<!--                </button>-->
-<!---->
-<!--                <div class="mc-common--div__SELECT">-->
-<!--                    <label class="mc-common--label__SELECT _NEWS _YEAR">-->
-<!--                        За все время-->
-<!--                        <input class="mc-common--input__SELECT _NEWS _YEAR" type="radio" name="mc-news-years"-->
-<!--                               value="all">-->
-<!--                    </label>-->
-<!--                    <label class="mc-common--label__SELECT _NEWS _YEAR">-->
-<!--                        2026-->
-<!--                        <input class="mc-common--input__SELECT _NEWS _YEAR" type="radio" name="mc-news-years"-->
-<!--                               value="2026">-->
-<!--                    </label>-->
-<!--                    <label class="mc-common--label__SELECT _NEWS _YEAR">-->
-<!--                        2025-->
-<!--                        <input class="mc-common--input__SELECT _NEWS _YEAR" type="radio" name="mc-news-years"-->
-<!--                               value="2025">-->
-<!--                    </label>-->
-<!--                    <label class="mc-common--label__SELECT _NEWS _YEAR">-->
-<!--                        2024-->
-<!--                        <input class="mc-common--input__SELECT _NEWS _YEAR" type="radio" name="mc-news-years"-->
-<!--                               value="2024">-->
-<!--                    </label>-->
-<!--                    <label class="mc-common--label__SELECT _NEWS _YEAR">-->
-<!--                        2023-->
-<!--                        <input class="mc-common--input__SELECT _NEWS _YEAR" type="radio" name="mc-news-years"-->
-<!--                               value="2023">-->
-<!--                    </label>-->
-<!--                    <label class="mc-common--label__SELECT _NEWS _YEAR">-->
-<!--                        2022-->
-<!--                        <input class="mc-common--input__SELECT _NEWS _YEAR" type="radio" name="mc-news-years"-->
-<!--                               value="2022">-->
-<!--                    </label>-->
-<!--                    <label class="mc-common--label__SELECT _NEWS _YEAR">-->
-<!--                        2021-->
-<!--                        <input class="mc-common--input__SELECT _NEWS _YEAR" type="radio" name="mc-news-years"-->
-<!--                               value="2021">-->
-<!--                    </label>-->
-<!--                    <label class="mc-common--label__SELECT _NEWS _YEAR">-->
-<!--                        2020-->
-<!--                        <input class="mc-common--input__SELECT _NEWS _YEAR" type="radio" name="mc-news-years"-->
-<!--                               value="2020">-->
-<!--                    </label>-->
-<!--                </div>-->
-<!--            </fieldset>-->
-<!---->
-<!---->
-<!--            <fieldset class="mc-common--fieldset__SELECT _NEWS _IND __C-SCRL DOWN">-->
-<!--                <button class="mc-common--button__SELECT" type="button">-->
-<!--                            <span class="mc-common--span__SELECT">-->
-<!--                                Отрасли-->
-<!--                            </span>-->
-<!--                    <svg class="mc-common--svg__SELECT" width="19" height="9" viewBox="0 0 19 9" fill="none"-->
-<!--                         xmlns="http://www.w3.org/2000/svg">-->
-<!--                        <path d="M0.125 0.125L9.125 8.59559L18.125 0.125" stroke="#0C0C0C" stroke-width="0.25"-->
-<!--                              stroke-linecap="round"/>-->
-<!--                    </svg>-->
-<!--                </button>-->
-<!---->
-<!--                <div class="mc-common--div__SELECT">-->
-<!--                    <label class="mc-common--label__SELECT _NEWS _IND">-->
-<!--                        Добыча и переработка полезных ископаемых-->
-<!--                        <input class="mc-common--input__SELECT _NEWS _IND" type="radio" name="mc-news-ind"-->
-<!--                               value="minerals">-->
-<!--                    </label>-->
-<!--                    <label class="mc-common--label__SELECT _NEWS _IND">-->
-<!--                        Строительство и ЖКХ-->
-<!--                        <input class="mc-common--input__SELECT _NEWS _IND" type="radio" name="mc-news-ind"-->
-<!--                               value="construction">-->
-<!--                    </label>-->
-<!--                    <label class="mc-common--label__SELECT _NEWS _IND">-->
-<!--                        Железнодорожный транспорт-->
-<!--                        <input class="mc-common--input__SELECT _NEWS _IND" type="radio" name="mc-news-ind"-->
-<!--                               value="railway">-->
-<!--                    </label>-->
-<!--                    <label class="mc-common--label__SELECT _NEWS _IND">-->
-<!--                        Медицинская техника-->
-<!--                        <input class="mc-common--input__SELECT _NEWS _IND" type="radio" name="mc-news-ind"-->
-<!--                               value="medicine">-->
-<!--                    </label>-->
-<!--                    <label class="mc-common--label__SELECT _NEWS _IND">-->
-<!--                        Банки и финансовый сектор-->
-<!--                        <input class="mc-common--input__SELECT _NEWS _IND" type="radio" name="mc-news-ind"-->
-<!--                               value="banks">-->
-<!--                    </label>-->
-<!--                </div>-->
-<!--            </fieldset>-->
-<!---->
-<!---->
-<!--            <fieldset class="mc-common--fieldset__SELECT _NEWS _DES __C-SCRL DOWN">-->
-<!--                <button class="mc-common--button__SELECT" type="button">-->
-<!--                            <span class="mc-common--span__SELECT">-->
-<!--                                Решения-->
-<!--                            </span>-->
-<!--                    <svg class="mc-common--svg__SELECT" width="19" height="9" viewBox="0 0 19 9" fill="none"-->
-<!--                         xmlns="http://www.w3.org/2000/svg">-->
-<!--                        <path d="M0.125 0.125L9.125 8.59559L18.125 0.125" stroke="#0C0C0C" stroke-width="0.25"-->
-<!--                              stroke-linecap="round"/>-->
-<!--                    </svg>-->
-<!--                </button>-->
-<!---->
-<!--                <div class="mc-common--div__SELECT">-->
-<!--                    <label class="mc-common--label__SELECT _NEWS _DES">-->
-<!--                        Пограничные вычисления-->
-<!--                        <input class="mc-common--input__SELECT _NEWS _DES" type="radio" name="mc-news-des" value="ec">-->
-<!--                    </label>-->
-<!--                    <label class="mc-common--label__SELECT _NEWS _DES">-->
-<!--                        Информационная безопасность (ИБ)-->
-<!--                        <input class="mc-common--input__SELECT _NEWS _DES" type="radio" name="mc-news-des" value="is">-->
-<!--                    </label>-->
-<!--                    <label class="mc-common--label__SELECT _NEWS _DES">-->
-<!--                        Автоматизация процессов (АСУ ТП)-->
-<!--                        <input class="mc-common--input__SELECT _NEWS _DES" type="radio" name="mc-news-des" value="pa">-->
-<!--                    </label>-->
-<!--                    <label class="mc-common--label__SELECT _NEWS _DES">-->
-<!--                        Контроль и мониторинг-->
-<!--                        <input class="mc-common--input__SELECT _NEWS _DES" type="radio" name="mc-news-des"-->
-<!--                               value="control">-->
-<!--                    </label>-->
-<!--                    <label class="mc-common--label__SELECT _NEWS _DES">-->
-<!--                        Отопление, вентиляция, охлаждение (HVAC)-->
-<!--                        <input class="mc-common--input__SELECT _NEWS _DES" type="radio" name="mc-news-des" value="hvac">-->
-<!--                    </label>-->
-<!--                    <label class="mc-common--label__SELECT _NEWS _DES">-->
-<!--                        Промышленный интернет вещей (IIOT)-->
-<!--                        <input class="mc-common--input__SELECT _NEWS _DES" type="radio" name="mc-news-des" value="iiot">-->
-<!--                    </label>-->
-<!--                </div>-->
-<!--            </fieldset>-->
-<!---->
-<!---->
-<!--            <fieldset class="mc-common--fieldset__SELECT _NEWS _TOPIC __C-SCRL DOWN">-->
-<!--                <button class="mc-common--button__SELECT" type="button">-->
-<!--                            <span class="mc-common--span__SELECT">-->
-<!--                                Тема-->
-<!--                            </span>-->
-<!--                    <svg class="mc-common--svg__SELECT" width="19" height="9" viewBox="0 0 19 9" fill="none"-->
-<!--                         xmlns="http://www.w3.org/2000/svg">-->
-<!--                        <path d="M0.125 0.125L9.125 8.59559L18.125 0.125" stroke="#0C0C0C" stroke-width="0.25"-->
-<!--                              stroke-linecap="round"/>-->
-<!--                    </svg>-->
-<!--                </button>-->
-<!---->
-<!--                <div class="mc-common--div__SELECT">-->
-<!--                    <label class="mc-common--label__SELECT _NEWS _TOPIC">-->
-<!--                        Что-то-->
-<!--                        <input class="mc-common--input__SELECT _NEWS _TOPIC" type="radio" name="mc-news-topic"-->
-<!--                               value="something">-->
-<!--                    </label>-->
-<!--                    <label class="mc-common--label__SELECT _NEWS _TOPIC">-->
-<!--                        Что-то-->
-<!--                        <input class="mc-common--input__SELECT _NEWS _TOPIC" type="radio" name="mc-news-topic"-->
-<!--                               value="something">-->
-<!--                    </label>-->
-<!--                    <label class="mc-common--label__SELECT _NEWS _TOPIC">-->
-<!--                        Что-то-->
-<!--                        <input class="mc-common--input__SELECT _NEWS _TOPIC" type="radio" name="mc-news-topic"-->
-<!--                               value="something">-->
-<!--                    </label>-->
-<!--                    <label class="mc-common--label__SELECT _NEWS _TOPIC">-->
-<!--                        Что-то-->
-<!--                        <input class="mc-common--input__SELECT _NEWS _TOPIC" type="radio" name="mc-news-topic"-->
-<!--                               value="something">-->
-<!--                    </label>-->
-<!--                    <label class="mc-common--label__SELECT _NEWS _TOPIC">-->
-<!--                        Что-то-->
-<!--                        <input class="mc-common--input__SELECT _NEWS _TOPIC" type="radio" name="mc-news-topic"-->
-<!--                               value="something">-->
-<!--                    </label>-->
-<!--                    <label class="mc-common--label__SELECT _NEWS _TOPIC">-->
-<!--                        Что-то-->
-<!--                        <input class="mc-common--input__SELECT _NEWS _TOPIC" type="radio" name="mc-news-topic"-->
-<!--                               value="something">-->
-<!--                    </label>-->
-<!--                </div>-->
-<!--            </fieldset>-->
-<!--        </form>-->
+        <!--        <form class="mc-common--form__SELECT _NEWS" action="#" method="post" name="mc-news">-->
+        <!--            <fieldset class="mc-common--fieldset__SELECT _NEWS _YEAR __C-SCRL DOWN">-->
+        <!--                <button class="mc-common--button__SELECT" type="button">-->
+        <!--                            <span class="mc-common--span__SELECT">-->
+        <!--                                Год-->
+        <!--                            </span>-->
+        <!--                    <svg class="mc-common--svg__SELECT" width="19" height="9" viewBox="0 0 19 9" fill="none"-->
+        <!--                         xmlns="http://www.w3.org/2000/svg">-->
+        <!--                        <path d="M0.125 0.125L9.125 8.59559L18.125 0.125" stroke="#0C0C0C" stroke-width="0.25"-->
+        <!--                              stroke-linecap="round"/>-->
+        <!--                    </svg>-->
+        <!--                </button>-->
+        <!---->
+        <!--                <div class="mc-common--div__SELECT">-->
+        <!--                    <label class="mc-common--label__SELECT _NEWS _YEAR">-->
+        <!--                        За все время-->
+        <!--                        <input class="mc-common--input__SELECT _NEWS _YEAR" type="radio" name="mc-news-years"-->
+        <!--                               value="all">-->
+        <!--                    </label>-->
+        <!--                    <label class="mc-common--label__SELECT _NEWS _YEAR">-->
+        <!--                        2026-->
+        <!--                        <input class="mc-common--input__SELECT _NEWS _YEAR" type="radio" name="mc-news-years"-->
+        <!--                               value="2026">-->
+        <!--                    </label>-->
+        <!--                    <label class="mc-common--label__SELECT _NEWS _YEAR">-->
+        <!--                        2025-->
+        <!--                        <input class="mc-common--input__SELECT _NEWS _YEAR" type="radio" name="mc-news-years"-->
+        <!--                               value="2025">-->
+        <!--                    </label>-->
+        <!--                    <label class="mc-common--label__SELECT _NEWS _YEAR">-->
+        <!--                        2024-->
+        <!--                        <input class="mc-common--input__SELECT _NEWS _YEAR" type="radio" name="mc-news-years"-->
+        <!--                               value="2024">-->
+        <!--                    </label>-->
+        <!--                    <label class="mc-common--label__SELECT _NEWS _YEAR">-->
+        <!--                        2023-->
+        <!--                        <input class="mc-common--input__SELECT _NEWS _YEAR" type="radio" name="mc-news-years"-->
+        <!--                               value="2023">-->
+        <!--                    </label>-->
+        <!--                    <label class="mc-common--label__SELECT _NEWS _YEAR">-->
+        <!--                        2022-->
+        <!--                        <input class="mc-common--input__SELECT _NEWS _YEAR" type="radio" name="mc-news-years"-->
+        <!--                               value="2022">-->
+        <!--                    </label>-->
+        <!--                    <label class="mc-common--label__SELECT _NEWS _YEAR">-->
+        <!--                        2021-->
+        <!--                        <input class="mc-common--input__SELECT _NEWS _YEAR" type="radio" name="mc-news-years"-->
+        <!--                               value="2021">-->
+        <!--                    </label>-->
+        <!--                    <label class="mc-common--label__SELECT _NEWS _YEAR">-->
+        <!--                        2020-->
+        <!--                        <input class="mc-common--input__SELECT _NEWS _YEAR" type="radio" name="mc-news-years"-->
+        <!--                               value="2020">-->
+        <!--                    </label>-->
+        <!--                </div>-->
+        <!--            </fieldset>-->
+        <!---->
+        <!---->
+        <!--            <fieldset class="mc-common--fieldset__SELECT _NEWS _IND __C-SCRL DOWN">-->
+        <!--                <button class="mc-common--button__SELECT" type="button">-->
+        <!--                            <span class="mc-common--span__SELECT">-->
+        <!--                                Отрасли-->
+        <!--                            </span>-->
+        <!--                    <svg class="mc-common--svg__SELECT" width="19" height="9" viewBox="0 0 19 9" fill="none"-->
+        <!--                         xmlns="http://www.w3.org/2000/svg">-->
+        <!--                        <path d="M0.125 0.125L9.125 8.59559L18.125 0.125" stroke="#0C0C0C" stroke-width="0.25"-->
+        <!--                              stroke-linecap="round"/>-->
+        <!--                    </svg>-->
+        <!--                </button>-->
+        <!---->
+        <!--                <div class="mc-common--div__SELECT">-->
+        <!--                    <label class="mc-common--label__SELECT _NEWS _IND">-->
+        <!--                        Добыча и переработка полезных ископаемых-->
+        <!--                        <input class="mc-common--input__SELECT _NEWS _IND" type="radio" name="mc-news-ind"-->
+        <!--                               value="minerals">-->
+        <!--                    </label>-->
+        <!--                    <label class="mc-common--label__SELECT _NEWS _IND">-->
+        <!--                        Строительство и ЖКХ-->
+        <!--                        <input class="mc-common--input__SELECT _NEWS _IND" type="radio" name="mc-news-ind"-->
+        <!--                               value="construction">-->
+        <!--                    </label>-->
+        <!--                    <label class="mc-common--label__SELECT _NEWS _IND">-->
+        <!--                        Железнодорожный транспорт-->
+        <!--                        <input class="mc-common--input__SELECT _NEWS _IND" type="radio" name="mc-news-ind"-->
+        <!--                               value="railway">-->
+        <!--                    </label>-->
+        <!--                    <label class="mc-common--label__SELECT _NEWS _IND">-->
+        <!--                        Медицинская техника-->
+        <!--                        <input class="mc-common--input__SELECT _NEWS _IND" type="radio" name="mc-news-ind"-->
+        <!--                               value="medicine">-->
+        <!--                    </label>-->
+        <!--                    <label class="mc-common--label__SELECT _NEWS _IND">-->
+        <!--                        Банки и финансовый сектор-->
+        <!--                        <input class="mc-common--input__SELECT _NEWS _IND" type="radio" name="mc-news-ind"-->
+        <!--                               value="banks">-->
+        <!--                    </label>-->
+        <!--                </div>-->
+        <!--            </fieldset>-->
+        <!---->
+        <!---->
+        <!--            <fieldset class="mc-common--fieldset__SELECT _NEWS _DES __C-SCRL DOWN">-->
+        <!--                <button class="mc-common--button__SELECT" type="button">-->
+        <!--                            <span class="mc-common--span__SELECT">-->
+        <!--                                Решения-->
+        <!--                            </span>-->
+        <!--                    <svg class="mc-common--svg__SELECT" width="19" height="9" viewBox="0 0 19 9" fill="none"-->
+        <!--                         xmlns="http://www.w3.org/2000/svg">-->
+        <!--                        <path d="M0.125 0.125L9.125 8.59559L18.125 0.125" stroke="#0C0C0C" stroke-width="0.25"-->
+        <!--                              stroke-linecap="round"/>-->
+        <!--                    </svg>-->
+        <!--                </button>-->
+        <!---->
+        <!--                <div class="mc-common--div__SELECT">-->
+        <!--                    <label class="mc-common--label__SELECT _NEWS _DES">-->
+        <!--                        Пограничные вычисления-->
+        <!--                        <input class="mc-common--input__SELECT _NEWS _DES" type="radio" name="mc-news-des" value="ec">-->
+        <!--                    </label>-->
+        <!--                    <label class="mc-common--label__SELECT _NEWS _DES">-->
+        <!--                        Информационная безопасность (ИБ)-->
+        <!--                        <input class="mc-common--input__SELECT _NEWS _DES" type="radio" name="mc-news-des" value="is">-->
+        <!--                    </label>-->
+        <!--                    <label class="mc-common--label__SELECT _NEWS _DES">-->
+        <!--                        Автоматизация процессов (АСУ ТП)-->
+        <!--                        <input class="mc-common--input__SELECT _NEWS _DES" type="radio" name="mc-news-des" value="pa">-->
+        <!--                    </label>-->
+        <!--                    <label class="mc-common--label__SELECT _NEWS _DES">-->
+        <!--                        Контроль и мониторинг-->
+        <!--                        <input class="mc-common--input__SELECT _NEWS _DES" type="radio" name="mc-news-des"-->
+        <!--                               value="control">-->
+        <!--                    </label>-->
+        <!--                    <label class="mc-common--label__SELECT _NEWS _DES">-->
+        <!--                        Отопление, вентиляция, охлаждение (HVAC)-->
+        <!--                        <input class="mc-common--input__SELECT _NEWS _DES" type="radio" name="mc-news-des" value="hvac">-->
+        <!--                    </label>-->
+        <!--                    <label class="mc-common--label__SELECT _NEWS _DES">-->
+        <!--                        Промышленный интернет вещей (IIOT)-->
+        <!--                        <input class="mc-common--input__SELECT _NEWS _DES" type="radio" name="mc-news-des" value="iiot">-->
+        <!--                    </label>-->
+        <!--                </div>-->
+        <!--            </fieldset>-->
+        <!---->
+        <!---->
+        <!--            <fieldset class="mc-common--fieldset__SELECT _NEWS _TOPIC __C-SCRL DOWN">-->
+        <!--                <button class="mc-common--button__SELECT" type="button">-->
+        <!--                            <span class="mc-common--span__SELECT">-->
+        <!--                                Тема-->
+        <!--                            </span>-->
+        <!--                    <svg class="mc-common--svg__SELECT" width="19" height="9" viewBox="0 0 19 9" fill="none"-->
+        <!--                         xmlns="http://www.w3.org/2000/svg">-->
+        <!--                        <path d="M0.125 0.125L9.125 8.59559L18.125 0.125" stroke="#0C0C0C" stroke-width="0.25"-->
+        <!--                              stroke-linecap="round"/>-->
+        <!--                    </svg>-->
+        <!--                </button>-->
+        <!---->
+        <!--                <div class="mc-common--div__SELECT">-->
+        <!--                    <label class="mc-common--label__SELECT _NEWS _TOPIC">-->
+        <!--                        Что-то-->
+        <!--                        <input class="mc-common--input__SELECT _NEWS _TOPIC" type="radio" name="mc-news-topic"-->
+        <!--                               value="something">-->
+        <!--                    </label>-->
+        <!--                    <label class="mc-common--label__SELECT _NEWS _TOPIC">-->
+        <!--                        Что-то-->
+        <!--                        <input class="mc-common--input__SELECT _NEWS _TOPIC" type="radio" name="mc-news-topic"-->
+        <!--                               value="something">-->
+        <!--                    </label>-->
+        <!--                    <label class="mc-common--label__SELECT _NEWS _TOPIC">-->
+        <!--                        Что-то-->
+        <!--                        <input class="mc-common--input__SELECT _NEWS _TOPIC" type="radio" name="mc-news-topic"-->
+        <!--                               value="something">-->
+        <!--                    </label>-->
+        <!--                    <label class="mc-common--label__SELECT _NEWS _TOPIC">-->
+        <!--                        Что-то-->
+        <!--                        <input class="mc-common--input__SELECT _NEWS _TOPIC" type="radio" name="mc-news-topic"-->
+        <!--                               value="something">-->
+        <!--                    </label>-->
+        <!--                    <label class="mc-common--label__SELECT _NEWS _TOPIC">-->
+        <!--                        Что-то-->
+        <!--                        <input class="mc-common--input__SELECT _NEWS _TOPIC" type="radio" name="mc-news-topic"-->
+        <!--                               value="something">-->
+        <!--                    </label>-->
+        <!--                    <label class="mc-common--label__SELECT _NEWS _TOPIC">-->
+        <!--                        Что-то-->
+        <!--                        <input class="mc-common--input__SELECT _NEWS _TOPIC" type="radio" name="mc-news-topic"-->
+        <!--                               value="something">-->
+        <!--                    </label>-->
+        <!--                </div>-->
+        <!--            </fieldset>-->
+        <!--        </form>-->
 
         <?php
         $APPLICATION->IncludeComponent(

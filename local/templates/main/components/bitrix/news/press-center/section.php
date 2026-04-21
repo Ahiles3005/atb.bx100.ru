@@ -98,13 +98,13 @@ $sectionId = (int)$arResult['VARIABLES']['SECTION_ID'];
 
         <div class="c-common--div__TABS __C-SCRL DOWN">
             <div class="c-common--div__TABS_TOP ">
-                <a class="c-common--a__TABS <?= $sectionId == 21 ? $class : '' ?>" href="/press-center/novosti/">
+                <a class="c-common--a__TABS <?= $sectionId == 21 ? $class : '' ?>" href="<?=$arParams['SEF_FOLDER']?>novosti/">
                     новости
                 </a>
-                <a class="c-common--a__TABS <?= $sectionId == 22 ? $class : '' ?>" href="/press-center/meropriyatiya/">
+                <a class="c-common--a__TABS <?= $sectionId == 22 ? $class : '' ?>" href="<?=$arParams['SEF_FOLDER']?>meropriyatiya/">
                     мероприятия
                 </a>
-                <a class="c-common--a__TABS <?= $sectionId == 23 ? $class : '' ?>" href="/press-center/stati/">
+                <a class="c-common--a__TABS <?= $sectionId == 23 ? $class : '' ?>" href="<?=$arParams['SEF_FOLDER']?>stati/">
                     статьи
                 </a>
                 <!--                    <a class="c-common--a__TABS" href="#mc-video">-->
