@@ -82,7 +82,7 @@ $APPLICATION->SetTitle("Пресс-центр");
 		"USE_SEARCH" => "N",
 		"USE_SHARE" => "N",
 		"COMPONENT_TEMPLATE" => "press-center",
-		"SEF_FOLDER" => "/press-center/",
+		"SEF_FOLDER" => "/about/press-center/",
 		"SEF_URL_TEMPLATES" => array(
 			"news" => "",
 			"section" => "#SECTION_CODE_PATH#/",
