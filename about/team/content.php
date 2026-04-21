@@ -135,7 +135,7 @@
                 <a class="c-common--a__TABS" href="#hr-blog">
                     hr-блог
                 </a>
-                <a class="c-common--a__TABS" href="hrx.html#hrx-vac">
+                <a class="c-common--a__TABS" href="/about/team/hr/">
                     вакансии
                 </a>
                 <div class="c-common--div__TABS_FRAME"></div>
