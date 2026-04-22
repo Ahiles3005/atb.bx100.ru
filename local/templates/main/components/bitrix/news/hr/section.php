@@ -157,7 +157,7 @@ $this->setFrameMode(true);
                 <div class="hrx-vac--div__REQUEST">
                     <div class="hrx-vac--div__IMAGES __C-SCRL DOWN">
                         <div class="hrx-vac--div__IMAGE_CONT">
-                            <img class="hrx-vac--img__IMAGE" src="images/hr/hr-hero_10.jpg" alt="" loading="lazy">
+                            <img class="hrx-vac--img__IMAGE" src="/local/templates/main/assets/images/hr/hr-hero_10.jpg" alt="" loading="lazy">
                         </div>
                         <div class="hrx-vac--div__IMAGE_ADD1"></div>
                         <div class="hrx-vac--div__IMAGE_ADD2"></div>

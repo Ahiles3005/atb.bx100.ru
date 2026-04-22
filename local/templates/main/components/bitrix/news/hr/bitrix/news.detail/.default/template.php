@@ -256,7 +256,7 @@ $this->setFrameMode(true);
                 </form>
 
                 <div class="c-common--div__FB_IMAGE __C-SCRL LEFT">
-                    <img src="images/hr/hr-hero_10.jpg" alt="" loading="lazy">
+                    <img src="/local/templates/main/assets/images/hr/hr-hero_10.jpg" alt="" loading="lazy">
                 </div>
             </div>
 
