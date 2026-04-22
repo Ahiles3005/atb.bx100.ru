@@ -8,12 +8,12 @@ $arUrlRewrite=array (
     'PATH' => '/bitrix/services/mobileapp/jn.php',
     'SORT' => 100,
   ),
-  5 => 
+  7 => 
   array (
-    'CONDITION' => '#^/success-stories/#',
-    'RULE' => '',
+    'CONDITION' => '#^/about/team/hr/(.*)/.*#',
+    'RULE' => 'ELEMENT_CODE=$1',
     'ID' => 'bitrix:news',
-    'PATH' => '/success-stories/index.php',
+    'PATH' => '/about/team/hr/index.php',
     'SORT' => 100,
   ),
   6 => 
@@ -22,6 +22,14 @@ $arUrlRewrite=array (
     'RULE' => '',
     'ID' => 'bitrix:news',
     'PATH' => '/about/press-center/index.php',
+    'SORT' => 100,
+  ),
+  5 => 
+  array (
+    'CONDITION' => '#^/success-stories/#',
+    'RULE' => '',
+    'ID' => 'bitrix:news',
+    'PATH' => '/success-stories/index.php',
     'SORT' => 100,
   ),
   3 => 
