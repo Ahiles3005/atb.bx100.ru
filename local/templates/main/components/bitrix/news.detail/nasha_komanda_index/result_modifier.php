@@ -190,10 +190,50 @@ if (CModule::IncludeModule("highloadblock")) {
 }
 
 
+$arResult['BLOG_ITEMS'] = [];
+if (CModule::IncludeModule("iblock")) {
+    $arSelect = ['*']; // нужные поля
+    $arFilter = ["IBLOCK_ID" => 12, "ACTIVE" => "Y"];
+    $res = CIBlockElement::GetList(["SORT" => "ASC"], $arFilter, false, false, $arSelect);
+
+    $arItems = [];
+
+    while ($ob = $res->GetNextElement()) {
+        $arFields = $ob->GetFields();
+        $arProps = $ob->GetProperties(); // получаем свойства каждого элемента
+
+        $detailPicture = CFile::GetFileArray($arFields['DETAIL_PICTURE']);
+
+        $images = [];
+        $video = [];
+
+        foreach ($arProps['FILE_1']['VALUE'] as $fileId) {
+            $images[] = CFile::GetFileArray($fileId);
+        }
+        foreach ($arProps['FILE_2']['VALUE'] as $fileId) {
+            $video[] = CFile::GetFileArray($fileId);
+        }
+
+        $arResult['BLOG_ITEMS'][] = [
+            'NAME' => $arFields['NAME'],
+            'DATE' => \CIBlockFormatProperties::DateFormat('d.m.Y', MakeTimeStamp($arFields["ACTIVE_FROM"], CSite::GetDateFormat())),
+            'DETAIL_PICTURE' => $detailPicture['SRC'] ?? AHILES3005_NO_IMAGE,
+            'TEXT_1' => $arProps['TEXT_1']['~VALUE']['TEXT'] ?? '',
+            'TEXT_2' => $arProps['TEXT_2']['~VALUE']['TEXT'] ?? '',
+            'TEXT_3' => $arProps['TEXT_3']['~VALUE']['TEXT'] ?? '',
+            'TEXT_4' => $arProps['TEXT_4']['~VALUE']['TEXT'] ?? '',
+            'IMAGES' => $images,
+            'VIDEO' => [],
+        ];
+    }
+
+
+}
+
 // Сохраняем данные для использования в component_epilog.php
 $cp = $this->__component;
 if (method_exists($cp, 'SetResultCacheKeys')) {
-    $cp->SetResultCacheKeys(['PROPERTIES', 'DISPLAY_PROPERTIES']);
+    $cp->SetResultCacheKeys(['PROPERTIES', 'DISPLAY_PROPERTIES', 'BLOG_ITEMS']);
 }
 
 
@@ -203,4 +243,8 @@ if (isset($arResult['PROPERTIES'])) {
 
 if (isset($arResult['DISPLAY_PROPERTIES'])) {
     $cp->arResult['DISPLAY_PROPERTIES'] = $arResult['DISPLAY_PROPERTIES'];
+}
+
+if (isset($arResult['BLOG_ITEMS'])) {
+    $cp->arResult['BLOG_ITEMS'] = $arResult['BLOG_ITEMS'];
 }
