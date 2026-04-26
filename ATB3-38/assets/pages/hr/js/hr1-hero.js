@@ -31,33 +31,33 @@ window.addEventListener ("load", function () {
         const hrHeroImgImage = Array.from (document.querySelectorAll (".hr-hero--img__IMAGE"));
 
 
-        if (matchMedia ('(any-pointer: coarse)').matches) {
-            hrHeroDivImageCont.forEach ((v, i, a) => {
-                a[i].addEventListener ("touchstart", () => {
-                    a[i].classList.add ("__hr-hero--div__IMAGE_CONT");
-                    hrHeroImgImage[i].classList.toggle ("__hr-hero--img__IMAGE");
-                });
-            });
-            hrHeroDivImageCont.forEach ((v, i, a) => {
-                a[i].addEventListener ("touchend", () => {
-                    a[i].classList.remove ("__hr-hero--div__IMAGE_CONT");
-                    hrHeroImgImage[i].classList.toggle ("__hr-hero--img__IMAGE");
-                });
-            });
-        } else {
+        // if (matchMedia ('(any-hover: none)').matches) {
+        //     hrHeroDivImageCont.forEach ((v, i, a) => {
+        //         a[i].addEventListener ("touchstart", () => {
+        //             a[i].classList.add ("__hr-hero--div__IMAGE_CONT");
+        //             hrHeroImgImage[i].classList.toggle ("__hr-hero--img__IMAGE");
+        //         });
+        //     });
+        //     hrHeroDivImageCont.forEach ((v, i, a) => {
+        //         a[i].addEventListener ("touchend", () => {
+        //             a[i].classList.remove ("__hr-hero--div__IMAGE_CONT");
+        //             hrHeroImgImage[i].classList.toggle ("__hr-hero--img__IMAGE");
+        //         });
+        //     });
+        // } else {
             hrHeroDivImageCont.forEach ((v, i, a) => {
                 a[i].addEventListener ("mouseenter", () => {
-                    a[i].classList.add ("__hr-hero--div__IMAGE_CONT");
+                    // a[i].classList.add ("__hr-hero--div__IMAGE_CONT");
                     hrHeroImgImage[i].classList.toggle ("__hr-hero--img__IMAGE");
                 });
             });
             hrHeroDivImageCont.forEach ((v, i, a) => {
                 a[i].addEventListener ("mouseleave", () => {
-                    a[i].classList.remove ("__hr-hero--div__IMAGE_CONT");
+                    // a[i].classList.remove ("__hr-hero--div__IMAGE_CONT");
                     hrHeroImgImage[i].classList.toggle ("__hr-hero--img__IMAGE");
                 });
             });
-        }
+        // }
         
                 
 
