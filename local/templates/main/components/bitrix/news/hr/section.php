@@ -42,7 +42,8 @@ $this->setFrameMode(true);
         <div class="hrx-hero--div__MAIN">
             <div class="hrx-hero--div__RIGHT">
                 <h1 class="hrx-hero--h1 __C-SCRL RIGHT">
-                    <? $APPLICATION->ShowTitle(false); ?> </h1>
+                    Присоединяйся <br class="hrx-hero--br__1" /> к команде <br class="hrx-hero--br__2" /> «АТБ Электроника»
+                </h1>
                 <p class="hrx-hero--p__TOP __C-SCRL DOWN">
                     Мы рады видеть в нашей команде ярких, творческих, грамотных и мотивированных профессионалов, готовых расти и развиваться вместе с компанией - ждём вас!
                 </p>
