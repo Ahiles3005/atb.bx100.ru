@@ -57,6 +57,15 @@
 
 
 
+@media (min-width: 450px) {
+    .hr-hero--h1 br {
+        display: none;
+    }
+}
+
+
+
+
 .hr-hero--div__IMAGES {
     margin-top: 22px;
     width: 100%;
@@ -137,13 +146,19 @@
     grid-column: span 2;
     background-color: var(--color-back-blue2);
 }
-.__hr-hero--div__IMAGE_CONT._6 {
+/* .__hr-hero--div__IMAGE_CONT._6 {
+    border-radius: 14px 50px 50px 14px;
+} */
+.hr-hero--div__IMAGE_CONT._6:hover {
     border-radius: 14px 50px 50px 14px;
 }
 @media (min-width: 1440px) {
-    .__hr-hero--div__IMAGE_CONT._6 {
+    /* .__hr-hero--div__IMAGE_CONT._6 {
         border-radius: 30px 120px 120px 30px;
-    } 
+    }  */
+    .hr-hero--div__IMAGE_CONT._6:hover {
+        border-radius: 30px 120px 120px 30px;
+    }
 }
 
 @media (max-width: 1439px) {
@@ -158,13 +173,19 @@
 .hr-hero--div__IMAGE_CONT._9 {
     background-color: var(--color-back-pink);
 }
-.__hr-hero--div__IMAGE_CONT._9 {
+/* .__hr-hero--div__IMAGE_CONT._9 {
+    border-radius: 14px 14px 50px 50px;
+} */
+.hr-hero--div__IMAGE_CONT._9:hover {
     border-radius: 14px 14px 50px 50px;
 }
 @media (min-width: 1440px) {
-    .__hr-hero--div__IMAGE_CONT._9 {
+    /* .__hr-hero--div__IMAGE_CONT._9 {
         border-radius: 30px 30px 120px 120px;
-    } 
+    } */
+    .hr-hero--div__IMAGE_CONT._9:hover {
+        border-radius: 30px 30px 120px 120px;
+    }
 }
 
 @media (max-width: 1439px) {
@@ -179,11 +200,17 @@
 .hr-hero--div__IMAGE_CONT._1 {
     background-color: var(--color-back-green);
 }
-.__hr-hero--div__IMAGE_CONT._1 {
+/* .__hr-hero--div__IMAGE_CONT._1 {
+    border-radius: 14px 14px 50px 14px;
+} */
+.hr-hero--div__IMAGE_CONT._1:hover {
     border-radius: 14px 14px 50px 14px;
 }
 @media (min-width: 1440px) {
-    .__hr-hero--div__IMAGE_CONT._1 {
+    /* .__hr-hero--div__IMAGE_CONT._1 {
+        border-radius: 30px 30px 120px 30px;
+    } */
+    .hr-hero--div__IMAGE_CONT._1:hover {
         border-radius: 30px 30px 120px 30px;
     } 
 }
@@ -200,13 +227,19 @@
 .hr-hero--div__IMAGE_CONT._11 {
     background-color: var(--color-back-orange);
 }
-.__hr-hero--div__IMAGE_CONT._11 {
+/* .__hr-hero--div__IMAGE_CONT._11 {
+    border-radius: 14px 50px 14px 50px;
+} */
+.hr-hero--div__IMAGE_CONT._11:hover {
     border-radius: 14px 50px 14px 50px;
 }
 @media (min-width: 1440px) {
-    .__hr-hero--div__IMAGE_CONT._11 {
+    /* .__hr-hero--div__IMAGE_CONT._11 {
         border-radius: 30px 120px 30px 120px;
-    } 
+    } */
+    .hr-hero--div__IMAGE_CONT._11:hover {
+        border-radius: 30px 120px 30px 120px;
+    }
 }
 
 @media (max-width: 1439px) {
@@ -221,13 +254,19 @@
 .hr-hero--div__IMAGE_CONT._3 {
     background-color: var(--color-back-blue2);
 }
-.__hr-hero--div__IMAGE_CONT._3 {
+/* .__hr-hero--div__IMAGE_CONT._3 {
+    border-radius: 50px;
+} */
+.hr-hero--div__IMAGE_CONT._3:hover {
     border-radius: 50px;
 }
 @media (min-width: 1440px) {
-    .__hr-hero--div__IMAGE_CONT._3 {
+    /* .__hr-hero--div__IMAGE_CONT._3 {
         border-radius: 120px;
-    } 
+    }  */
+    .hr-hero--div__IMAGE_CONT._3:hover {
+        border-radius: 120px;
+    }
 }
 
 @media (max-width: 1439px) {
@@ -247,13 +286,19 @@
         order: 2;
     }
 }
-.__hr-hero--div__IMAGE_CONT._4 {
+/* .__hr-hero--div__IMAGE_CONT._4 {
+    border-radius: 50px 14px 14px 14px;
+} */
+.hr-hero--div__IMAGE_CONT._4:hover {
     border-radius: 50px 14px 14px 14px;
 }
 @media (min-width: 1440px) {
-    .__hr-hero--div__IMAGE_CONT._4 {
+    /* .__hr-hero--div__IMAGE_CONT._4 {
         border-radius: 120px 30px 30px 30px;
-    } 
+    } */
+    .hr-hero--div__IMAGE_CONT._4:hover {
+        border-radius: 120px 30px 30px 30px;
+    }
 }
 
 @media (max-width: 1439px) {
@@ -273,13 +318,19 @@
         order: 1;
     }
 }
-.__hr-hero--div__IMAGE_CONT._8 {
+/* .__hr-hero--div__IMAGE_CONT._8 {
+    border-radius: 50px 14px 14px 50px;
+} */
+.hr-hero--div__IMAGE_CONT._8:hover {
     border-radius: 50px 14px 14px 50px;
 }
 @media (min-width: 1440px) {
-    .__hr-hero--div__IMAGE_CONT._8 {
+    /* .__hr-hero--div__IMAGE_CONT._8 {
         border-radius: 120px 30px 30px 120px;
-    } 
+    }  */
+    .hr-hero--div__IMAGE_CONT._8:hover {
+        border-radius: 120px 30px 30px 120px;
+    }
 }
 
 @media (max-width: 1439px) {
@@ -299,13 +350,19 @@
         order: 4;
     }
 }
-.__hr-hero--div__IMAGE_CONT._2 {
+/* .__hr-hero--div__IMAGE_CONT._2 {
+    border-radius: 50px;
+} */
+.hr-hero--div__IMAGE_CONT._2:hover {
     border-radius: 50px;
 }
 @media (min-width: 1440px) {
-    .__hr-hero--div__IMAGE_CONT._2 {
+    /* .__hr-hero--div__IMAGE_CONT._2 {
         border-radius: 120px;
-    } 
+    }  */
+    .hr-hero--div__IMAGE_CONT._2:hover {
+        border-radius: 120px;
+    }
 }
 
 @media (max-width: 1439px) {
@@ -325,13 +382,19 @@
         order: 3;
     }
 }
-.__hr-hero--div__IMAGE_CONT._5 {
+/* .__hr-hero--div__IMAGE_CONT._5 {
+    border-radius: 50px 14px 50px 14px;
+} */
+.hr-hero--div__IMAGE_CONT._5:hover {
     border-radius: 50px 14px 50px 14px;
 }
 @media (min-width: 1440px) {
-    .__hr-hero--div__IMAGE_CONT._5 {
+    /* .__hr-hero--div__IMAGE_CONT._5 {
         border-radius: 120px 30px 120px 30px;
-    } 
+    }  */
+    .hr-hero--div__IMAGE_CONT._5:hover {
+        border-radius: 120px 30px 120px 30px;
+    }
 }
 
 @media (max-width: 1439px) {
@@ -351,13 +414,19 @@
         order: 5;
     }
 }
-.__hr-hero--div__IMAGE_CONT._7 {
+/* .__hr-hero--div__IMAGE_CONT._7 {
+    border-radius: 50px 50px 14px 14px;
+} */
+.hr-hero--div__IMAGE_CONT._7:hover {
     border-radius: 50px 50px 14px 14px;
 }
 @media (min-width: 1440px) {
-    .__hr-hero--div__IMAGE_CONT._7 {
+    /* .__hr-hero--div__IMAGE_CONT._7 {
         border-radius: 120px 120px 30px 30px;
-    } 
+    }  */
+    .hr-hero--div__IMAGE_CONT._7:hover {
+        border-radius: 120px 120px 30px 30px;
+    }
 }
 
 @media (max-width: 1439px) {
@@ -377,13 +446,19 @@
         order: 6;
     }
 }
-.__hr-hero--div__IMAGE_CONT._10 {
+/* .__hr-hero--div__IMAGE_CONT._10 {
+    border-radius: 14px 50px 14px 14px;
+} */
+.hr-hero--div__IMAGE_CONT._10:hover {
     border-radius: 14px 50px 14px 14px;
 }
 @media (min-width: 1440px) {
-    .__hr-hero--div__IMAGE_CONT._10 {
+    /* .__hr-hero--div__IMAGE_CONT._10 {
         border-radius: 30px 120px 30px 30px;
-    } 
+    }  */
+    .hr-hero--div__IMAGE_CONT._10:hover {
+        border-radius: 30px 120px 30px 30px;
+    }
 }
 
 @media (max-width: 1439px) {
@@ -424,6 +499,9 @@
     opacity: 0;
     transition: opacity 0.4s;
 }
+/* .hr-hero--div__IMAGE_CONT:hover .hr-hero--img__IMAGE {
+    opacity: 1;
+} */
 .__hr-hero--img__IMAGE {
     opacity: 1;
 }

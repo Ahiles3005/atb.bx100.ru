@@ -225,16 +225,16 @@
 @media (min-width: 1440px) {
     .hr-polt--div__IMAGES {
         margin-top: 0px;
-        padding: 32px 0px 70px 70px;
+        padding: 32px 0px 38px 88px;
         max-width: none;
-        flex: 1;
+        flex: 1 1 43.7%;
     }
 }
 @media (min-width: 1920px) {
     .hr-polt--div__IMAGES {
-        padding: 40px 0px 90px 90px;
+        padding: 38px 0px 46px 107px;
         max-width: none;
-        flex: 1;
+        flex: 1 1 42.4%;
     }
 }
 
@@ -304,14 +304,14 @@
 }
 @media (min-width: 1440px) {
     .hr-polt--div__IMAGE_ADD1 {
-        height: 64px;
-        width: 323px;
+        height: 61px;
+        width: 305px;
     }
 }
 @media (min-width: 1920px) {
     .hr-polt--div__IMAGE_ADD1 {
-        height: 81px;
-        width: 406px;
+        height: 74px;
+        width: 370px;
     }
 }
 
@@ -331,14 +331,14 @@
 }
 @media (min-width: 1440px) {
     .hr-polt--div__IMAGE_ADD2 {
-        height: 182px;
-        width: 182px;
+        height: 173px;
+        width: 173px;
     }
 }
 @media (min-width: 1920px) {
     .hr-polt--div__IMAGE_ADD2 {
-        height: 230px;
-        width: 230px;
+        height: 210px;
+        width: 210px;
     }
 }
 
@@ -359,8 +359,13 @@
 }
 @media (min-width: 1440px) {
     .hr-polt--div__IMAGES_TEXT {
-        flex: 1;
+        flex: 1 1 53%;
         transition: transform 0.7s, opacity 0.7s;
+    }
+}
+@media (min-width: 1920px) {
+    .hr-polt--div__IMAGES_TEXT {
+        flex: 1 1 55%;
     }
 }
 
@@ -370,6 +375,15 @@
 @media (max-width: 1439px) {
     .hr-polt--div__IMAGES_TEXT.__C-SCRL {
         transform: translate(0px, 0px) !important;
+    }
+}
+
+
+
+
+@media (min-width: 1440px) {
+    .hr-polt--div__IMAGES_TEXT .st-main--p__DESCR2 {
+        margin-top: 19px;
     }
 }
 
@@ -418,7 +432,7 @@
     align-items: center;
     gap: 12px;
     border-bottom: 0.5px solid var(--color-back-green2);
-    transition: transform 0.7s, opacity 0.7s;
+    transition: transform 0.7s, opacity 0.7s, border 0.2s;
 }
 @media (min-width: 768px) {
     .hr-polt--a__DETAIL {
@@ -449,7 +463,7 @@
     font-size: 14px;
     line-height: 20px;
     color: var(--color-back-green2);
-    transition: text-shadow 0.2s;
+    transition: color 0.2s;
 }
 
 
@@ -459,19 +473,32 @@
     flex-shrink: 0;
 }
 
+
+
+
+.hr-polt--svg__DETAIL path {
+    transition: stroke 0.2s;
+}
+
 @media (any-hover: hover) {
+    .hr-polt--a__DETAIL:hover {
+        border-bottom: 0.5px solid var(--color-green-hover);
+    }
     .hr-polt--a__DETAIL:hover .hr-polt--span__DETAIL {
-        text-shadow: 0px 0px 1px var(--color-back-green2);
+        color: var(--color-green-hover);
     }
-    .hr-polt--a__DETAIL:hover .hr-polt--svg__DETAIL {
-        filter: drop-shadow(0px 0px 1px var(--color-back-green2));
+    .hr-polt--a__DETAIL:hover .hr-polt--svg__DETAIL path {
+        stroke: var(--color-green-hover)
     }
+}
+.hr-polt--a__DETAIL:active {
+    border-bottom: 0.5px solid var(--color-green-hover);
 }
 .hr-polt--a__DETAIL:active .hr-polt--span__DETAIL {
-    text-shadow: 0px 0px 1px var(--color-back-green2);
+    color: var(--color-green-hover);
 }
-.hr-polt--a__DETAIL:active .hr-polt--svg__DETAIL {
-    filter: drop-shadow(0px 0px 1px var(--color-back-green2));
+.hr-polt--a__DETAIL:active .hr-polt--svg__DETAIL path {
+    stroke: var(--color-green-hover)
 }
 
 
@@ -483,7 +510,12 @@
 @media (min-width: 1440px) {
     .hr-polt--div__IMAGES._SECOND {
         margin-top: 0px;
-        padding: 44px 69px 69px 0px;
+        padding: 40px 88px 29px 0px;
+    }
+}
+@media (min-width: 1920px) {
+    .hr-polt--div__IMAGES._SECOND {
+        padding: 48px 107px 35px 0px;
     }
 }
 
@@ -512,8 +544,8 @@
 }
 @media (min-width: 1440px) {
     .hr-polt--div__IMAGE_ADD1._SECOND {
-        height: 140px;
-        width: 379px;
+        height: 154px;
+        width: 415px;
         border-radius: 30px;
     }
 }
@@ -540,15 +572,15 @@
 }
 @media (min-width: 1440px) {
     .hr-polt--div__IMAGE_ADD2._SECOND {
-        height: 416px;
-        width: 416px;
+        height: 326px;
+        width: 348px;
         border-radius: 30px;
     }
 }
 @media (min-width: 1920px) {
     .hr-polt--div__IMAGE_ADD2._SECOND {
-        height: 523px;
-        width: 523px;
+        height: 395px;
+        width: 422px;
     }
 }
 

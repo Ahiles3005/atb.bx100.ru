@@ -233,6 +233,26 @@
 
 
 
+.hrx-hero--br__1,
+.hrx-hero--br__2 {
+    display: none;
+}
+
+@media (max-width: 480px) {
+    .hrx-hero--br__1 {
+        display: inline;
+    }
+}
+
+@media (max-width: 768px) or (min-width: 1440px) {
+    .hrx-hero--br__2 {
+        display: inline;
+    }
+}
+
+
+
+
 
 .hrx-hero--p__TOP {
     font-size: 16px;

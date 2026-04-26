@@ -355,6 +355,7 @@
 @media (min-width: 1440px) {
     .c-common--div__GLR_SWIPER_PAGINATION {
         padding: 24px 0px 5px;
+        /* height: 101px; */
         scroll-behavior: auto;
         gap: 12px;
     }
@@ -372,8 +373,8 @@
 
 .c-common--div__GLR_SWIPER_PAGINATION .swiper-pagination-bullet {
     margin: 0px !important;
-    height: 65.8px;
-    width: 65.8px;
+    height: 62px;
+    width: 62px;
     position: static;
     flex-shrink: 0;
     display: flex;
@@ -387,8 +388,9 @@
 }
 @media (min-width: 1440px) {
     .c-common--div__GLR_SWIPER_PAGINATION .swiper-pagination-bullet {
-        height: 73.8px;
-        width: 73.8px;
+        height: auto !important;
+        width: calc((100% - 110px) / 10) !important;
+        aspect-ratio: 1 / 1 !important;
     }
 }
 

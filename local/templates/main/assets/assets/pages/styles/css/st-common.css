@@ -2590,6 +2590,7 @@
     align-items: center;
     gap: 12px;
     border-bottom: 0.5px solid var(--color-mare);
+    transition: border 0.2s;
 }
 @media (min-width: 1440px) {
     .st-main--a__IMAGE7_TEXT {
@@ -2606,7 +2607,7 @@
     font-size: 14px;
     line-height: 20px;
     color: var(--color-mare);
-    transition: text-shadow 0.2s;
+    transition: color 0.2s;
 }
 @media (min-width: 1440px) {
     .st-main--span__IMAGE7_TEXT {
@@ -2618,19 +2619,29 @@
 
 
 
+.st-main--svg__IMAGE7_TEXT path {
+    transition: stroke 0.2s;
+}
+
 @media (any-hover: hover) {
+    .st-main--a__IMAGE7_TEXT:hover {
+        border-bottom: 0.5px solid var(--color-mare-hover);
+    }
     .st-main--a__IMAGE7_TEXT:hover .st-main--span__IMAGE7_TEXT {
-        text-shadow: 0px 0px 1px var(--color-mare);
+        color: var(--color-mare-hover);
     }
-    .st-main--a__IMAGE7_TEXT:hover .st-main--svg__IMAGE7_TEXT {
-        filter: drop-shadow(0px 0px 1px var(--color-mare));
+    .st-main--a__IMAGE7_TEXT:hover .st-main--svg__IMAGE7_TEXT path {
+        stroke: var(--color-mare-hover);
     }
+}
+.st-main--a__IMAGE7_TEXT:active {
+    border-bottom: 0.5px solid var(--color-mare-hover);
 }
 .st-main--a__IMAGE7_TEXT:active .st-main--span__IMAGE7_TEXT {
-    text-shadow: 0px 0px 1px var(--color-mare);
+    color: var(--color-mare-hover);
 }
-.st-main--a__IMAGE7_TEXT:active .st-main--svg__IMAGE7_TEXT {
-    filter: drop-shadow(0px 0px 1px var(--color-mare));
+.st-main--a__IMAGE7_TEXT:active .st-main--svg__IMAGE7_TEXT path {
+    stroke: var(--color-mare-hover);
 }
 
 

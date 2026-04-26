@@ -192,6 +192,15 @@
 
 
 
+@media (max-width: 1439px) {
+    #te .te-common--div__LIST_BODY:has(.st-main--div__IMAGE4) > .st-main--p__DESCR2:last-of-type {
+        margin-bottom: 16px;
+    }
+}
+
+
+
+
 .te-qm .te-common--div__LIST_BODY3_CONT {
     margin-top: 0px;
 }

@@ -187,7 +187,7 @@
     bottom: 0px;
     left: 0px;
     z-index: 0;
-    background-color: hsl(0, 0%, 100%);
+    background-color: transparent;
     border: 0.5px solid var(--color-back-blue2);
     border-radius: 10px;
     transition: opacity 0.7s 0.7s;
@@ -214,7 +214,7 @@
     width: 52px;
     position: absolute;
     bottom: 24px;
-    right: 33px;
+    left: 244px;
     z-index: 2;
     background-color: var(--color-back-blue3);
     border-radius: 50%;
@@ -225,7 +225,7 @@
         height: 59px;
         width: 59px;
         bottom: 27px;
-        right: 37px;
+        left: 276px;
     }
 }
 @media (min-width: 1920px) {
@@ -233,7 +233,7 @@
         height: 79px;
         width: 79px;
         bottom: 36px;
-        right: 49px;
+        left: 368px;
     }
 }
 

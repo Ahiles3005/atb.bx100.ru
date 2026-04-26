@@ -221,6 +221,7 @@
 @media (min-width: 1440px) {
     .cd-med--div__LINE1 {
         height: 0.25px;
+        flex-shrink: 0;
         display: flex;
         position: relative;
         background-color: var(--color-gray);
@@ -231,6 +232,11 @@
             .cd-med--div__LINE1 {
                 height: 1px;
             }
+        }
+    }
+    @supports (-webkit-touch-callout: none) {
+        .cd-med--div__LINE1 {
+            height: 1px;
         }
     }
     @-moz-document url-prefix() {

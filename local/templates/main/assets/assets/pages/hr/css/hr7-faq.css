@@ -458,6 +458,15 @@
 
 
 
+@media (min-width: 1440px) {
+    .hr-faq--div__REQUEST.__C-SCRL {
+        transform: translate(150px, 0px) !important;
+    }
+}
+
+
+
+
 .hr-faq--div__TEXT {
     display: flex;
     flex-direction: column;

@@ -481,6 +481,11 @@
         }
     }
 }
+@supports (-webkit-touch-callout: none) {
+    .hr-blog--div__SWIPER_NAV_LINE {
+        width: 1px;
+    }
+}
 @-moz-document url-prefix() {
     .hr-blog--div__SWIPER_NAV_LINE {
         width: 1px;
@@ -506,12 +511,12 @@
 }
 @media (min-width: 1440px) {
     .hr-blog--div__POPUP {
-        padding: 57px;
+        padding: 15px 57px;
     }
 }
 @media (min-width: 1920px) {
     .hr-blog--div__POPUP {
-        padding: 90px 80px;
+        padding: 20px 80px;
     }
 }
 

@@ -482,11 +482,11 @@
 
 
 .cd-hero--button__IMAGES {
-    height: 96px;
+    /* height: 96px; */
     width: 96px;
     aspect-ratio: 1 / 1;
     position: relative;
-    flex: 0 0 auto;
+    flex: 1 1 auto;
     display: none;
     background: url("../../../../images/card/cd-hero_button-back.svg") center / auto no-repeat;
     border: 0.25px solid var(--color-gray);
@@ -497,6 +497,7 @@
     .cd-hero--button__IMAGES {
         height: 142px;
         width: 142px;
+        flex: 0 0 auto;
         display: flex;
         background: none;
     }
@@ -1201,7 +1202,7 @@
     position: static;
     overflow-x: auto;
 }
-@media (max-height: 1439px) {
+@media (max-width: 1439px) {
     .cd-hero--div__SWIPER_PAGINATION {
         scrollbar-color: transparent transparent;
         -ms-overflow-style: none !important;

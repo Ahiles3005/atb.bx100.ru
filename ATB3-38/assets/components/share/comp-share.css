@@ -220,6 +220,8 @@
 
 
 .c-common--div__SHARE_POPUP_LINKS::-webkit-scrollbar {
+    height: 0px;
+    width: 0px;
     display: none !important;
 }
 

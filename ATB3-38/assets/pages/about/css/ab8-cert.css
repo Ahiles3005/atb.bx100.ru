@@ -95,6 +95,7 @@
     padding: 30px 0px;
     width: 100%;
     aspect-ratio: 1 / 1;
+    position: relative;
     flex: 0 0 auto;
     display: flex;
     justify-content: center;
@@ -110,6 +111,21 @@
 .ab-cert--img__ITEM_IMAGE {
     width: 46.5%;
     pointer-events: none;
+}
+
+
+
+
+.ab-cert--img__ITEM_IMAGE:last-of-type {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+.ab-cert--button__ITEM:hover .ab-cert--img__ITEM_IMAGE:last-of-type {
+    opacity: 1;
 }
 
 
@@ -198,6 +214,11 @@
         }
     }
 }
+@supports (-webkit-touch-callout: none) {
+    .ab-cert--div__SWIPER_NAV_LINE {
+        width: 1px;
+    }
+}
 @-moz-document url-prefix() {
     .ab-cert--div__SWIPER_NAV_LINE {
         width: 1px;
@@ -224,12 +245,12 @@
 }
 @media (min-width: 1440px) {
     .ab-cert--div__POPUP {
-        padding: 75px;
+        padding: 15px 75px;
     }
 }
 @media (min-width: 1920px) {
     .ab-cert--div__POPUP {
-        padding: 94px;
+        padding: 20px 94px;
     }
 }
 
@@ -257,17 +278,18 @@
 }
 @media (min-width: 1440px) {
     .ab-cert--div__POPUP_CONT {
-        padding: 50px 80px 14px;
-        height: 100%;
-        width: auto;
+        padding: 45px 50px 14px;
+        height: 750px;
+        width: 750px;
         max-width: none;
-        aspect-ratio: 1 / 1;
         border-radius: 30px;
     }
 }
 @media (min-width: 1920px) {
     .ab-cert--div__POPUP_CONT {
         padding: 50px 81px 20px;
+        height: 892px;
+        width: 892px;
     }
 }
 
@@ -312,7 +334,15 @@
 }
 @media (min-width: 1440px) {
     .ab-cert--img__POPUP {
+        height: 594px;
+        width: 420px;
         max-width: none;
+    }
+}
+@media (min-width: 1920px) {
+    .ab-cert--img__POPUP {
+        height: 730px;
+        width: 516px;
     }
 }
 
@@ -350,6 +380,16 @@
     font-size: 16px;
     line-height: 16px;
     color: var(--color-black1);
+    transition: color 0.2s;
+}
+
+@media (any-hover: hover) {
+    .ab-cert--a__DOWNLOAD:hover .ab-cert--span__DOWNLOAD {
+        color: var(--color-blue);
+    }
+}
+.ab-cert--a__DOWNLOAD:active .ab-cert--span__DOWNLOAD {
+    color: var(--color-blue);
 }
 
 
@@ -357,4 +397,20 @@
 
 .ab-cert--svg__DOWNLOAD {
     flex-shrink: 0;
+}
+
+
+
+
+.ab-cert--svg__DOWNLOAD path {
+    transition: stroke 0.2s;
+}
+
+@media (any-hover: hover) {
+    .ab-cert--a__DOWNLOAD:hover .ab-cert--svg__DOWNLOAD path {
+        stroke: var(--color-blue);
+    }
+}
+.ab-cert--a__DOWNLOAD:active .ab-cert--svg__DOWNLOAD path {
+    stroke: var(--color-blue);
 }

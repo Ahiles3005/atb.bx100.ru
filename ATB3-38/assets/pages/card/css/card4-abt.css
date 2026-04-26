@@ -496,6 +496,11 @@
         }
     }
 }
+@supports (-webkit-touch-callout: none) {
+    .cd-abt--div__SWIPER3_NAV_LINE {
+        width: 1px;
+    }
+}
 @-moz-document url-prefix() {
     .cd-abt--div__SWIPER3_NAV_LINE {
         width: 1px;

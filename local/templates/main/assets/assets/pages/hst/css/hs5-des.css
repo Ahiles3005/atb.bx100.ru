@@ -25,7 +25,7 @@
 
 
 #hs-des .cd-use--div__SWIPER21 {
-    margin-top: 30px;
+    margin-top: 20px;
     margin-left: -10px;
     padding: 10px 10px 60px 10px;
     width: calc(100% + 20px);
@@ -69,6 +69,21 @@
         column-gap: 0px;
         row-gap: 0px;
     }
+}
+
+
+
+
+#hs-des .cd-use--div__SWIPER21_NAV {
+    margin-left: auto;
+    height: 38px;
+    position: absolute;
+    right: 10px;
+    bottom: 2px;
+    display: flex;
+    align-items: center;
+    border: 0.25px solid var(--color-gray);
+    border-radius: 12px;
 }
 
 
@@ -187,7 +202,7 @@
 
 
 
-.cd-use--div__SWIPER22_NAV {
+#hs-des .cd-use--div__SWIPER22_NAV {
     margin-left: auto;
     height: 38px;
     position: absolute;

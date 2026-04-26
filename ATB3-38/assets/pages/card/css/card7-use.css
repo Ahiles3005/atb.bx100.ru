@@ -358,6 +358,11 @@
         }
     }
 }
+@supports (-webkit-touch-callout: none) {
+    .cd-use--div__SWIPER21_NAV_LINE {
+        width: 1px;
+    }
+}
 @-moz-document url-prefix() {
     .cd-use--div__SWIPER21_NAV_LINE {
         width: 1px;
@@ -530,6 +535,11 @@
         }
     }
 }
+@supports (-webkit-touch-callout: none) {
+    .cd-use--div__SWIPER22_NAV_LINE {
+        width: 1px;
+    }
+}
 @-moz-document url-prefix() {
     .cd-use--div__SWIPER22_NAV_LINE {
         width: 1px;
@@ -688,6 +698,11 @@
         .cd-use--div__SWIPER23_NAV_LINE {
             width: 1px;
         }
+    }
+}
+@supports (-webkit-touch-callout: none) {
+    .cd-use--div__SWIPER23_NAV_LINE {
+        width: 1px;
     }
 }
 @-moz-document url-prefix() {

@@ -168,6 +168,11 @@
         }
     }
 }
+@supports (-webkit-touch-callout: none) {
+    .cd-reg--div__TABLE_NAME {
+        border-top: 1px solid var(--color-gray);
+    }
+}
 @-moz-document url-prefix() {
     .cd-reg--div__TABLE_NAME {
         border-top: 1px solid var(--color-gray);
@@ -370,6 +375,11 @@
         .cd-reg--div__TABLE_LINE {
             height: 1px;
         }
+    }
+}
+@supports (-webkit-touch-callout: none) {
+    .cd-reg--div__TABLE_LINE {
+        height: 1px;
     }
 }
 @-moz-document url-prefix() {

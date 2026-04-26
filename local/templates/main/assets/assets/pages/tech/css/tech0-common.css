@@ -352,6 +352,12 @@
     margin-top: 0px;
     gap: 10px;
 }
+@media (max-width: 1439px) {
+    .te-common--div__LIST_BODY3 .st-main--div__FOOTNOTES1_FTNTS {
+        padding-bottom: 0px;
+        border-bottom: none;
+    }
+}
 @media (min-width: 1440px) {
     .te-common--div__LIST_BODY3 .st-main--div__FOOTNOTES1_FTNTS {
         flex: 0 0 30%;

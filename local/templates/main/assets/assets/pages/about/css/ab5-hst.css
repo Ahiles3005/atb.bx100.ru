@@ -199,6 +199,11 @@
         }
     }
 }
+@supports (-webkit-touch-callout: none) {
+    .ab-hst--div__SWIPER_NAV_LINE {
+        width: 1px;
+    }
+}
 @-moz-document url-prefix() {
     .ab-hst--div__SWIPER_NAV_LINE {
         width: 1px;

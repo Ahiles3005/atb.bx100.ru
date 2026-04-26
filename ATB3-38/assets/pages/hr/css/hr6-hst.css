@@ -689,6 +689,11 @@
         }
     }
 }
+@supports (-webkit-touch-callout: none) {
+    .hr-hst--div__SWIPER_NAV_LINE {
+        width: 1px;
+    }
+}
 @-moz-document url-prefix() {
     .hr-hst--div__SWIPER_NAV_LINE {
         width: 1px;
@@ -714,12 +719,12 @@
 }
 @media (min-width: 1440px) {
     .hr-hst--div__POPUP {
-        padding: 57px;
+        padding: 15px 57px;
     }
 }
 @media (min-width: 1920px) {
     .hr-hst--div__POPUP {
-        padding: 90px 80px;
+        padding: 20px 80px;
     }
 }
 
@@ -744,13 +749,13 @@
 }
 @media (min-width: 1440px) {
     .hr-hst--div__POPUP_CONT {
-        padding: 50px 558px 50px 50px;
+        padding: 50px;
         border-radius: 30px;
     }
 }
 @media (min-width: 1920px) {
     .hr-hst--div__POPUP_CONT {
-        padding: 60px 807px 60px 100px;
+        padding: 60px 100px;
         width: 1740px;
     }
 }
@@ -865,8 +870,8 @@
     .hr-hst--div__POPUP_IMAGES {
         margin-top: 0px;
         padding: 22px 22px 40px 40px;
-        height: 580px;
-        width: 448px;
+        height: auto;
+        width: 30%;
         max-width: none;
         position: absolute;
         top: 50px;
@@ -876,8 +881,7 @@
 @media (min-width: 1920px) {
     .hr-hst--div__POPUP_IMAGES {
         padding: 28px 28px 54px 54px;
-        height: 759px;
-        width: 587px;
+        width: 29%;
         top: 60px;
         right: 100px;
     }
@@ -945,15 +949,15 @@
 }
 @media (min-width: 1440px) {
     .hr-hst--div__POPUP_IMAGE_ADD1 {
-        height: 304px;
-        width: 357px;
+        height: 271px;
+        width: 319px;
         border-radius: 30px;
     }
 }
 @media (min-width: 1920px) {
     .hr-hst--div__POPUP_IMAGE_ADD1 {
-        height: 398px;
-        width: 468px;
+        height: 339px;
+        width: 398px;
     }
 }
 
@@ -973,14 +977,14 @@
 }
 @media (min-width: 1440px) {
     .hr-hst--div__POPUP_IMAGE_ADD2 {
-        height: 304px;
-        width: 77px;
+        height: 271px;
+        width: 69px;
     }
 }
 @media (min-width: 1920px) {
     .hr-hst--div__POPUP_IMAGE_ADD2 {
-        height: 398px;
-        width: 101px;
+        height: 339px;
+        width: 86px;
     }
 }
 
@@ -1004,6 +1008,7 @@
 @media (min-width: 1440px) {
     .hr-hst--div__POPUP_BODY {
         margin-top: 48px;
+        width: 58%;
         gap: 48px;
     }
 }
@@ -1013,6 +1018,17 @@
 
 .hr-hst .st-main--div__QUOTE3 {
     margin: 0px;
+}
+@media (min-width: 1440px) {
+    .hr-hst .st-main--div__QUOTE3 {
+        max-width: 598px;
+        align-self: flex-end;
+    }
+}
+@media (min-width: 1920px) {
+    .hr-hst .st-main--div__QUOTE3 {
+        max-width: 593px;
+    }
 }
 
 

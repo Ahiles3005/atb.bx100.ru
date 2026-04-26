@@ -190,6 +190,8 @@
     --color-blue-light2: hsl(201, 96%, 70%);
     --color-bluegray: hsl(210, 25%, 97%);
     --color-bluegray2: hsl(205, 33%, 83%);
+    --color-bluegray2: hsl(205, 33%, 83%);
+    --color-bluegray3: hsl(204, 43%, 93%);
     --color-bluegreen: hsl(188, 63%, 57%);
     --color-blue-tags: hsl(194, 100%, 42%);
     --color-red: hsl(0, 72%, 46%);
@@ -205,9 +207,11 @@
     --color-orange: hsl(31, 94%, 80%);
     --color-yellow: hsl(43, 91%, 45%);
     --color-green: hsl(101, 55%, 48%);
+    --color-green-hover: hsl(149, 54%, 45%);
     --color-green-dark: hsl(152, 51%, 37%);
     --color-greengray: hsl(138, 19%, 76%);
     --color-mare: hsl(169, 55%, 48%);
+    --color-mare-hover: hsl(169, 55%, 40%);
     --color-shadow: hsl(0, 0%, 92%);
     --color-shadow-light: hsl(0, 0%, 96%);
 
@@ -1046,6 +1050,7 @@ input[type="range"] {
     margin-bottom: 10px;
     height: 0.25px;
     width: 100%;
+    flex-shrink: 0;
     display: flex;
     background-color: hsla(0, 0%, 5%, 40%);
 }
@@ -1059,6 +1064,11 @@ input[type="range"] {
         .c-common--div__LINE1 {
             height: 1px;
         }
+    }
+}
+@supports (-webkit-touch-callout: none) {
+    .c-common--div__LINE1 {
+        height: 1px;
     }
 }
 @-moz-document url-prefix() {

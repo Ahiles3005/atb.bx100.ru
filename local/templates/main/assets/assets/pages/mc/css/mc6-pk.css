@@ -922,6 +922,11 @@
         }
     }
 }
+@supports (-webkit-touch-callout: none) {
+    .mc-pk--div__SWIPER11_NAV_LINE {
+        width: 1px;
+    }
+}
 @-moz-document url-prefix() {
     .mc-pk--div__SWIPER11_NAV_LINE {
         width: 1px;
