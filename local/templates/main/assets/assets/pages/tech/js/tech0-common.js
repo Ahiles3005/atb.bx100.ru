@@ -83,15 +83,20 @@ window.addEventListener ("load", function () {
                 teCommonUlList.forEach ((v, i, a) => {
                     const teCommonLiList = Array.from (a[i].querySelectorAll (".te-common--li__LIST"));
                     const teCommonButtonListTop = Array.from (a[i].querySelectorAll (".te-common--button__LIST_TOP"));
-        
+                    
                     teCommonButtonListTop.forEach ((v1, i1, a1) => {
                         a1[i1].onclick = function () {
                             teCommonLiList[i1].classList.toggle ("__te-common--li__LIST");
-                            teCommonLiList.filter (x => x !== teCommonLiList[i1]).forEach ((v2, i2, a2) => {
-                                a2[i2].classList.remove ("__te-common--li__LIST");
-                            });
                         };
                     });
+                    // teCommonButtonListTop.forEach ((v1, i1, a1) => {
+                    //     a1[i1].onclick = function () {
+                    //         teCommonLiList[i1].classList.toggle ("__te-common--li__LIST");
+                    //         teCommonLiList.filter (x => x !== teCommonLiList[i1]).forEach ((v2, i2, a2) => {
+                    //             a2[i2].classList.remove ("__te-common--li__LIST");
+                    //         });
+                    //     };
+                    // });
                 });
             }
         }
