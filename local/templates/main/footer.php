@@ -333,6 +333,10 @@ switch ($mainId) {
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/hrx/css/hrx2-vac.css');
         break;
 
+    case 'conts':
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/contacts/css/conts1-main.css');
+        break;
+
 }
 
 
@@ -484,6 +488,11 @@ switch ($mainId) {
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/hrx/js/hrx1-hero.js');
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/hrx/js/hrx2-vac.js');
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/libs/dragscroll/dragscroll.js');
+        break;
+
+    case 'conts':
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/contacts/js/conts0-common.js');
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/contacts/js/conts1-main.js');
         break;
 }
 ?>
