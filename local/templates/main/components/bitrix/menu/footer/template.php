@@ -45,7 +45,7 @@ function renderFooterMenuItems(array $items, $level = 1)
 
             if ($hasChildren) {
                 echo '<button class="c-footer--button__1">';
-                echo \Site\Template::showSvg('/assets/images/svg/chevron-down.svg');
+                echo \Site\Template::showSvg('/images/svg/chevron-down.svg');
                 echo '</button>';
                 echo '<div class="c-footer--div__LINE"></div>';
             }
@@ -78,7 +78,7 @@ function renderFooterMenuItems(array $items, $level = 1)
 
                     if ($childHasChildren) {
                         echo '<button class="c-footer--button__2">';
-                        echo \Site\Template::showSvg('/assets/images/svg/chevron-down.svg');
+                        echo \Site\Template::showSvg('/images/svg/chevron-down.svg');
                         echo '</button>';
                     }
 
@@ -126,7 +126,7 @@ function renderFooterMenuItems(array $items, $level = 1)
             echo '</a>';
             if ($hasChildren) {
                 echo '<button class="c-footer--button__2">';
-                echo \Site\Template::showSvg('/assets/images/svg/chevron-down.svg');
+                echo \Site\Template::showSvg('/images/svg/chevron-down.svg');
                 echo '</button>';
             }
             echo '</div>';

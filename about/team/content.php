@@ -28,7 +28,7 @@
                         Инициатива <br />
                         и настойчивость
                     </p>
-                    <img class="hr-hero--img__IMAGE" src="/local/templates/main/assets/images/hr/hr-hero_6.jpg" alt="" loading="lazy">
+                    <img class="hr-hero--img__IMAGE" src="/images/hr/hr-hero_6.jpg" alt="" loading="lazy">
                 </div>
 
                 <div class="hr-hero--div__IMAGE_CONT _9 __C-SCRL2 LEFT">
@@ -36,7 +36,7 @@
                         Коммуникации <br />
                         и сотрудничество
                     </p>
-                    <img class="hr-hero--img__IMAGE __hr-hero--img__IMAGE" src="/local/templates/main/assets/images/hr/hr-hero_9.jpg" alt="" loading="lazy">
+                    <img class="hr-hero--img__IMAGE __hr-hero--img__IMAGE" src="/images/hr/hr-hero_9.jpg" alt="" loading="lazy">
                 </div>
 
                 <div class="hr-hero--div__IMAGE_CONT _1 _CENTER __C-SCRL2 LEFT">
@@ -44,7 +44,7 @@
                         Энергия <br />
                         и движение
                     </p>
-                    <img class="hr-hero--img__IMAGE __hr-hero--img__IMAGE" src="/local/templates/main/assets/images/hr/hr-hero_1.jpg" alt="" loading="lazy">
+                    <img class="hr-hero--img__IMAGE __hr-hero--img__IMAGE" src="/images/hr/hr-hero_1.jpg" alt="" loading="lazy">
                 </div>
 
                 <div class="hr-hero--div__IMAGE_CONT _11 __C-SCRL2 DOWN">
@@ -52,7 +52,7 @@
                         Позитивный <br />
                         настрой
                     </p>
-                    <img class="hr-hero--img__IMAGE" src="/local/templates/main/assets/images/hr/hr-hero_11.jpg" alt="" loading="lazy">
+                    <img class="hr-hero--img__IMAGE" src="/images/hr/hr-hero_11.jpg" alt="" loading="lazy">
                 </div>
 
                 <div class="hr-hero--div__IMAGE_CONT _3 __C-SCRL2 DOWN">
@@ -60,7 +60,7 @@
                         Гибкость <br />
                         мышления
                     </p>
-                    <img class="hr-hero--img__IMAGE __hr-hero--img__IMAGE" src="/local/templates/main/assets/images/hr/hr-hero_3.jpg" alt="" loading="lazy">
+                    <img class="hr-hero--img__IMAGE __hr-hero--img__IMAGE" src="/images/hr/hr-hero_3.jpg" alt="" loading="lazy">
                 </div>
             </div>
 
@@ -71,7 +71,7 @@
                         Ответственность <br />
                         и осознанность
                     </p>
-                    <img class="hr-hero--img__IMAGE __hr-hero--img__IMAGE" src="/local/templates/main/assets/images/hr/hr-hero_4.jpg" alt="" loading="lazy">
+                    <img class="hr-hero--img__IMAGE __hr-hero--img__IMAGE" src="/images/hr/hr-hero_4.jpg" alt="" loading="lazy">
                 </div>
 
                 <div class="hr-hero--div__IMAGE_CONT _8 __C-SCRL2 TOP">
@@ -79,7 +79,7 @@
                         Творчество <br />
                         и инновации
                     </p>
-                    <img class="hr-hero--img__IMAGE __hr-hero--img__IMAGE" src="/local/templates/main/assets/images/hr/hr-hero_8.jpg" alt="" loading="lazy">
+                    <img class="hr-hero--img__IMAGE __hr-hero--img__IMAGE" src="/images/hr/hr-hero_8.jpg" alt="" loading="lazy">
                 </div>
 
                 <div class="hr-hero--div__IMAGE_CONT _2 _CENTER __C-SCRL2 RIGHT">
@@ -87,7 +87,7 @@
                         Знания <br />
                         и развитие
                     </p>
-                    <img class="hr-hero--img__IMAGE" src="/local/templates/main/assets/images/hr/hr-hero_2.jpg" alt="" loading="lazy">
+                    <img class="hr-hero--img__IMAGE" src="/images/hr/hr-hero_2.jpg" alt="" loading="lazy">
                 </div>
 
                 <div class="hr-hero--div__IMAGE_CONT _5 __C-SCRL2 RIGHT">
@@ -95,7 +95,7 @@
                         Лидерство <br />
                         и мотивация
                     </p>
-                    <img class="hr-hero--img__IMAGE __hr-hero--img__IMAGE" src="/local/templates/main/assets/images/hr/hr-hero_5.jpg" alt="" loading="lazy">
+                    <img class="hr-hero--img__IMAGE __hr-hero--img__IMAGE" src="/images/hr/hr-hero_5.jpg" alt="" loading="lazy">
                 </div>
 
                 <div class="hr-hero--div__IMAGE_CONT _7 __C-SCRL2 DOWN">
@@ -103,7 +103,7 @@
                         Командная <br />
                         работа
                     </p>
-                    <img class="hr-hero--img__IMAGE" src="/local/templates/main/assets/images/hr/hr-hero_7.jpg" alt="" loading="lazy">
+                    <img class="hr-hero--img__IMAGE" src="/images/hr/hr-hero_7.jpg" alt="" loading="lazy">
                 </div>
 
                 <div class="hr-hero--div__IMAGE_CONT _10 __C-SCRL2 RIGHT">
@@ -111,7 +111,7 @@
                         Экспертиза <br />
                         и компетенции
                     </p>
-                    <img class="hr-hero--img__IMAGE" src="/local/templates/main/assets/images/hr/hr-hero_10.jpg" alt="" loading="lazy">
+                    <img class="hr-hero--img__IMAGE" src="/images/hr/hr-hero_10.jpg" alt="" loading="lazy">
                 </div>
             </div>
         </div>

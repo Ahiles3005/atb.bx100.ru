@@ -5,7 +5,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
 ?>
     <!-- Кнопка UP -->
     <button class="c-common--button__UP">
-        <?= \Site\Template::showSvg('/assets/images/svg/arrow-up-red.svg') ?>
+        <?= \Site\Template::showSvg('/images/svg/arrow-up-red.svg') ?>
     </button>
 
     </main>
@@ -16,7 +16,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
                 <div class="c-footer--div__LEFT">
                     <a class="c-footer--a__LOGO" href="#">
                         <img class="c-footer--img__LOGO"
-                             src="<?= SITE_TEMPLATE_PATH ?>/assets/images/footer/c-footer_logo.svg" alt="Логотип">
+                             src="/images/footer/c-footer_logo.svg" alt="Логотип">
                     </a>
 
                     <div class="c-footer--div__LEFT_BTNS">
@@ -67,19 +67,19 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
                 <div class="c-footer--div__BOTTOM1">
                     <div class="c-footer--div__SOCIAL">
                         <a class="c-footer--a__SOCIAL" href="#">
-                            <?= \Site\Template::showSvg('/assets/images/svg/social-1.svg') ?>
+                            <?= \Site\Template::showSvg('/images/svg/social-1.svg') ?>
                         </a>
                         <a class="c-footer--a__SOCIAL" href="#">
-                            <?= \Site\Template::showSvg('/assets/images/svg/social-2.svg') ?>
+                            <?= \Site\Template::showSvg('/images/svg/social-2.svg') ?>
                         </a>
                         <a class="c-footer--a__SOCIAL" href="#">
-                            <?= \Site\Template::showSvg('/assets/images/svg/social-3.svg') ?>
+                            <?= \Site\Template::showSvg('/images/svg/social-3.svg') ?>
                         </a>
                         <a class="c-footer--a__SOCIAL" href="#">
-                            <?= \Site\Template::showSvg('/assets/images/svg/social-5.svg') ?>
+                            <?= \Site\Template::showSvg('/images/svg/social-5.svg') ?>
                         </a>
                         <a class="c-footer--a__SOCIAL" href="#">
-                            <?= \Site\Template::showSvg('/assets/images/svg/social-4.svg') ?>
+                            <?= \Site\Template::showSvg('/images/svg/social-4.svg') ?>
                         </a>
                     </div>
 

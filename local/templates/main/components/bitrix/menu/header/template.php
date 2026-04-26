@@ -43,7 +43,7 @@ function renderMenuItems(array $items, $isTop = false, $parentTitle = null)
         echo '<span>' . $title . '</span>';
         // Иконка-указатель для пунктов с дочерними
         if ($hasChildren) {
-            echo \Site\Template::showSvg('/assets/images/svg/chevron-left.svg');
+            echo \Site\Template::showSvg('/images/svg/chevron-left.svg');
         }
         echo '</a>';
 
@@ -57,7 +57,7 @@ function renderMenuItems(array $items, $isTop = false, $parentTitle = null)
                 $backTitle = strtoupper($backTitle);
             }
             echo '<a class="c-header--a__SUBMENU_BACK">';
-            echo \Site\Template::showSvg('/assets/images/svg/chevron-right.svg');
+            echo \Site\Template::showSvg('/images/svg/chevron-right.svg');
             echo '<span>' . $backTitle . '</span>';
             echo '</a>';
 

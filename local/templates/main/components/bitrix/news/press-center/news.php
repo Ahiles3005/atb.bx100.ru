@@ -39,17 +39,17 @@ $APPLICATION->SetPageProperty('mainid', 'mc');
         <div class="mc-hero--div__IMAGES __C-SCRL DOWN">
             <div class="mc-hero--div__IMAGES1">
                 <div class="mc-hero--div__IMAGE _1 __C-SCRL RIGHT">
-                    <img class="mc-hero--img__IMAGE" src="/local/templates/main/assets/images/mc/mc-hero_1.png" alt=""
+                    <img class="mc-hero--img__IMAGE" src="/images/mc/mc-hero_1.png" alt=""
                          loading="lazy">
                 </div>
 
                 <div class="mc-hero--div__IMAGES1_1">
                     <div class="mc-hero--div__IMAGE _2 __C-SCRL TOP">
-                        <img class="mc-hero--img__IMAGE" src="/local/templates/main/assets/images/mc/mc-hero_2.png"
+                        <img class="mc-hero--img__IMAGE" src="/images/mc/mc-hero_2.png"
                              alt="" loading="lazy">
                     </div>
                     <div class="mc-hero--div__IMAGE _3 __C-SCRL LEFT">
-                        <img class="mc-hero--img__IMAGE" src="/local/templates/main/assets/images/mc/mc-hero_3.png"
+                        <img class="mc-hero--img__IMAGE" src="/images/mc/mc-hero_3.png"
                              alt="" loading="lazy">
                     </div>
                 </div>
@@ -58,17 +58,17 @@ $APPLICATION->SetPageProperty('mainid', 'mc');
 
             <div class="mc-hero--div__IMAGES2">
                 <div class="mc-hero--div__IMAGE _4 __C-SCRL DOWN">
-                    <img class="mc-hero--img__IMAGE" src="/local/templates/main/assets/images/mc/mc-hero_4.png" alt=""
+                    <img class="mc-hero--img__IMAGE" src="/images/mc/mc-hero_4.png" alt=""
                          loading="lazy">
                 </div>
 
                 <div class="mc-hero--div__IMAGES2_1">
                     <div class="mc-hero--div__IMAGE _5 __C-SCRL LEFT">
-                        <img class="mc-hero--img__IMAGE" src="/local/templates/main/assets/images/mc/mc-hero_5.png"
+                        <img class="mc-hero--img__IMAGE" src="/images/mc/mc-hero_5.png"
                              alt="" loading="lazy">
                     </div>
                     <div class="mc-hero--div__IMAGE _6 __C-SCRL RIGHT">
-                        <img class="mc-hero--img__IMAGE" src="/local/templates/main/assets/images/mc/mc-hero_6.png"
+                        <img class="mc-hero--img__IMAGE" src="/images/mc/mc-hero_6.png"
                              alt="" loading="lazy">
                     </div>
                 </div>

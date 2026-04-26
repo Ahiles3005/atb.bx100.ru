@@ -110,7 +110,7 @@ $elementDeleteParams = ['CONFIRM' => GetMessage('CT_BCS_TPL_ELEMENT_DELETE_CONFI
                                     </button>
                                 </div>
                                 <img class="cd-hero--img__CARD_GISP"
-                                     src="<?= SITE_TEMPLATE_PATH ?>/assets/images/home/hm-cat_icon.svg"
+                                     src="/images/home/hm-cat_icon.svg"
                                      alt="ГИСП">
                             </div>
                             <button class="cd-hero--button__IMAGES_TOP_CONT"></button>

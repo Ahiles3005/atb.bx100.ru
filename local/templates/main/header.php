@@ -36,7 +36,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
         <div class="c-header--div__SUBMENU_BACK2_DESC"></div>
         <nav class="c-header--nav C-CONTAINER">
             <a class="c-header--a__LOGO" href="/">
-                <img class="c-header--img__LOGO" src="<?= SITE_TEMPLATE_PATH ?>/assets/images/header/c-header_logo.svg"
+                <img class="c-header--img__LOGO" src="/images/header/c-header_logo.svg"
                      alt="логотип">
             </a>
 
@@ -62,7 +62,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
 
             <!-- ПОИСК -->
             <button class="c-header--button__SEARCH_OPEN">
-                <?= \Site\Template::showSvg('/assets/images/svg/search.svg') ?>
+                <?= \Site\Template::showSvg('/images/svg/search.svg') ?>
             </button>
             <form class="c-header--form__SEARCH" action="#" method="post" name="header-search" role="search">
                 <div class="c-header--div__SEARCH C-CONTAINER">
@@ -71,7 +71,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
                         НАЙТИ
                     </button>
                     <button class="c-header--button__SEARCH_CLOSE" type="button">
-                        <?= \Site\Template::showSvg('/assets/images/svg/close.svg') ?>
+                        <?= \Site\Template::showSvg('/images/svg/close.svg') ?>
                     </button>
                 </div>
             </form>
@@ -84,7 +84,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
 
 
             <button class="c-header--button__BURGER">
-                <?= \Site\Template::showSvg('/assets/images/svg/burger.svg') ?>
+                <?= \Site\Template::showSvg('/images/svg/burger.svg') ?>
             </button>
         </nav>
     </div>

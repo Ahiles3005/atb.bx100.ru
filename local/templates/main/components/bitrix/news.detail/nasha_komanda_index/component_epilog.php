@@ -214,7 +214,7 @@ $BLOG = !empty($arResult["BLOG_ITEMS"]);
 
                     <div class="hr-adv--div__IMAGES">
                         <div class="hr-adv--div__IMAGE_CONT">
-                            <img class="hr-adv--img__IMAGE" src="/local/templates/main/assets/images/home/hm-des_2.png"
+                            <img class="hr-adv--img__IMAGE" src="/images/home/hm-des_2.png"
                                  alt="" loading="lazy">
                         </div>
                         <div class="hr-adv--div__IMAGE_ADD1"></div>
@@ -465,7 +465,7 @@ $BLOG = !empty($arResult["BLOG_ITEMS"]);
 
                     <div class="hr-faq--div__IMAGES">
                         <div class="hr-faq--div__IMAGE_CONT">
-                            <img class="hr-faq--img__IMAGE" src="/local/templates/main/assets/images/home/hm-des_2.png"
+                            <img class="hr-faq--img__IMAGE" src="/images/home/hm-des_2.png"
                                  alt="" loading="lazy">
                         </div>
                         <div class="hr-faq--div__IMAGE_ADD1"></div>
@@ -857,7 +857,7 @@ $BLOG = !empty($arResult["BLOG_ITEMS"]);
                                                                     <div class="c-common--div__GLR_SWIPER_SLIDE swiper-slide">
                                                                         <div class="c-common--div__GLR_IMAGE">
                                                                             <img class="c-common--img__GLR_IMAGE"
-                                                                                 src="/local/templates/main/assets/images/home/ATB-2100/АТБ-2100_2.webp"
+                                                                                 src="/images/home/ATB-2100/АТБ-2100_2.webp"
                                                                                  alt=""
                                                                                  loading="lazy">
                                                                         </div>
@@ -865,7 +865,7 @@ $BLOG = !empty($arResult["BLOG_ITEMS"]);
                                                                     <div class="c-common--div__GLR_SWIPER_SLIDE swiper-slide">
                                                                         <div class="c-common--div__GLR_IMAGE">
                                                                             <img class="c-common--img__GLR_IMAGE"
-                                                                                 src="/local/templates/main/assets/images/home/ATB-2100/АТБ-2100_3.webp"
+                                                                                 src="/images/home/ATB-2100/АТБ-2100_3.webp"
                                                                                  alt=""
                                                                                  loading="lazy">
                                                                         </div>
@@ -873,7 +873,7 @@ $BLOG = !empty($arResult["BLOG_ITEMS"]);
                                                                     <div class="c-common--div__GLR_SWIPER_SLIDE swiper-slide">
                                                                         <div class="c-common--div__GLR_IMAGE">
                                                                             <img class="c-common--img__GLR_IMAGE"
-                                                                                 src="/local/templates/main/assets/images/home/ATB-2100/АТБ-2100_4.webp"
+                                                                                 src="/images/home/ATB-2100/АТБ-2100_4.webp"
                                                                                  alt=""
                                                                                  loading="lazy">
                                                                         </div>
@@ -881,7 +881,7 @@ $BLOG = !empty($arResult["BLOG_ITEMS"]);
                                                                     <div class="c-common--div__GLR_SWIPER_SLIDE swiper-slide">
                                                                         <div class="c-common--div__GLR_IMAGE">
                                                                             <img class="c-common--img__GLR_IMAGE"
-                                                                                 src="/local/templates/main/assets/images/home/ATB-2100/АТБ-2100_5.webp"
+                                                                                 src="/images/home/ATB-2100/АТБ-2100_5.webp"
                                                                                  alt=""
                                                                                  loading="lazy">
                                                                         </div>
@@ -889,7 +889,7 @@ $BLOG = !empty($arResult["BLOG_ITEMS"]);
                                                                     <div class="c-common--div__GLR_SWIPER_SLIDE swiper-slide">
                                                                         <div class="c-common--div__GLR_IMAGE">
                                                                             <img class="c-common--img__GLR_IMAGE"
-                                                                                 src="/local/templates/main/assets/images/home/ATB-2100/АТБ-2100_6.webp"
+                                                                                 src="/images/home/ATB-2100/АТБ-2100_6.webp"
                                                                                  alt=""
                                                                                  loading="lazy">
                                                                         </div>
@@ -898,7 +898,7 @@ $BLOG = !empty($arResult["BLOG_ITEMS"]);
                                                                     <div class="c-common--div__GLR_SWIPER_SLIDE swiper-slide">
                                                                         <div class="c-common--div__GLR_IMAGE">
                                                                             <img class="c-common--img__GLR_IMAGE"
-                                                                                 src="/local/templates/main/assets/images/home/ATB-2100/АТБ-2100_1.webp"
+                                                                                 src="/images/home/ATB-2100/АТБ-2100_1.webp"
                                                                                  alt=""
                                                                                  loading="lazy">
                                                                         </div>
@@ -906,7 +906,7 @@ $BLOG = !empty($arResult["BLOG_ITEMS"]);
                                                                     <div class="c-common--div__GLR_SWIPER_SLIDE swiper-slide">
                                                                         <div class="c-common--div__GLR_IMAGE">
                                                                             <img class="c-common--img__GLR_IMAGE"
-                                                                                 src="/local/templates/main/assets/images/home/ATB-2100/АТБ-2100_2.webp"
+                                                                                 src="/images/home/ATB-2100/АТБ-2100_2.webp"
                                                                                  alt=""
                                                                                  loading="lazy">
                                                                         </div>
@@ -914,7 +914,7 @@ $BLOG = !empty($arResult["BLOG_ITEMS"]);
                                                                     <div class="c-common--div__GLR_SWIPER_SLIDE swiper-slide">
                                                                         <div class="c-common--div__GLR_IMAGE">
                                                                             <img class="c-common--img__GLR_IMAGE"
-                                                                                 src="/local/templates/main/assets/images/home/ATB-2100/АТБ-2100_3.webp"
+                                                                                 src="/images/home/ATB-2100/АТБ-2100_3.webp"
                                                                                  alt=""
                                                                                  loading="lazy">
                                                                         </div>
@@ -922,7 +922,7 @@ $BLOG = !empty($arResult["BLOG_ITEMS"]);
                                                                     <div class="c-common--div__GLR_SWIPER_SLIDE swiper-slide">
                                                                         <div class="c-common--div__GLR_IMAGE">
                                                                             <img class="c-common--img__GLR_IMAGE"
-                                                                                 src="/local/templates/main/assets/images/home/ATB-2100/АТБ-2100_4.webp"
+                                                                                 src="/images/home/ATB-2100/АТБ-2100_4.webp"
                                                                                  alt=""
                                                                                  loading="lazy">
                                                                         </div>
@@ -930,7 +930,7 @@ $BLOG = !empty($arResult["BLOG_ITEMS"]);
                                                                     <div class="c-common--div__GLR_SWIPER_SLIDE swiper-slide">
                                                                         <div class="c-common--div__GLR_IMAGE">
                                                                             <img class="c-common--img__GLR_IMAGE"
-                                                                                 src="/local/templates/main/assets/images/home/ATB-2100/АТБ-2100_5.webp"
+                                                                                 src="/images/home/ATB-2100/АТБ-2100_5.webp"
                                                                                  alt=""
                                                                                  loading="lazy">
                                                                         </div>
@@ -938,7 +938,7 @@ $BLOG = !empty($arResult["BLOG_ITEMS"]);
                                                                     <div class="c-common--div__GLR_SWIPER_SLIDE swiper-slide">
                                                                         <div class="c-common--div__GLR_IMAGE">
                                                                             <img class="c-common--img__GLR_IMAGE"
-                                                                                 src="/local/templates/main/assets/images/home/ATB-2100/АТБ-2100_6.webp"
+                                                                                 src="/images/home/ATB-2100/АТБ-2100_6.webp"
                                                                                  alt=""
                                                                                  loading="lazy">
                                                                         </div>

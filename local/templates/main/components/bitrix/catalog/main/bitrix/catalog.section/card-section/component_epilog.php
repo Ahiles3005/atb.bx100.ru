@@ -767,7 +767,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
                 <p class="cd-reg--p__TOP">
                     Единый реестр радиоэлектронной продукции (ПП РФ №878 от 10.07.2019)
                 </p>
-                <img class="cd-reg--img__TOP" src="<?= SITE_TEMPLATE_PATH ?>/assets/images/home/hm-cat_icon.svg"
+                <img class="cd-reg--img__TOP" src="/images/home/hm-cat_icon.svg"
                      alt="ГИСП">
             </a>
 
@@ -814,7 +814,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
 
                     <a class="cd-reg--a__TABLE_PDF" href="<?= $registry['src'] ?>" download>
                         <img class="cd-reg--img__TABLE_PDF"
-                             src="<?= SITE_TEMPLATE_PATH ?>/assets/images/card/cd-cnf_pdf.svg" alt="pdf">
+                             src="/images/card/cd-cnf_pdf.svg" alt="pdf">
                         <span>Выписка</span>
                     </a>
 

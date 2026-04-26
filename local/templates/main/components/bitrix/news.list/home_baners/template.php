@@ -30,8 +30,8 @@ $this->setFrameMode(true);
                         <div class="hm-hero--div__SWIPER_CONT C-CONTAINER">
                             <div class="hm-hero--div__IMAGE __hm-hero--div__IMAGE">
                                 <img class="hm-hero--img__MAIN" src="<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>" alt="" loading="lazy">
-                                <img class="hm-hero--img__CIRCLE1" src="<?=SITE_TEMPLATE_PATH?>/assets/images/home/hm-hero_circle1.svg" alt="Вращающийся круг №1">
-                                <img class="hm-hero--img__CIRCLE2" src="<?=SITE_TEMPLATE_PATH?>/assets/images/home/hm-hero_circle2.svg" alt="Вращающийся круг №2">
+                                <img class="hm-hero--img__CIRCLE1" src="/images/home/hm-hero_circle1.svg" alt="Вращающийся круг №1">
+                                <img class="hm-hero--img__CIRCLE2" src="/images/home/hm-hero_circle2.svg" alt="Вращающийся круг №2">
                             </div>
 
                             <div class="hm-hero--div__TEXT">
@@ -76,10 +76,10 @@ $this->setFrameMode(true);
             </div>
 
             <button class="hm-hero--button__NEXT">
-                <?= \Site\Template::showSvg('/assets/images/svg/next.svg') ?>
+                <?= \Site\Template::showSvg('/images/svg/next.svg') ?>
             </button>
             <button class="hm-hero--button__PREV">
-                <?= \Site\Template::showSvg('/assets/images/svg/prev.svg') ?>
+                <?= \Site\Template::showSvg('/images/svg/prev.svg') ?>
             </button>
 
             <div class="hm-hero--div__SWIPER_PAGINATION swiper-pagination"></div>

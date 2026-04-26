@@ -124,7 +124,7 @@ $detailText = $arFields['DETAIL_TEXT'];
                     <div class="ane-hero--div__BUTTONS">
                         <a class="ane-hero--a__DOWNLOAD __C-SCRL DOWN" href="#" download>
                             <img class="ane-hero--img__DOWNLOAD"
-                                 src="/local/templates/main/assets/images/card/cd-cnf_pdf.svg" alt="">
+                                 src="/images/card/cd-cnf_pdf.svg" alt="">
                             <span class="ane-hero--span__DOWNLOAD">СКАЧАТЬ PDF</span>
                         </a>
                         <div class="c-common--div__SHARE __C-SCRL DOWN">
@@ -410,7 +410,7 @@ $detailText = $arFields['DETAIL_TEXT'];
                             Зарегистрироваться
                         </button>
                         <a class="ane-hero--a__DOWNLOAD __C-SCRL DOWN" href="#" download>
-                            <img class="ane-hero--img__DOWNLOAD" src="/local/templates/main/assets/images/card/cd-cnf_pdf.svg" alt="">
+                            <img class="ane-hero--img__DOWNLOAD" src="/images/card/cd-cnf_pdf.svg" alt="">
                             <span class="ane-hero--span__DOWNLOAD">СКАЧАТЬ PDF</span>
                         </a>
                         <div class="c-common--div__SHARE __C-SCRL DOWN">
@@ -652,7 +652,7 @@ $detailText = $arFields['DETAIL_TEXT'];
                     <div class="ane-hero--div__BUTTONS">
                         <a class="ane-hero--a__DOWNLOAD __C-SCRL DOWN" href="#" download>
                             <img class="ane-hero--img__DOWNLOAD"
-                                 src="/local/templates/main/assets/images/card/cd-cnf_pdf.svg" alt="">
+                                 src="/images/card/cd-cnf_pdf.svg" alt="">
                             <span class="ane-hero--span__DOWNLOAD">СКАЧАТЬ PDF</span>
                         </a>
                         <div class="c-common--div__SHARE __C-SCRL DOWN">

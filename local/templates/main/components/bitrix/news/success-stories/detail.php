@@ -144,7 +144,7 @@ $detailPicture = CFile::GetFileArray($arFields['DETAIL_PICTURE']);
                     </div>
                     <div class="hs-hero--div__IMAGE">
                         <img class="hs-hero--img__IMAGE"
-                             src="<?= SITE_TEMPLATE_PATH ?>/assets/images/home/menu/Аппаратные-платформы.png" alt="">
+                             src="/images/home/menu/Аппаратные-платформы.png" alt="">
                     </div>
                 </div>
                 <div class="hs-hero--div__INFO_ITEM">

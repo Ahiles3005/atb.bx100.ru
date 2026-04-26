@@ -369,7 +369,7 @@ if (isset($arParams['USER_CONSENT_IS_LOADED'])) {
                                     </button>
                                 </div>
                                 <img class="cd-hero--img__CARD_GISP"
-                                     src="<?= SITE_TEMPLATE_PATH ?>/assets/images/home/hm-cat_icon.svg" alt="ГИСП">
+                                     src="/images/home/hm-cat_icon.svg" alt="ГИСП">
 
                             </div>
                             <button class="cd-hero--button__IMAGES_TOP_CONT"></button>
@@ -930,7 +930,7 @@ if (isset($arParams['USER_CONSENT_IS_LOADED'])) {
 
                 <a class="cd-reg--a__TABLE_PDF" href="<?= $registry['src'] ?>" download>
                     <img class="cd-reg--img__TABLE_PDF"
-                         src="<?= SITE_TEMPLATE_PATH ?>/assets/images/card/cd-cnf_pdf.svg" alt="pdf">
+                         src="/images/card/cd-cnf_pdf.svg" alt="pdf">
                     <span>Выписка</span>
                 </a>
 
@@ -957,7 +957,7 @@ if (isset($arParams['USER_CONSENT_IS_LOADED'])) {
 
         <div class="cdn-reg--div__REQUEST">
             <div class="cdn-reg--div__IMAGE __C-SCRL LEFT">
-                <img class="cdn-reg--img__IMAGE" src="<?=SITE_TEMPLATE_PATH?>/assets/images/home/menu/Аппаратные-платформы.png" alt="">
+                <img class="cdn-reg--img__IMAGE" src="/images/home/menu/Аппаратные-платформы.png" alt="">
             </div>
             <div class="cdn-reg--div__TEXT __C-SCRL RIGHT">
                 <h3 class="cdn-reg--h3">

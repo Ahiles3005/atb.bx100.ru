@@ -93,7 +93,7 @@ if (!empty($arResult['ITEMS'])) {
                     </button>
                 </div>
                 <img class="hm-cat--img__CARD_GISP"
-                     src="<?= SITE_TEMPLATE_PATH ?>/assets/images/home/hm-cat_icon.svg" alt="ГИСП">
+                     src="/images/home/hm-cat_icon.svg" alt="ГИСП">
             </div>
 
             <a class="hm-cat--a__CARD_NAME" href="#">

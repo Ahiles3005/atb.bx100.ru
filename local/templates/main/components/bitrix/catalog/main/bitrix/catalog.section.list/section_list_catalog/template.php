@@ -36,7 +36,7 @@ $strTitle = "";
                                 <span class="hm-cat--span__MENU_ITEM">
                                     <?= $arSection['~UF_NAME_MENU_HOME'] ?? $arSection['NAME'] ?>
                         </span>
-                                <?= \Site\Template::showSvg('/local/templates/main/assets/<?=SITE_TEMPLATE_PATH?>/assets/images/svg/inline-svg-003.svg') ?>
+                                <?= \Site\Template::showSvg('/images/svg/inline-svg-003.svg') ?>
                             </button>
                             <form class="hm-cat--form__SUBMENU __C-SCRL DOWN" action="#" method="" name="">
                             <? if (isset($arSection['childs']) && !empty($arSection['childs'])): ?>
