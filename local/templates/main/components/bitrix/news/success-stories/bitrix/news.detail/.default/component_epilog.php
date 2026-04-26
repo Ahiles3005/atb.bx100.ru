@@ -242,7 +242,7 @@ $isNotEmptyRESHENIA = is_array($arResult["PROPERTIES"]['RESHENIA']['VALUE']) && 
                     <p class="cdn-reg--p__REQUEST">
                         Свяжитесь с нами, чтобы получить персональное решение для вашей организации
                     </p>
-                    <button class="cdn-reg--button__REQUEST">
+                    <button class="cdn-reg--button__REQUEST _OPEN_FRM _FORM_COMMON RIGHT">
                         Отправить запрос
                     </button>
                 </div>
