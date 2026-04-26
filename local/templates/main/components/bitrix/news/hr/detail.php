@@ -342,6 +342,7 @@ $detailPicture = CFile::GetFileArray($arFields['DETAIL_PICTURE']);
                 </div>
             </div>
         </div>
+        <div class="hrv1-hero--div__LINE3"></div>
     </div>
 </section>
 
