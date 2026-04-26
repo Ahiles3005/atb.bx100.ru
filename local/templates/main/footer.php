@@ -20,10 +20,10 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
                     </a>
 
                     <div class="c-footer--div__LEFT_BTNS">
-                        <button class="c-footer--button__REQUEST">
+                        <button class="c-footer--button__REQUEST _OPEN_FRM _FORM_COMMON">
                             ОТПРАВИТЬ ЗАПРОС
                         </button>
-                        <button class="c-footer--button__SUBSCR">
+                        <button class="c-footer--button__SUBSCR _OPEN_FRM _FORM_SUBSCR">
                             ПОДПИСАТЬСЯ НА НОВОСТИ
                         </button>
                     </div>
