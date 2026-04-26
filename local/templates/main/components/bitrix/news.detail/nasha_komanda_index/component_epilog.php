@@ -515,7 +515,7 @@ $BLOG = !empty($arResult["BLOG_ITEMS"]);
             </div>
 
 
-            <div class="hr-faq--div__REQUEST DOWN">
+            <div class="hr-faq--div__REQUEST __C-SCRL DOWN">
                 <div class="hr-faq--div__TEXT RIGHT">
                     <h3 class="hr-faq--h3">
                         Связаться с отделом персонала
