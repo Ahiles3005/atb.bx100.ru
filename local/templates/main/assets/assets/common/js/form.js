@@ -202,7 +202,7 @@ window.addEventListener ("load", function () {
                             </form>
     
                             <div class="c-common--div__FB_IMAGE __C-SCRL LEFT">
-                                <img src="images/home/hm-des_2.png" alt="" loading="lazy">
+                                <img src="/images/home/hm-des_2.png" alt="" loading="lazy">
                             </div>
                         </div>
                     </div>
@@ -741,7 +741,7 @@ window.addEventListener ("load", function () {
                             </form>
             
                             <div class="c-common--div__FB_IMAGE __C-SCRL LEFT">
-                                <img src="images/home/hm-des_2.png" alt="" loading="lazy">
+                                <img src="/images/home/hm-des_2.png" alt="" loading="lazy">
                             </div>
                         </div>
                     </div>
@@ -1205,7 +1205,7 @@ window.addEventListener ("load", function () {
                             </form>
             
                             <div class="c-common--div__FB_IMAGE __C-SCRL LEFT">
-                                <img src="images/home/hm-des_2.png" alt="" loading="lazy">
+                                <img src="/images/home/hm-des_2.png" alt="" loading="lazy">
                             </div>
                         </div>
                     </div>
@@ -1704,7 +1704,7 @@ window.addEventListener ("load", function () {
                             </form>
             
                             <div class="c-common--div__FB_IMAGE __C-SCRL LEFT">
-                                <img src="images/home/hm-des_2.png" alt="" loading="lazy">
+                                <img src="/images/home/hm-des_2.png" alt="" loading="lazy">
                             </div>
                         </div>
                     </div>
@@ -2123,7 +2123,7 @@ window.addEventListener ("load", function () {
                             </form>
             
                             <div class="c-common--div__FB_IMAGE __C-SCRL LEFT">
-                                <img src="images/home/hm-des_2.png" alt="" loading="lazy">
+                                <img src="/images/home/hm-des_2.png" alt="" loading="lazy">
                             </div>
                         </div>
                     </div>
@@ -2560,7 +2560,7 @@ window.addEventListener ("load", function () {
                             </form>
             
                             <div class="c-common--div__FB_IMAGE __C-SCRL LEFT">
-                                <img src="images/home/hm-des_2.png" alt="" loading="lazy">
+                                <img src="/images/home/hm-des_2.png" alt="" loading="lazy">
                             </div>
                         </div>
                     </div>
