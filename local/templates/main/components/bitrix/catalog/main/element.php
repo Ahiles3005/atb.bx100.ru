@@ -421,7 +421,7 @@ if (isset($arParams['USER_CONSENT_IS_LOADED'])) {
 
 
                     <div class="cd-hero--div__LINKS">
-                        <a class="cd-hero--a__LINK __C-SCRL DOWN" href="#">
+                        <a class="cd-hero--a__LINK __C-SCRL DOWN _OPEN_FRM _FORM_COMMERCIAL" href="#" >
                             ОСТАВИТЬ ЗАЯВКУ
                         </a>
                     </div>
