@@ -170,7 +170,7 @@ $this->setFrameMode(true);
                         <p class="hrx-vac--p__REQUEST">
                             Расскажите нам о себе, задайте вопрос о работе и возможностях развития в «АТБ Электроника»
                         </p>
-                        <button class="hrx-vac--button__REQUEST">
+                        <button class="hrx-vac--button__REQUEST _OPEN_FRM _FORM_VACANCY">
                             Откликнуться
                         </button>
                     </div>

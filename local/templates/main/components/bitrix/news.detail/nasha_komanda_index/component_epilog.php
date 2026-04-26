@@ -523,7 +523,7 @@ $BLOG = !empty($arResult["BLOG_ITEMS"]);
                     <p class="hr-faq--p__REQUEST">
                         Расскажите нам о себе, задайте вопрос о работе и возможностях развития в «АТБ Электроника»
                     </p>
-                    <button class="hr-faq--button__REQUEST">
+                    <button class="hr-faq--button__REQUEST _OPEN_FRM _FORM_VACANCY">
                         Отправить запрос
                     </button>
                 </div>
