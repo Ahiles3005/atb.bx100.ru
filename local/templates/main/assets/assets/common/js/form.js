@@ -36,6 +36,10 @@ window.addEventListener ("load", function () {
                             </button>
     
                             <form class="c-common--form__FB __C-SCRL RIGHT" action="#" method="post" name="feedback" novalidate>
+                                    <input name="form_name" type="hidden" value="КП">
+                                    <div class="honey_age_old">
+                                    <input name="age_old" type="text" placeholder="Возраст">
+                                    </div>
                                 <p class="c-common--p__FB_NAME">
                                     Свяжитесь с нами, чтобы получить решение для вашей организации
                                 </p>
@@ -526,9 +530,11 @@ window.addEventListener ("load", function () {
             
                     setTimeout (() => {
                         if (!cCommonDivFbCmrs.querySelector (".__c-common--label__FB") && !cCommonDivFbCmrs.querySelector (".__c-common--input__FB_TEL") && !cCommonDivFbCmrs.querySelector (".__c-common--div__FB_APPR")) {
-                            cCommonFormFb.reset ();
-                            cCommonDivFbCmrs.classList.remove ("__c-common--div__FB");
-                            cCommonDivFbDoneCmrs.classList.add ("__c-common--div__FB_DONE");
+                            sendFormAjax(cCommonFormFb, function () {
+                                cCommonFormFb.reset();
+                                cCommonDivFbCmrs.classList.remove("__c-common--div__FB");
+                                cCommonDivFbDoneCmrs.classList.add("__c-common--div__FB_DONE");
+                            })
                         }
                     }, 50)
                 });
@@ -631,6 +637,10 @@ window.addEventListener ("load", function () {
                             </button>
             
                             <form class="c-common--form__FB _FORM_COMMON __C-SCRL RIGHT" action="#" method="post" name="feedback" novalidate>
+                              <input name="form_name" type="hidden" value="Напишите нам">
+                              <div class="honey_age_old">
+                                    <input name="age_old" type="text" placeholder="Возраст">
+                                    </div>
                                 <p class="c-common--p__FB_NAME">
                                     Напишите нам
                                 </p>
@@ -982,9 +992,11 @@ window.addEventListener ("load", function () {
             
                     setTimeout (() => {
                         if (!cCommonDivFbComm.querySelector (".__c-common--label__FB") && !cCommonDivFbComm.querySelector (".__c-common--input__FB_TEL") && !cCommonDivFbComm.querySelector (".__c-common--div__FB_APPR")) {
-                            cCommonFormFb.reset ();
-                            cCommonDivFbComm.classList.remove ("__c-common--div__FB");
-                            cCommonDivFbDoneComm.classList.add ("__c-common--div__FB_DONE");
+                            sendFormAjax(cCommonFormFb, function () {
+                                cCommonFormFb.reset();
+                                cCommonDivFbComm.classList.remove("__c-common--div__FB");
+                                cCommonDivFbDoneComm.classList.add("__c-common--div__FB_DONE");
+                            })
                         }
                     }, 50)
                 });
@@ -1080,6 +1092,10 @@ window.addEventListener ("load", function () {
                             </button>
             
                             <form class="c-common--form__FB _FORM_REGISTRATION __C-SCRL RIGHT" action="#" method="post" name="feedback" novalidate>
+                                <input name="form_name" type="hidden" value="Регистрация">
+                                <div class="honey_age_old">
+                                    <input name="age_old" type="text" placeholder="Возраст">
+                                    </div>
                                 <p class="c-common--p__FB_NAME">
                                     Зарегистрируйтесь
                                 </p>
@@ -1470,9 +1486,11 @@ window.addEventListener ("load", function () {
             
                     setTimeout (() => {
                         if (!cCommonDivFbReg.querySelector (".__c-common--label__FB") && !cCommonDivFbReg.querySelector (".__c-common--input__FB_TEL") && !cCommonDivFbReg.querySelector (".__c-common--div__FB_APPR")) {
-                            cCommonFormFb.reset ();
-                            cCommonDivFbReg.classList.remove ("__c-common--div__FB");
-                            cCommonDivFbDoneReg.classList.add ("__c-common--div__FB_DONE");
+                            sendFormAjax(cCommonFormFb, function () {
+                                cCommonFormFb.reset();
+                                cCommonDivFbReg.classList.remove("__c-common--div__FB");
+                                cCommonDivFbDoneReg.classList.add("__c-common--div__FB_DONE");
+                            })
                         }
                     }, 50)
                 });
@@ -1570,6 +1588,10 @@ window.addEventListener ("load", function () {
                             </button>
             
                             <form class="c-common--form__FB _FORM_VACANCY __C-SCRL RIGHT" action="#" method="post" name="feedback" novalidate>
+                               <input name="form_name" type="hidden" value="Вакансия">
+                               <div class="honey_age_old">
+                                    <input name="age_old" type="text" placeholder="Возраст">
+                                    </div>
                                 <p class="c-common--p__FB_NAME">
                                     Откликнуться на вакансию
                                 </p>
@@ -1944,9 +1966,11 @@ window.addEventListener ("load", function () {
             
                     setTimeout (() => {
                         if (!cCommonDivFbVac.querySelector (".__c-common--label__FB") && !cCommonDivFbVac.querySelector (".__c-common--input__FB_TEL") && !cCommonDivFbVac.querySelector (".__c-common--div__FB_APPR")) {
-                            cCommonFormFb.reset ();
-                            cCommonDivFbVac.classList.remove ("__c-common--div__FB");
-                            cCommonDivFbDoneVac.classList.add ("__c-common--div__FB_DONE");
+                            sendFormAjax(cCommonFormFb, function () {
+                                cCommonFormFb.reset();
+                                cCommonDivFbVac.classList.remove("__c-common--div__FB");
+                                cCommonDivFbDoneVac.classList.add("__c-common--div__FB_DONE");
+                            })
                         }
                     }, 50)
                 });
@@ -2041,6 +2065,10 @@ window.addEventListener ("load", function () {
                             </button>
             
                             <form class="c-common--form__FB _FORM_COMMON __C-SCRL RIGHT" action="#" method="post" name="feedback" novalidate>
+                                <input name="form_name" type="hidden" value="Подписка">
+                                <div class="honey_age_old">
+                                    <input name="age_old" type="text" placeholder="Возраст">
+                                    </div>
                                 <p class="c-common--p__FB_NAME">
                                     Подпишитесь на нашу новостную рассылку
                                 </p>
@@ -2298,9 +2326,11 @@ window.addEventListener ("load", function () {
             
                     setTimeout (() => {
                         if (!cCommonDivFbSub.querySelector (".__c-common--label__FB") && !cCommonDivFbSub.querySelector (".__c-common--input__FB_TEL") && !cCommonDivFbSub.querySelector (".__c-common--div__FB_APPR")) {
-                            cCommonFormFb.reset ();
-                            cCommonDivFbSub.classList.remove ("__c-common--div__FB");
-                            cCommonDivFbDoneSub.classList.add ("__c-common--div__FB_DONE");
+                            sendFormAjax(cCommonFormFb, function () {
+                                cCommonFormFb.reset();
+                                cCommonDivFbSub.classList.remove("__c-common--div__FB");
+                                cCommonDivFbDoneSub.classList.add("__c-common--div__FB_DONE");
+                            })
                         }
                     }, 50)
                 });
@@ -2391,6 +2421,10 @@ window.addEventListener ("load", function () {
                             </button>
             
                             <form class="c-common--form__FB _FORM_SERVICE __C-SCRL RIGHT" action="#" method="post" name="feedback" novalidate>
+                                <input name="form_name" type="hidden" value="Консультация">
+                                <div class="honey_age_old">
+                                    <input name="age_old" type="text" placeholder="Возраст">
+                                    </div>
                                 <p class="c-common--p__FB_NAME">
                                     Получите техническую консультацию
                                 </p>
@@ -2911,9 +2945,11 @@ window.addEventListener ("load", function () {
             
                     setTimeout (() => {
                         if (!cCommonDivFbServ.querySelector (".__c-common--label__FB") && !cCommonDivFbServ.querySelector (".__c-common--input__FB_TEL") && !cCommonDivFbServ.querySelector (".__c-common--div__FB_APPR")) {
-                            cCommonFormFb.reset ();
-                            cCommonDivFbServ.classList.remove ("__c-common--div__FB");
-                            cCommonDivFbDoneComm.classList.add ("__c-common--div__FB_DONE");
+                            sendFormAjax(cCommonFormFb, function () {
+                                cCommonFormFb.reset();
+                                cCommonDivFbServ.classList.remove("__c-common--div__FB");
+                                cCommonDivFbDoneComm.classList.add("__c-common--div__FB_DONE");
+                            })
                         }
                     }, 50)
                 });
@@ -2980,3 +3016,5 @@ window.addEventListener ("load", function () {
         });
     });
 });
+
+

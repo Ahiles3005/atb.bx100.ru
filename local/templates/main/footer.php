@@ -340,6 +340,7 @@ switch ($mainId) {
 }
 
 
+Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/script.js');
 Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/libs/swiper/swiper-bundle.min.js');
 Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/common/js/common.js');
 Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/styles/js/st1-common.js');
@@ -496,3 +497,6 @@ switch ($mainId) {
         break;
 }
 ?>
+
+<?php
+$_SESSION['form_submit_key'] = true;
