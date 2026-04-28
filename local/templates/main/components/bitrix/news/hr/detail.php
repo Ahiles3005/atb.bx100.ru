@@ -181,7 +181,7 @@ $detailPicture = CFile::GetFileArray($arFields['DETAIL_PICTURE']);
 
 
             <div class="hrv1-hero--div__BUTTONS">
-                <button class="hrv1-hero--button__REQUEST __C-SCRL DOWN">
+                <button class="hrv1-hero--button__REQUEST __C-SCRL DOWN _OPEN_FRM _FORM_VACANCY">
                     Откликнуться
                 </button>
                 <div class="c-common--div__SHARE __C-SCRL DOWN">
