@@ -337,6 +337,21 @@ switch ($mainId) {
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/contacts/css/conts1-main.css');
         break;
 
+    case 'ab':
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/styles/css/st-common.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/mc/css/mc6-pk.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/about/css/ab1-hero.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/about/css/ab2-quote.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/about/css/ab3-adv.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/about/css/ab4-med.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/about/css/ab5-hst.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/about/css/ab6-exp.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/about/css/ab7-par.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/about/css/ab8-cert.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/about/css/ab9-reg.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/about/css/ab10-doc.css');
+        break;
+
 }
 
 
@@ -494,6 +509,18 @@ switch ($mainId) {
     case 'conts':
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/contacts/js/conts0-common.js');
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/contacts/js/conts1-main.js');
+        break;
+
+    case 'ab':
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/styles/js/st1-common.js');
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/about/js/ab0-common.js');
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/about/js/ab1-hero.js');
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/about/js/ab4-med.js');
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/about/js/ab5-hst.js');
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/about/js/ab7-par.js');
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/about/js/ab8-cert.js');
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/about/js/ab10-doc.js');
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/libs/dragscroll/dragscroll.js');
         break;
 }
 ?>
