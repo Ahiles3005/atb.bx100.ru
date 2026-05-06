@@ -9,30 +9,30 @@ use CFile;
 
 //проверка на пост
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    success('Заявка добавелена: '.rand(111111111,222222222));
+    success('Заявка добавелена: ' . rand(111111111, 222222222));
 }
 
 //проверка ключа
 if (!isset($_SESSION['form_submit_key']) || $_SESSION['form_submit_key'] !== true) {
 
-    success('Заявка добавелена: '.rand(222222222,333333333));
+    success('Заявка добавелена: ' . rand(222222222, 333333333));
 }
 
 //проверка хонепота (должен заполнять робот автоматом)
 if (!isset($_POST['age_old']) || strlen($_POST['age_old']) > 0) {
-    success('Заявка добавелена: '.rand(333333333,444444444));
+    success('Заявка добавелена: ' . rand(333333333, 444444444));
 }
 
 
 //проверка согласия
 if (!isset($_POST['feedback-approve1']) || $_POST['feedback-approve1'] != 1) {
-    success('Заявка добавелена: '.rand(444444444,555555555));
+    success('Заявка добавелена: ' . rand(444444444, 555555555));
 }
 
 
 // Подключаем модуль инфоблоков
-if (!Loader::includeModule('iblock')) {
-    success('Заявка добавелена: '.rand(555555555,666666666));
+if (!Loader::includeModule('form')) {
+    success('Заявка добавелена: ' . rand(555555555, 666666666));
 }
 
 
@@ -61,89 +61,83 @@ function success($value = 'Заявка добавелена: ', $status = true)
 function addElement()
 {
 
-    $iblockId = 14;
+    $formData = [];
 
+    $FORM_ID = $_POST['form_id'] ?? 0;
 
-    $fieldNames = [
-        'form_name' => 'Название формы',
-        'feedback-comp' => 'Компания',
-        'feedback-doc' => 'Документа', //файл
-        'feedback-inn' => 'ИНН',
-        'feedback-mail' => 'Email',
-        'feedback-name' => 'Имя',
-        'feedback-num' => 'Серийный номер изделия',
-        'feedback-org' => 'Компания',
-        'feedback-patr' => 'Отчество',
-        'feedback-post' => 'Должность',
-        'feedback-resm' => 'Резюме', //файл
-        'feedback-surname' => 'Фамилия',
-        'feedback-tel' => 'Телефон',
-        'feedback-textarea' => 'Текст',
-    ];
-
-// Получаем название формы (обязательное поле)
-    $formName = trim($_POST['form_name'] ?? '');
-    if (empty($formName)) {
-        var_dump($_POST['form_name']);
-        success('Заявка добавелена: '.rand(666666666,777777777));
+    switch ($FORM_ID) {
+        case 1:
+            $formData = [
+                'form_text_1' => $_POST['feedback-inn'],
+                'form_text_2' => $_POST['feedback-org'],
+                'form_text_3' => $_POST['feedback-name'],
+                'form_text_4' => $_POST['feedback-surname'],
+                'form_text_5' => $_POST['feedback-mail'],
+                'form_text_6' => $_POST['feedback-tel'],
+                'form_textarea_7' => $_POST['feedback-textarea'],
+            ];
+            break;
+        case 2:
+            $formData = [
+                'form_text_8' => $_POST['feedback-name'],
+                'form_text_9' => $_POST['feedback-surname'],
+                'form_text_10' => $_POST['feedback-mail'],
+                'form_text_11' => $_POST['feedback-tel'],
+                'form_text_12' => $_POST['feedback-comp'],
+                'form_text_13' => $_POST['feedback-post'],
+                'form_textarea_14' => $_POST['feedback-textarea'],
+            ];
+            break;
+        case 3:
+            $file = $_FILES['feedback-resm'] ?? '';
+            if (is_array($file)) {
+                $arFile = CFile::MakeFileArray($file['tmp_name'], $file['type']);
+                $arFile['name'] = $file['name'];
+            }
+            $formData = [
+                'form_file_15' => $arFile ?? [],
+                'form_text_16' => $_POST['feedback-name'],
+                'form_text_17' => $_POST['feedback-surname'],
+                'form_text_18' => $_POST['feedback-mail'],
+                'form_text_19' => $_POST['feedback-tel'],
+                'form_textarea_20' => $_POST['feedback-textarea'],
+            ];
+            break;
+        case 4:
+            $formData = [
+                'form_text_23' => $_POST['feedback-name'],
+                'form_text_24' => $_POST['feedback-surname'],
+                'form_text_25' => $_POST['feedback-mail'],
+            ];
+            break;
+        case 5:
+            $file = $_FILES['feedback-doc'] ?? '';
+            if (is_array($file)) {
+                $arFile = CFile::MakeFileArray($file['tmp_name'], $file['type']);
+                $arFile['name'] = $file['name'];
+            }
+            $formData = [
+                'form_text_28' => $_POST['feedback-name'],
+                'form_text_29' => $_POST['feedback-surname'],
+                'form_text_30' => $_POST['feedback-mail'],
+                'form_text_31' => $_POST['feedback-tel'],
+                'form_text_32' => $_POST['feedback-comp'],
+                'form_text_33' => $_POST['feedback-post'],
+                'form_text_34' => $_POST['feedback-num'],
+                'form_file_35' => $arFile ?? [],
+                'form_textarea_36' => $_POST['feedback-textarea'],
+            ];
+            break;
+        default:
+            success('Заявка добавелена: ' . rand(666666666, 777777777));
     }
 
 
-    $detailText = "<h3>Данные формы: {$formName}</h3>\n";
-    $detailText .= "<p><strong>Дата создания:</strong> " . date('d.m.Y H:i:s') . "</p>\n";
-    $detailText .= "<hr>\n\n";
-
-
-// Собираем все данные из POST, используя массив с русскими названиями
-    foreach ($_POST as $key => $value) {
-
-        if ($key === 'form_name' || !array_key_exists($key, $fieldNames)) {
-            continue;
-        }
-
-
-        $label = $fieldNames[$key];
-
-        if (is_array($value)) {
-            $value = implode(', ', $value);
-        }
-
-
-        $detailText .= "<p><strong>{$label}:</strong> {$value}</p>\n";
-    }
-
-    $files = $_FILES['feedback-doc'] ?? [];
-    $arFiles = [];
-
-    foreach ($_FILES as $key => $file) {
-        if (!array_key_exists($key, $fieldNames)) {
-            continue;
-        }
-
-        if ($file['error'] === UPLOAD_ERR_OK) {
-            $arFile = CFile::MakeFileArray($file['tmp_name'],$file['type']);
-            $arFile['name'] = $file['name'];
-            $arFiles[] = $arFile;
-        }
-    }
-
-
-    $elementFields = [
-        'IBLOCK_ID' => $iblockId,
-        'NAME' => $formName . ' ' . date('d.m.Y H:i:s'),
-        'ACTIVE' => 'Y',
-        'DETAIL_TEXT' => $detailText,
-        'DETAIL_TEXT_TYPE' => 'html',
-        'PROPERTY_VALUES' => [
-            'FILES' => $arFiles
-        ]
-    ];
-
-// Создаем элемент
-    $element = new CIBlockElement();
-    if ($elementId = $element->Add($elementFields)) {
-        success('Заявка добавелена: ' . $elementId);
+    if ($RESULT_ID = CFormResult::Add($FORM_ID, $formData)) {
+        CFormCrm::AddLead($FORM_ID, $RESULT_ID);
+        success('Заявка добавелена: ' . $RESULT_ID);
     } else {
-        success($el->LAST_ERROR, false);
+        global $strError;
+        success($strError, false);
     }
 }
