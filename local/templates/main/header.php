@@ -78,7 +78,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
             <div class="c-header--div__SEARCH_BACK"></div>
 
 
-            <a class="c-header--a__CONTACTS" href="#">
+            <a class="c-header--a__CONTACTS" href="/about/contacts/">
                 КОНТАКТЫ
             </a>
 
