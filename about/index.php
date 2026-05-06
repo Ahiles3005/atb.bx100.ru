@@ -6,7 +6,6 @@ $APPLICATION->SetPageProperty('mainid', 'ab');
 ?>
 
 
-<?require_once (__DIR__.'/content.php')?>
 
 
 <?$APPLICATION->IncludeComponent(
@@ -34,11 +33,11 @@ $APPLICATION->SetPageProperty('mainid', 'ab');
                 "DISPLAY_PREVIEW_TEXT" => "N",
                 "DISPLAY_TOP_PAGER" => "N",
                 "ELEMENT_CODE" => "",
-                "ELEMENT_ID" => "95",
+                "ELEMENT_ID" => "131",
                 "FIELD_CODE" => array("",""),
                 "FILE_404" => '',
                 "GROUP_PERMISSIONS" => '',
-                "IBLOCK_ID" => "10",
+                "IBLOCK_ID" => "15",
                 "IBLOCK_TYPE" => "about_index",
                 "IBLOCK_URL" => "",
                 "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
