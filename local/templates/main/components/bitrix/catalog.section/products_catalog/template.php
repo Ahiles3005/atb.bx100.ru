@@ -97,7 +97,7 @@ if (!empty($arResult['ITEMS'])) :?>
                      src="/images/home/hm-cat_icon.svg" alt="ГИСП">
             </div>
 
-            <a class="hm-cat--a__CARD_NAME" href="#">
+            <a class="hm-cat--a__CARD_NAME" href="<?= $item['DETAIL_PAGE_URL'] ?>">
                 <p class="hm-cat--p__CARD_NAME1">
                     <?= $item['NAME'] ?>
                 </p>
