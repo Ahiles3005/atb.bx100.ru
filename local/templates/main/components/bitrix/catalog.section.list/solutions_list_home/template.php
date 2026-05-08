@@ -24,7 +24,7 @@ $strTitle = "";
                     Решения
                 </h2>
 
-                <a class="c-common--a__ALL hm-des--a__ALL __C-SCRL DOWN" href="#">
+                <a class="c-common--a__ALL hm-des--a__ALL __C-SCRL DOWN" href="/solutions/">
                     СМОТРЕТЬ ВСЕ
                 </a>
 

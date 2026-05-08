@@ -14,7 +14,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
         <div class="c-footer--div__CONT C-CONTAINER">
             <div class="c-footer--div__TOP">
                 <div class="c-footer--div__LEFT">
-                    <a class="c-footer--a__LOGO" href="#">
+                    <a class="c-footer--a__LOGO" href="/">
                         <img class="c-footer--img__LOGO"
                              src="/images/footer/c-footer_logo.svg" alt="Логотип">
                     </a>

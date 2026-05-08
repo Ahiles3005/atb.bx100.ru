@@ -24,7 +24,7 @@ $strTitle = "";
                     Отрасли
                 </h2>
 
-                <a class="c-common--a__ALL hm-ind--a__ALL __C-SCRL DOWN" href="#">
+                <a class="c-common--a__ALL hm-ind--a__ALL __C-SCRL DOWN" href="/industries/">
                     СМОТРЕТЬ ВСЕ
                 </a>
 
