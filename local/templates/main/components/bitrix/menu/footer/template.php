@@ -52,46 +52,87 @@ function renderFooterMenuItems(array $items, $level = 1)
 
             echo '</div>';
 
-            if ($hasChildren) {
-                // Рисуем 2-й уровень (подразделы)
-                echo '<ul class="c-footer--ul__2">';
-                foreach ($item['CHILDS'] as $child) {
-                    $childHasChildren = !empty($child['CHILDS']);
-                    $childTitle = htmlspecialchars($child['TEXT']);
-                    $childLink = isset($child['LINK']) ? htmlspecialchars($child['LINK']) : '#';
 
-                    echo '<li class="c-footer--li__2">';
-                    echo '<div class="c-footer--div__2">';
+            if ($hasChildren && $item['LINK']) {
+                if (in_array($link, ['/catalog/', '/success-stories/'])) {
+                    // Рисуем 2-й уровень (подразделы)
+                    echo '<ul class="c-footer--ul__2">';
+                    foreach ($item['CHILDS'] as $child) {
+                        $childHasChildren = !empty($child['CHILDS']);
+                        $childTitle = htmlspecialchars($child['TEXT']);
+                        $childLink = isset($child['LINK']) ? htmlspecialchars($child['LINK']) : '#';
 
-                    $childAClass = 'c-footer--a__2';
-                    if (!empty($child['PARAMS']['CSS_CLASS'])) {
-                        $childAClass = htmlspecialchars($child['PARAMS']['CSS_CLASS']);
+                        echo '<li class="c-footer--li__2">';
+                        echo '<div class="c-footer--div__2">';
+
+                        $childAClass = 'c-footer--a__2';
+                        if (!empty($child['PARAMS']['CSS_CLASS'])) {
+                            $childAClass = htmlspecialchars($child['PARAMS']['CSS_CLASS']);
+                        }
+
+                        if ($childHasChildren) {
+                            echo '<a class="' . $childAClass . '" href="' . $childLink . '">';
+                        } else {
+                            echo '<a class="' . $childAClass . '" href="' . $childLink . '">';
+                        }
+                        echo $childTitle;
+                        echo '</a>';
+
+                        if ($childHasChildren) {
+                            echo '<button class="c-footer--button__2">';
+                            echo \Site\Template::showSvg('/images/svg/chevron-down.svg');
+                            echo '</button>';
+                        }
+
+                        echo '</div>';
+
+                        if ($childHasChildren) {
+                            // 3-й уровень и глубже — простой список ссылок
+                            renderFooterMenuItems($child['CHILDS'], 3);
+                        }
+
+                        echo '</li>';
                     }
+                    echo '</ul>';
+                } else {
+                    // Рисуем 3-й уровень (подразделы)
+                    echo '<ul class="c-footer--ul__3">';
+                    foreach ($item['CHILDS'] as $child) {
+                        $childHasChildren = !empty($child['CHILDS']);
+                        $childTitle = htmlspecialchars($child['TEXT']);
+                        $childLink = isset($child['LINK']) ? htmlspecialchars($child['LINK']) : '#';
 
-                    if ($childHasChildren) {
-                        echo '<a class="' . $childAClass . '" href="' . $childLink . '">';
-                    } else {
-                        echo '<a class="' . $childAClass . '" href="' . $childLink . '">';
+                        echo '<li class="c-footer--li__3">';
+                        echo '<div class="c-footer--div__3">';
+
+                        $childAClass = 'c-footer--a__3';
+                        if (!empty($child['PARAMS']['CSS_CLASS'])) {
+                            $childAClass = htmlspecialchars($child['PARAMS']['CSS_CLASS']);
+                        }
+
+                        if ($childHasChildren) {
+                            echo '<a class="' . $childAClass . '" href="' . $childLink . '">';
+                        } else {
+                            echo '<a class="' . $childAClass . '" href="' . $childLink . '">';
+                        }
+                        echo $childTitle;
+                        echo '</a>';
+
+                        if ($childHasChildren) {
+                            echo '<button class="c-footer--button__3">';
+                            echo \Site\Template::showSvg('/images/svg/chevron-down.svg');
+                            echo '</button>';
+                        }
+
+                        echo '</div>';
+
+
+                        echo '</li>';
                     }
-                    echo $childTitle;
-                    echo '</a>';
-
-                    if ($childHasChildren) {
-                        echo '<button class="c-footer--button__2">';
-                        echo \Site\Template::showSvg('/images/svg/chevron-down.svg');
-                        echo '</button>';
-                    }
-
-                    echo '</div>';
-
-                    if ($childHasChildren) {
-                        // 3-й уровень и глубже — простой список ссылок
-                        renderFooterMenuItems($child['CHILDS'], 3);
-                    }
-
-                    echo '</li>';
+                    echo '</ul>';
                 }
-                echo '</ul>';
+
+
             }
 
             echo '</div>';
