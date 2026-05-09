@@ -166,7 +166,7 @@
 
                 <div class="cdn-reg--div__REQUEST">
                     <div class="cdn-reg--div__IMAGE __C-SCRL LEFT">
-                        <img class="cdn-reg--img__IMAGE" src="images/dih/dh-hst_request.webp" alt="">
+                        <img class="cdn-reg--img__IMAGE" src="/images/dih/dh-hst_request.webp" alt="">
                     </div>
                     <div class="cdn-reg--div__TEXT __C-SCRL RIGHT">
                         <h3 class="cdn-reg--h3">

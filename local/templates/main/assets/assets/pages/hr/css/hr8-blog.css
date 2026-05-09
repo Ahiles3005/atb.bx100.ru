@@ -123,7 +123,7 @@
     aspect-ratio: 328 / 234;
     position: relative;
     display: flex;
-    background: url("../../../../images/home/hm-common_logo.svg") center / 250px no-repeat;
+    background: url("/images/home/hm-common_logo.svg") center / 250px no-repeat;
     border-radius: 10px;
 }
 

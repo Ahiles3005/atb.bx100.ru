@@ -122,7 +122,7 @@
     width: 50px;
     flex-shrink: 0;
     background-color: var(--color-gray);
-    background: url("../../../../images/home/hm-cat_device.svg") center / contain no-repeat;
+    background: url("/images/home/hm-cat_device.svg") center / contain no-repeat;
 }
 @media (min-width: 1440px) {
     .hm-cat--div__MENU_ITEM {

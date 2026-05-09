@@ -885,7 +885,7 @@ if (isset($arParams['USER_CONSENT_IS_LOADED'])) {
             <p class="cd-reg--p__TOP">
                 Единый реестр радиоэлектронной продукции (ПП РФ №878 от 10.07.2019)
             </p>
-            <img class="cd-reg--img__TOP" src="images/home/hm-cat_icon.svg" alt="ГИСП">
+            <img class="cd-reg--img__TOP" src="/images/home/hm-cat_icon.svg" alt="ГИСП">
         </a>
 
 

@@ -441,7 +441,7 @@
     aspect-ratio: 7 / 5;
     position: relative;
     bottom: -1px;
-    background: url("../../../../images/home/hm-common_logo.svg") center / 250px no-repeat;
+    background: url("/images/home/hm-common_logo.svg") center / 250px no-repeat;
     border-radius: 10px;
 }
 @media (min-width: 1440px) {

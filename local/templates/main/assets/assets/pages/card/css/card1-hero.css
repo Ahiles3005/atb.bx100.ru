@@ -488,7 +488,7 @@
     position: relative;
     flex: 1 1 auto;
     display: none;
-    background: url("../../../../images/card/cd-hero_button-back.svg") center / auto no-repeat;
+    background: url("/images/card/cd-hero_button-back.svg") center / auto no-repeat;
     border: 0.25px solid var(--color-gray);
     border-radius: 7px;
     transition: box-shadow 0.3s;
@@ -546,11 +546,11 @@
     position: absolute;
     inset: 0px;
     z-index: 3;
-    background: url("../../../../images/card/cd-hero_button-video.svg") center / auto no-repeat;
+    background: url("/images/card/cd-hero_button-video.svg") center / auto no-repeat;
 }
 @media (min-width: 1440px) {
     .cd-hero--button__IMAGES.cd-hero__VID::before {
-        background: url("../../../../images/card/cd-hero_button-video.svg") center / 36px 36px no-repeat;
+        background: url("/images/card/cd-hero_button-video.svg") center / 36px 36px no-repeat;
     }
 }
 
@@ -571,11 +571,11 @@
     position: absolute;
     inset: 0px;
     z-index: 3;
-    background: url("../../../../images/card/cd-hero_360.svg") center / auto no-repeat;
+    background: url("/images/card/cd-hero_360.svg") center / auto no-repeat;
 }
 @media (min-width: 1440px) {
     .cd-hero--button__IMAGES.cd-hero__3D::before {
-        background: url("../../../../images/card/cd-hero_360.svg") center / 80px 80px no-repeat;
+        background: url("/images/card/cd-hero_360.svg") center / 80px 80px no-repeat;
     }
 }
 
@@ -1313,11 +1313,11 @@
     position: absolute;
     inset: 0px;
     z-index: 3;
-    background: url("../../../../images/card/cd-hero_button-video.svg") center / 22px 22px no-repeat;
+    background: url("/images/card/cd-hero_button-video.svg") center / 22px 22px no-repeat;
 }
 @media (min-width: 1440px) {
     .cd-hero--div__SWIPER_PAGINATION .swiper-pagination-bullet.cd-hero__VID::before {
-        background: url("../../../../images/card/cd-hero_button-video.svg") center / 26px 26px no-repeat;
+        background: url("/images/card/cd-hero_button-video.svg") center / 26px 26px no-repeat;
     }
 }
 
@@ -1348,11 +1348,11 @@
     position: absolute;
     inset: 0px;
     z-index: 3;
-    background: url("../../../../images/card/cd-hero_360.svg") center / 38px 38px no-repeat;
+    background: url("/images/card/cd-hero_360.svg") center / 38px 38px no-repeat;
 }
 @media (min-width: 1440px) {
     .cd-hero--div__SWIPER_PAGINATION .swiper-pagination-bullet.cd-hero__3D::before {
-        background: url("../../../../images/card/cd-hero_360.svg") center / 40px 40px no-repeat;
+        background: url("/images/card/cd-hero_360.svg") center / 40px 40px no-repeat;
     }
 }
 
