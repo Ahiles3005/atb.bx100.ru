@@ -84,7 +84,8 @@ if (!empty($arResult['ITEMS'])) {
                                     <article class="hm-pre--article__CARD DOWN">
                                         <a class="hm-pre--a__CARD" href="<?= $item['DETAIL_PAGE_URL'] ?>"></a>
                                         <div class="hm-pre--div__CARD_IMAGE">
-                                            <img src="<?= $item['DETAIL_PICTURE']['SRC'] ?? AHILES3005_NO_IMAGE ?>" alt="<?= $item['NAME'] ?>"
+                                            <img src="<?= $item['DETAIL_PICTURE']['SRC'] ?? AHILES3005_NO_IMAGE ?>"
+                                                 alt="<?= $item['NAME'] ?>"
                                                  loading="lazy">
                                         </div>
                                         <a class="hm-pre--a__CARD_TAG1" href="#">
@@ -109,29 +110,31 @@ if (!empty($arResult['ITEMS'])) {
                                 </div>
                             <? endforeach; ?>
                         </div>
-                        <div class="cd-med--div__SWIPER21_NAV">
-                            <button class="cd-med--button__SWIPER21_PREV swiper-button-disabled"
-                                    disabled="" tabindex="-1" aria-label="Previous slide"
-                                    aria-controls="swiper-wrapper-2e397d8c62b40696"
-                                    aria-disabled="true">
-                                <svg width="12" height="22" viewBox="0 0 12 22" fill="none"
-                                     xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1.2002 1.65002L10.0002 11L1.2002 20.35" stroke="#C82121"
-                                          stroke-width="1.5" stroke-linecap="round"></path>
-                                </svg>
-                            </button>
-                            <div class="cd-med--div__SWIPER21_NAV_LINE"></div>
-                            <button class="cd-med--button__SWIPER21_NEXT" tabindex="0"
-                                    aria-label="Next slide"
-                                    aria-controls="swiper-wrapper-2e397d8c62b40696"
-                                    aria-disabled="false">
-                                <svg width="12" height="22" viewBox="0 0 12 22" fill="none"
-                                     xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1.2002 1.65002L10.0002 11L1.2002 20.35" stroke="#C82121"
-                                          stroke-width="1.5" stroke-linecap="round"></path>
-                                </svg>
-                            </button>
-                        </div>
+                        <? if (count($data['items'] ?? []) > 3): ?>
+                            <div class="cd-med--div__SWIPER21_NAV">
+                                <button class="cd-med--button__SWIPER21_PREV swiper-button-disabled"
+                                        disabled="" tabindex="-1" aria-label="Previous slide"
+                                        aria-controls="swiper-wrapper-2e397d8c62b40696"
+                                        aria-disabled="true">
+                                    <svg width="12" height="22" viewBox="0 0 12 22" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.2002 1.65002L10.0002 11L1.2002 20.35" stroke="#C82121"
+                                              stroke-width="1.5" stroke-linecap="round"></path>
+                                    </svg>
+                                </button>
+                                <div class="cd-med--div__SWIPER21_NAV_LINE"></div>
+                                <button class="cd-med--button__SWIPER21_NEXT" tabindex="0"
+                                        aria-label="Next slide"
+                                        aria-controls="swiper-wrapper-2e397d8c62b40696"
+                                        aria-disabled="false">
+                                    <svg width="12" height="22" viewBox="0 0 12 22" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.2002 1.65002L10.0002 11L1.2002 20.35" stroke="#C82121"
+                                              stroke-width="1.5" stroke-linecap="round"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        <? endif ?>
                     </div>
                 </div>
             </div>
