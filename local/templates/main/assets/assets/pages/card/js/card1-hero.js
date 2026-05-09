@@ -390,9 +390,12 @@ window.addEventListener ("load", function () {
 
         // 3.4 Указание на оставшееся количество картинок, видео и 3d в правой кнопке
 
-        const cdHeroSpanMore = document.querySelector (".cd-hero--button__IMAGES.cd-hero__MORE > span:first-of-type");
+        const cdHeroSpanMore = document.querySelector(".cd-hero--button__IMAGES.cd-hero__MORE > span:first-of-type");
 
-        cdHeroSpanMore.textContent = `+ ${cdHeroDivSwiperPagBuls.length - 4}`;
+        if (cdHeroSpanMore) {
+            cdHeroSpanMore.textContent = `+ ${cdHeroDivSwiperPagBuls.length - 4}`;
+        }
+
 
 
 

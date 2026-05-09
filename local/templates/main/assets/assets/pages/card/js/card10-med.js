@@ -35,7 +35,7 @@ window.addEventListener ("load", function () {
         
         // 1.1 Открытие / закрытие субменю
 
-        cdMedDivHead.addEventListener ("click", () => {
+        cdMedDivHead?.addEventListener ("click", () => {
 
             if (!cdMedFormSubmenu.classList.contains ("__cd-med--form__SUBMENU")) {
                 cdMedFormSubmenu.classList.add ("__cd-med--form__SUBMENU");

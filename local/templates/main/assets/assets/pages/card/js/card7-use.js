@@ -127,7 +127,10 @@ window.addEventListener ("load", function () {
             }, 150);
         });
 
-        cdUseobserver.observe (cdUseDivTabs);
+        if(cdUseDivTabs){
+            cdUseobserver.observe (cdUseDivTabs);
+        }
+
 
 
         cdCommonMedia1920.addEventListener ("change", () => {
@@ -138,7 +141,7 @@ window.addEventListener ("load", function () {
 
         // Обработка кликов правой и левой кнопок
 
-        cdUseButtonTabsLeft.addEventListener ("click", () => {
+        cdUseButtonTabsLeft?.addEventListener ("click", () => {
             for (let i = 0; i < cdUseButtonTabs.length; i++) {
                 if (cdUseButtonTabs[i].classList.contains ("_ACT")) {
                     cdUseButtonTabs[i - 1].click ();
@@ -147,7 +150,7 @@ window.addEventListener ("load", function () {
             }
         });
 
-        cdUseButtonTabsRight.addEventListener ("click", () => {
+        cdUseButtonTabsRight?.addEventListener ("click", () => {
             for (let i = 0; i < cdUseButtonTabs.length; i++) {
                 if (cdUseButtonTabs[i].classList.contains ("_ACT")) {
                     cdUseButtonTabs[i + 1].click ();

@@ -128,7 +128,7 @@ window.addEventListener ("load", function () {
 
         cdAbtButtonTabsClick ();
 
-        cdAbtButtonTabs[0].click ();
+        cdAbtButtonTabs[0]?.click ();
 
 
         let cdAbttimeout;
@@ -140,7 +140,10 @@ window.addEventListener ("load", function () {
             }, 150);
         });
 
-        cdAbtobserver.observe (cdAbtDivTabs);
+        if(cdAbtDivTabs){
+            cdAbtobserver.observe (cdAbtDivTabs);
+        }
+
 
 
         cdCommonMedia1920.addEventListener ("change", () => {
@@ -151,7 +154,7 @@ window.addEventListener ("load", function () {
 
         // Обработка кликов правой и левой кнопок
 
-        cdAbtButtonTabsLeft.addEventListener ("click", () => {
+        cdAbtButtonTabsLeft?.addEventListener ("click", () => {
             for (let i = 0; i < cdAbtButtonTabs.length; i++) {
                 if (cdAbtButtonTabs[i].classList.contains ("_ACT")) {
                     cdAbtButtonTabs[i - 1].click ();
@@ -160,7 +163,7 @@ window.addEventListener ("load", function () {
             }
         });
 
-        cdAbtButtonTabsRight.addEventListener ("click", () => {
+        cdAbtButtonTabsRight?.addEventListener ("click", () => {
             for (let i = 0; i < cdAbtButtonTabs.length; i++) {
                 if (cdAbtButtonTabs[i].classList.contains ("_ACT")) {
                     cdAbtButtonTabs[i + 1].click ();
@@ -174,12 +177,12 @@ window.addEventListener ("load", function () {
 
         // 3.2 Открытие пунктов меню "Описание" "Характеристики" при выборе соответствующего пункта в левом меню
 
-        cdHeroAAnchsAbt.addEventListener ("click", (e) => {
+        cdHeroAAnchsAbt?.addEventListener ("click", (e) => {
             setTimeout (() => {
-                cdAbtButtonTabs[0].click ();
+                cdAbtButtonTabs[0]?.click ();
             }, 150);
         });
-        cdHeroAAnchsSpecs.addEventListener ("click", (e) => {
+        cdHeroAAnchsSpecs?.addEventListener ("click", (e) => {
             setTimeout (() => {
                 cdAbtButtonTabs[1].click ();
             }, 150);
@@ -274,16 +277,20 @@ window.addEventListener ("load", function () {
                 cdAbtDivSwiper3Slides[cdAbtDivSwiper4.activeIndex].click();
             });
         } else {
-            setTimeout (() => {
-                if (cdAbtDivSwiper3.isBeginning) {
-                    cdAbtDivSwiper3Wrapper.style.transform = `translate3d(0px, 0px, 0px)`;
-                } else if (cdAbtDivSwiper3.isEnd) {
-                    const k = parseInt(cdAbtDivSwiper3Wrapper.scrollWidth) - parseInt (cdAbtDivSwiper30.offsetWidth) + 6;
-                    if (k > 0 || 1) {
-                        cdAbtDivSwiper3Wrapper.style.transform = `translate3d(-${k}px, 0px, 0px)`;
+            if(cdAbtDivSwiper3Wrapper){
+                setTimeout (() => {
+
+                    if (cdAbtDivSwiper3.isBeginning) {
+                        cdAbtDivSwiper3Wrapper.style.transform = `translate3d(0px, 0px, 0px)`;
+                    } else if (cdAbtDivSwiper3.isEnd) {
+                        const k = parseInt(cdAbtDivSwiper3Wrapper.scrollWidth) - parseInt (cdAbtDivSwiper30.offsetWidth) + 6;
+                        if (k > 0 || 1) {
+                            cdAbtDivSwiper3Wrapper.style.transform = `translate3d(-${k}px, 0px, 0px)`;
+                        }
                     }
-                }
-            }, 100);
+                }, 100);
+            }
+
             
             setTimeout (() => {
                 cdAbtDivSwiper3Slides.forEach ((v, i, a) => {
@@ -389,6 +396,9 @@ window.addEventListener ("load", function () {
             });
         }, 150);
 
-        window.addEventListener ("resize", cdAbtResize3);
+        if(cdAbtDivSwiper3Wrapper){
+            window.addEventListener ("resize", cdAbtResize3);
+        }
+
     }
 });
