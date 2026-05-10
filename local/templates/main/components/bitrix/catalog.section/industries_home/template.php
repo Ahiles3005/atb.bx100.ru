@@ -43,12 +43,15 @@ if (!empty($arResult['ITEMS'])) {
         ?>
 
         <article class="hm-ind--article__CARD __C-SCRL DOWN" id="<?= $this->GetEditAreaId($uniqueId); ?>">
-            <a class="hm-ind--a__CARD_TAG color-yellow" href="<?= $item['DETAIL_PAGE_URL'] ?>">
-                <div class="hm-ind--div__CARD_TAG_CIRCLE"></div>
-                <span class="hm-ind--span__CARD_TAG">
-                            <?=$item['DISPLAY_PROPERTIES']['OTRASLI_NAME']['VALUE'] ?? ''?>
+            <? if (!empty($item['DISPLAY_PROPERTIES']['OTRASLI_NAME']['VALUE'])): ?>
+                <a class="hm-ind--a__CARD_TAG color-yellow" href="<?= $item['DETAIL_PAGE_URL'] ?>">
+                    <div class="hm-ind--div__CARD_TAG_CIRCLE"></div>
+                    <span class="hm-ind--span__CARD_TAG">
+                            <?= $item['DISPLAY_PROPERTIES']['OTRASLI_NAME']['VALUE'] ?? '' ?>
                         </span>
-            </a>
+                </a>
+            <?endif ?>
+
             <p class="hm-ind--p__CARD_NAME">
                 <?= $item['NAME'] ?>
             </p>
@@ -66,7 +69,7 @@ if (!empty($arResult['ITEMS'])) {
                     </svg>
                 </a>
 
-                <img src="<?=$item['DETAIL_PICTURE']['SRC'] ?? AHILES3005_NO_IMAGE ?>" alt="<?= $item['NAME'] ?>"
+                <img src="<?= $item['DETAIL_PICTURE']['SRC'] ?? AHILES3005_NO_IMAGE ?>" alt="<?= $item['NAME'] ?>"
                      loading="lazy">
             </div>
         </article>

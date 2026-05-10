@@ -43,12 +43,15 @@ if (!empty($arResult['ITEMS'])) {
         ?>
         <div class="cd-use--div__SWIPER21_SLIDE swiper-slide">
             <article class="hm-ind--article__CARD" id="<?= $this->GetEditAreaId($uniqueId); ?>">
-                <a class="hm-ind--a__CARD_TAG color-yellow" href="<?= $item['DETAIL_PAGE_URL'] ?>">
-                    <div class="hm-ind--div__CARD_TAG_CIRCLE"></div>
-                    <span class="hm-ind--span__CARD_TAG">
+                <? if (!empty($item['DISPLAY_PROPERTIES']['OTRASLI']['VALUE'])): ?>
+                    <a class="hm-ind--a__CARD_TAG color-yellow" href="<?= $item['DETAIL_PAGE_URL'] ?>">
+                        <div class="hm-ind--div__CARD_TAG_CIRCLE"></div>
+                        <span class="hm-ind--span__CARD_TAG">
                             <?= $item['DISPLAY_PROPERTIES']['OTRASLI']['VALUE'] ?? '' ?>
                         </span>
-                </a>
+                    </a>
+                <? endif ?>
+
                 <p class="hm-ind--p__CARD_NAME">
                     <?= $item['NAME'] ?>
                 </p>
