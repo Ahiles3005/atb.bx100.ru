@@ -139,7 +139,6 @@ switch ($mainId) {
         break;
 
     case 'catalog':
-        Asset::getInstance()->addCss('https://cdn.jsdelivr.net/npm/intl-tel-input@25.12.4/build/css/intlTelInput.css');
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/home/css/home2-cat.css');
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/catalog/css/catalog1-cat.css');
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/catalog/css/catalog2-wrt.css');
