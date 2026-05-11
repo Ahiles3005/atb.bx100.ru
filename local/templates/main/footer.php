@@ -351,6 +351,53 @@ switch ($mainId) {
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/about/css/ab10-doc.css');
         break;
 
+    case 'te':
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/mc/css/mc6-pk.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/tech/css/tech0-common.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/tech/css/tech1-dev.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/tech/css/tech2-prod.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/tech/css/tech3-qm.css');
+        break;
+
+    case 'sup':
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/styles/css/st-common.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/mc/css/mc6-pk.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/card-n/css/card-n4-reg.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/support/css/sup0-common.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/support/css/sup1-sup.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/support/css/sup2-org.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/support/css/sup3-adp.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/support/css/sup4-srv.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/support/css/sup5-cent.css');
+        break;
+
+    case 'srv1':
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/styles/css/st-common.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/mc/css/mc6-pk.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/card-n/css/card-n4-reg.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/services1/css/srv11-hero.css');
+        break;
+
+    case 'srv2':
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/styles/css/st-common.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/card-n/css/card-n4-reg.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/services2/css/srv21-hero.css');
+        break;
+
+    case 'srv3':
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/styles/css/st-common.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/mc/css/mc6-pk.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/card-n/css/card-n4-reg.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/services3/css/srv31-hero.css');
+        break;
+
+    case 'srv4':
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/styles/css/st-common.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/mc/css/mc6-pk.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/card-n/css/card-n4-reg.css');
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/services4/css/srv41-hero.css');
+        break;
+
 }
 
 
@@ -519,6 +566,50 @@ switch ($mainId) {
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/about/js/ab7-par.js');
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/about/js/ab8-cert.js');
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/about/js/ab10-doc.js');
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/libs/dragscroll/dragscroll.js');
+        break;
+
+    case 'te':
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/styles/js/st1-common.js');
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/tech/js/tech0-common.js');
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/tech/js/tech1-dev.js');
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/tech/js/tech1-dev.js');
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/libs/dragscroll/dragscroll.js');
+        break;
+
+    case 'sup':
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/styles/js/st1-common.js');
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/support/js/sup0-common.js');
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/support/js/sup1-sup.js');
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/support/js/sup2-org.js');
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/support/js/sup4-srv.js');
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/libs/dragscroll/dragscroll.js');
+        break;
+
+    case 'srv1':
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/styles/js/st1-common.js');
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/services1/js/srv10-common.js');
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/services1/js/srv11-hero.js');
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/libs/dragscroll/dragscroll.js');
+        break;
+
+    case 'srv2':
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/styles/js/st1-common.js');
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/services2/js/srv20-common.js');
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/services2/js/srv21-hero.js');
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/libs/dragscroll/dragscroll.js');
+        break;
+
+    case 'srv3':
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/styles/js/st1-common.js');
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/services3/js/srv30-common.js');
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/libs/dragscroll/dragscroll.js');
+        break;
+
+    case 'srv4':
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/styles/js/st1-common.js');
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/services4/js/srv40-common.js');
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/services4/js/srv41-hero.js');
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/libs/dragscroll/dragscroll.js');
         break;
 }
