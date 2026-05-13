@@ -38,12 +38,15 @@ $class = $arParams['IS_AJAX'] == 'Y' ? '__mc-common--article__CARD' : '__C-SCRL'
                     <?= $arItem["NAME"] ?>
                 </p>
                 <div class="hm-pre--div__CARD_BOTTOM">
-                    <a class="hm-pre--a__CARD_TAG color-green" href="<?= $arItem["DETAIL_PAGE_URL"] ?>">
-                        <div class="hm-pre--div__CARD_TAG_CIRCLE"></div>
-                        <span class="hm-pre--span__CARD_TAG">
+                    <? if (!empty($arItem["DISPLAY_PROPERTIES"]['TAG_KRASOTA']['DISPLAY_VALUE'])): ?>
+                        <a class="hm-pre--a__CARD_TAG color-green" href="<?= $arItem["DETAIL_PAGE_URL"] ?>">
+                            <div class="hm-pre--div__CARD_TAG_CIRCLE"></div>
+                            <span class="hm-pre--span__CARD_TAG">
                                     <?= $arItem["DISPLAY_PROPERTIES"]['TAG_KRASOTA']['DISPLAY_VALUE'] ?>
                                 </span>
-                    </a>
+                        </a>
+                    <? endif ?>
+
                     <span class="hm-pre--span__CARD_DATE">
                                 <?= $arItem["DISPLAY_ACTIVE_FROM"] ?>
                             </span>
