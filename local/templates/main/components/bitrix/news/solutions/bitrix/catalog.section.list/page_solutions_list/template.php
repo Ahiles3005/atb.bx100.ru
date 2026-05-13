@@ -90,12 +90,15 @@ if ($arParams['THIS_SECTION_ID']) {
                                                 <div class="cd-use--div__SWIPER22_SLIDE swiper-slide">
                                                     <article class="hm-des--article__CARD">
                                                         <div class="hm-des--div__CARD_TEXT">
-                                                            <a class="hm-des--a__CARD_TAG color-green" href="#">
-                                                                <div class="hm-des--div__CARD_TAG_CIRCLE"></div>
-                                                                <span class="hm-des--span__CARD_TAG">
+
+                                                            <? if (!empty($item['PROPERTIES']['TAG_KRASOTA']['VALUE'])): ?>
+                                                                <a class="hm-des--a__CARD_TAG color-green" href="#">
+                                                                    <div class="hm-des--div__CARD_TAG_CIRCLE"></div>
+                                                                    <span class="hm-des--span__CARD_TAG">
                                                                 <?= $item['PROPERTIES']['TAG_KRASOTA']['VALUE'] ?>
                                                             </span>
-                                                            </a>
+                                                                </a>
+                                                            <? endif ?>
                                                             <p class="hm-des--p__CARD_NAME">
                                                                 <?= $item['NAME'] ?>
                                                             </p>
