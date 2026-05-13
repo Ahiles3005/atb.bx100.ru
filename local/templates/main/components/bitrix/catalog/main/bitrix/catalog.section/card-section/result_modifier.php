@@ -219,10 +219,9 @@ if (isset($arResult['ID']) && !empty($arResult['ID'])) {
                 $arFields = $element->GetFields();
                 $arProps = $element->GetProperties();
 
-
                 $fileid = $arProps['FILE']['VALUE'] ?? false;
                 $link = $arProps['LINK']['VALUE'] ?? false;
-                $number = $arProps['NUMBER']['VALUE_XML_ID'] ?? false;
+                $number = $arProps['NUMBER']['VALUE'] ?? false;
 
                 $originalPath = CFile::GetPath($fileid);
 

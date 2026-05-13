@@ -166,7 +166,7 @@ function getRegistryData($registry)
 
         $fileid = $arProps['FILE']['VALUE'] ?? false;
         $link = $arProps['LINK']['VALUE'] ?? false;
-        $number = $arProps['NUMBER']['VALUE_XML_ID'] ?? false;
+        $number = $arProps['NUMBER']['VALUE'] ?? false;
 
         $originalPath = CFile::GetPath($fileid);
 
