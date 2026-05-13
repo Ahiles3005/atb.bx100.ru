@@ -40,12 +40,16 @@ if (!empty($arResult['ITEMS'])) {
         ?>
 
         <article class="hm-hst--article__CARD __C-SCRL DOWN">
-            <a class="hm-hst--a__CARD_TAG color-green" href="#">
-                <div class="hm-hst--div__CARD_TAG_CIRCLE"></div>
-                <span class="hm-hst--span__CARD_TAG">
-                                <?=$item['DISPLAY_PROPERTIES']['TAG_KRASOTA']['VALUE'] ?? ''?>
+            <? if (!empty($item['DISPLAY_PROPERTIES']['TAG_KRASOTA']['VALUE'])): ?>
+                <a class="hm-hst--a__CARD_TAG color-green" href="#">
+                    <div class="hm-hst--div__CARD_TAG_CIRCLE"></div>
+                    <span class="hm-hst--span__CARD_TAG">
+                                <?= $item['DISPLAY_PROPERTIES']['TAG_KRASOTA']['VALUE'] ?>
                             </span>
-            </a>
+                </a>
+            <?endif ?>
+
+
             <p class="hm-hst--p__CARD_NAME">
                 <?= $item['NAME'] ?>
             </p>
@@ -62,7 +66,7 @@ if (!empty($arResult['ITEMS'])) {
                               stroke-width="0.55"/>
                     </svg>
                 </a>
-                <img src="<?=$item['DETAIL_PICTURE']['SRC'] ?? AHILES3005_NO_IMAGE ?>"
+                <img src="<?= $item['DETAIL_PICTURE']['SRC'] ?? AHILES3005_NO_IMAGE ?>"
                      alt="<?= $item['NAME'] ?>" loading="lazy">
             </div>
         </article>

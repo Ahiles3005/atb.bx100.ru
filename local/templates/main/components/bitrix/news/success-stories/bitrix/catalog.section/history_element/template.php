@@ -42,12 +42,15 @@ if (!empty($arResult['ITEMS'])) {
 
         <div class="cd-use--div__SWIPER23_SLIDE swiper-slide">
             <article class="hm-hst--article__CARD">
-                <a class="hm-hst--a__CARD_TAG color-green" href="#">
-                    <div class="hm-hst--div__CARD_TAG_CIRCLE"></div>
-                    <span class="hm-hst--span__CARD_TAG">
-                                                                 <?= $item['DISPLAY_PROPERTIES']['TAG_KRASOTA']['VALUE'] ?? '' ?>
+                <? if (!empty($item['DISPLAY_PROPERTIES']['TAG_KRASOTA']['VALUE'])): ?>
+                    <a class="hm-hst--a__CARD_TAG color-green" href="#">
+                        <div class="hm-hst--div__CARD_TAG_CIRCLE"></div>
+                        <span class="hm-hst--span__CARD_TAG">
+                                                                 <?= $item['DISPLAY_PROPERTIES']['TAG_KRASOTA']['VALUE'] ?>
                                                             </span>
-                </a>
+                    </a>
+                <?endif ?>
+
                 <p class="hm-hst--p__CARD_NAME">
                     <?= $item['NAME'] ?>
                 </p>
