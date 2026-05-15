@@ -109,19 +109,22 @@ if (!empty($arResult['ITEMS'])) :?>
             <p class="hm-cat--p__CARD_TEXT">
                 <?= mb_substr($item['PREVIEW_TEXT'], 0, 273) ?>
             </p>
-
-            <ul class="hm-cat--ul__CARD_PARAMS">
-                <?
-                $propsCode = ['CPU', 'RAM', 'BUILT_IN_HARD_DRIVE']
+            
+            <?
+            if (!empty($item['PROPERTIES']['SVOISTVA_DLA_SPISKA']['VALUE'])) {
+                $propsCode = unserialize($item['PROPERTIES']['SVOISTVA_DLA_SPISKA']['~VALUE']);
                 ?>
-                <? foreach ($propsCode as $propCode): ?>
-                    <? if (isset($item['PROPERTIES'][$propCode]['VALUE']) && !empty($item['PROPERTIES'][$propCode]['VALUE'])): ?>
-                        <li class="hm-cat--li__CARD_PARAM">
-                            <?= $item['PROPERTIES'][$propCode]['VALUE'] ?>
-                        </li>
-                    <? endif ?>
-                <? endforeach; ?>
-            </ul>
+                <ul class="hm-cat--ul__CARD_PARAMS">
+                    <? foreach ($propsCode['VALUE'] as $propCode): ?>
+                        <? if (isset($item['PROPERTIES'][$propCode]['VALUE']) && !empty($item['PROPERTIES'][$propCode]['VALUE'])): ?>
+                            <li class="hm-cat--li__CARD_PARAM">
+                                <?= $item['PROPERTIES'][$propCode]['VALUE'] ?>
+                            </li>
+                        <? endif ?>
+                    <? endforeach; ?>
+                </ul>
+            <? } ?>
+
             <div class="hm-cat--div__CARD_PRICE">
                 <p class="hm-cat--p__CARD_PRICE_CUR">
                                 <span class="hm-cat--span__CARD_PRICE_CUR">
