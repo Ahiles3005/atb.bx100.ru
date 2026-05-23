@@ -34,7 +34,7 @@ $APPLICATION->SetPageProperty('mainid', 'te');
                 "FILE_404" => '',
                 "GROUP_PERMISSIONS" => '',
                 "IBLOCK_ID" => "18",
-                "IBLOCK_TYPE" => "tech_index",
+                "IBLOCK_TYPE" => "nasha_komanda",
                 "IBLOCK_URL" => "",
                 "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
                 "MESSAGE_404" => "",
