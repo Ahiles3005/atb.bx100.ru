@@ -372,6 +372,7 @@ switch ($mainId) {
         break;
 
     case 'srv1':
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/components/tabs/comp-tabs.css');
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/styles/css/st-common.css');
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/mc/css/mc6-pk.css');
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/card-n/css/card-n4-reg.css');
@@ -379,12 +380,14 @@ switch ($mainId) {
         break;
 
     case 'srv2':
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/components/tabs/comp-tabs.css');
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/styles/css/st-common.css');
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/card-n/css/card-n4-reg.css');
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/services2/css/srv21-hero.css');
         break;
 
     case 'srv3':
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/components/tabs/comp-tabs.css');
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/styles/css/st-common.css');
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/mc/css/mc6-pk.css');
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/card-n/css/card-n4-reg.css');
@@ -392,6 +395,7 @@ switch ($mainId) {
         break;
 
     case 'srv4':
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/components/tabs/comp-tabs.css');
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/styles/css/st-common.css');
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/mc/css/mc6-pk.css');
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/card-n/css/card-n4-reg.css');
@@ -588,6 +592,7 @@ switch ($mainId) {
 
     case 'srv1':
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/styles/js/st1-common.js');
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/components/tabs/comp-tabs.js');
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/services1/js/srv10-common.js');
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/services1/js/srv11-hero.js');
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/libs/dragscroll/dragscroll.js');
@@ -595,6 +600,7 @@ switch ($mainId) {
 
     case 'srv2':
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/styles/js/st1-common.js');
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/components/tabs/comp-tabs.js');
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/services2/js/srv20-common.js');
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/services2/js/srv21-hero.js');
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/libs/dragscroll/dragscroll.js');
@@ -602,12 +608,14 @@ switch ($mainId) {
 
     case 'srv3':
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/styles/js/st1-common.js');
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/components/tabs/comp-tabs.js');
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/services3/js/srv30-common.js');
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/libs/dragscroll/dragscroll.js');
         break;
 
     case 'srv4':
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/styles/js/st1-common.js');
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/components/tabs/comp-tabs.js');
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/services4/js/srv40-common.js');
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/services4/js/srv41-hero.js');
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/libs/dragscroll/dragscroll.js');
