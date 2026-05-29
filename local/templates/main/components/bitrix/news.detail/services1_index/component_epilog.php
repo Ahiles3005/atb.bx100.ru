@@ -70,7 +70,7 @@ if ($isNotEmptyVIDEO && count($arResult["PROPERTIES"]['VIDEO']['VALUE']) == 1) {
 
 
         <h2 class="c-common--h2 __C-SCRL RIGHT">
-            Услуги
+            <? $APPLICATION->ShowTitle(false); ?>
         </h2>
 
         <?= $arResult["DISPLAY_PROPERTIES"]['TEXT_1']['~VALUE']['TEXT'] ?? '' ?>
