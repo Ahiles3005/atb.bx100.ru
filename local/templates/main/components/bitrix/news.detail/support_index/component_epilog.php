@@ -86,9 +86,9 @@ $SPISOK_4 = !empty($arResult["DISPLAY_PROPERTIES"]["SPISOK_4"]['VALUE']);
                     <div class="sup-sup--div__SCHEME_MOB_ITEMS">
                         <div class="sup-sup--div__SCHEME_MOB_ITEM">
                             <div class="sup-sup--div__SCHEME_MOB_IMAGE">
-                                <img class="sup-sup--img__SCHEME_MOB_IMAGE" src="images/support/sup-sup_1.svg" alt=""
+                                <img class="sup-sup--img__SCHEME_MOB_IMAGE" src="/images/support/sup-sup_1.svg" alt=""
                                      loading="lazy">
-                                <img class="sup-sup--img__SCHEME_MOB_IMAGE" src="images/support/sup-sup_1n.svg" alt=""
+                                <img class="sup-sup--img__SCHEME_MOB_IMAGE" src="/images/support/sup-sup_1n.svg" alt=""
                                      loading="lazy">
                             </div>
                             <div class="sup-sup--div__SCHEME_MOB_ITEM_CENTER">
