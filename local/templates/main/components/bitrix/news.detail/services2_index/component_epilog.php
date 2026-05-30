@@ -40,10 +40,10 @@ $BLOCK_4_F = !empty($arResult["DISPLAY_PROPERTIES"]['BLOCK_4_F']['VALUE']);
 
         <div class="c-common--div__TABS __C-SCRL DOWN">
             <div class="c-common--div__TABS_TOP">
-                <a class="c-common--a__TABS ">
+                <a class="c-common--a__TABS"  href="/services/">
                     услуги
                 </a>
-                <a class="c-common--a__TABS _ACT _MARK" href="/services/contract-manufacturing/">
+                <a class="c-common--a__TABS _ACT _MARK" >
                     контрактное производство
                 </a>
                 <a class="c-common--a__TABS" href="/services/custom-development/">
