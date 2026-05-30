@@ -448,7 +448,7 @@ $BLOCK_4_F = !empty($arResult["DISPLAY_PROPERTIES"]['BLOCK_4_F']['VALUE']);
                     <p class="cdn-reg--p__REQUEST">
                         Напишите нам, чтобы получить профессиональную техническую консультацию
                     </p>
-                    <button class="cdn-reg--button__REQUEST _OPEN_FRM _FORM_SERVICE">
+                    <button class="cdn-reg--button__REQUEST _OPEN_FRM _FORM_COMMON">
                         Отправить запрос
                     </button>
                 </div>

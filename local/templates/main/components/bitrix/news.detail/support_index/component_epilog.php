@@ -336,7 +336,7 @@ $SPISOK_4 = !empty($arResult["DISPLAY_PROPERTIES"]["SPISOK_4"]['VALUE']);
                 <p class="cdn-reg--p__REQUEST">
                     Напишите нам, чтобы получить профессиональную техническую консультацию
                 </p>
-                <button class="cdn-reg--button__REQUEST">
+                <button class="cdn-reg--button__REQUEST _OPEN_FRM _FORM_COMMON">
                     Отправить запрос
                 </button>
             </div>
