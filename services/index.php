@@ -52,7 +52,7 @@ $APPLICATION->SetPageProperty('mainid', 'srv1');
                 "SET_META_KEYWORDS" => "N",
                 "SET_STATUS_404" => "N",
                 "SET_TITLE" => "N",
-                "SHOW_404" => "N",
+                "SHOW_404" => "Y",
                 "STRICT_SECTION_CHECK" => "N",
                 "USE_PERMISSIONS" => "N",
                 "USE_SHARE" => "N"
