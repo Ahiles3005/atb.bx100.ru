@@ -188,6 +188,13 @@
     --color-blue-hover: hsl(204, 100%, 35%);
     --color-blue-light: hsla(204, 100%, 29%, 20%);
     --color-blue-light2: hsl(201, 96%, 70%);
+    --color-blue-dark: hsl(204, 64%, 44%);
+    --color-blue-dark2: hsl(195, 22%, 61%);
+    --color-blue-dark3: hsl(207, 83%, 54%);
+    --color-blue-dark4: hsl(206, 17%, 53%);
+    --color-blue-dark5: hsl(218, 21%, 50%);
+    --color-blue-dark6: hsl(194, 38%, 32%);
+    --color-blue-dark7: hsl(218, 49%, 58%);
     --color-bluegray: hsl(210, 25%, 97%);
     --color-bluegray2: hsl(205, 33%, 83%);
     --color-bluegray2: hsl(205, 33%, 83%);
@@ -195,6 +202,8 @@
     --color-bluegreen: hsl(188, 63%, 57%);
     --color-blue-tags: hsl(194, 100%, 42%);
     --color-red: hsl(0, 72%, 46%);
+    --color-red-dark: hsl(0, 35%, 59%);
+    --color-red-dark2: hsl(338, 35%, 46%);
     --color-red-hover: hsl(0, 81%, 37%);
     --color-black1: hsl(0, 0%, 5%);
     --color-gray: hsl(0, 0%, 75%);
@@ -204,14 +213,35 @@
     --color-gray4: hsl(0, 0%, 51%);
     --color-gray5: hsl(0, 0%, 85%);
     --color-gray6: hsl(0, 0%, 97%);
+    --color-gray7: hsl(32, 30%, 69%);
+    --color-gray8: hsl(50, 4%, 67%);
     --color-orange: hsl(31, 94%, 80%);
+    --color-orange2: hsl(20, 39%, 50%);
+    --color-orange3: hsl(21, 84%, 70%);
+    --color-orange4: hsl(15, 100%, 60%);
+    --color-orange5: hsl(12, 85%, 46%);
     --color-yellow: hsl(43, 91%, 45%);
+    --color-yellow2: hsl(47, 68%, 62%);
+    --color-yellow3: hsl(45, 93%, 53%);
+    --color-olive: hsl(72, 74%, 49%);
+    --color-olive2: hsl(89, 39%, 67%);
+    --color-olive3: hsl(86, 47%, 42%);
+    --color-olive4: hsl(60, 16%, 51%);
     --color-green: hsl(101, 55%, 48%);
+    --color-green2: hsl(126, 10%, 40%);
     --color-green-hover: hsl(149, 54%, 45%);
     --color-green-dark: hsl(152, 51%, 37%);
+    --color-green-dark2: hsl(155, 26%, 51%);
     --color-greengray: hsl(138, 19%, 76%);
     --color-mare: hsl(169, 55%, 48%);
     --color-mare-hover: hsl(169, 55%, 40%);
+    --color-mare2: hsl(177, 48%, 62%);
+    --color-violet: hsl(328, 20%, 54%);
+    --color-violet2: hsl(279, 34%, 70%);
+    --color-violet3: hsl(306, 31%, 41%);
+    --color-purple: hsl(242, 57%, 80%);
+    --color-purple2: hsl(245, 52%, 60%);
+    --color-purple3: hsl(243, 100%, 75%);
     --color-shadow: hsl(0, 0%, 92%);
     --color-shadow-light: hsl(0, 0%, 96%);
 
@@ -260,6 +290,10 @@
     :root:has(.__ct-cat--div__FILTER_BACK) {
         overflow: hidden;
     }
+}
+
+:root:has(.__c-header--div__SEARCH_BACK2) {
+    overflow: hidden;
 }
 
 :root:has(.__cd-hero--div__POPUP) {
@@ -681,26 +715,73 @@ input[type="range"] {
 
 /* Классы цветов для простых тегов */
 
-.color-yellow {
-    color: var(--color-yellow);
+
+/* Авиация */
+.color-blue-light2 {
+    color: var(--color-blue-light2);
 }
-.color-yellow > div {
-    background-color: var(--color-yellow);
-}
-
-
-
-
-.color-green {
-    color: var(--color-green);
-}
-.color-green > div {
-    background-color: var(--color-green);
+.color-blue-light2 > div {
+    background-color: var(--color-blue-light2);
 }
 
 
 
 
+/* Медицина */
+.color-bluegreen {
+    color: var(--color-bluegreen);
+}
+.color-bluegreen > div {
+    background-color: var(--color-bluegreen);
+}
+
+
+
+/* Информационная безопасность (ИБ) */
+.color-blue-tags {
+    color: var(--color-blue-tags);
+}
+.color-blue-tags > div {
+    background-color: var(--color-blue-tags);
+}
+
+
+
+
+/* Судостроение */
+.color-blue-dark3 {
+    color: var(--color-blue-dark3);
+}
+.color-blue-dark3 > div {
+    background-color: var(--color-blue-dark3);
+}
+
+
+
+
+/* Хранение данных (ЦОД) */
+.color-blue-dark {
+    color: var(--color-blue-dark);
+}
+.color-blue-dark > div {
+    background-color: var(--color-blue-dark);
+}
+
+
+
+
+/* Защита критической инфраструктуры (КИИ) */
+.color-mare2 {
+    color: var(--color-mare2);
+}
+.color-mare2 > div {
+    background-color: var(--color-mare2);
+}
+
+
+
+
+/* Инфраструктура */
 .color-mare {
     color: var(--color-mare);
 }
@@ -711,6 +792,18 @@ input[type="range"] {
 
 
 
+/* Промышленный интернет вещей (IIOT) */
+.color-green-dark2 {
+    color: var(--color-green-dark2);
+}
+.color-green-dark2 > div {
+    background-color: var(--color-green-dark2);
+}
+
+
+
+
+/* Банки и финансы */
 .color-green-dark {
     color: var(--color-green-dark);
 }
@@ -721,6 +814,227 @@ input[type="range"] {
 
 
 
+/* Автоматизация технологических процессов (АСУ ТП) */
+.color-greengray {
+    color: var(--color-greengray);
+}
+.color-greengray > div {
+    background-color: var(--color-greengray);
+}
+
+
+
+
+/* Пограничные вычисления (EDGE) */
+.color-olive2 {
+    color: var(--color-olive2);
+}
+.color-olive2 > div {
+    background-color: var(--color-olive2);
+}
+
+
+
+
+/* Проекты */
+.color-olive {
+    color: var(--color-olive);
+}
+.color-olive > div {
+    background-color: var(--color-olive);
+}
+
+
+
+
+/* Экология и природные ресурсы */
+.color-green {
+    color: var(--color-green);
+}
+.color-green > div {
+    background-color: var(--color-green);
+}
+
+
+
+
+/* Навигация */
+.color-olive3 {
+    color: var(--color-olive3);
+}
+.color-olive3 > div {
+    background-color: var(--color-olive3);
+}
+
+
+
+
+/* ??? */
+.color-olive4 {
+    color: var(--color-olive4);
+}
+.color-olive4 > div {
+    background-color: var(--color-olive4);
+}
+
+
+
+
+/* ??? */
+.color-green2 {
+    color: var(--color-green2);
+}
+.color-green2 > div {
+    background-color: var(--color-green2);
+}
+
+
+
+
+/* Контроль и мониторинг */
+.color-blue-dark2 {
+    color: var(--color-blue-dark2);
+}
+.color-blue-dark2 > div {
+    background-color: var(--color-blue-dark2);
+}
+
+
+
+
+/* Промышленность */
+.color-blue-dark4 {
+    color: var(--color-blue-dark4);
+}
+.color-blue-dark4 > div {
+    background-color: var(--color-blue-dark4);
+}
+
+
+
+
+/* Критическая инфраструктура (КИИ) */
+.color-blue-dark5 {
+    color: var(--color-blue-dark5);
+}
+.color-blue-dark5 > div {
+    background-color: var(--color-blue-dark5);
+}
+
+
+
+
+/* Электроника */
+.color-blue-dark6 {
+    color: var(--color-blue-dark6);
+}
+.color-blue-dark6 > div {
+    background-color: var(--color-blue-dark6);
+}
+
+
+
+
+/* Логистика */
+.color-purple {
+    color: var(--color-purple);
+}
+.color-purple > div {
+    background-color: var(--color-purple);
+}
+
+
+
+
+/* Передача данных */
+.color-blue-dark7 {
+    color: var(--color-blue-dark7);
+}
+.color-blue-dark7 > div {
+    background-color: var(--color-blue-dark7);
+}
+
+
+
+
+/* Инновации */
+.color-purple3 {
+    color: var(--color-purple3);
+}
+.color-purple3 > div {
+    background-color: var(--color-purple3);
+}
+
+
+
+
+/* Достижения */
+.color-purple2 {
+    color: var(--color-purple2);
+}
+.color-purple2 > div {
+    background-color: var(--color-purple2);
+}
+
+
+
+
+/* ??? */
+.color-violet2 {
+    color: var(--color-violet2);
+}
+.color-violet2 > div {
+    background-color: var(--color-violet2);
+}
+
+
+
+
+/* ??? */
+.color-red-dark {
+    color: var(--color-red-dark);
+}
+.color-red-dark > div {
+    background-color: var(--color-red-dark);
+}
+
+
+
+
+/* Встраиваемые решения */
+.color-violet {
+    color: var(--color-violet);
+}
+.color-violet > div {
+    background-color: var(--color-violet);
+}
+
+
+
+
+/* Мероприятия */
+.color-red-dark2 {
+    color: var(--color-red-dark2);
+}
+.color-red-dark2 > div {
+    background-color: var(--color-red-dark2);
+}
+
+
+
+
+/* Телекоммуникации */
+.color-violet3 {
+    color: var(--color-viole3);
+}
+.color-violet3 > div {
+    background-color: var(--color-violet3);
+}
+
+
+
+
+/* Отопление, вентиляция, охлаждение (HVAC) */
 .color-orange {
     color: var(--color-orange);
 }
@@ -731,12 +1045,103 @@ input[type="range"] {
 
 
 
-.color-blue {
-    color: var(--color-blue-tags);
+/* Электроэнергетика */
+.color-orange3 {
+    color: var(--color-orange3);
 }
-.color-blue > div {
-    background-color: var(--color-blue-tags);
+.color-orange3 > div {
+    background-color: var(--color-orange3);
 }
+
+
+
+
+/* Партнёрство */
+.color-orange4 {
+    color: var(--color-orange4);
+}
+.color-orange4 > div {
+    background-color: var(--color-orange4);
+}
+
+
+
+
+/* Новинки */
+.color-orange5 {
+    color: var(--color-orange5);
+}
+.color-orange5 > div {
+    background-color: var(--color-orange5);
+}
+
+
+
+
+/* Добыча и переработка ископаемых */
+.color-orange2 {
+    color: var(--color-orange2);
+}
+.color-orange2 > div {
+    background-color: var(--color-orange2);
+}
+
+
+
+
+/* Транспорт */
+.color-yellow2 {
+    color: var(--color-yellow2);
+}
+.color-yellow2 > div {
+    background-color: var(--color-yellow2);
+}
+
+
+
+
+
+/* Управление освещением (АСУНО) */
+.color-yellow3 {
+    color: var(--color-yellow3);
+}
+.color-yellow3 > div {
+    background-color: var(--color-yellow3);
+}
+
+
+
+
+/* Импортозамещение */
+.color-yellow {
+    color: var(--color-yellow);
+}
+.color-yellow > div {
+    background-color: var(--color-yellow);
+}
+
+
+
+
+/* ЖКХ */
+.color-gray7 {
+    color: var(--color-gray7);
+}
+.color-gray7 > div {
+    background-color: var(--color-gray7);
+}
+
+
+
+
+/* Строительство */
+.color-gray8 {
+    color: var(--color-gray8);
+}
+.color-gray8 > div {
+    background-color: var(--color-gray8);
+}
+
 
 
 
@@ -1091,4 +1496,109 @@ input[type="range"] {
     .c-common--div__LINE11 {
         top: -1.75px;
     }
+}
+
+
+
+
+/* Куки */
+
+.c-common--div__COOKIES {
+    padding: 14px 20px;
+    width: calc(100% - 32px);
+    max-width: 780px;
+    position: fixed;
+    left: 50%;
+    bottom: 12px;
+    z-index: 8;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    background-color: hsla(0, 0%, 100%, 93%);
+    border-radius: 12px;
+    border: 0.25px solid var(--color-gray4);
+    box-shadow: var(--block-shadow);
+    opacity: 0;
+    transform: translate(-50%, 300px);
+    transition: transform 0.5s, opacity 0.3s;
+}
+@media (min-width: 1440px) {
+    .c-common--div__COOKIES {
+        padding: 20px;
+        width: 54%;
+        max-width: 890px;
+        flex-direction: row;
+        gap: 30px;
+        transform: translate(-50%, 200px);
+    }
+}
+
+.__c-common--div__COOKIES {
+    opacity: 1;
+    transform: translate(-50%, 0px);
+}
+.__c-common--div__COOKIES_DEL {
+    display: none;
+}
+
+
+
+
+.c-common--p__COOKIES {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--color-black1);
+}
+
+
+
+
+.c-common--a__COOKIES {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--color-blue);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+
+
+
+.c-common--button__COOKIES {
+    padding: 11px;
+    width: 100%;
+    max-width: 328px;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 32px;
+    text-transform: uppercase;
+    color: var(--color-black1);
+    background-color: hsl(0, 0%, 100%);
+    border: 0.25px solid var(--color-blue);
+    border-radius: 10px;
+    transition: color 0.2s, background-color 0.2s;
+}
+@media (min-width: 1440px) {
+    .c-common--button__COOKIES {
+        padding: 14px 45px;
+        max-width: 175px;
+        font-size: 18px;
+    }
+}
+
+@media (any-hover: hover) {
+    .c-common--button__COOKIES:hover {
+        color: hsl(0, 0%, 100%);
+        background-color: var(--color-blue);
+    }
+}
+.c-common--button__COOKIES:active {
+    color: hsl(0, 0%, 100%);
+    background-color: var(--color-blue);
 }

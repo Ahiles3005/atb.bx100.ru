@@ -264,6 +264,20 @@
 
 
 
+.p404-hero--svg__IMAGE_MOB path[fill="#005792"] {
+    fill: transparent;
+}
+
+
+
+
+.p404-hero--svg__IMAGE_DESK path[fill="#005792"] {
+    fill: transparent;
+}
+
+
+
+
 .p404-hero--div__BOTTOM_M {
     display: flex;
     flex-direction: column;
@@ -288,6 +302,16 @@
 @media (min-width: 768px) {
     .p404-hero--p__BOTTOM_M_TOP {
         text-align: center;
+        white-space: nowrap;
+    }
+}
+
+
+
+
+@media (min-width: 440px) {
+    .p404-hero--p__BOTTOM_M_TOP br {
+        display: none;
     }
 }
 
@@ -359,12 +383,13 @@
 
 
 .p404-hero--p__BOTTOM_D_TOP {
+    align-self: stretch;
     font-weight: 600;
-    font-size: 32px;
+    font-size: 31px;
     line-height: 32px;
     color: var(--color-blue);
-    text-align: center;
-    letter-spacing: 0.02em;
+    text-align-last: justify;
+    white-space: nowrap;
 }
 
 

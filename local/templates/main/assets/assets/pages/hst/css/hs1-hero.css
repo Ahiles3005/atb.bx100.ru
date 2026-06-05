@@ -10,7 +10,7 @@
     padding: 0px 16px;
     width: 100%;
     position: relative;
-    background: linear-gradient(180deg, hsla(0, 0%, 100%, 70%), hsla(0, 0%, 100%, 0%)), url("/images/hst/hst-hero_main.webp") center / auto no-repeat;
+    background: linear-gradient(180deg, hsla(0, 0%, 100%, 70%), hsla(0, 0%, 100%, 0%)), url("../../../../images/hst/hst-hero_main.webp") center / auto no-repeat;
     background-color: var(--color-bluegray);
     
 }
@@ -19,7 +19,7 @@
         margin-top: 90px;
         padding: 0px 80px;
         overflow: hidden;
-        background: linear-gradient(180deg, hsla(0, 0%, 100%, 70%), hsla(0, 0%, 100%, 0%)), url("/images/hst/hst-hero_main.webp") center / 100% no-repeat;
+        background: linear-gradient(180deg, hsla(0, 0%, 100%, 70%), hsla(0, 0%, 100%, 0%)), url("../../../../images/hst/hst-hero_main.webp") center / 100% no-repeat;
     } 
 }
 

@@ -306,6 +306,11 @@
         grid-auto-rows: 1fr;
     }
 }
+@media (min-width: 1760px) {
+    .srv3-hero .st-main--div__GRID2 {
+        max-width: 1405px;
+    }
+}
 
 
 
@@ -324,6 +329,7 @@
 
 .srv3-hero .st-main--button__GRID2_ITEM_TOP {
     align-items: center;
+    pointer-events: none;
 }
 @media (min-width: 1440px) {
     .srv3-hero .st-main--button__GRID2_ITEM_TOP {
@@ -345,8 +351,8 @@
 }
 @media (min-width: 1440px) {
     .srv3-hero .st-main--div__GRID2_ITEM_IMAGE {
-        height: 100px;
-        width: 100px;
+        height: 80px;
+        width: 80px;
     }
 }
 
@@ -360,8 +366,8 @@
 }
 @media (min-width: 1440px) {
     .srv3-hero .st-main--img__GRID2_ITEM_IMAGE {
-        height: 100px;
-        width: 100px;
+        height: 80px;
+        width: 80px;
     }
 }
 

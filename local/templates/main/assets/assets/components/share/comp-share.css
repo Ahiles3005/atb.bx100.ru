@@ -70,12 +70,23 @@
 
 
 .c-common--button__SHARE path {
+    fill: var(--color-gray);
     transition: fill 0.2s;
 }
+@media (max-width: 1439px) {
+    .c-common--button__SHARE:active path {
+        fill: var(--color-blue);
+    }
+}
 
-@media (any-hover: hover) {
-    .c-common--button__SHARE:hover path {
-        fill: hsl(0, 0%, 100%);
+@media (min-width: 1440px) {
+    .c-common--button__SHARE path {
+        fill: var(--color-blue);
+    }
+    @media (any-hover: hover) {
+        .c-common--button__SHARE:hover path {
+            fill: hsl(0, 0%, 100%);
+        }
     }
 }
 

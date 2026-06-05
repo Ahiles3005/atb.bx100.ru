@@ -616,7 +616,7 @@
 }
 @media (min-width: 1440px) {
     .cdn-reg--div__TEXT {
-        padding: 60px 80px 40px;
+        padding: 60px 77px 40px;
         width: 100%;
         flex-shrink: 1;
         background-color: var(--color-bluegray);

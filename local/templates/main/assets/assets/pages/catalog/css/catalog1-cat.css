@@ -208,6 +208,7 @@
 
 
 .ct-cat--div__BUTTONS {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1247,6 +1248,91 @@
 }
 .ct-cat--button__VIEWS:active path {
     fill: var(--color-blue);
+}
+
+
+
+
+.ct-cat--a__COMP_COMMON {
+    padding: 2px 9px 0px 0px;
+    position: absolute;
+    right: 113px;
+    bottom: 0px;
+    display: flex;
+}
+@media (min-width: 1440px) {
+    .ct-cat--a__COMP_COMMON {
+        padding: 3px 13px 0px 0px;
+    }
+}
+
+
+
+
+.ct-cat--svg__COMP_COMMON {
+    height: 17px;
+    width: 14px;
+    flex-shrink: 0;
+}
+@media (min-width: 1440px) {
+    .ct-cat--svg__COMP_COMMON {
+        height: 24px;
+        width: 20px;
+    }
+}
+
+
+
+
+.ct-cat--svg__COMP_COMMON > path {
+    transition: fill 0.2s;
+}
+
+.__ct-cat--a__COMP_COMMON .ct-cat--svg__COMP_COMMON > path {
+    fill: var(--color-blue);
+}
+
+
+
+
+.ct-cat--div__COMP_COMMON {
+    padding: 2px;
+    min-height: 13px;
+    aspect-ratio: 1 / 1;
+    position: absolute;
+    top: -3px;
+    right: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-blue);
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+@media (min-width: 1440px) {
+    .ct-cat--div__COMP_COMMON {
+        min-height: 18px;
+    }
+}
+
+.__ct-cat--a__COMP_COMMON .ct-cat--div__COMP_COMMON {
+    opacity: 1;
+}
+
+
+
+
+.ct-cat--span__COMP_COMMON {
+    font-size: 8px;
+    line-height: 8px;
+    color: hsl(0, 0%, 100%);
+}
+@media (min-width: 1440px) {
+    .ct-cat--span__COMP_COMMON {
+        font-size: 10px;
+        line-height: 10px;
+    }
 }
 
 

@@ -307,6 +307,13 @@
 
 
 
+.srv2-hero--div__SCHEME_MOB_ITEM:last-of-type .srv2-hero--div__SCHEME_MOB_ITEM_LINE {
+    background-color: transparent;
+}
+
+
+
+
 .srv2-hero--div__SCHEME_MOB_ITEM_TEXT {
     position: absolute;
     top: 23px;
@@ -512,14 +519,14 @@
 .srv2-hero--div__SCHEME_DESK_TEXT {
     position: absolute;
     top: 0px;
-    left: 28px;
+    left: 23px;
     display: flex;
     justify-content: center;
 }
 
 .srv2-hero--div__SCHEME_DESK_ITEM:nth-of-type(even) .srv2-hero--div__SCHEME_DESK_TEXT {
     top: auto;
-    bottom: 0px;
+    bottom: 8px;
 }
 
 
@@ -675,7 +682,7 @@
 .srv2-hero--div__SCHEME_DESK_IMAGE {
     position: absolute;
     left: 50%;
-    bottom: 0px;
+    bottom: 14px;
     align-self: center;
     display: flex;
     justify-content: center;
@@ -686,89 +693,92 @@
 
 
 .srv2-hero--div__SCHEME_DESK_ITEM:nth-of-type(even) .srv2-hero--div__SCHEME_DESK_IMAGE {
-    top: calc(50% - 36px);
+    top: calc(50% - 60px);
     bottom: auto;
     transform: translate(-50%, -100%);
+}
+@media (min-width: 1920px) {
+    .srv2-hero--div__SCHEME_DESK_ITEM:nth-of-type(even) .srv2-hero--div__SCHEME_DESK_IMAGE {
+        top: calc(50% - 69px);
+    }
 }
 
 
 
 
 .srv2-hero--div__SCHEME_DESK_ITEM:first-of-type .srv2-hero--div__SCHEME_DESK_IMAGE {
-    height: 100px;
-    width: 102px;
+    height: 71px;
+    width: 72px;
 }
 @media (min-width: 1920px) {
     .srv2-hero--div__SCHEME_DESK_ITEM:first-of-type .srv2-hero--div__SCHEME_DESK_IMAGE {
-        height: 125px;
-        width: 127px;
+        height: 90px;
+        width: 92px;
     }
 }
 
 .srv2-hero--div__SCHEME_DESK_ITEM:nth-of-type(2) .srv2-hero--div__SCHEME_DESK_IMAGE {
-    height: 98px;
-    width: 102px;
+    height: 73px;
+    width: 76px;
 }
 @media (min-width: 1920px) {
     .srv2-hero--div__SCHEME_DESK_ITEM:nth-of-type(2) .srv2-hero--div__SCHEME_DESK_IMAGE {
-        height: 124px;
-        width: 127px;
+        height: 91px;
+        width: 94px;
     }
 }
 
 .srv2-hero--div__SCHEME_DESK_ITEM:nth-of-type(3) .srv2-hero--div__SCHEME_DESK_IMAGE {
-    height: 99px;
-    width: 100px;
+    height: 66px;
+    width: 66px;
 }
 @media (min-width: 1920px) {
     .srv2-hero--div__SCHEME_DESK_ITEM:nth-of-type(3) .srv2-hero--div__SCHEME_DESK_IMAGE {
-        height: 123px;
-        width: 123px;
+        height: 83px;
+        width: 83px;
     }
 }
 
 .srv2-hero--div__SCHEME_DESK_ITEM:nth-of-type(4) .srv2-hero--div__SCHEME_DESK_IMAGE {
-    height: 105px;
-    /* width: 107px; */
+    height: 80px;
     aspect-ratio: 108 / 119;
 }
 @media (min-width: 1920px) {
     .srv2-hero--div__SCHEME_DESK_ITEM:nth-of-type(4) .srv2-hero--div__SCHEME_DESK_IMAGE {
-        height: 149px;
-        /* width: 134px; */
+        height: 100px;
     }
 }
 
 .srv2-hero--div__SCHEME_DESK_ITEM:nth-of-type(5) .srv2-hero--div__SCHEME_DESK_IMAGE {
-    height: 106px;
-    width: 102px;
+    height: 77px;
+    width: 74px;
 }
 @media (min-width: 1920px) {
     .srv2-hero--div__SCHEME_DESK_ITEM:nth-of-type(5) .srv2-hero--div__SCHEME_DESK_IMAGE {
-        height: 132px;
-        width: 127px;
+        height: 95px;
+        width: 91px;
     }
 }
 
 .srv2-hero--div__SCHEME_DESK_ITEM:nth-of-type(6) .srv2-hero--div__SCHEME_DESK_IMAGE {
-    height: 100px;
-    width: 130px;
+    height: 68px;
+    width: 88px;
 }
 @media (min-width: 1920px) {
     .srv2-hero--div__SCHEME_DESK_ITEM:nth-of-type(6) .srv2-hero--div__SCHEME_DESK_IMAGE {
-        height: 124px;
-        width: 161px;
+        height: 84px;
+        width: 109px;
     }
 }
 
 .srv2-hero--div__SCHEME_DESK_ITEM:nth-of-type(7) .srv2-hero--div__SCHEME_DESK_IMAGE {
-    height: 97px;
-    width: 121px;
+    height: 66px;
+    width: 82px;
 }
 @media (min-width: 1920px) {
     .srv2-hero--div__SCHEME_DESK_ITEM:nth-of-type(7) .srv2-hero--div__SCHEME_DESK_IMAGE {
-        height: 123px;
-        width: 151px;
+        height: 83px;
+        width: 103px;
     }
 }
 
@@ -1156,6 +1166,15 @@
 
 .srv2-hero .hr-adv--div__LIST_BOTTOM .st-main--div__GRID1 {
     margin-top: 0px;
+}
+
+
+
+
+@media (min-width: 1440px) {
+    .srv2-hero .hr-adv--div__LIST_BOTTOM .st-main--div__GRID1_ITEM {
+        padding: 32px 38px 0px 64px;
+    }
 }
 
 

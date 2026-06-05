@@ -256,6 +256,11 @@
         row-gap: 30px;
     }
 }
+@media (min-width: 1600px) {
+    .srv4-hero--div__HERO_PARTNERS_ITEMS {
+        column-gap: 60px;
+    }
+}
 
 
 
@@ -296,7 +301,12 @@
 
 
 
-
+@media (max-width: 1699px) {
+    .srv4-hero--p__HERO_PARTNERS_ITEM br,
+    .srv4-hero--p__HERO_PARTNERS_ITEM span {
+        display: none;
+    }
+}
 
 
 
@@ -356,6 +366,15 @@
 @media (min-width: 1440px) {
     .srv4-hero--div__HERO .st-main--div__QUOTE3 {
         margin: 44px 0px 0px;
+    }
+}
+
+
+
+
+@media (min-width: 1440px) {
+    .srv4-hero--div__HERO .st-main--p__QUOTE3 span {
+        white-space: nowrap;
     }
 }
 

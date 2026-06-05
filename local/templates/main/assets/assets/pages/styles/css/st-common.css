@@ -3151,7 +3151,7 @@
 .st-main--div__IMAGES9_ITEM {
     margin-left: -16px;
     padding: 16px;
-    width: 100vw;
+    width: calc(100% + 32px);
     display: flex;
     flex-direction: column;
     gap: 14px;

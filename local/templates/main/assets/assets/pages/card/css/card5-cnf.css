@@ -82,7 +82,7 @@
     margin-top: 30px;
     margin-left: -16px;
     padding: 16px;
-    width: 100vw;
+    width: calc(100% + 32px);
     position: relative;
     /* left: -16px; */
     display: flex;
@@ -952,7 +952,7 @@
 .cd-cnf--div__RESULT {
     margin-top: 30px;
     margin-left: -16px;
-    width: 100vw;
+    width: calc(100% + 32px);
     position: relative;
     /* left: -16px; */
     display: none;
