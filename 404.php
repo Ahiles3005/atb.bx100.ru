@@ -1462,7 +1462,7 @@ $APPLICATION->SetTitle("Страница не найдена"); ?>
 
                 <div class="p404-hero--div__BOTTOM_M __C-SCRL DOWN">
                     <p class="p404-hero--p__BOTTOM_M_TOP">
-                        К сожалению, этой страницы не существует
+                        К сожалению, этой страницы<br /> не существует
                     </p>
                     <a class="p404-hero--a__BOTTOM_M" href="/">
                         вернуться на главную
