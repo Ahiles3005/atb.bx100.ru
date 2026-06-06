@@ -75,7 +75,7 @@ $SPISOK_4 = !empty($arResult["DISPLAY_PROPERTIES"]["SPISOK_4"]['VALUE']);
         <div class="sup-sup--div__MAIN">
             <?= $arResult["DISPLAY_PROPERTIES"]['TEXT_1']['~VALUE']['TEXT'] ?>
 
-            <div class="sup-sup--div__SCHEME_MOB __C-SCRL DOWN">
+            <div class="sup-sup--div__SCHEME_MOB">
                 <div class="sup-sup--div__SCHEME_MOB_CONT">
                     <div class="sup-sup--div__SCHEME_MOB_TOP">
                         <svg class="sup-sup--svg__SCHEME_MOB_TOP" width="10" height="8" viewBox="0 0 10 8" fill="none"
@@ -84,7 +84,7 @@ $SPISOK_4 = !empty($arResult["DISPLAY_PROPERTIES"]["SPISOK_4"]['VALUE']);
                         </svg>
                     </div>
                     <div class="sup-sup--div__SCHEME_MOB_ITEMS">
-                        <div class="sup-sup--div__SCHEME_MOB_ITEM">
+                        <div class="sup-sup--div__SCHEME_MOB_ITEM __C-SCRL DOWN">
                             <div class="sup-sup--div__SCHEME_MOB_IMAGE">
                                 <img class="sup-sup--img__SCHEME_MOB_IMAGE" src="/images/support/sup-sup_1.svg" alt=""
                                      loading="lazy">
@@ -108,7 +108,7 @@ $SPISOK_4 = !empty($arResult["DISPLAY_PROPERTIES"]["SPISOK_4"]['VALUE']);
                         </div>
 
 
-                        <div class="sup-sup--div__SCHEME_MOB_ITEM">
+                        <div class="sup-sup--div__SCHEME_MOB_ITEM __C-SCRL DOWN">
                             <div class="sup-sup--div__SCHEME_MOB_IMAGE">
                                 <img class="sup-sup--img__SCHEME_MOB_IMAGE" src="/images/support/sup-sup_2.svg" alt=""
                                      loading="lazy">
@@ -132,7 +132,7 @@ $SPISOK_4 = !empty($arResult["DISPLAY_PROPERTIES"]["SPISOK_4"]['VALUE']);
                         </div>
 
 
-                        <div class="sup-sup--div__SCHEME_MOB_ITEM">
+                        <div class="sup-sup--div__SCHEME_MOB_ITEM __C-SCRL DOWN">
                             <div class="sup-sup--div__SCHEME_MOB_IMAGE">
                                 <img class="sup-sup--img__SCHEME_MOB_IMAGE" src="/images/support/sup-sup_3.svg" alt=""
                                      loading="lazy">
@@ -156,7 +156,7 @@ $SPISOK_4 = !empty($arResult["DISPLAY_PROPERTIES"]["SPISOK_4"]['VALUE']);
                         </div>
 
 
-                        <div class="sup-sup--div__SCHEME_MOB_ITEM">
+                        <div class="sup-sup--div__SCHEME_MOB_ITEM __C-SCRL DOWN">
                             <div class="sup-sup--div__SCHEME_MOB_IMAGE">
                                 <img class="sup-sup--img__SCHEME_MOB_IMAGE" src="/images/support/sup-sup_4.svg" alt=""
                                      loading="lazy">
@@ -180,7 +180,7 @@ $SPISOK_4 = !empty($arResult["DISPLAY_PROPERTIES"]["SPISOK_4"]['VALUE']);
                         </div>
 
 
-                        <div class="sup-sup--div__SCHEME_MOB_ITEM">
+                        <div class="sup-sup--div__SCHEME_MOB_ITEM __C-SCRL DOWN">
                             <div class="sup-sup--div__SCHEME_MOB_IMAGE">
                                 <img class="sup-sup--img__SCHEME_MOB_IMAGE" src="/images/support/sup-sup_5.svg" alt=""
                                      loading="lazy">

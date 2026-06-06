@@ -264,10 +264,10 @@ if ($isNotEmptyVIDEO && count($arResult["PROPERTIES"]['VIDEO']['VALUE']) == 1) {
                 </div>
                 <div class="cdn-reg--div__TEXT __C-SCRL RIGHT">
                     <h3 class="cdn-reg--h3">
-                        Свяжитесь с сервисной службой
+                        Напишите нам
                     </h3>
                     <p class="cdn-reg--p__REQUEST">
-                        Напишите нам, чтобы получить профессиональную техническую консультацию
+                        Свяжитесь с нами, чтобы получить персональное решение для вашей организации
                     </p>
                     <button class="cdn-reg--button__REQUEST _OPEN_FRM _FORM_COMMON">
                         Отправить запрос

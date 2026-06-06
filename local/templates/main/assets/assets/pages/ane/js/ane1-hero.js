@@ -48,7 +48,7 @@ window.addEventListener ("load", function () {
 
 
         // 2. ГЛАВНЫЙ СЛАЙДЕР ГАЛЕРЕИ
-
+        
         const mcPkDivSwiper1v = new Swiper (".mc-pk--div__SWIPER1", {
             effect: "fade",
             allowTouchMove: false,
@@ -69,7 +69,7 @@ window.addEventListener ("load", function () {
 
         // 2.2 Выбор первой радиокнопки в субменю при загрузке страницы
 
-        mcPkLabelSubmenu[0]?.click ();
+        mcPkLabelSubmenu[0].click ();
 
 
         /// 2.3 Выбор уже выбранного слайда при ресайзе для избежания бага с обрезанием главного слайдера
@@ -97,7 +97,7 @@ window.addEventListener ("load", function () {
 
         // 3. ВТОРОЙ ТИП КОНТЕНТА - ФОТОГАЛЕРЕЯ И ВИДЕОГАЛЕРЕЯ
 
-        // Код взят из файла gallery.js, сам файл не поключен, поскольку логика и интерфейс отличаются
+        // Код взят из файла gallery.js, сам файл не поключен, поскольку логика и интерфейс отличаются 
         // от стандартной галереи
         // (нет модального окна, слайдер состоит не только из картинок, но и текста и т.д.)
 
@@ -122,13 +122,13 @@ window.addEventListener ("load", function () {
 
 
 
-        // 3.2 Копирование изображений в кнопки пагинации
+        // 3.2 Копирование изображений в кнопки пагинации 
         // !!! (Это временное решение. При ИНТЕГРАЦИИ (если, конечно, нужно в превью загружать картинки меньшего разрешения)
         // пройтись по массиву cCommonDivGlrSwiperPagBuls
         // - это массив кнопок пагинации и загрузить изображения меньшего разрешения).
 
-
-
+        
+        
         setTimeout (() => {
             const cCommonImgGlrImages = Array.from (document.querySelectorAll (".c-common--img__GLR_IMAGE"));
             const cCommonDivGlrSwiperPagBuls = Array.from (document.querySelectorAll (".c-common--div__GLR_SWIPER_PAGINATION .swiper-pagination-bullet"));
@@ -138,7 +138,7 @@ window.addEventListener ("load", function () {
                 cCommonDivGlrSwiperPagBuls[i].append (clone);
             });
         }, 50);
-
+        
 
 
 
@@ -159,7 +159,7 @@ window.addEventListener ("load", function () {
         });
 
 
-
+        
 
         // 3.4 Если картинок больше 1, включить превью
 
@@ -170,7 +170,7 @@ window.addEventListener ("load", function () {
         });
 
 
-
+        
 
 
         // 4. СЛАЙДЕР ПРОДУКТЫ
@@ -185,7 +185,7 @@ window.addEventListener ("load", function () {
                     spaceBetween: 10,
                     slidesPerView: 1,
                 },
-
+            
                 768: {
                     spaceBetween: 44,
                     slidesPerView: 2,
@@ -242,13 +242,13 @@ window.addEventListener ("load", function () {
                     let div = document.createElement ("div");
                     div.className = "hm-cat--div__CARD_SENSOR_ITEM";
                     a[i].querySelector (".hm-cat--div__CARD_SENSOR").append (div);
-
+                    
                     div.addEventListener ("mouseover", () => {
                         hmCatDivCardImage[i].slideTo (i1);
                     });
                 });
             });
-
+        
         }
 
         hmCatImageSwiper ();
@@ -297,9 +297,9 @@ window.addEventListener ("load", function () {
 
 
 
-
+        
         // 5. СЛАЙДЕР ОТРАСЛИ
-
+        
         const cdUseDivSwiper21 = new Swiper (".cd-use--div__SWIPER21", {
             navigation: {
                 nextEl: '.cd-use--button__SWIPER21_NEXT',
@@ -339,7 +339,7 @@ window.addEventListener ("load", function () {
 
 
         // 6. СЛАЙДЕР РЕШЕНИЯ
-
+        
         const cdUseDivSwiper22 = new Swiper (".cd-use--div__SWIPER22", {
             navigation: {
                 nextEl: '.cd-use--button__SWIPER22_NEXT',
