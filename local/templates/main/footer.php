@@ -125,7 +125,7 @@ Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/common/css/for
 Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/common/css/gallery.css');
 Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/header/css/header.css');
 Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/footer/css/footer.css');
-Asset::getInstance()->addCss(SITE_TEMPLATE_PATH .'/assets/libs/intlTelInput/css/intlTelInput.css');
+Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/libs/intlTelInput/css/intlTelInput.css');
 
 
 switch ($mainId) {
@@ -406,6 +406,30 @@ switch ($mainId) {
         Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/p404/css/p404-hero.css');
         break;
 
+    case 'lg1':
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/legal/css/lg1-main.css');
+        break;
+
+    case 'lg2':
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/legal/css/lg1-main.css');
+        break;
+
+    case 'lg3':
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/legal/css/lg1-main.css');
+        break;
+
+    case 'lg4':
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/legal/css/lg1-main.css');
+        break;
+
+    case 'lg5':
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/legal/css/lg1-main.css');
+        break;
+
+    case 'lg6':
+        Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/assets/assets/pages/legal/css/lg1-main.css');
+        break;
+
 }
 
 
@@ -630,6 +654,30 @@ switch ($mainId) {
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/p404/js/p404-common.js');
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/p404/js/p404-hero.js');
         Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/libs/dragscroll/dragscroll.js');
+        break;
+
+    case 'lg1':
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/legal/js/lg0-common.js');
+        break;
+
+    case 'lg2':
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/legal/js/lg0-common.js');
+        break;
+
+    case 'lg3':
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/legal/js/lg0-common.js');
+        break;
+
+    case 'lg4':
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/legal/js/lg0-common.js');
+        break;
+
+    case 'lg5':
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/legal/js/lg0-common.js');
+        break;
+
+    case 'lg6':
+        Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/assets/assets/pages/legal/js/lg0-common.js');
         break;
 }
 ?>
