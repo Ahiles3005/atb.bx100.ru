@@ -195,7 +195,7 @@ window.addEventListener ("load", function () {
         // 2.3 Скролл элементов субменю до видимой части
 
         hmCatLabelSubmenu.forEach ((v, i, a) => {
-            a[i].addEventListener ("click", () => {
+            a[i].addEventListener ("click", () => {   
                 if (a[i].parentNode.scrollHeight > a[i].parentNode.offsetHeight) {
 
                     let k = a[i].offsetTop - a[i].parentNode.scrollTop;
@@ -210,6 +210,8 @@ window.addEventListener ("load", function () {
                 }
             });
         });
+
+        
 
         // 3. СЛАЙДЕР КАРТОЧЕК ТОВАРОВ
 
@@ -242,13 +244,13 @@ window.addEventListener ("load", function () {
                     let div = document.createElement ("div");
                     div.className = "hm-cat--div__CARD_SENSOR_ITEM";
                     a[i].querySelector (".hm-cat--div__CARD_SENSOR").append (div);
-
+                    
                     div.addEventListener ("mouseover", () => {
                         hmCatDivCardImage[i].slideTo (i1);
                     });
                 });
             });
-
+        
         }
 
         hmCatImageSwiper ();
@@ -298,7 +300,7 @@ window.addEventListener ("load", function () {
 
 
 
-
+    
         // 6. ТЭГИ
 
         const containerClass = 'ct-cat--ul__TAGS';
@@ -307,7 +309,7 @@ window.addEventListener ("load", function () {
         const buttonClass = 'ct-cat--a__TAGS';
         const breakpoint = 1439;
         const maxLines = 2;
-        const gap = 16;
+        const gap = 16; 
 
         let container = null;
         let resizeObserver = null;
@@ -586,7 +588,7 @@ window.addEventListener ("load", function () {
 
         ctCatButtonFilter.addEventListener ("click", () => {
             ctCatDivFilterBack.classList.add ("__ct-cat--div__FILTER_BACK");
-
+            
         });
 
         ctCatButtonFilterClose.addEventListener ("click", () => {
@@ -629,7 +631,7 @@ window.addEventListener ("load", function () {
 
 
         // 8.3 Разворачивание до 6 чекбоксов
-
+        
         const ctCatButtonFilterItemTop = Array.from (document.querySelectorAll (".ct-cat--button__FILTER_ITEM_TOP"));
         const ctCatSvgFilterItemTop = Array.from (document.querySelectorAll (".ct-cat--svg__FILTER_ITEM_TOP"));
         const ctCatFieldsetFilterItemBody = Array.from (document.querySelectorAll (".ct-cat--fieldset__FILTER_ITEM_BODY"));
@@ -642,19 +644,19 @@ window.addEventListener ("load", function () {
 
             ctCatFieldsetFilterItemBody.forEach ((v, i, a) => {
                 const items = Array.from (a[i].querySelectorAll (".ct-cat--label__FILTER_ITEM"));
-
+                
                 let sixItemsHeight = 0;
                 for (let j = 0; j < 6; j++) {
                     if (!items[j]) break;
                     sixItemsHeight += items[j].offsetHeight;
                 };
-
+                
                 if (items.length > 5) {
                     sixItemsHeight += parseInt (getComputedStyle (a[i]).gap) * 5;
                 } else {
                     sixItemsHeight += parseInt (getComputedStyle (a[i]).gap) * (items.length - 1);
                 }
-
+                
                 ctCatFieldsetFilterItemBodyMaxHeight.push (sixItemsHeight);
             });
 
@@ -665,7 +667,7 @@ window.addEventListener ("load", function () {
                     ctCatFieldsetFilterItemBody[i].style.maxHeight = `${ctCatFieldsetFilterItemBodyMaxHeight[i]}px`;
                 }
             });
-
+            
 
             return ctCatFieldsetFilterItemBodyMaxHeight;
         }
@@ -686,7 +688,7 @@ window.addEventListener ("load", function () {
 
         window.addEventListener ("resize", ctCatDebounce1);
 
-
+        
         // 8.3.2 Разворачивание / сворачивание
 
         ctCatButtonFilterItemTop.forEach ((v, i, a) => {
@@ -790,11 +792,11 @@ window.addEventListener ("load", function () {
                 selPriceMax.blur ();
             }
         });
-
-
+        
+        
         selPriceMin.value = "0";
-
-
+        
+        
         selRangeMin.addEventListener ("input", () => {
             if (+selRangeMin.value > +selRangeMax.value) {
                 selRangeMin.value = "0";
@@ -811,10 +813,10 @@ window.addEventListener ("load", function () {
             selPriceMin.value = selRangeMin.value;
         });
 
-
+        
         selPriceMax.value = "550000";
-
-
+        
+        
         selRangeMax.addEventListener ("input", () => {
             if (+selRangeMax.value < +selRangeMin.value) {
                 selRangeMin.value = "0";
@@ -826,7 +828,7 @@ window.addEventListener ("load", function () {
                 var(--color-bluegray) ${selRangeMin.value / 5500}%, 
                 var(--color-blue) ${selRangeMin.value / 5500}%, 
                 var(--color-blue) ${selRangeMax.value / 5500}%, 
-                var(--color-bluegray) ${selRangeMax.value / 5500}%)`;
+                var(--color-bluegray) ${selRangeMax.value / 5500}%)`;            
             selPriceMax.value = selRangeMax.value;
         });
 
@@ -877,7 +879,7 @@ window.addEventListener ("load", function () {
         ctCatFormFilterMarginTop ();
 
         cdCommonMedia1440.addEventListener ("change", ctCatFormFilterMarginTop);
-
+        
         hmCatButtonMenuItem.forEach ((v, i, a) => {
             a[i].addEventListener ("click", () => {
                 ctCatFormFilterMarginTop ();
@@ -972,7 +974,7 @@ window.addEventListener ("load", function () {
                     }
                 });
             }
-
+            
             ctCatVisCounter ();
         }
 

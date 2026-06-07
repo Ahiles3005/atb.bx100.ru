@@ -117,7 +117,6 @@ window.addEventListener ("load", function () {
         // - это массив кнопок пагинации и загрузить изображения меньшего разрешения (если нужно)).
 
         const cdHeroImgSwiperImages = Array.from (document.querySelectorAll (".cd-hero--img__SWIPER_IMAGE"));
-        const cdHeroVideo = Array.from (document.querySelectorAll (".cd-hero--video"));
         const cdHeroDivSwiperPagBuls = Array.from (document.querySelectorAll(".cd-hero--div__SWIPER_PAGINATION .swiper-pagination-bullet"));
 
 
@@ -323,6 +322,20 @@ window.addEventListener ("load", function () {
                     document.body.append (myScript);
                 }
             }
+        });
+
+
+
+
+        // 3.2.6 Постановка всех видео на паузу при листании слайдера
+
+        const cdHeroVideo = Array.from (document.querySelectorAll (".cd-hero--video"));
+
+
+        cdHeroDivSwiper.on ("slideChange", () => {
+            cdHeroVideo.forEach ((v, i, a) => {
+                a[i].pause ();
+            });
         });
 
 

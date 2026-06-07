@@ -120,7 +120,6 @@ window.addEventListener ("load", function () {
         // - это массив кнопок пагинации и загрузить изображения меньшего разрешения (если нужно)).
 
         const cdHeroImgSwiperImages = Array.from (document.querySelectorAll (".cd-hero--img__SWIPER_IMAGE"));
-        const cdHeroVideo = Array.from (document.querySelectorAll (".cd-hero--video"));
         const cdHeroDivSwiperPagBuls = Array.from (document.querySelectorAll(".cd-hero--div__SWIPER_PAGINATION .swiper-pagination-bullet"));
 
 
@@ -306,7 +305,7 @@ window.addEventListener ("load", function () {
 
         cdHeroDivSwiper.on ("slideChange", () => {
             if (cdHeroDivSwiper.activeIndex == cdHeroDivSwiperPagBuls.length - 1) {
-                if (!document.querySelector ("script[src='/local/templates/main/assets/3d/canvas3d.js']")) {
+                if (!document.querySelector ("script[src='3d/canvas3d.js']")) {
                     // const myScriptMap = document.createElement ("script");
                     // myScriptMap.setAttribute ("type", "importmap");
                     // myScriptMap.innerHTML = `
@@ -321,11 +320,25 @@ window.addEventListener ("load", function () {
                     // document.head.append (myScriptMap);
                     
                     const myScript = document.createElement ("script");
-                    myScript.setAttribute ("src", "/local/templates/main/assets/3d/canvas3d.js");
+                    myScript.setAttribute ("src", "3d/canvas3d.js");
                     myScript.setAttribute ("type", "module");
                     document.body.append (myScript);
                 }
             }
+        });
+
+
+
+
+        // 3.2.6 Постановка всех видео на паузу при листании слайдера
+
+        const cdHeroVideo = Array.from (document.querySelectorAll (".cd-hero--video"));
+
+
+        cdHeroDivSwiper.on ("slideChange", () => {
+            cdHeroVideo.forEach ((v, i, a) => {
+                a[i].pause ();
+            });
         });
 
 

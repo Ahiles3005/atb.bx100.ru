@@ -27,56 +27,160 @@ window.addEventListener ("load", function () {
 
         // 1. АНИМАЦИЯ
 
-        //1.2 Для мобилок
+        // 1.1 Для мобилок
+
+        // 1.1.1 Линии
+        // 0.003754 - коэффициент: 98% времени итерации / количество элементов (261) / 100
+        // оставшиеся 2% времени итерации - для плавного перехода
 
         const p404HeroSvgPathM = Array.from (document.querySelectorAll(".p404-hero--svg__IMAGE_MOB path:not(.p404-hero--path__4)"));
 
         p404HeroSvgPathM.forEach ((v, i, a) => {
             a[i].animate ([
                 {
+                    offset: 0,
                     strokeWidth: "0.5"
                 },
                 {
-                    offset: (i) * 0.003773,
+                    offset: i * 0.003754,
                     strokeWidth: "0.5"
                 },
                 {
-                    offset: (i + 1) * 0.003773,
-                    strokeWidth: "1.5"
+                    offset: (i + 1) * 0.003754,
+                    strokeWidth: "1",
+                },
+                {
+                    offset: 0.98,
+                    strokeWidth: "1",
+                },
+                {
+                    offset: 1,
+                    strokeWidth: "0.5"
                 },
             ],
             {
-                duration: 30000,
+                duration: 20000,
                 easing: "linear",
-                delay: `${((i + 1) * 37.73) + 800}`,
+                delay: 800,
                 iterations: Infinity,
             });
         });
 
 
 
-        //1.2 Для десктопа
+        // 1.1.2 Круги
+        // 0.02390 - коэффициент: 98% времени итерации / количество элементов (41) / 100
+        // оставшиеся 2% времени итерации - для плавного перехода 
+
+        const p404HeroSvgPathMCirc = Array.from (document.querySelectorAll('.p404-hero--svg__IMAGE_MOB path[fill="#005792"]'));
+
+        p404HeroSvgPathMCirc.forEach ((v, i, a) => {
+            a[i].animate ([
+                {
+                    offset: 0,
+                    fill: "transparent"
+                },
+                {
+                    offset: i * 0.02390,
+                    fill: "transparent",
+                },
+                {
+                    offset: (i + 1) * 0.02390,
+                    fill: "#005792",
+                },
+                {
+                    offset: 0.98,
+                    fill: "#005792",
+                },
+                {
+                    offset: 1,
+                    fill: "transparent"
+                },
+            ],
+            {
+                duration: 20000,
+                easing: "linear",
+                delay: 800,
+                iterations: Infinity,
+            });
+        });
+
+
+
+        // 1.2 Для десктопа
+
+        // 1.2.1 Линии
+        // 0.003299 - коэффициент: 98% времени итерации / количество элементов (297) / 100
+        // оставшиеся 2% времени итерации - для плавного перехода
 
         const p404HeroSvgPathD = Array.from (document.querySelectorAll(".p404-hero--svg__IMAGE_DESK path:not(.p404-hero--path__4)"));
 
         p404HeroSvgPathD.forEach ((v, i, a) => {
             a[i].animate ([
                 {
+                    offset: 0,
                     strokeWidth: "0.5"
                 },
                 {
-                    offset: (i) * 0.003367,
+                    offset: i * 0.003299,
                     strokeWidth: "0.5"
                 },
                 {
-                    offset: (i + 1) * 0.003367,
-                    strokeWidth: "1.5"
+                    offset: (i + 1) * 0.003299,
+                    strokeWidth: "1.5",
+                },
+                {
+                    offset: 0.98,
+                    strokeWidth: "1.5",
+                },
+                {
+                    offset: 1,
+                    strokeWidth: "0.5"
                 },
             ],
             {
-                duration: 30000,
+                duration: 20000,
                 easing: "linear",
-                delay: `${((i + 1) * 33.67) + 800}`,
+                delay: 800,
+                iterations: Infinity,
+            });
+        });
+
+
+
+        // 1.2.1 Круги
+        // 0.020851 - коэффициент: 98% времени итерации / количество элементов (47) / 100
+        // оставшиеся 2% времени итерации - для плавного перехода
+
+        const p404HeroSvgPathDCirc = Array.from (document.querySelectorAll('.p404-hero--svg__IMAGE_DESK path[fill="#005792"]'));
+
+        p404HeroSvgPathDCirc.forEach ((v, i, a) => {
+            a[i].animate ([
+                {
+                    offset: 0,
+                    fill: "transparent"
+                },
+                {
+                    offset: i * 0.020851,
+                    fill: "transparent",
+                },
+                {
+                    offset: (i + 1) * 0.020851,
+                    fill: "#005792",
+                },
+                {
+                    offset: 0.98,
+                    fill: "#005792",
+                },
+                {
+                    offset: 1,
+                    fill: "transparent"
+                },
+            ],
+            {
+                duration: 20000,
+                easing: "linear",
+                delay: 800,
                 iterations: Infinity,
             });
         });

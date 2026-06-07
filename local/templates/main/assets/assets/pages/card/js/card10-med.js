@@ -32,10 +32,10 @@ window.addEventListener ("load", function () {
         const cdMedSvgSubmenu = document.querySelector (".cd-med--svg__SUBMENU");
         const cdMedFormSubmenu = document.querySelector (".cd-med--form__SUBMENU");
 
-
+        
         // 1.1 Открытие / закрытие субменю
 
-        cdMedDivHead?.addEventListener ("click", () => {
+        cdMedDivHead.addEventListener ("click", () => {
 
             if (!cdMedFormSubmenu.classList.contains ("__cd-med--form__SUBMENU")) {
                 cdMedFormSubmenu.classList.add ("__cd-med--form__SUBMENU");
@@ -50,13 +50,13 @@ window.addEventListener ("load", function () {
 
 
         // 2. СЛАЙДЕР С КОНТЕНТОМ
-
+        
         const cdMedDivSwiper2 = new Swiper (".cd-med--div__SWIPER2", {
             effect: "fade",
             allowTouchMove: false,
         });
 
-
+        
         // 2.1 Переключение слайдов через радиокнопки
 
         const cdMedLabelSubmenu = Array.from (document.querySelectorAll (".cd-med--label__SUBMENU"));
@@ -70,13 +70,13 @@ window.addEventListener ("load", function () {
 
         // 2.1 Выбор первой радиокнопки в субменю при загрузке страницы
 
-        cdMedLabelSubmenu[0]?.click ();
+        cdMedLabelSubmenu[0].click ();
 
 
 
 
         // 3. СЛАЙДЕР ВИДЕО
-
+        
         const cdMedDivSwiper21 = new Swiper (".cd-med--div__SWIPER21", {
             navigation: {
                 nextEl: '.cd-med--button__SWIPER21_NEXT',
@@ -86,7 +86,7 @@ window.addEventListener ("load", function () {
                 200: {
                     slidesPerView: "auto",
                 },
-
+            
                 1440: {
                     slidesPerView: 2,
                     spaceBetween: 60,
@@ -99,7 +99,7 @@ window.addEventListener ("load", function () {
 
 
         // 4. СЛАЙДЕР СТАТЬИ
-
+        
         const cdMedDivSwiper22 = new Swiper (".cd-med--div__SWIPER22", {
             navigation: {
                 nextEl: '.cd-med--button__SWIPER22_NEXT',
@@ -109,7 +109,7 @@ window.addEventListener ("load", function () {
                 200: {
                     slidesPerView: "auto",
                 },
-
+            
                 1440: {
                     slidesPerView: 2,
                     spaceBetween: 60,
@@ -132,7 +132,7 @@ window.addEventListener ("load", function () {
                 200: {
                     slidesPerView: "auto",
                 },
-
+            
                 1440: {
                     slidesPerView: 2,
                     spaceBetween: 60,
@@ -155,7 +155,7 @@ window.addEventListener ("load", function () {
                 200: {
                     slidesPerView: "auto",
                 },
-
+            
                 1440: {
                     slidesPerView: 2,
                     spaceBetween: 60,
@@ -169,64 +169,30 @@ window.addEventListener ("load", function () {
 
         // 7. ДОПОЛНИТЕЛЬНЫЕ НАСТРОЙКИ СЛАЙДЕРОВ ВИДЕО, СТАТЕЙ, НОВОСТЕЙ, МЕРОПРИЯТИЙ
 
-        const applyToSwiper = (item, method) => {
-            if (!item) return;
-
-            if (Array.isArray(item)) {
-                item.forEach(swiper => swiper?.[method]());
-            } else if (typeof item?.[method] === 'function') {
-                item[method]();
-            }
-        };
-
-        // if (cdCommonMedia1440.matches) {
-        //     console.log(cdMedDivSwiper21);
-        //     cdMedDivSwiper21.enable ();
-        //     cdMedDivSwiper22.enable ();
-        //     cdMedDivSwiper23.enable ();
-        //     cdMedDivSwiper24.enable ();
-        // } else {
-        //     cdMedDivSwiper21.disable ();
-        //     cdMedDivSwiper22.disable ();
-        //     cdMedDivSwiper23.disable ();
-        //     cdMedDivSwiper24.disable ();
-        // }
-
         if (cdCommonMedia1440.matches) {
-            applyToSwiper(cdMedDivSwiper21, 'enable');
-            applyToSwiper(cdMedDivSwiper22, 'enable');
-            applyToSwiper(cdMedDivSwiper23, 'enable');
-            applyToSwiper(cdMedDivSwiper24, 'enable');
+            cdMedDivSwiper21.enable ();
+            cdMedDivSwiper22.enable ();
+            cdMedDivSwiper23.enable ();
+            cdMedDivSwiper24.enable ();
         } else {
-            applyToSwiper(cdMedDivSwiper21, 'disable');
-            applyToSwiper(cdMedDivSwiper22, 'disable');
-            applyToSwiper(cdMedDivSwiper23, 'disable');
-            applyToSwiper(cdMedDivSwiper24, 'disable');
+            cdMedDivSwiper21.disable ();
+            cdMedDivSwiper22.disable ();
+            cdMedDivSwiper23.disable ();
+            cdMedDivSwiper24.disable ();
         }
 
 
         cdCommonMedia1440.addEventListener ("change", (e) => {
-            // if (e.matches) {
-            //     cdMedDivSwiper21.enable ();
-            //     cdMedDivSwiper22.enable ();
-            //     cdMedDivSwiper23.enable ();
-            //     cdMedDivSwiper24.enable ();
-            // } else {
-            //     cdMedDivSwiper21.disable ();
-            //     cdMedDivSwiper22.disable ();
-            //     cdMedDivSwiper23.disable ();
-            //     cdMedDivSwiper24.disable ();
-            // }
             if (e.matches) {
-                applyToSwiper(cdMedDivSwiper21, 'enable');
-                applyToSwiper(cdMedDivSwiper22, 'enable');
-                applyToSwiper(cdMedDivSwiper23, 'enable');
-                applyToSwiper(cdMedDivSwiper24, 'enable');
+                cdMedDivSwiper21.enable ();
+                cdMedDivSwiper22.enable ();
+                cdMedDivSwiper23.enable ();
+                cdMedDivSwiper24.enable ();
             } else {
-                applyToSwiper(cdMedDivSwiper21, 'disable');
-                applyToSwiper(cdMedDivSwiper22, 'disable');
-                applyToSwiper(cdMedDivSwiper23, 'disable');
-                applyToSwiper(cdMedDivSwiper24, 'disable');
+                cdMedDivSwiper21.disable ();
+                cdMedDivSwiper22.disable ();
+                cdMedDivSwiper23.disable ();
+                cdMedDivSwiper24.disable ();
             }
         });
     }

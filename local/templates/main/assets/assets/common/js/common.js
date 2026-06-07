@@ -66,13 +66,28 @@ window.addEventListener ("load", function () {
 
 
 
-    // 3. ОБЪЕКТЫ ДЛЯ ПРОСЛУШИВАНИЯ ПЕРЕХОДА ЧЕРЕЗ БРЕЙКПОИНТЫ
+    // 3. КУКИ
 
-    const cdCommonMedia400 = window.matchMedia ("(min-width: 400px)");
-    const cdCommonMedia511 = window.matchMedia ("(min-width: 511px)");
-    const cdCommonMedia768 = window.matchMedia ("(min-width: 768px)");
-    const cdCommonMedia1200 = window.matchMedia ("(min-width: 1200px)");
-    const cdCommonMedia1440 = window.matchMedia ("(min-width: 1440px)");
-    const cdCommonMedia1920 = window.matchMedia ("(min-width: 1920px)");
+    const cCommonDivCookies = document.querySelector (".c-common--div__COOKIES");
+    const cCommonButtonCookies = document.querySelector (".c-common--button__COOKIES");
 
+
+    // 3.1 Появление попапа
+
+    setTimeout (() => {
+        cCommonDivCookies?.classList.add ("__c-common--div__COOKIES");
+    }, 2000);
+
+    window.addEventListener ("scroll", () => {
+        if (window.scrollY > 50) {
+            cCommonDivCookies?.classList.add ("__c-common--div__COOKIES");
+        }
+    });
+
+
+    // 3.2 Закрытие попапа
+
+    cCommonButtonCookies?.addEventListener ("click", () => {
+        cCommonDivCookies?.classList.add ("__c-common--div__COOKIES_DEL");
+    });
 });

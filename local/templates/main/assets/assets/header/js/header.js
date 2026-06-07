@@ -321,51 +321,113 @@ window.addEventListener ("load", function () {
         // 3. ПОЯВЛЕНИЕ / ИСЧЕЗАНИЕ ПОИСКОВОЙ СТРОКИ
 
         const cHeaderButtonSearchOpen = document.querySelector (".c-header--button__SEARCH_OPEN");
-        const cHeaderButtonSearchSvg = document.querySelector (".c-header--button__SEARCH_OPEN svg");
         const cHeaderFormSearch = document.querySelector (".c-header--form__SEARCH");
         const cHeaderInputSearch = document.querySelector (".c-header--input__SEARCH");
-        const cHeaderButtonSearchClose = document.querySelector (".c-header--button__SEARCH_CLOSE");
         const cHeaderDivSearchBack = document.querySelector (".c-header--div__SEARCH_BACK");
-
-
+        
 
         // 3.1 Открытие кнопкой
 
         cHeaderButtonSearchOpen.addEventListener ("click", () => {
-            cHeaderFormSearch.classList.add ("__c-header--form__SEARCH");
-            cHeaderInputSearch.focus ();
             cHeaderDivSearchBack.classList.add ("__c-header--div__SEARCH_BACK1");
             setTimeout (() => {
                 cHeaderDivSearchBack.classList.add ("__c-header--div__SEARCH_BACK2");
+                cHeaderInputSearch.focus ();
             }, 30);
         });
 
 
 
-        // 3.2 Закрытие кнопкой
 
-        cHeaderButtonSearchClose.addEventListener ("click", () => {
+
+        // 3.3 Появление / исчезание плейсхолдера и кнопок
+
+        cHeaderInputSearch.addEventListener ("input", () => {
+            if (cHeaderInputSearch.value.length > 0) {
+                cHeaderFormSearch.classList.add ("__c-header--form__SEARCH");
+            } else {
+                cHeaderFormSearch.classList.remove ("__c-header--form__SEARCH");
+            }
+        });
+
+        cHeaderFormSearch.addEventListener ("reset", () => {
             cHeaderFormSearch.classList.remove ("__c-header--form__SEARCH");
-            cHeaderDivSearchBack.classList.remove ("__c-header--div__SEARCH_BACK2");
-            setTimeout (() => {
-                if (!cHeaderDivSearchBack.classList.contains ("__c-header--div__SEARCH_BACK2")) {
-                    cHeaderDivSearchBack.classList.remove ("__c-header--div__SEARCH_BACK1");
-                }
-            }, 500);
+            cHeaderInputSearch.focus ();
         });
 
 
 
-        // 3.3 Закрытие кликом вне формы
+
+        // 3.4 Счетчик совпадений
+
+        const cHeaderSpanCount = document.querySelector (".c-header--span__COUNT");
+
+        cHeaderSpanCount.cHeaderCounter = function () {
+                
+            let cHeaderSpanNumber = 0;
+            let localFormat = new Intl.NumberFormat("ru-RU");
+            let dS = parseInt (cHeaderSpanCount.dataset.finl);
+    
+            let time;
+            let count;
+            
+            if (dS <= 100) {
+                time = Math.round (1000 / dS);
+                count = 1;
+            } else {
+                time = 10;
+                count = Math.round (dS / 100);
+            }
+    
+            let cHeaderClear = setInterval (() => {
+                cHeaderSpanNumber = cHeaderSpanNumber + count;
+                cHeaderSpanCount.textContent = `${localFormat.format (cHeaderSpanNumber)}`;
+                if (cHeaderSpanNumber >= dS) {
+                    clearInterval (cHeaderClear);
+                    cHeaderSpanCount.textContent = `${localFormat.format (dS)}`;
+                }
+            }, time);
+        }
+
+
+
+
+        // 3.5 Появление / исчезание блока поисковой выдачи
+
+        const cHeaderDivSearchResult = document.querySelector (".c-header--div__SEARCH_RESULT");
+        const cHeaderSpanSearchResultLeft2 = document.querySelector (".c-header--span__SEARCH_RESULT_LEFT2");
+
+        cHeaderInputSearch.addEventListener ("input", () => {
+            if (cHeaderInputSearch.value.length > 2) {
+                cHeaderDivSearchResult.classList.add ("__c-header--div__SEARCH_RESULT");
+                cHeaderSpanSearchResultLeft2.textContent = cHeaderInputSearch.value;
+                cHeaderSpanCount.cHeaderCounter ();
+            } else {
+                cHeaderDivSearchResult.classList.remove ("__c-header--div__SEARCH_RESULT");
+                cHeaderSpanSearchResultLeft2.textContent = "";
+            }
+        });
+
+        cHeaderFormSearch.addEventListener ("reset", () => {
+            cHeaderDivSearchResult.classList.remove ("__c-header--div__SEARCH_RESULT");
+        });
+
+
+
+
+        // 3.5 Закрытие кликом вне формы
 
         cHeaderDivSearchBack.addEventListener ("click", (e) => {
-            cHeaderFormSearch.classList.remove ("__c-header--form__SEARCH");
-            cHeaderDivSearchBack.classList.remove ("__c-header--div__SEARCH_BACK2");
-            setTimeout (() => {
-                if (!cHeaderDivSearchBack.classList.contains ("__c-header--div__SEARCH_BACK2")) {
-                    cHeaderDivSearchBack.classList.remove ("__c-header--div__SEARCH_BACK1");
-                }
-            }, 500);
+            if (e.target === cHeaderDivSearchBack) {
+                cHeaderFormSearch.classList.remove ("__c-header--form__SEARCH");
+                cHeaderDivSearchBack.classList.remove ("__c-header--div__SEARCH_BACK2");
+                cHeaderFormSearch.reset ();
+                setTimeout (() => {
+                    if (!cHeaderDivSearchBack.classList.contains ("__c-header--div__SEARCH_BACK2")) {
+                        cHeaderDivSearchBack.classList.remove ("__c-header--div__SEARCH_BACK1");
+                    }
+                }, 500);
+            }
         });
     }
 });

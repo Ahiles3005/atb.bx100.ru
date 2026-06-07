@@ -83,18 +83,19 @@ window.addEventListener ("load", function () {
             let count;
             
             if (dS <= 100) {
-                time = 1000 / dS;
+                time = Math.round (1000 / dS);
                 count = 1;
             } else {
                 time = 10;
-                count = dS / 100;
+                count = Math.round (dS / 100);
             }
 
             let hmHeroClear1 = setInterval (() => {
                 hmHeroSpanNumber1 = hmHeroSpanNumber1 + count;
                 hmHeroSpanCount1.textContent = `${localFormat.format (hmHeroSpanNumber1)} +`;
-                if (hmHeroSpanNumber1 == dS) {
+                if (hmHeroSpanNumber1 >= dS) {
                     clearInterval (hmHeroClear1);
+                    hmHeroSpanCount1.textContent = `${localFormat.format (dS)} +`
                 }
             }, time);
         }

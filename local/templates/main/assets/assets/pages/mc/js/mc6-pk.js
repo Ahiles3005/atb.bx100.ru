@@ -21,7 +21,7 @@ window.addEventListener ("load", function () {
         const cdCommonMedia1440 = window.matchMedia ("(min-width: 1440px)");
         const cdCommonMedia1920 = window.matchMedia ("(min-width: 1920px)");
 
-
+        
         /* ---------- ********** СЕКЦИЯ PK (Пресс-кит) ********** ---------- */
 
 
@@ -40,7 +40,7 @@ window.addEventListener ("load", function () {
                 } else {
                     mcPkDivBody[i].classList.remove ("__mc-pk--div__BODY");
                 }
-
+                
             });
         });
 
@@ -48,7 +48,7 @@ window.addEventListener ("load", function () {
 
 
         // 2. ГЛАВНЫЙ СЛАЙДЕР
-
+        
         const mcPkDivSwiper1v = new Swiper (".mc-pk--div__SWIPER1", {
             effect: "fade",
             allowTouchMove: false,
@@ -92,7 +92,10 @@ window.addEventListener ("load", function () {
             mcPkDivSwiper1v.slideTo(mcPkDivSwiper1v.activeIndex);
         }, 150);
 
-        window.addEventListener("resize", mcPk1Debounce);
+        window.addEventListener ("resize", mcPk1Debounce);
+
+
+
 
 
 
@@ -111,7 +114,7 @@ window.addEventListener ("load", function () {
                 mcPkDivSwiper1v.slideTo(i);
             });
         });
-
+        
 
         // 3.2 Создание слайдов по числу карточек для десктопа.
 
@@ -120,59 +123,59 @@ window.addEventListener ("load", function () {
 
             // 3.2.1 Карточки пресс-релизов и логотипов
 
-            const mcPkDivCards1 = Array.from (mcPkDivPrlMob[0].querySelectorAll(".mc-pk--div__CARD"));
-            const mcPkDivCards2 = Array.from (mcPkDivPrlMob[1].querySelectorAll(".mc-pk--div__CARD"));
+        const mcPkDivCards1 = Array.from (mcPkDivPrlMob[0].querySelectorAll(".mc-pk--div__CARD"));
+        const mcPkDivCards2 = Array.from (mcPkDivPrlMob[1].querySelectorAll(".mc-pk--div__CARD"));
 
 
-            // 3.2.2 Число необходимых слайдов
+        // 3.2.2 Число необходимых слайдов
 
-            const mcPkDivSlides1 = Math.ceil (mcPkDivCards1.length / 4);
-            const mcPkDivSlides2 = Math.ceil (mcPkDivCards2.length / 4);
+        const mcPkDivSlides1 = Math.ceil (mcPkDivCards1.length / 4);
+        const mcPkDivSlides2 = Math.ceil (mcPkDivCards2.length / 4);
 
 
-            // 3.2.3 Создание слайдов
+        // 3.2.3 Создание слайдов
 
-            const mcPkDivSwiper11Wrapper = Array.from (document.querySelectorAll (".mc-pk--div__SWIPER11 .mc-pk--div__SWIPER11_WRAPPER"));
+        const mcPkDivSwiper11Wrapper = Array.from (document.querySelectorAll (".mc-pk--div__SWIPER11 .mc-pk--div__SWIPER11_WRAPPER"));
 
-            for (let i = 0; i < mcPkDivSlides1; i++) {
-                mcPkDivSwiper11Wrapper[0].insertAdjacentHTML ("beforeend", `
+        for (let i = 0; i < mcPkDivSlides1; i++) {
+            mcPkDivSwiper11Wrapper[0].insertAdjacentHTML ("beforeend", `
                 <div class="mc-pk--div__SWIPER11_SLIDE swiper-slide"></div>
             `);
-            }
-            for (let i = 0; i < mcPkDivSlides2; i++) {
-                mcPkDivSwiper11Wrapper[1].insertAdjacentHTML ("beforeend", `
+        }
+        for (let i = 0; i < mcPkDivSlides2; i++) {
+            mcPkDivSwiper11Wrapper[1].insertAdjacentHTML ("beforeend", `
                 <div class="mc-pk--div__SWIPER11_SLIDE swiper-slide"></div>
             `);
+        }
+
+
+        // 3.2.4 Распределение карточек по слайдам
+
+        const mcPkDivSwiper11Slide1 = Array.from (mcPkDivSwiper11Wrapper[0].querySelectorAll (".mc-pk--div__SWIPER11_SLIDE"));
+        const mcPkDivSwiper11Slide2 = Array.from (mcPkDivSwiper11Wrapper[1].querySelectorAll (".mc-pk--div__SWIPER11_SLIDE"));
+
+
+        // 3.2.4.1 Счетчики нераспределенных карточек
+
+        let mcPkDivCards1Counter = mcPkDivCards1.length;
+        let mcPkDivCards2Counter = mcPkDivCards2.length;
+
+        mcPkDivSwiper11Slide1.forEach ((v, i, a) => {
+            for (let j = 0; j < 4; j++) {
+                if (mcPkDivCards1Counter && a[i].querySelectorAll (".mc-pk--div__CARD").length < 4) {
+                    a[i].append (mcPkDivCards1[mcPkDivCards1.length - mcPkDivCards1Counter].cloneNode (true));
+                    mcPkDivCards1Counter--;
+                }
             }
-
-
-            // 3.2.4 Распределение карточек по слайдам
-
-            const mcPkDivSwiper11Slide1 = Array.from (mcPkDivSwiper11Wrapper[0].querySelectorAll (".mc-pk--div__SWIPER11_SLIDE"));
-            const mcPkDivSwiper11Slide2 = Array.from (mcPkDivSwiper11Wrapper[1].querySelectorAll (".mc-pk--div__SWIPER11_SLIDE"));
-
-
-            // 3.2.4.1 Счетчики нераспределенных карточек
-
-            let mcPkDivCards1Counter = mcPkDivCards1.length;
-            let mcPkDivCards2Counter = mcPkDivCards2.length;
-
-            mcPkDivSwiper11Slide1.forEach ((v, i, a) => {
-                for (let j = 0; j < 4; j++) {
-                    if (mcPkDivCards1Counter && a[i].querySelectorAll (".mc-pk--div__CARD").length < 4) {
-                        a[i].append (mcPkDivCards1[mcPkDivCards1.length - mcPkDivCards1Counter].cloneNode (true));
-                        mcPkDivCards1Counter--;
-                    }
+        });
+        mcPkDivSwiper11Slide2.forEach ((v, i, a) => {
+            for (let j = 0; j < 4; j++) {
+                if (mcPkDivCards2Counter && a[i].querySelectorAll (".mc-pk--div__CARD").length < 4) {
+                    a[i].append (mcPkDivCards2[mcPkDivCards2.length - mcPkDivCards2Counter].cloneNode (true));
+                    mcPkDivCards2Counter--;
                 }
-            });
-            mcPkDivSwiper11Slide2.forEach ((v, i, a) => {
-                for (let j = 0; j < 4; j++) {
-                    if (mcPkDivCards2Counter && a[i].querySelectorAll (".mc-pk--div__CARD").length < 4) {
-                        a[i].append (mcPkDivCards2[mcPkDivCards2.length - mcPkDivCards2Counter].cloneNode (true));
-                        mcPkDivCards2Counter--;
-                    }
-                }
-            });
+            }
+        });
 
 
         }
@@ -186,7 +189,7 @@ window.addEventListener ("load", function () {
                 nextEl: '.mc-pk--div__SWIPER1_SLIDE:first-of-type .mc-pk--button__SWIPER11_NEXT',
                 prevEl: '.mc-pk--div__SWIPER1_SLIDE:first-of-type .mc-pk--button__SWIPER11_PREV',
             },
-
+            
         });
 
         // 3.3.1 Слайдер логотипов
@@ -237,13 +240,13 @@ window.addEventListener ("load", function () {
 
 
 
-        // 4.2 Копирование изображений в кнопки пагинации
+        // 4.2 Копирование изображений в кнопки пагинации 
         // !!! (Это временное решение. При ИНТЕГРАЦИИ (если, конечно, нужно в превью загружать картинки меньшего разрешения)
         // пройтись по массиву cCommonDivGlrSwiperPagBuls
         // - это массив кнопок пагинации и загрузить изображения меньшего разрешения).
 
-
-
+        
+        
         setTimeout (() => {
             const cCommonImgGlrImages = Array.from (document.querySelectorAll (".c-common--img__GLR_IMAGE"));
             const cCommonDivGlrSwiperPagBuls = Array.from (document.querySelectorAll (".c-common--div__GLR_SWIPER_PAGINATION .swiper-pagination-bullet"));
@@ -253,7 +256,7 @@ window.addEventListener ("load", function () {
                 cCommonDivGlrSwiperPagBuls[i].append (clone);
             });
         }, 50);
-
+        
 
 
 
@@ -274,7 +277,7 @@ window.addEventListener ("load", function () {
         });
 
 
-
+        
 
         // 4.4 Если картинок больше 1, включить превью
 
@@ -283,7 +286,7 @@ window.addEventListener ("load", function () {
                 cCommonDivGlrCont20[i].querySelector (".c-common--div__GLR_SWIPER_PAGINATION").style.display = "flex";
             }
         });
-
+        
 
 
 

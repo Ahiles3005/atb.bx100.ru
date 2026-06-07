@@ -72,18 +72,19 @@ window.addEventListener ("load", function () {
                 let count;
                 
                 if (dS <= 100) {
-                    time = 1000 / dS;
+                    time = Math.round (1000 / dS);
                     count = 1;
                 } else {
                     time = 10;
-                    count = dS / 100;
+                    count = Math.round (dS / 100);
                 }
         
                 let stMainClear = setInterval (() => {
                     stMainSpanNumber = stMainSpanNumber + count;
                     a[i].textContent = `${localFormat.format (stMainSpanNumber)} +`;
-                    if (stMainSpanNumber == dS) {
+                    if (stMainSpanNumber >= dS) {
                         clearInterval (stMainClear);
+                        a[i].textContent = `${localFormat.format (dS)} +`;
                     }
                 }, time);
             

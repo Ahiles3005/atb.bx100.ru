@@ -439,9 +439,9 @@ window.addEventListener ("load", function () {
     
     
                 // 4. ИНИЦИАЛИЗАЦИЯ ПЛАГИНА intlTelInput
-    
+
                 window.intlTelInput(cCommonInputFbTel, {
-                    loadUtils: () => import("https://cdn.jsdelivr.net/npm/intl-tel-input@25.12.4/build/js/utils.js"),
+                    loadUtils: () => import("/local/templates/main/assets/libs/intlTelInput/js/utils.js"),
                     initialCountry: "ru",
                     autoPlaceholder: "aggressive",
                     formatOnDisplay: true,
@@ -914,9 +914,9 @@ window.addEventListener ("load", function () {
     
     
                 // 4. ИНИЦИАЛИЗАЦИЯ ПЛАГИНА intlTelInput
-    
+
                 window.intlTelInput(cCommonInputFbTel, {
-                    loadUtils: () => import("https://cdn.jsdelivr.net/npm/intl-tel-input@25.12.4/build/js/utils.js"),
+                    loadUtils: () => import("/local/templates/main/assets/libs/intlTelInput/js/utils.js"),
                     initialCountry: "ru",
                     autoPlaceholder: "aggressive",
                     formatOnDisplay: true,
@@ -1401,9 +1401,9 @@ window.addEventListener ("load", function () {
     
     
                 // 4. ИНИЦИАЛИЗАЦИЯ ПЛАГИНА intlTelInput
-    
+
                 window.intlTelInput(cCommonInputFbTel, {
-                    loadUtils: () => import("https://cdn.jsdelivr.net/npm/intl-tel-input@25.12.4/build/js/utils.js"),
+                    loadUtils: () => import("/local/templates/main/assets/libs/intlTelInput/js/utils.js"),
                     initialCountry: "ru",
                     autoPlaceholder: "aggressive",
                     formatOnDisplay: true,
@@ -1877,9 +1877,9 @@ window.addEventListener ("load", function () {
     
     
                 // 4. ИНИЦИАЛИЗАЦИЯ ПЛАГИНА intlTelInput
-    
+
                 window.intlTelInput(cCommonInputFbTel, {
-                    loadUtils: () => import("https://cdn.jsdelivr.net/npm/intl-tel-input@25.12.4/build/js/utils.js"),
+                    loadUtils: () => import("/local/templates/main/assets/libs/intlTelInput/js/utils.js"),
                     initialCountry: "ru",
                     autoPlaceholder: "aggressive",
                     formatOnDisplay: true,
@@ -2820,9 +2820,9 @@ window.addEventListener ("load", function () {
     
     
                 // 4. ИНИЦИАЛИЗАЦИЯ ПЛАГИНА intlTelInput
-    
+
                 window.intlTelInput(cCommonInputFbTel, {
-                    loadUtils: () => import("https://cdn.jsdelivr.net/npm/intl-tel-input@25.12.4/build/js/utils.js"),
+                    loadUtils: () => import("/local/templates/main/assets/libs/intlTelInput/js/utils.js"),
                     initialCountry: "ru",
                     autoPlaceholder: "aggressive",
                     formatOnDisplay: true,
@@ -3031,5 +3031,3 @@ window.addEventListener ("load", function () {
         });
     });
 });
-
-

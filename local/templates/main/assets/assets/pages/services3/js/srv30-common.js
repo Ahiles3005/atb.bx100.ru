@@ -50,5 +50,39 @@ window.addEventListener ("load", function () {
         const observer = new IntersectionObserver (callback, options)
 
         scrolls.forEach ((v) => observer.observe (v));
+
+
+
+
+
+
+
+        // 2. АНИМАЦИЯ ПРИ СКРОЛЛЕ С ОБРАТНЫМ СРАБАТЫВАНИЕМ ДЛЯ МОБИЛОК
+
+        function scrollAnim2 () {
+            const scrolls2 = Array.from (document.querySelectorAll (".srv3-hero .st-main--div__GRID2_ITEM"));
+
+            const callback2 = (entries, observer) => {
+                entries.forEach ((entry) => {                       
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add ("__st-main--div__GRID2_ITEM");
+                    } else {
+                        entry.target.classList.remove ("__st-main--div__GRID2_ITEM");
+                    }
+                });
+            }
+    
+            const options2 = {
+                rootMargin: `-49% 0px -48%`,
+                threshold: 0,
+            }
+            
+    
+            const observer2 = new IntersectionObserver (callback2, options2)
+    
+            scrolls2.forEach ((v) => observer2.observe (v));
+        }
+
+        scrollAnim2 ();
     }
 });

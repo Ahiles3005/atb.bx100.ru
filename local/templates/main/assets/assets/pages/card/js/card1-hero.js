@@ -117,7 +117,6 @@ window.addEventListener ("load", function () {
         // - это массив кнопок пагинации и загрузить изображения меньшего разрешения (если нужно)).
 
         const cdHeroImgSwiperImages = Array.from (document.querySelectorAll (".cd-hero--img__SWIPER_IMAGE"));
-        const cdHeroVideo = Array.from (document.querySelectorAll (".cd-hero--video"));
         const cdHeroDivSwiperPagBuls = Array.from (document.querySelectorAll(".cd-hero--div__SWIPER_PAGINATION .swiper-pagination-bullet"));
 
 
@@ -303,7 +302,7 @@ window.addEventListener ("load", function () {
 
         cdHeroDivSwiper.on ("slideChange", () => {
             if (cdHeroDivSwiper.activeIndex == cdHeroDivSwiperPagBuls.length - 1) {
-                if (!document.querySelector ("script[src='/local/templates/main/assets/3d/canvas3d.js']")) {
+                if (!document.querySelector ("script[src='3d/canvas3d.js']")) {
                     // const myScriptMap = document.createElement ("script");
                     // myScriptMap.setAttribute ("type", "importmap");
                     // myScriptMap.innerHTML = `
@@ -318,11 +317,25 @@ window.addEventListener ("load", function () {
                     // document.head.append (myScriptMap);
                     
                     const myScript = document.createElement ("script");
-                    myScript.setAttribute ("src", "/local/templates/main/assets/3d/canvas3d.js");
+                    myScript.setAttribute ("src", "3d/canvas3d.js");
                     myScript.setAttribute ("type", "module");
                     document.body.append (myScript);
                 }
             }
+        });
+
+
+
+
+        // 3.2.6 Постановка всех видео на паузу при листании слайдера
+
+        const cdHeroVideo = Array.from (document.querySelectorAll (".cd-hero--video"));
+
+
+        cdHeroDivSwiper.on ("slideChange", () => {
+            cdHeroVideo.forEach ((v, i, a) => {
+                a[i].pause ();
+            });
         });
 
 
@@ -346,41 +359,40 @@ window.addEventListener ("load", function () {
             cdHeroDivSwiper.slideTo (0);
         });
 
-
-        cdHeroButtonImagescdHeroImg1?.addEventListener ("click", (e) => {
+        cdHeroButtonImagescdHeroImg1.addEventListener ("click", (e) => {
             e.stopPropagation ();
             cdHeroDivPopup.classList.add ("__cd-hero--div__POPUP");
             cdHeroDivSwiper.slideTo (0);
         });
 
-        cdHeroButtonImagescdHeroImg2?.addEventListener ("click", (e) => {
+        cdHeroButtonImagescdHeroImg2.addEventListener ("click", (e) => {
             e.stopPropagation ();
             cdHeroDivPopup.classList.add ("__cd-hero--div__POPUP");
             cdHeroDivSwiper.slideTo (1);
         });
 
-        cdHeroButtonImagescdHeroVid?.addEventListener ("click", (e) => {
+        cdHeroButtonImagescdHeroVid.addEventListener ("click", (e) => {
             e.stopPropagation ();
             cdHeroDivPopup.classList.add ("__cd-hero--div__POPUP");
             cdHeroDivSwiper.slideTo (cdHeroDivSwiper.slides.length - 2);
         });
 
-        cdHeroButtonImagescdHero3d?.addEventListener ("click", (e) => {
+        cdHeroButtonImagescdHero3d.addEventListener ("click", (e) => {
             e.stopPropagation ();
             cdHeroDivPopup.classList.add ("__cd-hero--div__POPUP");
             cdHeroDivSwiperPagBuls[cdHeroDivSwiperPagBuls.length - 1].click ();
         });
 
-        cdHeroButtonImagescdHeroMore?.addEventListener ("click", (e) => {
+        cdHeroButtonImagescdHeroMore.addEventListener ("click", (e) => {
             e.stopPropagation ();
             cdHeroDivPopup.classList.add ("__cd-hero--div__POPUP");
         });
 
-        cdHeroButtonPopupClose?.addEventListener ("click", () => {
+        cdHeroButtonPopupClose.addEventListener ("click", () => {
             cdHeroDivPopup.classList.remove ("__cd-hero--div__POPUP");
         });
 
-        cdHeroDivPopup?.addEventListener ("click", (e) => {
+        cdHeroDivPopup.addEventListener ("click", (e) => {
             if (cdHeroDivPopup.classList.contains ("__cd-hero--div__POPUP") && e.target === cdHeroDivPopup) {
                 cdHeroDivPopup.classList.remove ("__cd-hero--div__POPUP");
             }
@@ -390,12 +402,9 @@ window.addEventListener ("load", function () {
 
         // 3.4 Указание на оставшееся количество картинок, видео и 3d в правой кнопке
 
-        const cdHeroSpanMore = document.querySelector(".cd-hero--button__IMAGES.cd-hero__MORE > span:first-of-type");
+        const cdHeroSpanMore = document.querySelector (".cd-hero--button__IMAGES.cd-hero__MORE > span:first-of-type");
 
-        if (cdHeroSpanMore) {
-            cdHeroSpanMore.textContent = `+ ${cdHeroDivSwiperPagBuls.length - 4}`;
-        }
-
+        cdHeroSpanMore.textContent = `+ ${cdHeroDivSwiperPagBuls.length - 4}`;
 
 
 
@@ -413,7 +422,7 @@ window.addEventListener ("load", function () {
             cdCommonDivLeft.append (cdHeroDivLeftCont);
         }
 
-        cdCommonMedia1440?.addEventListener ("change", (e) => {
+        cdCommonMedia1440.addEventListener ("change", (e) => {
             if (e.matches) {
                 cdCommonDivLeft.append (cdHeroDivLeftCont);
             } else {
