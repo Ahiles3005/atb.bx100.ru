@@ -40,3 +40,23 @@ function sendFormAjax(formElement, onSuccess,onError) {
             // }
         });
 }
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const radios = document.querySelectorAll('.cd-mat--input__SUBMENU');
+    const cards = document.querySelectorAll('.cd-mat--a__CARD');
+
+    radios.forEach(radio => {
+        radio.addEventListener('change', () => {
+            const value = radio.value;
+
+            cards.forEach(card => {
+                if (!value || card.dataset.type === value) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
+});

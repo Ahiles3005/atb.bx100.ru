@@ -822,7 +822,7 @@ if (isset($arParams['USER_CONSENT_IS_LOADED'])) {
         <div class="cd-mat--div__CARDS __C-SCRL DOWN">
             <? foreach ($materialsaData as $key => $materials): ?>
                 <? foreach ($materials['elements'] as $material): ?>
-                    <a class="cd-mat--a__CARD" href="<?= $material['src'] ?>" target="_blank">
+                    <a class="cd-mat--a__CARD" href="<?= $material['src'] ?>" target="_blank" data-type="<?=$key?>">
                         <div class="cd-mat--div__CARD_IMAGES">
                             <svg class="cd-mat--svg__CARD_IMAGE_1" width="34" height="41" viewBox="0 0 34 41"
                                  fill="none"
