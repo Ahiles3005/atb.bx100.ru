@@ -139,20 +139,30 @@ window.addEventListener ("load", function () {
             const cdModArticlesVis = cdModArticles.filter (x => {
                 return getComputedStyle (x).display == "grid";
             });
-            cdModSpanInd1.textContent = cdModArticlesVis.length;
-            cdModSpanInd2.textContent = cdModArticles.length;
+            if (cdModSpanInd1) {
+                cdModSpanInd1.textContent = cdModArticlesVis.length;
+            }
+
+            if (cdModSpanInd2) {
+                cdModSpanInd2.textContent = cdModArticles.length;
+            }
 
             // 4.2.2 Линия
 
-            cdModDivLine1.style.width = `${(parseFloat (cdModSpanInd1.textContent) / parseFloat (cdModSpanInd2.textContent)) * 100}%`;
+            if (cdModDivLine1) {
+                cdModDivLine1.style.width = `${(parseFloat (cdModSpanInd1.textContent) / parseFloat (cdModSpanInd2.textContent)) * 100}%`;
+            }
 
             // 4.2.3 Уборка кнопки "Показать еще", если все карточки показаны
 
-            if (cdModArticlesVis.length === cdModArticles.length) {
-                cdModButtonElse.classList.add ("__cd-mod--button__ELSE");
-            } else {
-                cdModButtonElse.classList.remove ("__cd-mod--button__ELSE");
+            if(cdModButtonElse){
+                if (cdModArticlesVis.length === cdModArticles.length) {
+                    cdModButtonElse.classList.add ("__cd-mod--button__ELSE");
+                } else {
+                    cdModButtonElse.classList.remove ("__cd-mod--button__ELSE");
+                }
             }
+
         }
 
 
@@ -212,7 +222,7 @@ window.addEventListener ("load", function () {
             cdModVisCounter ();
         }
 
-        cdModButtonElse.addEventListener ("click", cdModCardsAdd);
+        cdModButtonElse?.addEventListener ("click", cdModCardsAdd);
 
 
 

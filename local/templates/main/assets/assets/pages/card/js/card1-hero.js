@@ -377,7 +377,7 @@ window.addEventListener ("load", function () {
             cdHeroDivSwiper.slideTo (cdHeroDivSwiper.slides.length - 2);
         });
 
-        cdHeroButtonImagescdHero3d.addEventListener ("click", (e) => {
+        cdHeroButtonImagescdHero3d?.addEventListener ("click", (e) => {
             e.stopPropagation ();
             cdHeroDivPopup.classList.add ("__cd-hero--div__POPUP");
             cdHeroDivSwiperPagBuls[cdHeroDivSwiperPagBuls.length - 1].click ();
@@ -417,6 +417,12 @@ window.addEventListener ("load", function () {
         const cdHeroAAnchsSpecs = document.querySelector (".cd-hero--a__ANCHS._SPECS");
         const cdHeroAAnchsAbt = document.querySelector (".cd-hero--a__ANCHS._ABT");
 
+
+        console.log(cdHeroDivLeft);
+        console.log(cdCommonDivLeft);
+        console.log(cdHeroDivLeftCont);
+        console.log(cdHeroAAnchsSpecs);
+        console.log(cdHeroAAnchsAbt);
 
         if (cdCommonMedia1440.matches) {
             cdCommonDivLeft.append (cdHeroDivLeftCont);

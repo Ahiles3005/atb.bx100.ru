@@ -36,7 +36,7 @@ window.addEventListener ("load", function () {
         const cdCnfLabelSelectType = Array.from (document.querySelectorAll (".cd-cnf--label__SELECT._TYPE"));
 
 
-        cdCnfButtonSelectType.addEventListener ("click", () => {
+        cdCnfButtonSelectType?.addEventListener ("click", () => {
             if (!cdCnfDivSelectType.classList.contains ("__cd-cnf--div__SELECT_TYPE")) {
                 cdCnfDivSelectType.classList.add ("__cd-cnf--div__SELECT_TYPE");
             } else {
