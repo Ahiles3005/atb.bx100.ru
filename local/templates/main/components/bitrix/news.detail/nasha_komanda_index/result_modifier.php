@@ -223,7 +223,7 @@ if (CModule::IncludeModule("iblock")) {
             'TEXT_3' => $arProps['TEXT_3']['~VALUE']['TEXT'] ?? '',
             'TEXT_4' => $arProps['TEXT_4']['~VALUE']['TEXT'] ?? '',
             'IMAGES' => $images,
-            'VIDEO' => [],
+            'VIDEO' => $video,
         ];
     }
 

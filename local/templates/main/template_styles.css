@@ -12,3 +12,6 @@
 .honey_age_old {
     display:none;
 }
+video.c-common--img__GLR_IMAGE {
+    pointer-events: visible;
+}

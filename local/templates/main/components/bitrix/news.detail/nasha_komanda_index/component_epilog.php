@@ -663,6 +663,7 @@ $BLOG = !empty($arResult["BLOG_ITEMS"]);
                                 </div>
                             <? endif ?>
 
+
                             <? if (!empty($blogItem['IMAGES']) && !empty($blogItem['VIDEO'])): ?>
                                 <div class="mc-pk--div__FILES">
                                     <button class="mc-pk--button__OPEN">
@@ -854,95 +855,19 @@ $BLOG = !empty($arResult["BLOG_ITEMS"]);
                                                         <div class="c-common--div__GLR_CONT2 __C-SCRL LEFT">
                                                             <div class="c-common--div__GLR_SWIPER swiper">
                                                                 <div class="c-common--div__GLR_SWIPER_WRAPPER swiper-wrapper">
-                                                                    <div class="c-common--div__GLR_SWIPER_SLIDE swiper-slide">
-                                                                        <div class="c-common--div__GLR_IMAGE">
-                                                                            <img class="c-common--img__GLR_IMAGE"
-                                                                                 src="/images/home/ATB-2100/АТБ-2100_2.webp"
-                                                                                 alt=""
-                                                                                 loading="lazy">
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="c-common--div__GLR_SWIPER_SLIDE swiper-slide">
-                                                                        <div class="c-common--div__GLR_IMAGE">
-                                                                            <img class="c-common--img__GLR_IMAGE"
-                                                                                 src="/images/home/ATB-2100/АТБ-2100_3.webp"
-                                                                                 alt=""
-                                                                                 loading="lazy">
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="c-common--div__GLR_SWIPER_SLIDE swiper-slide">
-                                                                        <div class="c-common--div__GLR_IMAGE">
-                                                                            <img class="c-common--img__GLR_IMAGE"
-                                                                                 src="/images/home/ATB-2100/АТБ-2100_4.webp"
-                                                                                 alt=""
-                                                                                 loading="lazy">
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="c-common--div__GLR_SWIPER_SLIDE swiper-slide">
-                                                                        <div class="c-common--div__GLR_IMAGE">
-                                                                            <img class="c-common--img__GLR_IMAGE"
-                                                                                 src="/images/home/ATB-2100/АТБ-2100_5.webp"
-                                                                                 alt=""
-                                                                                 loading="lazy">
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="c-common--div__GLR_SWIPER_SLIDE swiper-slide">
-                                                                        <div class="c-common--div__GLR_IMAGE">
-                                                                            <img class="c-common--img__GLR_IMAGE"
-                                                                                 src="/images/home/ATB-2100/АТБ-2100_6.webp"
-                                                                                 alt=""
-                                                                                 loading="lazy">
-                                                                        </div>
-                                                                    </div>
 
-                                                                    <div class="c-common--div__GLR_SWIPER_SLIDE swiper-slide">
-                                                                        <div class="c-common--div__GLR_IMAGE">
-                                                                            <img class="c-common--img__GLR_IMAGE"
-                                                                                 src="/images/home/ATB-2100/АТБ-2100_1.webp"
-                                                                                 alt=""
-                                                                                 loading="lazy">
+                                                                    <? foreach ($blogItem['VIDEO'] as $video): ?>
+                                                                        <div class="c-common--div__GLR_SWIPER_SLIDE swiper-slide">
+                                                                            <div class="c-common--div__GLR_IMAGE">
+                                                                                <video class="c-common--img__GLR_IMAGE"
+                                                                                       src="<?= $video['SRC'] ?>"
+                                                                                       alt=""
+                                                                                       loading="lazy" controls></video>
+                                                                            </div>
                                                                         </div>
-                                                                    </div>
-                                                                    <div class="c-common--div__GLR_SWIPER_SLIDE swiper-slide">
-                                                                        <div class="c-common--div__GLR_IMAGE">
-                                                                            <img class="c-common--img__GLR_IMAGE"
-                                                                                 src="/images/home/ATB-2100/АТБ-2100_2.webp"
-                                                                                 alt=""
-                                                                                 loading="lazy">
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="c-common--div__GLR_SWIPER_SLIDE swiper-slide">
-                                                                        <div class="c-common--div__GLR_IMAGE">
-                                                                            <img class="c-common--img__GLR_IMAGE"
-                                                                                 src="/images/home/ATB-2100/АТБ-2100_3.webp"
-                                                                                 alt=""
-                                                                                 loading="lazy">
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="c-common--div__GLR_SWIPER_SLIDE swiper-slide">
-                                                                        <div class="c-common--div__GLR_IMAGE">
-                                                                            <img class="c-common--img__GLR_IMAGE"
-                                                                                 src="/images/home/ATB-2100/АТБ-2100_4.webp"
-                                                                                 alt=""
-                                                                                 loading="lazy">
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="c-common--div__GLR_SWIPER_SLIDE swiper-slide">
-                                                                        <div class="c-common--div__GLR_IMAGE">
-                                                                            <img class="c-common--img__GLR_IMAGE"
-                                                                                 src="/images/home/ATB-2100/АТБ-2100_5.webp"
-                                                                                 alt=""
-                                                                                 loading="lazy">
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="c-common--div__GLR_SWIPER_SLIDE swiper-slide">
-                                                                        <div class="c-common--div__GLR_IMAGE">
-                                                                            <img class="c-common--img__GLR_IMAGE"
-                                                                                 src="/images/home/ATB-2100/АТБ-2100_6.webp"
-                                                                                 alt=""
-                                                                                 loading="lazy">
-                                                                        </div>
-                                                                    </div>
+                                                                    <? endforeach ?>
+
+
                                                                 </div>
                                                                 <button class="c-common--button__GLR_LEFT">
                                                                     <svg width="30" height="47" viewBox="0 0 30 47"
@@ -1051,18 +976,18 @@ $BLOG = !empty($arResult["BLOG_ITEMS"]);
 
 
                                                         <div class="mc-pk--div__GALLERY_TEXT __C-SCRL RIGHT">
-                                                            <div class="mc-pk--div__GALLERY_TEXT_TOP">
-                                                                <p class="mc-pk--p__GALLERY_TEXT_TOP">
-                                                                    Презентация сетевой вычислительной платформы
-                                                                    АТБ-АТОМ-1
-                                                                </p>
-                                                            </div>
-                                                            <p class="mc-pk--p__GALLERY_TEXT_INFO">
-                                                                Межсетевого экрана или шлюза совместно со
-                                                                специализированным российским ПО. АТБ-АТОМ-1
-                                                                поддерживает до 8 Гб оперативной памяти и до 256 Гб
-                                                                накопителя SSD
-                                                            </p>
+<!--                                                            <div class="mc-pk--div__GALLERY_TEXT_TOP">-->
+<!--                                                                <p class="mc-pk--p__GALLERY_TEXT_TOP">-->
+<!--                                                                    Презентация сетевой вычислительной платформы-->
+<!--                                                                    АТБ-АТОМ-1-->
+<!--                                                                </p>-->
+<!--                                                            </div>-->
+<!--                                                            <p class="mc-pk--p__GALLERY_TEXT_INFO">-->
+<!--                                                                Межсетевого экрана или шлюза совместно со-->
+<!--                                                                специализированным российским ПО. АТБ-АТОМ-1-->
+<!--                                                                поддерживает до 8 Гб оперативной памяти и до 256 Гб-->
+<!--                                                                накопителя SSD-->
+<!--                                                            </p>-->
                                                         </div>
                                                     </div>
                                                 </div>
