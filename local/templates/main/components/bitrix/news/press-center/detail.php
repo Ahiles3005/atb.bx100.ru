@@ -36,7 +36,7 @@ switch ($PRESS_TYPE) {
     case "4":
         $APPLICATION->SetPageProperty('mainid', 'ev');
         break;
-    case "5":
+    case "6":
         $APPLICATION->SetPageProperty('mainid', 'ar');
         break;
 }

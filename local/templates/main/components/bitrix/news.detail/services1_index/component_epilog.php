@@ -436,9 +436,9 @@ if ($isNotEmptyVIDEO && count($arResult["PROPERTIES"]['VIDEO']['VALUE']) == 1) {
                                                     <? foreach ($arResult["DISPLAY_PROPERTIES"]['VIDEO']['FILE_VALUE'] as $slide): ?>
                                                         <div class="c-common--div__GLR_SWIPER_SLIDE swiper-slide">
                                                             <div class="c-common--div__GLR_IMAGE">
-                                                                <img class="c-common--img__GLR_IMAGE"
+                                                                <video class="c-common--img__GLR_IMAGE"
                                                                      src="<?= $slide['SRC'] ?>"
-                                                                     alt="" loading="lazy">
+                                                                       alt="" loading="lazy" controls></video>
                                                             </div>
                                                         </div>
                                                     <? endforeach ?>
