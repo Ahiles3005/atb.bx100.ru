@@ -21,7 +21,7 @@ window.addEventListener ("load", function () {
         const cdCommonMedia1440 = window.matchMedia ("(min-width: 1440px)");
         const cdCommonMedia1920 = window.matchMedia ("(min-width: 1920px)");
 
-        
+
         /* ---------- ********** СЕКЦИЯ MAIN ********** ---------- */
 
 
@@ -40,7 +40,7 @@ window.addEventListener ("load", function () {
                 } else {
                     mcPkDivBody[i].classList.remove ("__mc-pk--div__BODY");
                 }
-                
+
             });
         });
 

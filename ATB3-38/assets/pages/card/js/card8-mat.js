@@ -25,10 +25,12 @@ window.addEventListener ("load", function () {
 
         // 1.1 Выбор первой радиокнопки в субменю при загрузке страницы
 
-        cdMatFormSubmenu.querySelector (".cd-mat--label__SUBMENU:first-of-type").click ();
-        
+        if(cdMatFormSubmenu){
+            cdMatFormSubmenu.querySelector (".cd-mat--label__SUBMENU:first-of-type").click ();
+        }
 
-        cdMatDivHead.addEventListener ("click", () => {
+
+        cdMatDivHead?.addEventListener ("click", () => {
         
             // 1.2 Открытие / закрытие субменю
 

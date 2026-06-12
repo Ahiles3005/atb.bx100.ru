@@ -69,23 +69,27 @@ window.addEventListener ("load", function () {
 
         // 2.2 Выбор первой радиокнопки в субменю при загрузке страницы
 
-        mcPkLabelSubmenu[0].click ();
+        mcPkLabelSubmenu[0]?.click ();
 
 
         // 2.3 Выбор уже выбранного слайда при ресайзе для избежания бага с обрезанием главного слайдера
 
-        function mcPkDebounce (cB, time) {
+        function mcPkDebounce(cB, time) {
             let idTimer;
             return function () {
-                clearTimeout (idTimer);
-                idTimer = setTimeout (() => {
-                    cB();
+                clearTimeout(idTimer);
+                idTimer = setTimeout(() => {
+                    try {
+                        cB();
+                    } catch (e) {
+                        console.log('error')
+                    }
                 }, time);
             }
         }
 
-        const mcPk1Debounce = mcPkDebounce (() => {
-            mcPkDivSwiper1v.slideTo (mcPkDivSwiper1v.activeIndex);
+        const mcPk1Debounce = mcPkDebounce(() => {
+            mcPkDivSwiper1v.slideTo(mcPkDivSwiper1v.activeIndex);
         }, 150);
 
         window.addEventListener ("resize", mcPk1Debounce);
@@ -114,7 +118,10 @@ window.addEventListener ("load", function () {
 
         // 3.2 Создание слайдов по числу карточек для десктопа.
 
-        // 3.2.1 Карточки пресс-релизов и логотипов
+        if (mcPkDivPrlMob && mcPkDivPrlMob.length > 0) {
+
+
+            // 3.2.1 Карточки пресс-релизов и логотипов
 
         const mcPkDivCards1 = Array.from (mcPkDivPrlMob[0].querySelectorAll(".mc-pk--div__CARD"));
         const mcPkDivCards2 = Array.from (mcPkDivPrlMob[1].querySelectorAll(".mc-pk--div__CARD"));
@@ -171,6 +178,7 @@ window.addEventListener ("load", function () {
         });
 
 
+        }
         // 3.3 Инициализация созданных слайдеров для десктопа
 
         // 3.3.1 Слайдер пресс-релиза
@@ -197,11 +205,11 @@ window.addEventListener ("load", function () {
         // 3.3.2 Принудительный переход к первому слайду основного слайда для перевычисления высоты 
         // после инициализации второстепенных слайдеров
 
-        mcPkDivSwiper1v.slideTo(0);
-
-
-
-
+        try {
+            mcPkDivSwiper1v.slideTo(0);
+        } catch (e) {
+            console.log('error');
+        }
 
 
 

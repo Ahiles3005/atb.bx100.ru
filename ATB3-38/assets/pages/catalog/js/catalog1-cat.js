@@ -11,6 +11,46 @@ window.addEventListener ("load", function () {
 
     if (document.querySelector ("#catalog")) {
 
+        //загрузка товара
+        const subMenuItems = Array.from(document.querySelectorAll(".hm-cat--label__SUBMENU"));
+
+        subMenuItems.forEach((v) => {
+            v.addEventListener("click", (event) => {
+                if (event.target.classList.contains('hm-cat--label__SUBMENU') || event.target.classList.contains('hm-cat--span__SUBMENU')) {
+                    let sectionId = v.dataset.sectionid;
+                    let elementCount = v.dataset.elementcount;
+                    let href = v.dataset.href;
+                    window.history.replaceState(null, '', href);
+
+                    document.querySelector(".ct-cat--span__IND2").innerText=elementCount;
+
+                    let url = '/local/templates/main/include/catalog/ajax/products.php?SECTION_ID=' + sectionId
+
+                    fetch(url)
+                        .then(response => {
+                            if (!response.ok) {
+                                throw new Error(response.statusText);
+                            }
+                            return response.text();
+                        })
+                        .then(html => {
+                            document.querySelector('#products-html').innerHTML = html
+
+                            observeScrollElements();
+                            hmCatImageSwiper();
+                            hmCatCardButtons();
+                            hmCatPriceSplit();
+                            // ctCatCardsCur();
+                            ctCatCardsAdd();
+
+                        })
+                        .catch(error => {
+                            console.error('Fetch error:', error);
+                        });
+                }
+            });
+        });
+
 
         // ОБЪЕКТЫ ДЛЯ ПРОСЛУШИВАНИЯ ПЕРЕХОДА ЧЕРЕЗ БРЕЙКПОИНТЫ
 
@@ -21,7 +61,7 @@ window.addEventListener ("load", function () {
         const cdCommonMedia1440 = window.matchMedia ("(min-width: 1440px)");
         const cdCommonMedia1920 = window.matchMedia ("(min-width: 1920px)");
 
-        
+
         /* ---------- ********** СЕКЦИЯ CAT ********** ---------- */
 
         // 1. РАСЧЕТ ПОЗИЦИОНИРОВАНИЯ ФОРМ С РАДИОКНОПКАМИ В ДЕСКТОПЕ
@@ -50,13 +90,13 @@ window.addEventListener ("load", function () {
                     ctCatFormSubmenu.forEach ((v, i, a) => {
                         a[i].style.top = `${ctCatUlMenu.offsetHeight + 50 + ctCatUlTags.offsetHeight + 115}px`;
                     });
-                }, 400);  
+                }, 400);
             }
         });
 
 
 
-        // 2. ОТКРЫТИЕ / ЗАКРЫТИЕ СУБМЕНЮ, 
+        // 2. ОТКРЫТИЕ / ЗАКРЫТИЕ СУБМЕНЮ,
         // ВЫБОР ПЕРВОЙ РАДИОКНОПКИ В ОТКРЫВШЕМСЯ СУБМЕНЮ,
         // СНЯТИЕ ВЫБОРА СО ВСЕХ РАДИОКНОПОК В ЗАКРЫВАЮЩИХСЯ СУБМЕНЮ
 
@@ -65,12 +105,11 @@ window.addEventListener ("load", function () {
         const hmCatFormSubmenu = Array.from (document.querySelectorAll (".hm-cat--form__SUBMENU"));
         const ctCatDivContent = document.querySelector (".ct-cat--div__CONTENT");
         const hmCatLabelSubmenu = Array.from (document.querySelectorAll (".hm-cat--label__SUBMENU"));
-        
-    
+
 
         hmCatButtonMenuItem.forEach ((v, i, a) => {
             a[i].addEventListener ("click", () => {
-                
+
                 // 2.1 Открытие субменю
 
                 if (!hmCatLiMenuItem[i].classList.contains ("__hm-cat--li__MENU_ITEM")) {
@@ -79,15 +118,15 @@ window.addEventListener ("load", function () {
                     } else {
                         hmCatLiMenuItem[i].classList.add ("__hm-cat--li__MENU_ITEM");
                     }
-                    
-                    
+
+
 
                     // 2.2 Выбор первой радиокнопки в открывшемся субменю
 
                     if (hmCatLiMenuItem[i].querySelector (".hm-cat--label__SUBMENU:first-of-type > .hm-cat--input__SUBMENU")) {
                         hmCatLiMenuItem[i].querySelector (".hm-cat--label__SUBMENU:first-of-type").click ();
                     }
-                    
+
                     // 2.3 Закрытие остальных субменю
 
                     hmCatLiMenuItem.filter (x => x !== hmCatLiMenuItem[i]).forEach ((v1, i1, a1) => {
@@ -98,7 +137,7 @@ window.addEventListener ("load", function () {
                         if (a1[i1].querySelector (".hm-cat--input__SUBMENU:checked")) {
                             const a = a1[i1].querySelector (".hm-cat--input__SUBMENU:checked");
                             a.checked = false;
-                        } 
+                        }
                     });
                 } else {
                     // 2.5 Закрытие субменю
@@ -113,7 +152,25 @@ window.addEventListener ("load", function () {
 
         // 2.6 Открытие первого субменю при загрузке страницы
 
-        hmCatButtonMenuItem[0].click ();
+        //переделываем на переключение актуальной версии, в зависимости от ссылки
+
+        let currectUri = window.location.pathname;
+        let uriMatch = false;
+
+        hmCatButtonMenuItem.forEach(function(v,i, a){
+            if(v.dataset.href == currectUri){
+                v.click();
+                uriMatch = true;
+                return;
+            }
+        })
+
+        if(!uriMatch){
+            hmCatButtonMenuItem[0].click ();
+        }
+
+
+
 
 
         // 2.7 Выравнивание высоты form для десктопов по блоку с контентом
@@ -124,7 +181,7 @@ window.addEventListener ("load", function () {
         //             setTimeout (() => {
         //                 a[i].style.maxHeight = getComputedStyle (ctCatDivContent).height;
         //             }, 800);
-                    
+
         //         });
         //     } else {
         //         hmCatFormSubmenu.forEach ((v, i, a) => {
@@ -134,7 +191,6 @@ window.addEventListener ("load", function () {
         //         });
         //     }
         // }
-
 
         // 2.3 Скролл элементов субменю до видимой части
 
@@ -835,7 +891,12 @@ window.addEventListener ("load", function () {
 
         // 9. РАСКРЫТИЕ КАРТОЧЕК
 
-        const ctCatArticles = Array.from (document.querySelectorAll (".ct-cat--div__CONTENT .hm-cat--article__CARD"));
+
+        function getctCatArticles(){
+            return Array.from (document.querySelectorAll (".ct-cat--div__CONTENT .hm-cat--article__CARD"));
+        }
+
+        const ctCatArticles = getctCatArticles();
         const ctCatSpanInd1 = document.querySelector (".ct-cat--span__IND1");
         const ctCatSpanInd2 = document.querySelector (".ct-cat--span__IND2");
         const ctCatDivLine1 = document.querySelector (".ct-cat--div__LINE1");
@@ -850,6 +911,8 @@ window.addEventListener ("load", function () {
         // 9.2 Счетчик показанных карточек
 
         function ctCatVisCounter () {
+            const ctCatArticles = getctCatArticles();
+
             // 9.2.1 Числа
 
             const ctCatArticlesVis = ctCatArticles.filter (x => {
@@ -876,6 +939,8 @@ window.addEventListener ("load", function () {
         // 9.3 Начальное / текущее количество видимых карточек (для начальной загрузки и изменения количества при ресайзе или переключении видов)
 
         function ctCatCardsCur () {
+            const ctCatArticles = getctCatArticles();
+
             if (window.innerWidth < 768 || (window.innerWidth > 1199 && window.innerWidth < 1440)) {
                 ctCatArticles.forEach ((v, i, a) => {
                     if (i < ctCatCounter * 3) {
@@ -920,6 +985,7 @@ window.addEventListener ("load", function () {
         // 9.4 Добавление карточек по клику по кнопке
 
         function ctCatCardsAdd () {
+            const ctCatArticles = getctCatArticles();
             ctCatCounter++;
 
             if (window.innerWidth < 768 || (window.innerWidth > 1199 && window.innerWidth < 1440)) {

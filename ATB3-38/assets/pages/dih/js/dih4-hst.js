@@ -84,8 +84,19 @@ window.addEventListener ("load", function () {
 
 
         // 1.5 Открытие первого субменю при загрузке страницы
+        hmHstButtonMenuItemClick = false;
+        hmHstButtonMenuItem.forEach(function (hmHstButtonMenuItemValue) {
+            if (window.location.pathname.includes(hmHstButtonMenuItemValue.dataset.path)) {
+                hmHstButtonMenuItemValue.click();
+                hmHstButtonMenuItemClick = true;
+            }
+        })
 
-        hmHstButtonMenuItem[0].click ();
+
+        if (hmHstButtonMenuItem.length > 0 && !hmHstButtonMenuItemClick) {
+            hmHstButtonMenuItem[0].click();
+        }
+
 
 
         // 1.6 Выравнивание высоты form для десктопов по блоку с контентом
@@ -95,7 +106,9 @@ window.addEventListener ("load", function () {
                 hmHstFormSubmenu.forEach ((v, i, a) => {
                     setTimeout (() => {
                         a[i].style.maxHeight = `${parseInt (getComputedStyle (hmHstDivContent).height) - 64}px`;
-                        hmHstDivSubmenuBack.style.top = `${parseInt (getComputedStyle (hmHstDivContent).height) + 52}px`;
+                        if(hmHstDivSubmenuBack){
+                            hmHstDivSubmenuBack.style.top = `${parseInt (getComputedStyle (hmHstDivContent).height) + 52}px`;
+                        }
                     }, 800);
                 });
             } else {
@@ -203,5 +216,11 @@ window.addEventListener ("load", function () {
                 },
             });
         });
+
+        if (document.querySelector(`.hm-hst--label__SUBMENU[data-path="${window.location.pathname}"] > .hm-hst--input__SUBMENU `)) {
+            document.querySelector(`.hm-hst--label__SUBMENU[data-path="${window.location.pathname}"] > .hm-hst--input__SUBMENU `).click();
+        }
+
+
     }
 });

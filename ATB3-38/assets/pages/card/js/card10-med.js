@@ -35,7 +35,7 @@ window.addEventListener ("load", function () {
         
         // 1.1 Открытие / закрытие субменю
 
-        cdMedDivHead.addEventListener ("click", () => {
+        cdMedDivHead?.addEventListener ("click", () => {
 
             if (!cdMedFormSubmenu.classList.contains ("__cd-med--form__SUBMENU")) {
                 cdMedFormSubmenu.classList.add ("__cd-med--form__SUBMENU");
@@ -70,7 +70,7 @@ window.addEventListener ("load", function () {
 
         // 2.1 Выбор первой радиокнопки в субменю при загрузке страницы
 
-        cdMedLabelSubmenu[0].click ();
+        cdMedLabelSubmenu[0]?.click ();
 
 
 

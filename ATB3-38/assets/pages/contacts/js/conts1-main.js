@@ -273,7 +273,7 @@ window.addEventListener ("load", function () {
         // });
 
         window.intlTelInput(cCommonInputFbTel, {
-            loadUtils: () => import ("/libs/intlTelInput/js/utils.js"),
+            loadUtils: () => import ("/local/templates/main/assets/libs/intlTelInput/js/utils.js"),
             initialCountry: "ru",
         });
 
