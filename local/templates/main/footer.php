@@ -8,6 +8,21 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
         <?= \Site\Template::showSvg('/images/svg/arrow-up-red.svg') ?>
     </button>
 
+    <div class="c-common--div__COOKIES">
+        <p class="c-common--p__COOKIES">
+            Для того, чтобы сделать наш сайт максимально удобным
+            и полезным, мы используем cookie и инструменты «Яндекс.Метрики»,
+            «Манго-Офиса» и «Битрикс24». Если вы не против, нажимайте
+            «Принять» или продолжайте пользоваться сайтом. А если передумаете
+            — cookie легко удалить или отключить в настройках браузера.
+            Подробности — по <a class="c-common--a__COOKIES" href="/pravovaya-informatsiya-i-yuridicheskie-dokumenty/politika-konfidentsialnosti/">ссылке</a>.
+            Спасибо, что вы с нами!
+        </p>
+        <button class="c-common--button__COOKIES">
+            принять
+        </button>
+    </div>
+
     </main>
     <!-- FOOTER -->
     <footer class="c-footer">

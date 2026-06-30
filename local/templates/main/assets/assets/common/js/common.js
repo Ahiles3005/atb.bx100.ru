@@ -5,7 +5,7 @@
 
 window.addEventListener ("load", function () {
 
-    
+
     /* ---------- ********** ОБЩИЕ ДЛЯ ВСЕХ СТРАНИЦ ********** ---------- */
 
 
@@ -23,7 +23,7 @@ window.addEventListener ("load", function () {
     }
 
     cCommonUserVh ();
-    
+
     function cCommonUserVhDebounce0 (cB, time) {
         let idTimer;
         return function () {
@@ -72,22 +72,38 @@ window.addEventListener ("load", function () {
     const cCommonButtonCookies = document.querySelector (".c-common--button__COOKIES");
 
 
+
+    function setCookie(name, value, days) {
+        const expires = new Date(Date.now() + days * 864e5).toUTCString();
+        document.cookie = `${name}=${value}; expires=${expires}; path=/; SameSite=Lax`;
+    }
+
+    function hasCookie(name) {
+        return document.cookie
+            .split("; ")
+            .some(cookie => cookie.startsWith(name + "="));
+    }
+
     // 3.1 Появление попапа
 
-    setTimeout (() => {
-        cCommonDivCookies?.classList.add ("__c-common--div__COOKIES");
-    }, 2000);
+    if (!hasCookie("cookiesAccepted")) {
+        setTimeout(() => {
+            cCommonDivCookies?.classList.add("__c-common--div__COOKIES");
+        }, 2000);
+    }
 
-    window.addEventListener ("scroll", () => {
-        if (window.scrollY > 50) {
-            cCommonDivCookies?.classList.add ("__c-common--div__COOKIES");
+    window.addEventListener("scroll", () => {
+        if (!hasCookie("cookiesAccepted") && window.scrollY > 50) {
+            cCommonDivCookies?.classList.add("__c-common--div__COOKIES");
         }
     });
 
 
     // 3.2 Закрытие попапа
 
-    cCommonButtonCookies?.addEventListener ("click", () => {
-        cCommonDivCookies?.classList.add ("__c-common--div__COOKIES_DEL");
+    cCommonButtonCookies?.addEventListener("click", () => {
+        setCookie("cookiesAccepted", "1", 365);
+
+        cCommonDivCookies?.classList.add("__c-common--div__COOKIES_DEL");
     });
 });
