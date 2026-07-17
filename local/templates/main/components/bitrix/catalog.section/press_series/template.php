@@ -91,9 +91,9 @@ if (!empty($arResult['ITEMS'])) {
                                         <a class="hm-pre--a__CARD_TAG1" href="#">
                                             <?= $item['DISPLAY_PROPERTIES']['PRESS_TYPE']['VALUE'] ?? '' ?>
                                         </a>
-                                        <p class="hm-pre--p__CARD_NAME">
+                                        <a class="hm-pre--p__CARD_NAME" href="<?= $item['DETAIL_PAGE_URL'] ?>">
                                             <?= $item['NAME'] ?>
-                                        </p>
+                                        </a>
                                         <div class="hm-pre--div__CARD_BOTTOM">
                                             <? if (!empty($item['DISPLAY_PROPERTIES']['TAG_KRASOTA']['VALUE'])): ?>
                                                 <a class="hm-pre--a__CARD_TAG color-yellow" href="#">

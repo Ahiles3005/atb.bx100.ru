@@ -52,9 +52,9 @@ if (!empty($arResult['ITEMS'])) {
                             </span>
                     </a>
                 <? endif ?>
-                <p class="hm-des--p__CARD_NAME">
+                <a class="hm-des--p__CARD_NAME" href="<?= $item['DETAIL_PAGE_URL'] ?>">
                     <?= $item['NAME'] ?>
-                </p>
+                </a>
                 <ul class="hm-des--ul__CARD_LIST">
                     <? foreach ($item['PROPERTIES']['TEXT_BOTTOM_NEXT']['VALUE'] as $k => $value): ?>
                         <li class="hm-des--li__CARD_LIST">

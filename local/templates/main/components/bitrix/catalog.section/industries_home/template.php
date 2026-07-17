@@ -52,9 +52,9 @@ if (!empty($arResult['ITEMS'])) {
                 </a>
             <?endif ?>
 
-            <p class="hm-ind--p__CARD_NAME">
+            <a class="hm-ind--p__CARD_NAME" href="<?= $item['DETAIL_PAGE_URL'] ?>">
                 <?= $item['NAME'] ?>
-            </p>
+            </a>
             <p class="hm-ind--p__CARD_TEXT">
                 <?= $item['PREVIEW_TEXT'] ?>
             </p>
