@@ -59,4 +59,29 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     });
+
+
+    //фейковые ссылки
+    document.addEventListener('click', function(e) {
+
+        let image = e.target.closest('.hm-cat--div__CARD_IMAGE');
+
+        if (!image) {
+            return;
+        }
+
+        let article = image.closest('.hm-cat--article__CARD');
+
+        if (!article) {
+            return;
+        }
+
+        let link = article.getAttribute('href');
+
+        if (link) {
+            window.location.href = link;
+        }
+
+    });
+
 });
