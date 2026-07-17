@@ -14,14 +14,15 @@ foreach ($arResult["SECTIONS"] as $k => $section) {
         continue;
     }
 
-    $img = CFile::ResizeImageGet(
-        $section['PICTURE'],
-        array("width" => 80, "height" => 80),
-        BX_RESIZE_IMAGE_EXACT,
-        true
-    );
-
-    $arResult["SECTIONS"][$k]['RESIZE_PICTURE'] = $img;
+//    $img = CFile::ResizeImageGet(
+//        $section['PICTURE'],
+//        array("width" => 80, "height" => 80),
+//        BX_RESIZE_IMAGE_EXACT,
+//        true
+//    );
+//
+//    $arResult["SECTIONS"][$k]['RESIZE_PICTURE'] = $img;
+    $arResult["SECTIONS"][$k]['RESIZE_PICTURE']['src'] = $section['PICTURE']['SRC'];
 
 }
 
