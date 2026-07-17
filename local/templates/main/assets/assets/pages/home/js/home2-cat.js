@@ -128,43 +128,43 @@ window.addEventListener ("load", function () {
         // по высоте основной блок - раскомментировать далее до 1.8 
         // и содержимое пункта 1.8:
 
-        // hmCatFormHeight ();
+        hmCatFormHeight ();
 
-        // function hmCatDebounce (cB, time) {
-        //     let idTimer;
-        //     return function () {
-        //         clearTimeout (idTimer);
-        //         idTimer = setTimeout (() => {
-        //             cB();
-        //         }, time);
-        //     }
-        // }
+        function hmCatDebounce (cB, time) {
+            let idTimer;
+            return function () {
+                clearTimeout (idTimer);
+                idTimer = setTimeout (() => {
+                    cB();
+                }, time);
+            }
+        }
 
-        // const hmCatFormDebounce = hmCatDebounce (hmCatFormHeight, 100);
+        const hmCatFormDebounce = hmCatDebounce (hmCatFormHeight, 100);
 
-        // window.addEventListener ("resize", hmCatFormDebounce);
+        window.addEventListener ("resize", hmCatFormDebounce);
 
 
         // 1.8 Скролл элементов субменю до видимой части
         
-        // const hmCatLabelSubmenu = Array.from (document.querySelectorAll (".hm-cat--label__SUBMENU"));
+        const hmCatLabelSubmenu = Array.from (document.querySelectorAll (".hm-cat--label__SUBMENU"));
 
-        // hmCatLabelSubmenu.forEach ((v, i, a) => {
-        //     a[i].addEventListener ("click", () => {   
-        //         if (a[i].parentNode.scrollHeight > a[i].parentNode.offsetHeight) {
+        hmCatLabelSubmenu.forEach ((v, i, a) => {
+            a[i].addEventListener ("click", () => {
+                if (a[i].parentNode.scrollHeight > a[i].parentNode.offsetHeight) {
 
-        //             let k = a[i].offsetTop - a[i].parentNode.scrollTop;
-        //             let k1 = a[i].offsetTop + a[i].offsetHeight - a[i].parentNode.scrollTop;
+                    let k = a[i].offsetTop - a[i].parentNode.scrollTop;
+                    let k1 = a[i].offsetTop + a[i].offsetHeight - a[i].parentNode.scrollTop;
 
 
-        //             if (k < 0 && k1 > 0) {
-        //                 a[i].parentNode.scrollTop = a[i].offsetTop;
-        //             } else if (k < a[i].parentNode.offsetHeight && k1 > a[i].parentNode.offsetHeight) {
-        //                 a[i].parentNode.scrollTop = a[i].parentNode.scrollTop + k1 - a[i].parentNode.offsetHeight;
-        //             }
-        //         }
-        //     });
-        // });
+                    if (k < 0 && k1 > 0) {
+                        a[i].parentNode.scrollTop = a[i].offsetTop;
+                    } else if (k < a[i].parentNode.offsetHeight && k1 > a[i].parentNode.offsetHeight) {
+                        a[i].parentNode.scrollTop = a[i].parentNode.scrollTop + k1 - a[i].parentNode.offsetHeight;
+                    }
+                }
+            });
+        });
 
 
 
