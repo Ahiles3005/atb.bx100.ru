@@ -43,11 +43,14 @@ if (!empty($arResult['ITEMS'])) {
         ?>
 
         <article class="hm-ind--article__CARD __C-SCRL DOWN" id="<?= $this->GetEditAreaId($uniqueId); ?>">
-            <? if (!empty($item['DISPLAY_PROPERTIES']['OTRASLI_NAME']['VALUE'])): ?>
-                <a class="hm-ind--a__CARD_TAG color-yellow" href="<?= $item['DETAIL_PAGE_URL'] ?>">
-                    <div class="hm-ind--div__CARD_TAG_CIRCLE"></div>
+            <?
+            $otrasl = $arResult["PROPERTIES"]['OTRASLI_NAME']['DATA'][$item['PROPERTIES']['OTRASLI_NAME']['VALUE']] ?? [];
+            ?>
+            <? if (!empty($item['PROPERTIES']['OTRASLI_NAME']['VALUE'])): ?>
+                <a class="hm-ind--a__CARD_TAG color-yellow" href="<?= $item['DETAIL_PAGE_URL'] ?>" style="color:<?=$otrasl['UF_DESCRIPTION']?>">
+                    <div class="hm-ind--div__CARD_TAG_CIRCLE" style="background-color: <?=$otrasl['UF_DESCRIPTION']?>"></div>
                     <span class="hm-ind--span__CARD_TAG">
-                            <?= $item['DISPLAY_PROPERTIES']['OTRASLI_NAME']['VALUE'] ?? '' ?>
+                            <?= $otrasl['UF_NAME'] ?? '' ?>
                         </span>
                 </a>
             <?endif ?>
