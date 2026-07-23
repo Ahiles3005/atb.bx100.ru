@@ -81,14 +81,18 @@ if ($arParams['THIS_SECTION_ID']) {
 
                                                 <div class="cd-use--div__SWIPER21_SLIDE swiper-slide">
                                                     <article class="hm-ind--article__CARD">
+                                                        <?
+                                                        $otrasl = $arResult["PROPERTIES"]['OTRASLI_NAME']['DATA'][$item['PROPERTIES']['OTRASLI_NAME']['VALUE']] ?? [];
+                                                        ?>
+
                                                         <? if (!empty($item['PROPERTIES']['OTRASLI_NAME']['VALUE'])): ?>
-                                                            <a class="hm-ind--a__CARD_TAG color-yellow" href="#">
-                                                                <div class="hm-ind--div__CARD_TAG_CIRCLE"></div>
+                                                            <a class="hm-ind--a__CARD_TAG color-yellow" href="<?= $item['DETAIL_PAGE_URL'] ?>" style="color:<?=$otrasl['UF_DESCRIPTION']?>">
+                                                                <div class="hm-ind--div__CARD_TAG_CIRCLE" style="background-color: <?=$otrasl['UF_DESCRIPTION']?>"></div>
                                                                 <span class="hm-ind--span__CARD_TAG">
-                                                        <?= $item['PROPERTIES']['OTRASLI_NAME']['VALUE'] ?>
-                                                        </span>
+                            <?= $otrasl['UF_NAME'] ?? '' ?>
+                        </span>
                                                             </a>
-                                                        <? endif ?>
+                                                        <?endif ?>
 
                                                         <a class="hm-ind--p__CARD_NAME" href="<?= $item['DETAIL_PAGE_URL'] ?>">
                                                             <?= $item['NAME'] ?>

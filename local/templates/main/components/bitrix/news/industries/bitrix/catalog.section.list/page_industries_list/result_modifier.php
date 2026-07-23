@@ -44,6 +44,7 @@ if (!empty($arResult['SECTIONS'])) {
         $arSection['ITEMS'] = array();
 
         while ($obElement = $rsElements->GetNextElement()) {
+
             $arItem = $obElement->GetFields();
 
             // Получаем свойства элемента
@@ -88,7 +89,7 @@ if (!empty($arResult['SECTIONS'])) {
             if (empty($arItem['DETAIL_PICTURE']) && !empty($arItem['PREVIEW_PICTURE'])) {
                 $arItem['DETAIL_PICTURE_SRC'] = $arItem['PREVIEW_PICTURE_SRC'];
             }
-
+            $OTRASLI_Id[] = $arItem["PROPERTIES"]['OTRASLI_NAME']['VALUE'];
             $arSection['ITEMS'][] = $arItem;
         }
 
@@ -105,7 +106,49 @@ if (!empty($arResult['SECTIONS'])) {
     unset($arSection);
 
     // Добавляем в кеш
-    if (isset($this) && method_exists($this, 'SetResultCacheKeys')) {
-        $this->SetResultCacheKeys(array('SECTIONS_WITH_ITEMS'));
+
+}
+
+
+if (CModule::IncludeModule("highloadblock")) {
+
+
+    if (!empty($OTRASLI_Id)) {
+
+        $hlBlock = \Bitrix\Highloadblock\HighloadBlockTable::getList([
+            'filter' => ['=ID' => 17]
+        ])->fetch();
+
+        if ($hlBlock) {
+            $entity = \Bitrix\Highloadblock\HighloadBlockTable::compileEntity($hlBlock);
+            $entityClass = $entity->getDataClass();
+            $datas = $entityClass::getList([
+                'select' => ['*'],
+                'order' => ['ID' => 'ASC'],
+                'limit' => null,
+                'filter' => ['UF_XML_ID' => $OTRASLI_Id]
+            ])->fetchAll();
+        }
+
+        $entityClass = $entity->getDataClass();
+
+        foreach ($datas as $data) {
+            $arResult["PROPERTIES"]['OTRASLI_NAME']['DATA'][$data['UF_XML_ID']] = $data;
+        }
+
     }
+}
+
+$cp = $this->__component;
+if (method_exists($cp, 'SetResultCacheKeys')) {
+    $cp->SetResultCacheKeys(['PROPERTIES','SECTIONS_WITH_ITEMS']);
+}
+
+
+if (isset($arResult['PROPERTIES'])) {
+    $cp->arResult['PROPERTIES'] = $arResult['PROPERTIES'];
+}
+
+if (isset($arResult['SECTIONS_WITH_ITEMS'])) {
+    $cp->arResult['SECTIONS_WITH_ITEMS'] = $arResult['SECTIONS_WITH_ITEMS'];
 }
