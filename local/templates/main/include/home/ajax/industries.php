@@ -5,6 +5,11 @@ require_once($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/prolog_befo
 <?php if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die() ?>
 
 
+<?php
+global $arrFilter;
+$arrFilter['PROPERTY_VIVODIT_NA_GLAVNOY'] = 32;
+
+?>
 <?$APPLICATION->IncludeComponent("bitrix:catalog.section", "industries_home", Array(
     "ACTION_VARIABLE" => "action",	// Название переменной, в которой передается действие
     "ADD_PICT_PROP" => "-",	// Дополнительная картинка основного товара
