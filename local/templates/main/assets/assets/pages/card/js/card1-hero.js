@@ -116,22 +116,30 @@ window.addEventListener ("load", function () {
         // !!! (Это временное решение. При ИНТЕГРАЦИИ пройтись по массиву cdHeroDivSwiperPagBuls
         // - это массив кнопок пагинации и загрузить изображения меньшего разрешения (если нужно)).
 
-        const cdHeroImgSwiperImages = Array.from (document.querySelectorAll (".cd-hero--img__SWIPER_IMAGE"));
+        // const cdHeroImgSwiperImages = Array.from (document.querySelectorAll (".cd-hero--img__SWIPER_IMAGE"));
+        const cdHeroImgSwiperImages = Array.from (document.querySelectorAll (".cd-hero--div__SWIPER_SLIDE.swiper-slide"));
         const cdHeroDivSwiperPagBuls = Array.from (document.querySelectorAll(".cd-hero--div__SWIPER_PAGINATION .swiper-pagination-bullet"));
 
 
         cdHeroImgSwiperImages.forEach ((v, i, a) => {
             let clone = a[i].cloneNode (true);
-            cdHeroDivSwiperPagBuls[i].append (clone);
-        });
-
-        cdHeroDivSwiperPagBuls.forEach ((v, i, a) => {
-            if (!a[i].hasChildNodes() && i < (a.length - 1)) {
-                a[i].classList.add ("cd-hero__VID");
-            } else if (!a[i].hasChildNodes() && i == (a.length - 1)) {
-                a[i].classList.add ("cd-hero__3D");
+            let innerImg = clone.querySelector(".cd-hero--img__SWIPER_IMAGE");
+            if(innerImg){
+                cdHeroDivSwiperPagBuls[i].append (innerImg);
+            }else if(clone.querySelector(".cd-hero--video")){
+                cdHeroDivSwiperPagBuls[i].classList.add ("cd-hero__VID");;
+            }else if(clone.querySelector(".cd-hero--canvas")){
+                cdHeroDivSwiperPagBuls[i].classList.add ("cd-hero__3D");;
             }
         });
+
+        // cdHeroDivSwiperPagBuls.forEach ((v, i, a) => {
+        //     if (!a[i].hasChildNodes() && i < (a.length - 1)) {
+        //         a[i].classList.add ("cd-hero__VID");
+        //     } else if (!a[i].hasChildNodes() && i == (a.length - 1)) {
+        //         a[i].classList.add ("cd-hero__3D");
+        //     }
+        // });
 
 
 
