@@ -417,10 +417,35 @@ window.addEventListener ("load", function () {
         const cdnHeroButtonArtic = document.querySelector (".cdn-hero--button__ARTIC");
         const cdnHeroSpanArtic2 = document.querySelector (".cdn-hero--span__ARTIC_2");
 
-        cdnHeroButtonArtic.addEventListener ("click", () => {
-            navigator.clipboard.writeText (cdnHeroSpanArtic2.innerText).catch (() => {
-                console.error ("Ошибка: ", error);
-            });
+        cdnHeroButtonArtic.addEventListener("click", () => {
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(cdnHeroSpanArtic2.innerText).catch((error) => {
+                    console.error("Ошибка: ", error);
+                });
+            } else {
+                const textArea = document.createElement("textarea");
+                textArea.value = cdnHeroSpanArtic2.innerText;
+
+                textArea.style.position = "fixed";
+                textArea.style.top = "-9999px";
+                document.body.appendChild(textArea);
+
+                textArea.focus();
+                textArea.select();
+
+                try {
+                    const successful = document.execCommand('copy');
+                    if (successful) {
+                        console.log("Успешно скопировано через execCommand");
+                    } else {
+                        console.error("Не удалось скопировать через execCommand");
+                    }
+                } catch (err) {
+                    console.error("Ошибка при копировании через execCommand: ", err);
+                }
+
+                document.body.removeChild(textArea);
+            }
         });
 
 
