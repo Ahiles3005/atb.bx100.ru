@@ -86,6 +86,32 @@ if ($element) {
 
 $otrosli = $arProps['OTRASLI_NAME']['VALUE'] ?? '';
 
+if (CModule::IncludeModule("highloadblock") && !empty($otrosli)) {
+
+    $hlBlock = \Bitrix\Highloadblock\HighloadBlockTable::getList([
+            'filter' => ['=ID' => 17]
+    ])->fetch();
+
+    if ($hlBlock) {
+        $entity = \Bitrix\Highloadblock\HighloadBlockTable::compileEntity($hlBlock);
+        $entityClass = $entity->getDataClass();
+        $datas = $entityClass::getList([
+                'select' => ['*'],
+                'order' => ['ID' => 'ASC'],
+                'limit' => null,
+                'filter' => ['UF_XML_ID' => $otrosli]
+        ])->fetchAll();
+    }
+
+    $entityClass = $entity->getDataClass();
+
+    foreach ($datas as $data) {
+        $otrosli = $data;
+    }
+
+}
+
+
 $detailPicture = CFile::GetFileArray($arFields['DETAIL_PICTURE']);
 
 
@@ -113,10 +139,10 @@ $detailPicture = CFile::GetFileArray($arFields['DETAIL_PICTURE']);
                 <p class="in-hero--p__IND_TYPE">
                     Отрасль
                 </p>
-                <a class="in-hero--a__TAG color-green-dark" href="#">
+                <a class="in-hero--a__TAG color-green-dark" style="color: <?= $otrosli['UF_DESCRIPTION'] ?>" href="#">
                     <div class="in-hero--div__TAG_CIRCLE"></div>
                     <span class="in-hero--span__TAG">
-                                <?= $otrosli ?>
+                                <?= $otrosli['UF_NAME'] ?>
                             </span>
                 </a>
             </div>
