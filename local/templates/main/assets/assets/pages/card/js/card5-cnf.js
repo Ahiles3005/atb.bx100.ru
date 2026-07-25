@@ -54,7 +54,7 @@ window.addEventListener ("load", function () {
         });
 
         document.addEventListener ("click", (e) => {
-            if (!cdcnfFieldsetSelectType.contains (e.target)) {
+            if (cdcnfFieldsetSelectType && !cdcnfFieldsetSelectType.contains (e.target)) {
                 cdCnfDivSelectType.classList.remove ("__cd-cnf--div__SELECT_TYPE");
             }
         });

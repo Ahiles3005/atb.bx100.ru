@@ -169,30 +169,40 @@ window.addEventListener ("load", function () {
 
         // 7. ДОПОЛНИТЕЛЬНЫЕ НАСТРОЙКИ СЛАЙДЕРОВ ВИДЕО, СТАТЕЙ, НОВОСТЕЙ, МЕРОПРИЯТИЙ
 
-        if (cdCommonMedia1440.matches) {
-            cdMedDivSwiper21.enable ();
-            cdMedDivSwiper22.enable ();
-            cdMedDivSwiper23.enable ();
-            cdMedDivSwiper24.enable ();
-        } else {
-            cdMedDivSwiper21.disable ();
-            cdMedDivSwiper22.disable ();
-            cdMedDivSwiper23.disable ();
-            cdMedDivSwiper24.disable ();
+        try {
+            if (cdCommonMedia1440.matches) {
+                cdMedDivSwiper21.enable();
+                cdMedDivSwiper22.enable();
+                cdMedDivSwiper23.enable();
+                cdMedDivSwiper24.enable();
+            } else {
+                cdMedDivSwiper21.disable();
+                cdMedDivSwiper22.disable();
+                cdMedDivSwiper23.disable();
+                cdMedDivSwiper24.disable();
+            }
+
+        } catch (e) {
+
         }
 
 
-        cdCommonMedia1440.addEventListener ("change", (e) => {
-            if (e.matches) {
-                cdMedDivSwiper21.enable ();
-                cdMedDivSwiper22.enable ();
-                cdMedDivSwiper23.enable ();
-                cdMedDivSwiper24.enable ();
-            } else {
-                cdMedDivSwiper21.disable ();
-                cdMedDivSwiper22.disable ();
-                cdMedDivSwiper23.disable ();
-                cdMedDivSwiper24.disable ();
+        cdCommonMedia1440.addEventListener("change", (e) => {
+            try {
+                if (e.matches) {
+                    cdMedDivSwiper21.enable();
+                    cdMedDivSwiper22.enable();
+                    cdMedDivSwiper23.enable();
+                    cdMedDivSwiper24.enable();
+                } else {
+                    cdMedDivSwiper21.disable();
+                    cdMedDivSwiper22.disable();
+                    cdMedDivSwiper23.disable();
+                    cdMedDivSwiper24.disable();
+                }
+
+            } catch (e) {
+
             }
         });
     }
