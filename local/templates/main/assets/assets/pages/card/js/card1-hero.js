@@ -353,58 +353,76 @@ window.addEventListener ("load", function () {
         const cdHeroDivPopupBody = document.querySelector (".cd-hero--div__POPUP_BODY");
 
 
-        cdHeroButtonImagesTopCont.addEventListener ("click", (e) => {
-            e.stopPropagation ();
-            cdHeroDivPopup.classList.add ("__cd-hero--div__POPUP");
-            cdHeroDivSwiper.slideTo (0);
-        });
+        if (cdHeroButtonImagesTopCont) {
+            cdHeroButtonImagesTopCont.addEventListener("click", (e) => {
+                e.stopPropagation();
+                cdHeroDivPopup.classList.add("__cd-hero--div__POPUP");
+                cdHeroDivSwiper.slideTo(0);
+            });
+        }
 
-        cdHeroButtonImagescdHeroImg1.addEventListener ("click", (e) => {
-            e.stopPropagation ();
-            cdHeroDivPopup.classList.add ("__cd-hero--div__POPUP");
-            cdHeroDivSwiper.slideTo (0);
-        });
+        if (cdHeroButtonImagescdHeroImg1) {
+            cdHeroButtonImagescdHeroImg1.addEventListener("click", (e) => {
+                e.stopPropagation();
+                cdHeroDivPopup.classList.add("__cd-hero--div__POPUP");
+                cdHeroDivSwiper.slideTo(0);
+            });
+        }
 
-        cdHeroButtonImagescdHeroImg2.addEventListener ("click", (e) => {
-            e.stopPropagation ();
-            cdHeroDivPopup.classList.add ("__cd-hero--div__POPUP");
-            cdHeroDivSwiper.slideTo (1);
-        });
+        if (cdHeroButtonImagescdHeroImg2) {
+            cdHeroButtonImagescdHeroImg2.addEventListener("click", (e) => {
+                e.stopPropagation();
+                cdHeroDivPopup.classList.add("__cd-hero--div__POPUP");
+                cdHeroDivSwiper.slideTo(1);
+            });
+        }
 
-        cdHeroButtonImagescdHeroVid.addEventListener ("click", (e) => {
-            e.stopPropagation ();
-            cdHeroDivPopup.classList.add ("__cd-hero--div__POPUP");
-            cdHeroDivSwiper.slideTo (cdHeroDivSwiper.slides.length - 2);
-        });
+        if (cdHeroButtonImagescdHeroVid) {
+            cdHeroButtonImagescdHeroVid.addEventListener("click", (e) => {
+                e.stopPropagation();
+                cdHeroDivPopup.classList.add("__cd-hero--div__POPUP");
+                cdHeroDivSwiper.slideTo(cdHeroDivSwiper.slides.length - 2);
+            });
+        }
 
-        cdHeroButtonImagescdHero3d?.addEventListener ("click", (e) => {
-            e.stopPropagation ();
-            cdHeroDivPopup.classList.add ("__cd-hero--div__POPUP");
-            cdHeroDivSwiperPagBuls[cdHeroDivSwiperPagBuls.length - 1].click ();
-        });
+        if (cdHeroButtonImagescdHero3d) {
+            cdHeroButtonImagescdHero3d?.addEventListener("click", (e) => {
+                e.stopPropagation();
+                cdHeroDivPopup.classList.add("__cd-hero--div__POPUP");
+                cdHeroDivSwiperPagBuls[cdHeroDivSwiperPagBuls.length - 1].click();
+            });
+        }
 
-        cdHeroButtonImagescdHeroMore.addEventListener ("click", (e) => {
-            e.stopPropagation ();
-            cdHeroDivPopup.classList.add ("__cd-hero--div__POPUP");
-        });
+        if (cdHeroButtonImagescdHeroMore) {
+            cdHeroButtonImagescdHeroMore.addEventListener("click", (e) => {
+                e.stopPropagation();
+                cdHeroDivPopup.classList.add("__cd-hero--div__POPUP");
+            });
+        }
 
-        cdHeroButtonPopupClose.addEventListener ("click", () => {
-            cdHeroDivPopup.classList.remove ("__cd-hero--div__POPUP");
-        });
+        if (cdHeroButtonPopupClose) {
+            cdHeroButtonPopupClose.addEventListener("click", () => {
+                cdHeroDivPopup.classList.remove("__cd-hero--div__POPUP");
+            });
+        }
 
-        cdHeroDivPopup.addEventListener ("click", (e) => {
-            if (cdHeroDivPopup.classList.contains ("__cd-hero--div__POPUP") && e.target === cdHeroDivPopup) {
-                cdHeroDivPopup.classList.remove ("__cd-hero--div__POPUP");
-            }
-        });
-
+        if (cdHeroDivPopup) {
+            cdHeroDivPopup.addEventListener("click", (e) => {
+                if (cdHeroDivPopup.classList.contains("__cd-hero--div__POPUP") && e.target === cdHeroDivPopup) {
+                    cdHeroDivPopup.classList.remove("__cd-hero--div__POPUP");
+                }
+            });
+        }
 
 
         // 3.4 Указание на оставшееся количество картинок, видео и 3d в правой кнопке
 
         const cdHeroSpanMore = document.querySelector (".cd-hero--button__IMAGES.cd-hero__MORE > span:first-of-type");
 
-        cdHeroSpanMore.textContent = `+ ${cdHeroDivSwiperPagBuls.length - 4}`;
+        if (cdHeroSpanMore) {
+            cdHeroSpanMore.textContent = `+ ${cdHeroDivSwiperPagBuls.length - 4}`;
+        }
+
 
 
 
