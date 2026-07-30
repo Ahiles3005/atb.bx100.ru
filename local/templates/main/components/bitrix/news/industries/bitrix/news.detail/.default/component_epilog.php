@@ -111,7 +111,7 @@ $isEmptyTASK_TEXT_4 = empty($arResult["DISPLAY_PROPERTIES"]['TASK_TEXT_4']['~VAL
 <?php
 $isEmptySOLUTION_TEXT = empty($arResult["DISPLAY_PROPERTIES"]['SOLUTION_TEXT']['~VALUE']['TEXT']);
 $isNotEmptyPRODUCTS = is_array($arResult["PROPERTIES"]['PRODUCTS']['VALUE']) && !empty($arResult["PROPERTIES"]['PRODUCTS']['VALUE']);
-$isNotEmptyOTRASLI_ELEMENTS = is_array($arResult["PROPERTIES"]['OTRASLI_ELEMENTS']['VALUE']) && !empty($arResult["PROPERTIES"]['OTRASLI_ELEMENTS']['VALUE']);
+$isNotEmptyRESHENIA = is_array($arResult["PROPERTIES"]['RESHENIA']['VALUE']) && !empty($arResult["PROPERTIES"]['RESHENIA']['VALUE']);
 
 ?>
 <section class="in-des">
@@ -285,20 +285,23 @@ $isNotEmptyOTRASLI_ELEMENTS = is_array($arResult["PROPERTIES"]['OTRASLI_ELEMENTS
             </div>
         </div>
 
-        <? if ($isNotEmptyOTRASLI_ELEMENTS): ?>
+        <? if ($isNotEmptyRESHENIA): ?>
+
             <h3 class="c-common--h3 __C-SCRL RIGHT">
-                Отрасли
+                Эффективные решения
             </h3>
 
 
-            <div class="cd-use--div__SWIPER21 swiper __C-SCRL DOWN">
-                <div class="cd-use--div__SWIPER21_WRAPPER swiper-wrapper">
+            <div class="cd-use--div__SWIPER22 swiper __C-SCRL DOWN">
+                <div class="cd-use--div__SWIPER22_WRAPPER swiper-wrapper">
                     <?
-                    $GLOBALS['arrFilterOtrasli'] = ['ID' => $arResult["PROPERTIES"]['OTRASLI_ELEMENTS']['VALUE'] ?? 0];
+                    $GLOBALS['arrFilterReshenia'] = [
+                            'ID' => $arResult["PROPERTIES"]['RESHENIA']['VALUE'] ?? 0
+                    ];
                     ?>
                     <? $APPLICATION->IncludeComponent(
                             "bitrix:catalog.section",
-                            "industries_series", [
+                            "history_solutions", [
                             "ACTION_VARIABLE" => "action",
                             "ADD_PICT_PROP" => "-",
                             "ADD_PROPERTIES_TO_BASKET" => "N",
@@ -326,8 +329,8 @@ $isNotEmptyOTRASLI_ELEMENTS = is_array($arResult["PROPERTIES"]['OTRASLI_ELEMENTS
                             "ELEMENT_SORT_ORDER" => "asc",
                             "ELEMENT_SORT_ORDER2" => "desc",
                             "ENLARGE_PRODUCT" => "STRICT",
-                            "FILTER_NAME" => "arrFilterOtrasli",
-                            "IBLOCK_ID" => "2",
+                            "FILTER_NAME" => "arrFilterReshenia",
+                            "IBLOCK_ID" => "3",
                             "IBLOCK_TYPE" => "content",
                             "INCLUDE_SUBSECTIONS" => "Y",
                             "LABEL_PROP" => "",
@@ -395,31 +398,32 @@ $isNotEmptyOTRASLI_ELEMENTS = is_array($arResult["PROPERTIES"]['OTRASLI_ELEMENTS
                                     'RAM',
                                     'BUILT_IN_HARD_DRIVE',
                             ]
+
                     ],
                             false
                     ); ?>
                 </div>
-
-                <div class="cd-use--div__SWIPER21_NAV">
-                    <button class="cd-use--button__SWIPER21_PREV swiper-button-disabled" disabled="" tabindex="-1"
+                <div class="cd-use--div__SWIPER22_NAV">
+                    <button class="cd-use--button__SWIPER22_PREV swiper-button-disabled" disabled="" tabindex="-1"
                             aria-label="Previous slide" aria-controls="swiper-wrapper-2e397d8c62b40696"
                             aria-disabled="true">
-                        <svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg width="12" height="22" viewBox="0 0 12 22" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
                             <path d="M1.2002 1.65002L10.0002 11L1.2002 20.35" stroke="#C82121" stroke-width="1.5"
                                   stroke-linecap="round"></path>
                         </svg>
                     </button>
-                    <div class="cd-use--div__SWIPER21_NAV_LINE"></div>
-                    <button class="cd-use--button__SWIPER21_NEXT" tabindex="0" aria-label="Next slide"
+                    <div class="cd-use--div__SWIPER22_NAV_LINE"></div>
+                    <button class="cd-use--button__SWIPER22_NEXT" tabindex="0" aria-label="Next slide"
                             aria-controls="swiper-wrapper-2e397d8c62b40696" aria-disabled="false">
-                        <svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg width="12" height="22" viewBox="0 0 12 22" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
                             <path d="M1.2002 1.65002L10.0002 11L1.2002 20.35" stroke="#C82121" stroke-width="1.5"
                                   stroke-linecap="round"></path>
                         </svg>
                     </button>
                 </div>
             </div>
-
         <? endif ?>
     </div>
 </section>

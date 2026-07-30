@@ -181,7 +181,7 @@ $properties = [
         'TASK_TEXT_4',
         'SOLUTION_TEXT',
         'PRODUCTS',
-        'OTRASLI_ELEMENTS',
+        'RESHENIA',
 ];
 
 $arParams["DETAIL_PROPERTY_CODE"] = array_merge($arParams["DETAIL_PROPERTY_CODE"], $properties);
