@@ -4,7 +4,87 @@
 
 <?php
 $isEmptyORGANIZACIA_2_2 = empty($arResult["DISPLAY_PROPERTIES"]['ORGANIZACIA_2_2']['~VALUE']['TEXT']);
+
+$isEmptySITTYACIA_1 = empty($arResult["DISPLAY_PROPERTIES"]['SITTYACIA_1']['~VALUE']['TEXT']);
+
+$isEmptyTASK_1 = empty($arResult["DISPLAY_PROPERTIES"]['TASK_1']['~VALUE']['TEXT']);
+
+$isEmptyRESHENIE_1 = empty($arResult["DISPLAY_PROPERTIES"]['RESHENIE_1']['~VALUE']['TEXT']);
+$isNotEmptyPRODUCTS = is_array($arResult["PROPERTIES"]['PRODUCTS']['VALUE']) && !empty($arResult["PROPERTIES"]['PRODUCTS']['VALUE']);
+$isNotEmptyOTRASLI_ELEMENTS = is_array($arResult["PROPERTIES"]['OTRASLI_ELEMENTS']['VALUE']) && !empty($arResult["PROPERTIES"]['OTRASLI_ELEMENTS']['VALUE']);
+$isNotEmptyRESHENIA = is_array($arResult["PROPERTIES"]['RESHENIA']['VALUE']) && !empty($arResult["PROPERTIES"]['RESHENIA']['VALUE']);
+
+$isEmptyELEMENTY_PREIM = empty($arResult["PROPERTIES"]['ELEMENTY_PREIM']['DATA']);
+$isEmptyRESULT_2 = empty($arResult["DISPLAY_PROPERTIES"]['RESULT_2']['~VALUE']['TEXT']);
 ?>
+
+
+<?
+ob_start();
+?>
+
+<? if (
+        !$isEmptyORGANIZACIA_2_2 ||
+        !$isEmptySITTYACIA_1 ||
+        !$isEmptyTASK_1 ||
+        (!$isEmptyRESHENIE_1 || $isNotEmptyPRODUCTS || $isNotEmptyOTRASLI_ELEMENTS || $isNotEmptyRESHENIA) ||
+        (!$isEmptyELEMENTY_PREIM && !$isEmptyRESULT_2)
+): ?>
+    <div class="c-common--div__TABS __C-SCRL DOWN">
+
+        <div class="c-common--div__TABS_TOP">
+            <? if (!$isEmptyORGANIZACIA_2_2): ?>
+                <a class="c-common--a__TABS _ACT _MARK" href="#hs-org">
+                    организация
+                </a>
+            <? endif ?>
+
+            <? if (!$isEmptySITTYACIA_1): ?>
+                <a class="c-common--a__TABS" href="#hs-sit">
+                    описание ситуации
+                </a>
+            <? endif ?>
+
+            <? if (!$isEmptyTASK_1): ?>
+                <a class="c-common--a__TABS" href="#hs-tsk">
+                    задача
+                </a>
+            <? endif ?>
+
+            <? if (!$isEmptyRESHENIE_1 || $isNotEmptyPRODUCTS || $isNotEmptyOTRASLI_ELEMENTS || $isNotEmptyRESHENIA): ?>
+                <a class="c-common--a__TABS" href="#hs-des">
+                    решение
+                </a>
+
+            <? endif ?>
+
+            <? if (!$isEmptyELEMENTY_PREIM && !$isEmptyRESULT_2): ?>
+                <a class="c-common--a__TABS" href="#hs-res">
+                    результат
+                </a>
+            <? endif ?>
+            <div class="c-common--div__TABS_FRAME"></div>
+        </div>
+
+
+        <button class="c-common--button__TABS_LEFT">
+            <svg width="54" height="20" viewBox="0 0 54 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M36 4.5L41 10L36 15.5" stroke="#005792" stroke-width="1.5" stroke-linecap="round"></path>
+            </svg>
+        </button>
+        <button class="c-common--button__TABS_RIGHT">
+            <svg width="54" height="20" viewBox="0 0 54 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M36 4.5L41 10L36 15.5" stroke="#005792" stroke-width="1.5" stroke-linecap="round"></path>
+            </svg>
+        </button>
+    </div>
+<? endif ?>
+
+<?
+$content = ob_get_clean();
+$APPLICATION->AddViewContent("success-stories-navgations", $content);
+?>
+
 
 <? if (!$isEmptyORGANIZACIA_2_2): ?>
     <section class="hs-org" id="hs-org">
@@ -31,10 +111,6 @@ $isEmptyORGANIZACIA_2_2 = empty($arResult["DISPLAY_PROPERTIES"]['ORGANIZACIA_2_2
 
     <!-- ---------- ********** СЕКЦИЯ SIT ********** ---------- -->
 
-<?php
-$isEmptySITTYACIA_1 = empty($arResult["DISPLAY_PROPERTIES"]['SITTYACIA_1']['~VALUE']['TEXT']);
-?>
-
 <? if (!$isEmptySITTYACIA_1): ?>
     <section class="in-tsk" id="hs-sit">
         <div class="in-tsk--div__CONT C-CONTAINER">
@@ -50,9 +126,6 @@ $isEmptySITTYACIA_1 = empty($arResult["DISPLAY_PROPERTIES"]['SITTYACIA_1']['~VAL
 
     <!-- ---------- ********** СЕКЦИЯ TSK ********** ---------- -->
 
-<?php
-$isEmptyTASK_1 = empty($arResult["DISPLAY_PROPERTIES"]['TASK_1']['~VALUE']['TEXT']);
-?>
 <? if (!$isEmptyTASK_1): ?>
     <section class="in-des" id="hs-tsk">
         <div class="in-des--div__CONT C-CONTAINER">
@@ -67,13 +140,6 @@ $isEmptyTASK_1 = empty($arResult["DISPLAY_PROPERTIES"]['TASK_1']['~VALUE']['TEXT
 <? endif ?>
 
     <!-- ---------- ********** СЕКЦИЯ DES ********** ---------- -->
-
-<?php
-$isEmptyRESHENIE_1 = empty($arResult["DISPLAY_PROPERTIES"]['RESHENIE_1']['~VALUE']['TEXT']);
-$isNotEmptyPRODUCTS = is_array($arResult["PROPERTIES"]['PRODUCTS']['VALUE']) && !empty($arResult["PROPERTIES"]['PRODUCTS']['VALUE']);
-$isNotEmptyOTRASLI_ELEMENTS = is_array($arResult["PROPERTIES"]['OTRASLI_ELEMENTS']['VALUE']) && !empty($arResult["PROPERTIES"]['OTRASLI_ELEMENTS']['VALUE']);
-$isNotEmptyRESHENIA = is_array($arResult["PROPERTIES"]['RESHENIA']['VALUE']) && !empty($arResult["PROPERTIES"]['RESHENIA']['VALUE']);
-?>
 
     <section class="in-des" id="hs-des">
         <div class="in-des--div__CONT C-CONTAINER">
@@ -533,11 +599,6 @@ $isNotEmptyRESHENIA = is_array($arResult["PROPERTIES"]['RESHENIA']['VALUE']) && 
 
     <!-- ---------- ********** СЕКЦИЯ RES ********** ---------- -->
 
-
-<?php
-$isEmptyELEMENTY_PREIM = empty($arResult["PROPERTIES"]['ELEMENTY_PREIM']['DATA']);
-$isEmptyRESULT_2 = empty($arResult["DISPLAY_PROPERTIES"]['RESULT_2']['~VALUE']['TEXT']);
-?>
 
 <? if (!$isEmptyELEMENTY_PREIM && !$isEmptyRESULT_2): ?>
     <section class="hs-res" id="hs-res">
