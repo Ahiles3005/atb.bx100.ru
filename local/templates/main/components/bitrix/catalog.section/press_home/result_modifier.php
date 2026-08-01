@@ -24,5 +24,9 @@ foreach ($arResult['ITEMS'] as $key => $item) {
 
     $arResult['ITEMS'][$key]['DATE'] = $date["day"] . '.' . $date["month"] . '.' . $date["year"];
 
-
+    $tagsValue[] = $item["PROPERTIES"]['TAG_KRASOTA']['VALUE'][0];
 }
+
+$arResult["PROPERTIES"]['TAG_KRASOTA']['DATA'] = Helper::getDataForTagPressCenter($tagsValue);
+
+

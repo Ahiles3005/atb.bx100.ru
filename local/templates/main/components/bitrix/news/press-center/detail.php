@@ -41,8 +41,12 @@ switch ($PRESS_TYPE) {
         break;
 }
 
-$otrosli = $arProps['TAG_KRASOTA']['VALUE'] ?? '';
-
+$tagData = Helper::getDataForTagPressCenter($arProps['TAG_KRASOTA']['VALUE']);
+foreach ($arProps['TAG_KRASOTA']['VALUE'] as $tagValue) {
+    if(array_key_exists($tagValue, $tagData)) {
+        $tags[] = $tagData[$tagValue];
+    }
+}
 
 
 $tip_stati = $arProps['TIP_STATI']['VALUE'] ?? '';
@@ -72,14 +76,14 @@ $detailText = $arFields['DETAIL_TEXT'];
         <? if ($arResult['VARIABLES']['SECTION_ID'] == 21) : ?>
             <div class="ane-hero--div__TOP">
                 <div class="ane-hero--div__TAGS __C-SCRL LEFT">
-                    <? if (!empty($otrosli)): ?>
-                        <a class="ane-hero--a__TAG color-orange" href="#">
-                            <div class="ane-hero--div__TAG_CIRCLE"></div>
+                    <? foreach ($tags as $tag ) : ?>
+                        <a class="ane-hero--a__TAG color-orange" href="#" style="color:<?= $tag['UF_DESCRIPTION'] ?>">
+                            <div class="ane-hero--div__TAG_CIRCLE" style="background-color: <?= $tag['UF_DESCRIPTION'] ?>" ></div>
                             <span class="ane-hero--span__TAG">
-                                <?= $otrosli ?>
+                                <?= $tag['UF_NAME'] ?? '' ?>
                             </span>
                         </a>
-                    <? endif ?>
+                    <? endforeach ?>
                 </div>
 
                 <h1 class="ane-hero--h1 __C-SCRL LEFT">
@@ -291,14 +295,14 @@ $detailText = $arFields['DETAIL_TEXT'];
         <? if ($arResult['VARIABLES']['SECTION_ID'] == 22) : ?>
             <div class="ane-hero--div__TOP">
                 <div class="ane-hero--div__TAGS __C-SCRL LEFT">
-                    <? if (!empty($otrosli)): ?>
-                        <a class="ane-hero--a__TAG color-orange" href="#">
-                            <div class="ane-hero--div__TAG_CIRCLE"></div>
+                    <? foreach ($tags as $tag ) : ?>
+                        <a class="ane-hero--a__TAG color-orange" href="#" style="color:<?= $tag['UF_DESCRIPTION'] ?>">
+                            <div class="ane-hero--div__TAG_CIRCLE" style="background-color: <?= $tag['UF_DESCRIPTION'] ?>" ></div>
                             <span class="ane-hero--span__TAG">
-                                <?= $otrosli ?>
+                                <?= $tag['UF_NAME'] ?? '' ?>
                             </span>
                         </a>
-                    <? endif ?>
+                    <? endforeach ?>
                 </div>
 
                 <h1 class="ane-hero--h1 __C-SCRL LEFT">
@@ -577,14 +581,14 @@ $detailText = $arFields['DETAIL_TEXT'];
         <? if ($arResult['VARIABLES']['SECTION_ID'] == 23) : ?>
             <div class="ane-hero--div__TOP">
                 <div class="ane-hero--div__TAGS __C-SCRL LEFT">
-                    <? if (!empty($otrosli)): ?>
-                        <a class="ane-hero--a__TAG color-orange _DES" href="#">
-                            <div class="ane-hero--div__TAG_CIRCLE"></div>
+                    <? foreach ($tags as $tag ) : ?>
+                        <a class="ane-hero--a__TAG color-orange" href="#" style="color:<?= $tag['UF_DESCRIPTION'] ?>">
+                            <div class="ane-hero--div__TAG_CIRCLE" style="background-color: <?= $tag['UF_DESCRIPTION'] ?>" ></div>
                             <span class="ane-hero--span__TAG">
-                                <?= $otrosli ?>
+                                <?= $tag['UF_NAME'] ?? '' ?>
                             </span>
                         </a>
-                    <? endif ?>
+                    <? endforeach ?>
                 </div>
 
                 <h1 class="ane-hero--h1 __C-SCRL LEFT">

@@ -95,11 +95,17 @@ if (!empty($arResult['ITEMS'])) {
                                             <?= $item['NAME'] ?>
                                         </a>
                                         <div class="hm-pre--div__CARD_BOTTOM">
-                                            <? if (!empty($item['DISPLAY_PROPERTIES']['TAG_KRASOTA']['VALUE'])): ?>
-                                                <a class="hm-pre--a__CARD_TAG color-yellow" href="#">
-                                                    <div class="hm-pre--div__CARD_TAG_CIRCLE"></div>
+                                            <?
+                                            $tag = $arResult["PROPERTIES"]['TAG_KRASOTA']['DATA'][$item['PROPERTIES']['TAG_KRASOTA']['VALUE'][0]] ?? [];
+                                            ?>
+                                            <? if (!empty($tag)): ?>
+                                                <a class="hm-pre--a__CARD_TAG color-yellow"
+                                                   href="<?= $item['DETAIL_PAGE_URL'] ?>"
+                                                   style="color:<?= $tag['UF_DESCRIPTION'] ?>">
+                                                    <div class="hm-pre--div__CARD_TAG_CIRCLE"
+                                                         style="background-color: <?= $tag['UF_DESCRIPTION'] ?>"></div>
                                                     <span class="hm-pre--span__CARD_TAG">
-                                <?= $item['DISPLAY_PROPERTIES']['TAG_KRASOTA']['VALUE']?>
+                                <?= $tag['UF_NAME'] ?? '' ?>
                             </span>
                                                 </a>
                                             <? endif ?>

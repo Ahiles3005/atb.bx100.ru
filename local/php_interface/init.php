@@ -31,3 +31,8 @@ if (file_exists($_SERVER['DOCUMENT_ROOT'] . '/local/php_interface/ahiles3005/cha
 if (file_exists($_SERVER['DOCUMENT_ROOT'] . '/local/php_interface/ahiles3005/characteristic_list_section.php')) {
     require_once $_SERVER['DOCUMENT_ROOT'] . '/local/php_interface/ahiles3005/characteristic_list_section.php';
 }
+
+if (file_exists($_SERVER['DOCUMENT_ROOT'] . '/local/php_interface/ahiles3005/Helper.php')) {
+    require_once $_SERVER['DOCUMENT_ROOT'] . '/local/php_interface/ahiles3005/Helper.php';
+}
+

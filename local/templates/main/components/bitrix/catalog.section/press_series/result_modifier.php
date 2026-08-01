@@ -34,7 +34,11 @@ foreach ($arResult['ITEMS'] as $key => $item) {
     if (!is_set($arResult['NEWS_DATA'][$newsTypeId]['name'])) {
         $arResult['NEWS_DATA'][$newsTypeId]['name'] = $newsTypeName;
     }
+
+    $tagsValue[] = $item["PROPERTIES"]['TAG_KRASOTA']['VALUE'][0];
 }
+$arResult["PROPERTIES"]['TAG_KRASOTA']['DATA'] = Helper::getDataForTagPressCenter($tagsValue);
+
 unset($arResult['ITEMS']);
 
 // Сохраняем данные для использования в component_epilog.php
