@@ -54,10 +54,10 @@ window.addEventListener ("load", function () {
 
         // 1.1 Выбор первой радиокнопки в субменю при загрузке страницы
 
-        hmDesFormSubmenu.querySelector (".hm-des--label__SUBMENU:first-of-type").click ();
+        hmDesFormSubmenu?.querySelector (".hm-des--label__SUBMENU:first-of-type").click ();
 
 
-        hmDesDivHead.addEventListener ("click", () => {
+        hmDesDivHead?.addEventListener ("click", () => {
         
             // 1.2 Открытие / закрытие субменю
 

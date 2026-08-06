@@ -57,10 +57,10 @@ window.addEventListener ("load", function () {
 
         // 1.1 Выбор первой радиокнопки в субменю при загрузке страницы
 
-        hmIndFormSubmenu.querySelector (".hm-ind--label__SUBMENU:first-of-type").click ();
+        hmIndFormSubmenu?.querySelector (".hm-ind--label__SUBMENU:first-of-type").click ();
         
 
-        hmIndDivHead.addEventListener ("click", () => {
+        hmIndDivHead?.addEventListener ("click", () => {
         
             // 1.2 Открытие / закрытие субменю
 
@@ -77,7 +77,12 @@ window.addEventListener ("load", function () {
         // 1.3 Выравнивание высоты form для десктопов по блоку с контентом
         
         function hmIndFormHeight () {
-            if (window.innerWidth > 1439) {
+
+            if (!hmIndFormSubmenu || !hmIndDivContent) {
+                return true;
+            }
+
+            if (window.innerWidth > 1439 ) {
                 setTimeout (() => {
                     hmIndFormSubmenu.style.maxHeight = getComputedStyle (hmIndDivContent).height;
                     hmIndDivSubmenuBack.style.top = `${parseInt (getComputedStyle (hmIndDivContent).height) + 108}px`;

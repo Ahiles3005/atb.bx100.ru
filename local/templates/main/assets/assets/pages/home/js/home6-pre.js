@@ -61,7 +61,7 @@ window.addEventListener ("load", function () {
                 }
             });
         });
-        menuItem[0].click()
+        menuItem[0]?.click()
 
         const menuItems = Array.from(document.querySelectorAll(".hm-pre--label__SUBMENU"));
         menuItems.forEach((v) => {

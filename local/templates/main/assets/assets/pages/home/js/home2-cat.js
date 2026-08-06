@@ -100,7 +100,7 @@ window.addEventListener ("load", function () {
 
         // 1.6 Открытие первого субменю при загрузке страницы
 
-        hmCatButtonMenuItem[0].click ();
+        hmCatButtonMenuItem[0]?.click ();
 
 
         // 1.7 Выравнивание высоты form для десктопов по блоку с контентом

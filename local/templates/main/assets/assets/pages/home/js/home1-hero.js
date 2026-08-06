@@ -74,30 +74,33 @@ window.addEventListener ("load", function () {
 
         function hmHeroCounter1 () {
             const hmHeroSpanCount1 = document.querySelector (".swiper-slide-active .hm-hero--div__COUNT:first-of-type .hm-hero--span__COUNT");
-            
-            let hmHeroSpanNumber1 = 0;
-            let localFormat = new Intl.NumberFormat("ru-RU");
-            let dS = parseInt (hmHeroSpanCount1.dataset.finl);
 
-            let time;
-            let count;
-            
-            if (dS <= 100) {
-                time = Math.round (1000 / dS);
-                count = 1;
-            } else {
-                time = 10;
-                count = Math.round (dS / 100);
+            if(hmHeroSpanCount1){
+                let hmHeroSpanNumber1 = 0;
+                let localFormat = new Intl.NumberFormat("ru-RU");
+                let dS = parseInt (hmHeroSpanCount1.dataset.finl);
+
+                let time;
+                let count;
+
+                if (dS <= 100) {
+                    time = Math.round (1000 / dS);
+                    count = 1;
+                } else {
+                    time = 10;
+                    count = Math.round (dS / 100);
+                }
+
+                let hmHeroClear1 = setInterval (() => {
+                    hmHeroSpanNumber1 = hmHeroSpanNumber1 + count;
+                    hmHeroSpanCount1.textContent = `${localFormat.format (hmHeroSpanNumber1)} +`;
+                    if (hmHeroSpanNumber1 >= dS) {
+                        clearInterval (hmHeroClear1);
+                        hmHeroSpanCount1.textContent = `${localFormat.format (dS)} +`
+                    }
+                }, time);
             }
 
-            let hmHeroClear1 = setInterval (() => {
-                hmHeroSpanNumber1 = hmHeroSpanNumber1 + count;
-                hmHeroSpanCount1.textContent = `${localFormat.format (hmHeroSpanNumber1)} +`;
-                if (hmHeroSpanNumber1 >= dS) {
-                    clearInterval (hmHeroClear1);
-                    hmHeroSpanCount1.textContent = `${localFormat.format (dS)} +`
-                }
-            }, time);
         }
 
         hmHeroCounter1 ();
@@ -108,28 +111,31 @@ window.addEventListener ("load", function () {
         function hmHeroCounter2 () {
             const hmHeroSpanCount2 = document.querySelector (".swiper-slide-active .hm-hero--div__COUNT:last-of-type .hm-hero--span__COUNT");
 
-            let hmHeroSpanNumber2 = 0;
-            let localFormat = new Intl.NumberFormat("ru-RU");
-            let dS = parseInt (hmHeroSpanCount2.dataset.finl);
+            if(hmHeroSpanCount2){
+                let hmHeroSpanNumber2 = 0;
+                let localFormat = new Intl.NumberFormat("ru-RU");
+                let dS = parseInt (hmHeroSpanCount2.dataset.finl);
 
-            let time;
-            let count;
+                let time;
+                let count;
 
-            if (dS <= 100) {
-                time = 1000 / dS;
-                count = 1;
-            } else {
-                time = 10;
-                count = dS / 100;
+                if (dS <= 100) {
+                    time = 1000 / dS;
+                    count = 1;
+                } else {
+                    time = 10;
+                    count = dS / 100;
+                }
+
+                let hmHeroClear2 = setInterval (() => {
+                    hmHeroSpanNumber2 = hmHeroSpanNumber2 + count;
+                    hmHeroSpanCount2.textContent = `${localFormat.format (hmHeroSpanNumber2)} +`;
+                    if (hmHeroSpanNumber2 == dS) {
+                        clearInterval (hmHeroClear2);
+                    }
+                }, time);
             }
 
-            let hmHeroClear2 = setInterval (() => {
-                hmHeroSpanNumber2 = hmHeroSpanNumber2 + count;
-                hmHeroSpanCount2.textContent = `${localFormat.format (hmHeroSpanNumber2)} +`;
-                if (hmHeroSpanNumber2 == dS) {
-                    clearInterval (hmHeroClear2);
-                }
-            }, time);
         }
 
         hmHeroCounter2 ();
@@ -151,11 +157,14 @@ window.addEventListener ("load", function () {
         // 3.1 При загрузке
 
         function hmHeroAnimation () {
-            hmHeroDivSwiper0.querySelector (".swiper-slide-active").classList.add ("__hm-hero--div__SWIPER_SLIDE");
-            const freeSlides = Array.from (hmHeroDivSwiper0.querySelectorAll (".hm-hero--div__SWIPER_SLIDE:not(.swiper-slide-active)"));
-            freeSlides.forEach ((v, i, a) => {
-                a[i].classList.remove ("__hm-hero--div__SWIPER_SLIDE");
-            });
+            if(hmHeroDivSwiper0){
+                hmHeroDivSwiper0.querySelector (".swiper-slide-active").classList.add ("__hm-hero--div__SWIPER_SLIDE");
+                const freeSlides = Array.from (hmHeroDivSwiper0.querySelectorAll (".hm-hero--div__SWIPER_SLIDE:not(.swiper-slide-active)"));
+                freeSlides.forEach ((v, i, a) => {
+                    a[i].classList.remove ("__hm-hero--div__SWIPER_SLIDE");
+                });
+            }
+
         }
 
         hmHeroAnimation ();
