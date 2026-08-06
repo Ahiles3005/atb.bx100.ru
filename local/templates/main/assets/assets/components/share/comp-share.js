@@ -91,9 +91,30 @@ window.addEventListener ("load", function () {
 
         const cCommonAnySharePopupLinkCopy = Array.from (document.querySelectorAll (".c-common--any__SHARE_POPUP_LINK._COPY"));
 
-        cCommonAnySharePopupLinkCopy.forEach ((v, i, a) => {
-            a[i].addEventListener ("click", (e) => {
-                navigator.clipboard.writeText (document.location.href);
+        cCommonAnySharePopupLinkCopy.forEach((v, i, a) => {
+            a[i].addEventListener("click", (e) => {
+                const url = window.location.href;
+
+                // Проверяем, доступен ли современный Clipboard API
+                if (navigator.clipboard && typeof navigator.clipboard.writeText === "function") {
+                    navigator.clipboard.writeText(url).catch(err => {
+                        console.error("Ошибка при копировании через Clipboard API: ", err);
+                    });
+                } else {
+                    // Резервный метод для HTTP и старых браузеров
+                    const textArea = document.createElement("textarea");
+                    textArea.value = url;
+                    textArea.style.position = "fixed"; // Избегаем прокрутки страницы
+                    document.body.appendChild(textArea);
+                    textArea.focus();
+                    textArea.select();
+                    try {
+                        document.execCommand("copy");
+                    } catch (err) {
+                        console.error("Не удалось скопировать текст: ", err);
+                    }
+                    document.body.removeChild(textArea);
+                }
             });
         });
 

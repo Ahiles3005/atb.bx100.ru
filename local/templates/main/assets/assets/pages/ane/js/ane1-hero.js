@@ -69,7 +69,7 @@ window.addEventListener ("load", function () {
 
         // 2.2 Выбор первой радиокнопки в субменю при загрузке страницы
 
-        mcPkLabelSubmenu[0].click ();
+        mcPkLabelSubmenu[0]?.click ();
 
 
         /// 2.3 Выбор уже выбранного слайда при ресайзе для избежания бага с обрезанием главного слайдера
