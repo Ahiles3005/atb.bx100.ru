@@ -386,8 +386,9 @@ $sectionId = (int)$arResult['VARIABLES']['SECTION_ID'];
 </section>
 
 <script>
+
     window.addEventListener("load", function () {
-        window.mcCommonCardOpener(".mc-news", <?=$arParams['NEWS_COUNT']?>);
+
         document.addEventListener("click", function (event) {
 
             const loadMoreBtn = event.target.closest('.ahiles3005_load_more');
@@ -432,6 +433,7 @@ $sectionId = (int)$arResult['VARIABLES']['SECTION_ID'];
                             const currentGrid = document.querySelector('.mc-common--div__GRID');
                             if (currentGrid) {
                                 currentGrid.insertAdjacentHTML('beforeend', gridHtml);
+                                mcCommonCardOpener (".mc-news", 1);
                             }
                         }
 

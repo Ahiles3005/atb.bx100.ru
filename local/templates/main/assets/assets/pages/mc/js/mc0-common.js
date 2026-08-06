@@ -1,7 +1,171 @@
 
 "use strict";
 
+function mcCommonCardOpener (x, y) {
 
+    const xElement = document.querySelector (`${x}`);
+
+    if(!xElement){
+        return true;
+    }
+
+    const mcCommonDivGrid = document.querySelector (`${x} .mc-common--div__GRID`);
+    const ctCatArticles = Array.from (document.querySelectorAll (`${x} article`));
+    const ctCatSpanInd1 = document.querySelector (`${x} .ct-cat--span__IND1`);
+    const ctCatSpanInd2 = document.querySelector (`${x} .ct-cat--span__IND2`);
+    const ctCatDivLine1 = document.querySelector (`${x} .ct-cat--div__LINE1`);
+    const ctCatButtonElse = document.querySelector (`${x} .ct-cat--button__ELSE`);
+
+
+    // 3.1 Счетчик показанных порций карточек
+
+    let ctCatCounter = 1;
+
+
+    // 3.2 Счетчик показанных карточек
+
+    function ctCatVisCounter () {
+
+        // 3.2.1 Числа
+
+        const ctCatArticlesVis = ctCatArticles.filter (x => {
+            return getComputedStyle (x).display == "grid";
+        });
+
+        const count1 = ctCatArticlesVis.length
+        const count2 = ctCatSpanInd2.textContent
+
+        ctCatSpanInd1.textContent = ctCatArticlesVis.length;
+       // ctCatSpanInd2.textContent = ctCatArticles.length;
+
+        // 3.2.2 Линия
+
+        ctCatDivLine1.style.width = `${(parseFloat (ctCatSpanInd1.textContent) / parseFloat (ctCatSpanInd2.textContent)) * 100}%`;
+
+        // 3.2.3 Уборка кнопки "Показать еще", если все карточки показаны
+
+        if (count1 == count2) {
+            ctCatButtonElse.classList.add ("__ct-cat--button__ELSE");
+        } else {
+            ctCatButtonElse.classList.remove ("__ct-cat--button__ELSE");
+        }
+    }
+
+
+
+    // 3.3 Начальное / текущее количество видимых карточек (для начальной загрузки и изменения количества при ресайзе или переключении видов)
+
+    function ctCatCardsCur () {
+        if (y === 1) {
+            if (window.innerWidth < 1440) {
+                ctCatArticles.forEach ((v, i, a) => {
+                    if (i < ctCatCounter * 3) {
+                        a[i]?.classList.add ("__mc-common--article__CARD");
+                    } else {
+                        a[i]?.classList.remove ("__mc-common--article__CARD");
+                    }
+                });
+            } else {
+                ctCatArticles.forEach ((v, i, a) => {
+                    if (i < ctCatCounter * 6) {
+                        a[i]?.classList.add ("__mc-common--article__CARD");
+                    } else {
+                        a[i]?.classList.remove ("__mc-common--article__CARD");
+                    }
+                });
+            }
+        } else if (y === 2) {
+            if (window.innerWidth < 1200) {
+                ctCatArticles.forEach ((v, i, a) => {
+                    if (i < ctCatCounter * 2) {
+                        a[i]?.classList.add ("__mc-common--article__CARD");
+                    } else {
+                        a[i]?.classList.remove ("__mc-common--article__CARD");
+                    }
+                });
+            } else {
+                ctCatArticles.forEach ((v, i, a) => {
+                    if (i < ctCatCounter * 3) {
+                        a[i]?.classList.add ("__mc-common--article__CARD");
+                    } else {
+                        a[i]?.classList.remove ("__mc-common--article__CARD");
+                    }
+                });
+            }
+        }
+
+
+        ctCatVisCounter ();
+    }
+
+    ctCatCardsCur ();
+
+
+
+    // 3.4 Добавление карточек по клику по кнопке
+
+    function ctCatCardsAdd () {
+
+        ctCatCounter++;
+
+        if (y === 1) {
+            if (window.innerWidth < 1440) {
+                ctCatArticles.forEach ((v, i, a) => {
+                    if (i < ctCatCounter * 3) {
+                        a[i]?.classList.add ("__mc-common--article__CARD");
+                    } else {
+                        a[i]?.classList.remove ("__mc-common--article__CARD");
+                    }
+                });
+            } else {
+                ctCatArticles.forEach ((v, i, a) => {
+                    if (i < ctCatCounter * 3) {
+                        a[i]?.classList.add ("__mc-common--article__CARD");
+                    } else {
+                        a[i]?.classList.remove ("__mc-common--article__CARD");
+                    }
+                });
+            }
+        } else if (y === 2) {
+            if (window.innerWidth < 1200) {
+                ctCatArticles.forEach ((v, i, a) => {
+                    if (i < ctCatCounter * 2) {
+                        a[i]?.classList.add ("__mc-common--article__CARD");
+                    } else {
+                        a[i]?.classList.remove ("__mc-common--article__CARD");
+                    }
+                });
+            } else {
+                ctCatArticles.forEach ((v, i, a) => {
+                    if (i < ctCatCounter * 3) {
+                        a[i]?.classList.add ("__mc-common--article__CARD");
+                    } else {
+                        a[i]?.classList.remove ("__mc-common--article__CARD");
+                    }
+                });
+            }
+        }
+
+        ctCatVisCounter ();
+    }
+
+    ctCatButtonElse?.addEventListener ("click", ctCatCardsAdd);
+
+
+
+    // 3.5 Пересчет при резайзе
+
+    cdCommonMedia()
+
+}
+
+
+function cdCommonMedia(){
+    const cdCommonMedia768 = window.matchMedia ("(min-width: 768px)");
+    const cdCommonMedia1200 = window.matchMedia ("(min-width: 1200px)");
+    const cdCommonMedia1440 = window.matchMedia ("(min-width: 1440px)");
+    const cdCommonMedia1920 = window.matchMedia ("(min-width: 1920px)");
+}
 
 window.addEventListener ("load", function () {
 
@@ -17,10 +181,7 @@ window.addEventListener ("load", function () {
 
         // ОБЪЕКТЫ ДЛЯ ПРОСЛУШИВАНИЯ ПЕРЕХОДА ЧЕРЕЗ БРЕЙКПОИНТЫ
 
-        const cdCommonMedia768 = window.matchMedia ("(min-width: 768px)");
-        const cdCommonMedia1200 = window.matchMedia ("(min-width: 1200px)");
-        const cdCommonMedia1440 = window.matchMedia ("(min-width: 1440px)");
-        const cdCommonMedia1920 = window.matchMedia ("(min-width: 1920px)");
+
 
 
 
@@ -112,157 +273,7 @@ window.addEventListener ("load", function () {
         // по 3 и 6 (для мобилок и десктопа соответственно) - 1 
         // или по 2 и 3 - 2.
 
-        function mcCommonCardOpener (x, y) {
 
-            const mcCommonDivGrid = document.querySelector (`${x} .mc-common--div__GRID`);
-            const ctCatArticles = Array.from (document.querySelectorAll (`${x} article`));
-            const ctCatSpanInd1 = document.querySelector (`${x} .ct-cat--span__IND1`);
-            const ctCatSpanInd2 = document.querySelector (`${x} .ct-cat--span__IND2`);
-            const ctCatDivLine1 = document.querySelector (`${x} .ct-cat--div__LINE1`);
-            const ctCatButtonElse = document.querySelector (`${x} .ct-cat--button__ELSE`);
-
-
-
-            // 3.1 Счетчик показанных порций карточек
-
-            let ctCatCounter = 1;
-
-
-            // 3.2 Счетчик показанных карточек
-
-            function ctCatVisCounter () {
-
-                // 3.2.1 Числа
-
-                const ctCatArticlesVis = ctCatArticles.filter (x => {
-                    return getComputedStyle (x).display == "grid";
-                });
-                ctCatSpanInd1.textContent = ctCatArticlesVis.length;
-                ctCatSpanInd2.textContent = ctCatArticles.length;
-
-                // 3.2.2 Линия
-
-                ctCatDivLine1.style.width = `${(parseFloat (ctCatSpanInd1.textContent) / parseFloat (ctCatSpanInd2.textContent)) * 100}%`;
-
-                // 3.2.3 Уборка кнопки "Показать еще", если все карточки показаны
-
-                if (ctCatArticlesVis.length === ctCatArticles.length) {
-                    ctCatButtonElse.classList.add ("__ct-cat--button__ELSE");
-                } else {
-                    ctCatButtonElse.classList.remove ("__ct-cat--button__ELSE");
-                }
-            }
-
-
-
-            // 3.3 Начальное / текущее количество видимых карточек (для начальной загрузки и изменения количества при ресайзе или переключении видов)
-
-            function ctCatCardsCur () {
-                if (y === 1) {
-                    if (window.innerWidth < 1440) {
-                        ctCatArticles.forEach ((v, i, a) => {
-                            if (i < ctCatCounter * 3) {
-                                a[i]?.classList.add ("__mc-common--article__CARD");
-                            } else {
-                                a[i]?.classList.remove ("__mc-common--article__CARD");
-                            }
-                        });
-                    } else {
-                        ctCatArticles.forEach ((v, i, a) => {
-                            if (i < ctCatCounter * 6) {
-                                a[i]?.classList.add ("__mc-common--article__CARD");
-                            } else {
-                                a[i]?.classList.remove ("__mc-common--article__CARD");
-                            }
-                        });
-                    }
-                } else if (y === 2) {
-                    if (window.innerWidth < 1200) {
-                        ctCatArticles.forEach ((v, i, a) => {
-                            if (i < ctCatCounter * 2) {
-                                a[i]?.classList.add ("__mc-common--article__CARD");
-                            } else {
-                                a[i]?.classList.remove ("__mc-common--article__CARD");
-                            }
-                        });
-                    } else {
-                        ctCatArticles.forEach ((v, i, a) => {
-                            if (i < ctCatCounter * 3) {
-                                a[i]?.classList.add ("__mc-common--article__CARD");
-                            } else {
-                                a[i]?.classList.remove ("__mc-common--article__CARD");
-                            }
-                        });
-                    }
-                }
-                
-                
-                ctCatVisCounter ();
-            }
-
-            ctCatCardsCur ();
-
-
-
-            // 3.4 Добавление карточек по клику по кнопке
-
-            function ctCatCardsAdd () {
-                
-                ctCatCounter++;
-
-                if (y === 1) {
-                    if (window.innerWidth < 1440) {
-                        ctCatArticles.forEach ((v, i, a) => {
-                            if (i < ctCatCounter * 3) {
-                                a[i]?.classList.add ("__mc-common--article__CARD");
-                            } else {
-                                a[i]?.classList.remove ("__mc-common--article__CARD");
-                            }
-                        });
-                    } else {
-                        ctCatArticles.forEach ((v, i, a) => {
-                            if (i < ctCatCounter * 3) {
-                                a[i]?.classList.add ("__mc-common--article__CARD");
-                            } else {
-                                a[i]?.classList.remove ("__mc-common--article__CARD");
-                            }
-                        });
-                    }
-                } else if (y === 2) {
-                    if (window.innerWidth < 1200) {
-                        ctCatArticles.forEach ((v, i, a) => {
-                            if (i < ctCatCounter * 2) {
-                                a[i]?.classList.add ("__mc-common--article__CARD");
-                            } else {
-                                a[i]?.classList.remove ("__mc-common--article__CARD");
-                            }
-                        });
-                    } else {
-                        ctCatArticles.forEach ((v, i, a) => {
-                            if (i < ctCatCounter * 3) {
-                                a[i]?.classList.add ("__mc-common--article__CARD");
-                            } else {
-                                a[i]?.classList.remove ("__mc-common--article__CARD");
-                            }
-                        });
-                    }
-                }
-
-                ctCatVisCounter ();
-            }
-
-            ctCatButtonElse.addEventListener ("click", ctCatCardsAdd);
-
-
-
-            // 3.5 Пересчет при резайзе
-
-            cdCommonMedia768.addEventListener ("change", ctCatCardsCur);
-            cdCommonMedia1200.addEventListener ("change", ctCatCardsCur);
-            cdCommonMedia1440.addEventListener ("change", ctCatCardsCur);
-            cdCommonMedia1920.addEventListener ("change", ctCatCardsCur);
-
-        }
         
         
 
@@ -285,5 +296,5 @@ window.addEventListener ("load", function () {
         
 
         
-    }
+   }
 });
