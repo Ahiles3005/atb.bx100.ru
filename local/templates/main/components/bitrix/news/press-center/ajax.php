@@ -10,9 +10,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $arParams = unserialize(base64_decode($_POST['arParams']), ['allowed_classes' => false]);
     $arResult = unserialize(base64_decode($_POST['arResult']), ['allowed_classes' => false]);
 
-//    $GLOBALS['filter'] = [
-//
-//    ];
+    $GLOBALS[$arParams['FILTER_NAME']] = unserialize(base64_decode($_POST['arFilter']), ['allowed_classes' => false]);
+
     $APPLICATION->IncludeComponent(
         "bitrix:news.list",
         "press-center",
@@ -60,7 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             "ACTIVE_DATE_FORMAT" => 'd.m.Y',
             "USE_PERMISSIONS" => $arParams["USE_PERMISSIONS"],
             "GROUP_PERMISSIONS" => $arParams["GROUP_PERMISSIONS"],
-            "FILTER_NAME" => 'filter',
+            "FILTER_NAME" => $arParams["FILTER_NAME"],
             "HIDE_LINK_WHEN_NO_DETAIL" => $arParams["HIDE_LINK_WHEN_NO_DETAIL"],
             "CHECK_DATES" => $arParams["CHECK_DATES"],
 

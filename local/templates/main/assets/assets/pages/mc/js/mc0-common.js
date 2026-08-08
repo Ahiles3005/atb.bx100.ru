@@ -26,6 +26,10 @@ function mcCommonCardOpener (x, y) {
 
     function ctCatVisCounter () {
 
+        if(!ctCatSpanInd1){
+            return true;
+        }
+
         // 3.2.1 Числа
 
         const ctCatArticlesVis = ctCatArticles.filter (x => {
