@@ -37,6 +37,7 @@ window.addEventListener ("load", function () {
     
                             <form class="c-common--form__FB __C-SCRL RIGHT" action="#" method="post" name="feedback" novalidate>
                                     <input name="form_name" type="hidden" value="КП">
+                                    <input name="form_id" type="hidden" value="1">
                                     <div class="honey_age_old">
                                     <input name="age_old" type="text" placeholder="Возраст">
                                     </div>
@@ -641,6 +642,7 @@ window.addEventListener ("load", function () {
             
                             <form class="c-common--form__FB _FORM_COMMON __C-SCRL RIGHT" action="#" method="post" name="feedback" novalidate>
                               <input name="form_name" type="hidden" value="Напишите нам">
+                              <input name="form_id" type="hidden" value="2">
                               <div class="honey_age_old">
                                     <input name="age_old" type="text" placeholder="Возраст">
                                     </div>
@@ -1099,6 +1101,7 @@ window.addEventListener ("load", function () {
             
                             <form class="c-common--form__FB _FORM_REGISTRATION __C-SCRL RIGHT" action="#" method="post" name="feedback" novalidate>
                                 <input name="form_name" type="hidden" value="Регистрация">
+                                
                                 <div class="honey_age_old">
                                     <input name="age_old" type="text" placeholder="Возраст">
                                     </div>
@@ -1598,6 +1601,7 @@ window.addEventListener ("load", function () {
             
                             <form class="c-common--form__FB _FORM_VACANCY __C-SCRL RIGHT" action="#" method="post" name="feedback" novalidate>
                                <input name="form_name" type="hidden" value="Вакансия">
+                               <input name="form_id" type="hidden" value="3">
                                <div class="honey_age_old">
                                     <input name="age_old" type="text" placeholder="Возраст">
                                     </div>
@@ -2078,6 +2082,7 @@ window.addEventListener ("load", function () {
             
                             <form class="c-common--form__FB _FORM_COMMON __C-SCRL RIGHT" action="#" method="post" name="feedback" novalidate>
                                 <input name="form_name" type="hidden" value="Подписка">
+                                <input name="form_id" type="hidden" value="4">
                                 <div class="honey_age_old">
                                     <input name="age_old" type="text" placeholder="Возраст">
                                     </div>
@@ -2434,6 +2439,7 @@ window.addEventListener ("load", function () {
             
                             <form class="c-common--form__FB _FORM_SERVICE __C-SCRL RIGHT" action="#" method="post" name="feedback" novalidate>
                                 <input name="form_name" type="hidden" value="Консультация">
+                                <input name="form_id" type="hidden" value="5">
                                 <div class="honey_age_old">
                                     <input name="age_old" type="text" placeholder="Возраст">
                                     </div>
