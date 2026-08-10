@@ -80,6 +80,12 @@ $this->setFrameMode(true);
                     ),
                     $component
             );
+
+            $FORMAT_RABOTY = $GLOBALS[$arParams["FILTER_NAME"]]['PROPERTY']['FORMAT_RABOTY'] ?? 0;
+
+            if($FORMAT_RABOTY == 0){
+                unset($GLOBALS[$arParams["FILTER_NAME"]]['PROPERTY']['FORMAT_RABOTY']);
+            }
             ?>
 
             <div class="hrx-vac--div__RIGHT">

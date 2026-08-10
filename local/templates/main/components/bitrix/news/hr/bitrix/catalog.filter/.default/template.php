@@ -177,8 +177,8 @@ if (!$delete) {
                       fill="#0C0C0C"/>
             </svg>
             <span>ПОКАЗАТЬ</span>
-            <span class="ct-cat--span__FILTER_BOTTOM">20</span>
-            <span>ВАКАНСИЙ</span>
+<!--            <span class="ct-cat--span__FILTER_BOTTOM">20</span>-->
+            <span>ВАКАНСИИ</span>
         </button>
         <button class="hrx-vac--button__FILTER_RESET __C-SCRL DOWN" type="submit" name="del_filter" value="Y">
             <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">

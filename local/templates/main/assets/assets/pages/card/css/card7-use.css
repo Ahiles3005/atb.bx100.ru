@@ -278,7 +278,7 @@
 
 .cd-use--div__SWIPER21_SLIDE {
     display: grid;
-    grid-template-rows: subgrid;
+    /*grid-template-rows: subgrid;*/
     grid-row: span 4;
     pointer-events: all !important;
 }
