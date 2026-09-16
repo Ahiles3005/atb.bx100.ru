@@ -10,16 +10,16 @@ window.addEventListener ("load", function () {
 
 
     /* --- КОММЕРЧЕСКАЯ ФОРМА --- */
-    
-    
+
+
     // 1. ОТКРЫТИЕ / ЗАКРЫТИЕ МОДАЛЬНЫХ ОКОН
 
     const openFrmCmrs = Array.from (document.querySelectorAll ("._OPEN_FRM._FORM_COMMERCIAL"));
-    
+
 
     // 1.1 Открытие
 
-    
+
     openFrmCmrs?.forEach ((v0, i0, a0) => {
         a0[i0].addEventListener ("click", () => {
             if (!document.querySelector (".c-common--div__FB._FORM_COMMERCIAL")) {
@@ -250,44 +250,44 @@ window.addEventListener ("load", function () {
                         </div>
                     </div>
                 `);
-    
-    
-    
+
+
+
                 const cCommonDivFbCmrs = document.querySelector (".c-common--div__FB._FORM_COMMERCIAL");
                 const cCommonButtonFbCloseCmrs = cCommonDivFbCmrs.querySelector (".c-common--button__FB_CLOSE");
-    
+
                 setTimeout (() => {
                     cCommonDivFbCmrs.classList.add ("__c-common--div__FB");
                 }, 50);
-    
-    
-    
+
+
+
                 // 1.2 Закрытие
-    
+
                 cCommonButtonFbCloseCmrs.addEventListener ("click", () => {
                     cCommonDivFbCmrs.classList.remove ("__c-common--div__FB");
                 });
-                
-                
+
+
                 cCommonDivFbCmrs.addEventListener ("click", (e) => {
                     if (e.target === cCommonDivFbCmrs) {
                         cCommonDivFbCmrs.classList.remove ("__c-common--div__FB");
                     }
                 });
-    
-    
-    
-    
+
+
+
+
                 // 2. ИСЧЕЗАНИЕ / ПОЯВЛЕНИЕ ЗВЕЗДОЧКИ И/ИЛИ ПОДПИСЕЙ В ПОЛЯХ ПРИ НАБОРЕ
-    
+
                 // 2.1 Поле организации
-                
+
                 const cCommonLabelFbOrg = cCommonDivFbCmrs.querySelector (".c-common--label__FB_ORG");
                 const cCommonInputFbOrg = cCommonDivFbCmrs.querySelector (".c-common--input__FB_ORG");
                 const cCommonSpanFbOrg1 = cCommonDivFbCmrs.querySelector (".c-common--span__FB_ORG1");
                 const cCommonSvgFbOrg = cCommonDivFbCmrs.querySelector (".c-common--svg__FB_ORG");
-    
-                
+
+
                 cCommonInputFbOrg.addEventListener ("input", () => {
                     if (cCommonInputFbOrg.value !== "") {
                         cCommonLabelFbOrg.classList.add ("__c-common--label__FB_ORG");
@@ -297,11 +297,11 @@ window.addEventListener ("load", function () {
                         cCommonSpanFbOrg1.classList.remove ("__c-common--span__FB_ORG1");
                     }
                 });
-                
-    
-    
+
+
+
                 // 2.2 Поля имени и фамилии
-    
+
                 const cCommonInputFbName = cCommonDivFbCmrs.querySelector (".c-common--input__FB_NAME");
                 const cCommonLabelFbName = cCommonDivFbCmrs.querySelector (".c-common--label__FB_NAME");
                 const cCommonSvgFbName = cCommonDivFbCmrs.querySelector (".c-common--svg__FB_NAME");
@@ -310,7 +310,7 @@ window.addEventListener ("load", function () {
                 const cCommonLabelFbSurName = cCommonDivFbCmrs.querySelector (".c-common--label__FB_SURNAME");
                 const cCommonSvgFbSurName = cCommonDivFbCmrs.querySelector (".c-common--svg__FB_SURNAME");
                 const cCommonSpanFbSurName = cCommonDivFbCmrs.querySelector (".c-common--span__FB_SURNAME");
-    
+
                 cCommonInputFbName.addEventListener ("input", () => {
                     if (cCommonInputFbName.value !== "") {
                         cCommonSpanFbName.classList.add ("__c-common--span__FB_NAME");
@@ -318,8 +318,8 @@ window.addEventListener ("load", function () {
                         cCommonSpanFbName.classList.remove ("__c-common--span__FB_NAME");
                     }
                 });
-                
-                
+
+
                 cCommonInputFbSurName.addEventListener ("input", () => {
                     if (cCommonInputFbSurName.value !== "") {
                         cCommonSpanFbSurName.classList.add ("__c-common--span__FB_SURNAME");
@@ -327,17 +327,17 @@ window.addEventListener ("load", function () {
                         cCommonSpanFbSurName.classList.remove ("__c-common--span__FB_SURNAME");
                     }
                 });
-                
-    
-    
+
+
+
                 // 2.3 Поле электронной почты
-    
+
                 const cCommonInputFbMail = cCommonDivFbCmrs.querySelector (".c-common--input__FB_MAIL");
                 const cCommonLabelFbMail = cCommonDivFbCmrs.querySelector (".c-common--label__FB_MAIL");
                 const cCommonSvgFbMail = cCommonDivFbCmrs.querySelector (".c-common--svg__FB_MAIL");
                 const cCommonSpanFbMail = cCommonDivFbCmrs.querySelector (".c-common--span__FB_MAIL");
-    
-                
+
+
                 cCommonInputFbMail.addEventListener ("input", () => {
                     if (cCommonInputFbMail.value !== "") {
                         cCommonSpanFbMail.classList.add ("__c-common--span__FB_MAIL");
@@ -345,16 +345,16 @@ window.addEventListener ("load", function () {
                         cCommonSpanFbMail.classList.remove ("__c-common--span__FB_MAIL");
                     }
                 });
-    
-    
-    
+
+
+
                 // 2.4 Поле телефона
-    
+
                 const cCommonInputFbTel = cCommonDivFbCmrs.querySelector (".c-common--input__FB_TEL");
                 const cCommonSvgFbTel = cCommonDivFbCmrs.querySelector (".c-common--svg__FB_TEL");
                 const cCommonSpanFbTel = cCommonDivFbCmrs.querySelector (".c-common--span__FB_TEL");
-    
-                
+
+
                 cCommonInputFbTel.addEventListener ("input", () => {
                     if (cCommonInputFbTel.value !== "") {
                         cCommonSpanFbTel.classList.add ("__c-common--span__FB_TEL");
@@ -362,17 +362,17 @@ window.addEventListener ("load", function () {
                         cCommonSpanFbTel.classList.remove ("__c-common--span__FB_TEL");
                     }
                 });
-    
-    
-    
+
+
+
                 // 2.5 Поле комментария
-    
+
                 const cCommonTextareaFbTa = cCommonDivFbCmrs.querySelector (".c-common--textarea__FB_TA");
                 const cCommonLabelFbTa = cCommonDivFbCmrs.querySelector (".c-common--label__FB_TA");
                 const cCommonSvgFbTa = cCommonDivFbCmrs.querySelector (".c-common--svg__FB_TA");
                 const cCommonSpanFbTa = cCommonDivFbCmrs.querySelector (".c-common--span__FB_TA");
-    
-    
+
+
                 cCommonTextareaFbTa.addEventListener ("input", () => {
                     if (cCommonTextareaFbTa.value !== "") {
                         cCommonSpanFbTa.classList.add ("__c-common--span__FB_TA");
@@ -380,12 +380,12 @@ window.addEventListener ("load", function () {
                         cCommonSpanFbTa.classList.remove ("__c-common--span__FB_TA");
                     }
                 });
-                
-    
-    
-    
+
+
+
+
                 // 3. ВЫБОР ОРГАНИЗАЦИИ ПО ИНН  (!!! ДЕМОНСТРАЦИОННЫЙ КОД, ПРИ ИНТЕГРАЦИИ МОЖЕТ БЫТЬ ЗАМЕНЕН / УДАЛЕН)
-    
+
                 const cCommonFormFb = cCommonDivFbCmrs.querySelector (".c-common--form__FB");
                 const cCommonLabelFbInn = cCommonDivFbCmrs.querySelector (".c-common--label__FB_INN");
                 const cCommonInputFbInn = cCommonDivFbCmrs.querySelector (".c-common--input__FB_INN");
@@ -394,8 +394,8 @@ window.addEventListener ("load", function () {
                 const cCommonSpanFbInnNm = Array.from (cCommonDivFbCmrs.querySelectorAll (".c-common--span__FB_INN_NM"));
                 const cCommonPFbInnAdr = Array.from (cCommonDivFbCmrs.querySelectorAll (".c-common--p__FB_INN_ADR"));
                 const cCommonDivFbAdr = cCommonDivFbCmrs.querySelector (".c-common--div__FB_ADR");
-    
-    
+
+
                 cCommonInputFbInn.addEventListener ("input", () => {
                     if (cCommonInputFbInn.value !== "") {
                         cCommonUlFbInn.classList.add ("__c-common--ul__FB_INN");
@@ -405,16 +405,16 @@ window.addEventListener ("load", function () {
                         cCommonLabelFbInn.classList.remove ("__c-common--label__FB_INN");
                     }
                 });
-    
-    
+
+
                 cCommonFormFb.addEventListener ("click", (e) => {
                     if (e.target !== cCommonLabelFbInn) {
                         cCommonUlFbInn.classList.remove ("__c-common--ul__FB_INN");
                         cCommonLabelFbInn.classList.remove ("__c-common--label__FB_INN");
                     }
                 });
-    
-    
+
+
                 cCommonLiFbInn.forEach ((v, i, a) => {
                     a[i].addEventListener ("click", () => {
                         cCommonInputFbOrg.value = cCommonSpanFbInnNm[i].textContent;
@@ -427,18 +427,18 @@ window.addEventListener ("load", function () {
                         cCommonLabelFbInn.classList.remove ("__c-common--label__FB_INN");
                     });
                 });
-    
-    
+
+
                 cCommonInputFbOrg.addEventListener ("input", () => {
                     if (cCommonInputFbOrg.value === "") {
                         cCommonDivFbAdr.classList.remove ("__c-common--p__FB_ADR");
                         cCommonDivFbAdr.innerHTML = "";
                     }
                 });
-    
-    
-    
-    
+
+
+
+
                 // 4. ИНИЦИАЛИЗАЦИЯ ПЛАГИНА intlTelInput
 
                 window.intlTelInput(cCommonInputFbTel, {
@@ -446,31 +446,28 @@ window.addEventListener ("load", function () {
                     initialCountry: "ru",
                     autoPlaceholder: "aggressive",
                     customPlaceholder: function(selectedPlaceholder, selectedCountryData) {
-                        // Если выбрана Россия (код страны "ru")
                         if (selectedCountryData.iso2 === 'ru') {
                             return "8 999 999-99-99";
                         }
-
-                        // Для остальных стран оставляем стандартный плейсхолдер плагина
                         return selectedPlaceholder;
                     },
                     formatOnDisplay: true,
                     strictMode: true
                 });
-    
-    
-    
-    
+
+
+
+
                 // 5. ВАЛИДАЦИЯ, ОТПРАВКА И ОТБИВКА (!!! ПРИ ИНТЕГРАЦИИ ВОЗМОЖНО БУДЕТ НЕОБХОДИМО ИЗМЕНЕНИЕ В ЧАСТИ ОТПРАВКИ)
-    
+
                 const cCommonDivFbDoneCmrs = document.querySelector (".c-common--div__FB_DONE._FORM_COMMERCIAL");
                 const cCommonButtonFbDoneClose = cCommonDivFbDoneCmrs.querySelector (".c-common--button__FB_DONE_CLOSE");
-    
-                
+
+
                 cCommonFormFb.addEventListener ("submit", (e) => {
                     e.preventDefault ();
-                    
-                    
+
+
                     if (cCommonInputFbOrg.checkValidity ()) {
                         cCommonLabelFbOrg.classList.remove ("__c-common--label__FB");
                         cCommonSvgFbOrg.classList.remove ("__c-common--svg__FB");
@@ -478,9 +475,9 @@ window.addEventListener ("load", function () {
                         cCommonLabelFbOrg.classList.add ("__c-common--label__FB");
                         cCommonSvgFbOrg.classList.add ("__c-common--svg__FB");
                     }
-                    
-                    
-    
+
+
+
                     if (cCommonInputFbName.checkValidity ()) {
                         cCommonLabelFbName.classList.remove ("__c-common--label__FB");
                         cCommonSvgFbName.classList.remove ("__c-common--svg__FB");
@@ -488,9 +485,9 @@ window.addEventListener ("load", function () {
                         cCommonLabelFbName.classList.add ("__c-common--label__FB");
                         cCommonSvgFbName.classList.add ("__c-common--svg__FB");
                     }
-                    
-                    
-                    
+
+
+
                     if (cCommonInputFbSurName.checkValidity ()) {
                         cCommonLabelFbSurName.classList.remove ("__c-common--label__FB");
                         cCommonSvgFbSurName.classList.remove ("__c-common--svg__FB");
@@ -498,9 +495,9 @@ window.addEventListener ("load", function () {
                         cCommonLabelFbSurName.classList.add ("__c-common--label__FB");
                         cCommonSvgFbSurName.classList.add ("__c-common--svg__FB");
                     }
-                    
-            
-                    
+
+
+
                     if (cCommonInputFbMail.checkValidity ()) {
                         cCommonLabelFbMail.classList.remove ("__c-common--label__FB");
                         cCommonSvgFbMail.classList.remove ("__c-common--svg__FB");
@@ -508,9 +505,9 @@ window.addEventListener ("load", function () {
                         cCommonLabelFbMail.classList.add ("__c-common--label__FB");
                         cCommonSvgFbMail.classList.add ("__c-common--svg__FB");
                     }
-                    
-                    
-                    
+
+
+
                     if (cCommonInputFbTel.checkValidity ()) {
                         cCommonInputFbTel.classList.remove ("__c-common--input__FB_TEL");
                         cCommonSvgFbTel.classList.remove ("__c-common--svg__FB");
@@ -518,9 +515,9 @@ window.addEventListener ("load", function () {
                         cCommonInputFbTel.classList.add ("__c-common--input__FB_TEL");
                         cCommonSvgFbTel.classList.add ("__c-common--svg__FB");
                     }
-                    
-            
-                    
+
+
+
                     if (cCommonTextareaFbTa.checkValidity ()) {
                         cCommonLabelFbTa.classList.remove ("__c-common--label__FB");
                         cCommonSvgFbTa.classList.remove ("__c-common--svg__FB");
@@ -528,9 +525,9 @@ window.addEventListener ("load", function () {
                         cCommonLabelFbTa.classList.add ("__c-common--label__FB");
                         cCommonSvgFbTa.classList.add ("__c-common--svg__FB");
                     }
-                    
-                    
-                    
+
+
+
                     if (cCommonDivFbCmrs.querySelector (".c-common--input__FB_APPR").checkValidity ()) {
                         cCommonDivFbCmrs.querySelector (".c-common--div__FB_APPR").classList.remove ("__c-common--div__FB_APPR");
                         cCommonDivFbCmrs.querySelector (".c-common--p__FB_APPR").classList.remove ("__c-common--p__FB_APPR");
@@ -538,9 +535,9 @@ window.addEventListener ("load", function () {
                         cCommonDivFbCmrs.querySelector (".c-common--div__FB_APPR").classList.add ("__c-common--div__FB_APPR");
                         cCommonDivFbCmrs.querySelector (".c-common--p__FB_APPR").classList.add ("__c-common--p__FB_APPR");
                     }
-                    
-    
-            
+
+
+
                     setTimeout (() => {
                         if (!cCommonDivFbCmrs.querySelector (".__c-common--label__FB") && !cCommonDivFbCmrs.querySelector (".__c-common--input__FB_TEL") && !cCommonDivFbCmrs.querySelector (".__c-common--div__FB_APPR")) {
                             sendFormAjax(cCommonFormFb, function () {
@@ -551,9 +548,9 @@ window.addEventListener ("load", function () {
                         }
                     }, 50)
                 });
-    
-    
-                
+
+
+
                 cCommonButtonFbDoneClose.addEventListener ("click", () => {
                     cCommonDivFbDoneCmrs.classList.remove ("__c-common--div__FB_DONE");
                     cCommonLabelFbOrg.classList.remove ("__c-common--label__FB_ORG");
@@ -566,9 +563,9 @@ window.addEventListener ("load", function () {
                     cCommonSpanFbTel.classList.remove ("__c-common--span__FB_TEL");
                     cCommonSpanFbTa.classList.remove ("__c-common--span__FB_TA");
                 });
-                
-                
-                
+
+
+
                 cCommonDivFbDoneCmrs.addEventListener ("click", (e) => {
                     if (e.target === cCommonDivFbDoneCmrs) {
                         cCommonDivFbDoneCmrs.classList.remove ("__c-common--div__FB_DONE");
@@ -583,14 +580,14 @@ window.addEventListener ("load", function () {
                         cCommonSpanFbTa.classList.remove ("__c-common--span__FB_TA");
                     }
                 });
-    
-    
-    
-    
+
+
+
+
                 // 6. АНИМАЦИЯ ПРИ СКРОЛЛЕ 
-    
+
                 const scrolls = cCommonDivFbCmrs.querySelectorAll('.__C-SCRL');
-    
+
                 const callback = (entries, observer) => {
                     entries.forEach((entry) => {
                         if (entry.isIntersecting) {
@@ -599,23 +596,23 @@ window.addEventListener ("load", function () {
                         }
                     });
                 }
-    
+
                 const options = {
                     rootMargin: '-40px 0px 0px 0px',
                     threshold: 0,
                 }
-    
+
                 const observer = new IntersectionObserver(callback, options)
-    
+
                 scrolls.forEach((v) => observer.observe(v));
-                
+
             } else {
                 document.querySelector (".c-common--div__FB._FORM_COMMERCIAL").classList.add ("__c-common--div__FB");
             }
-            
+
         });
     });
-    
+
 
 
 
@@ -629,11 +626,11 @@ window.addEventListener ("load", function () {
     // 1. ОТКРЫТИЕ / ЗАКРЫТИЕ МОДАЛЬНЫХ ОКОН
 
     const openFrmComm = Array.from (document.querySelectorAll ("._OPEN_FRM._FORM_COMMON"));
-    
+
 
     // 1.1 Открытие
 
-    
+
     openFrmComm?.forEach ((v0, i0, a0) => {
         a0[i0].addEventListener ("click", () => {
             if (!document.querySelector (".c-common--div__FB._FORM_COMMON")) {
@@ -807,41 +804,41 @@ window.addEventListener ("load", function () {
                         </div>
                     </div>
                 `);
-    
-    
+
+
                 const cCommonDivFbComm = document.querySelector (".c-common--div__FB._FORM_COMMON");
                 const cCommonButtonFbCloseComm = cCommonDivFbComm.querySelector (".c-common--button__FB_CLOSE");
                 const cCommonFormFb = cCommonDivFbComm.querySelector (".c-common--form__FB");
-    
-    
+
+
                 setTimeout (() => {
                     cCommonDivFbComm.classList.add ("__c-common--div__FB");
                 }, 50);
-                
-    
-    
-    
+
+
+
+
                 // 1.2 Закрытие
-    
+
                 cCommonButtonFbCloseComm.addEventListener ("click", () => {
                     cCommonDivFbComm.classList.remove ("__c-common--div__FB");
                 });
-                
-                
+
+
                 cCommonDivFbComm.addEventListener ("click", (e) => {
                     if (e.target === cCommonDivFbComm) {
                         cCommonDivFbComm.classList.remove ("__c-common--div__FB");
                     }
                 });
-    
-    
-    
-    
+
+
+
+
                 // 2. ИСЧЕЗАНИЕ / ПОЯВЛЕНИЕ ЗВЕЗДОЧКИ И/ИЛИ ПОДПИСЕЙ В ПОЛЯХ ПРИ НАБОРЕ
-    
-    
+
+
                 // 2.1 Поля имени и фамилии
-    
+
                 const cCommonInputFbName = cCommonDivFbComm.querySelector (".c-common--input__FB_NAME");
                 const cCommonLabelFbName = cCommonDivFbComm.querySelector (".c-common--label__FB_NAME");
                 const cCommonSvgFbName = cCommonDivFbComm.querySelector (".c-common--svg__FB_NAME");
@@ -850,7 +847,7 @@ window.addEventListener ("load", function () {
                 const cCommonLabelFbSurName = cCommonDivFbComm.querySelector (".c-common--label__FB_SURNAME");
                 const cCommonSvgFbSurName = cCommonDivFbComm.querySelector (".c-common--svg__FB_SURNAME");
                 const cCommonSpanFbSurName = cCommonDivFbComm.querySelector (".c-common--span__FB_SURNAME");
-    
+
                 cCommonInputFbName.addEventListener ("input", () => {
                     if (cCommonInputFbName.value !== "") {
                         cCommonSpanFbName.classList.add ("__c-common--span__FB_NAME");
@@ -858,8 +855,8 @@ window.addEventListener ("load", function () {
                         cCommonSpanFbName.classList.remove ("__c-common--span__FB_NAME");
                     }
                 });
-                
-                
+
+
                 cCommonInputFbSurName.addEventListener ("input", () => {
                     if (cCommonInputFbSurName.value !== "") {
                         cCommonSpanFbSurName.classList.add ("__c-common--span__FB_SURNAME");
@@ -867,17 +864,17 @@ window.addEventListener ("load", function () {
                         cCommonSpanFbSurName.classList.remove ("__c-common--span__FB_SURNAME");
                     }
                 });
-                
-    
-    
+
+
+
                 // 2.2 Поле электронной почты
-    
+
                 const cCommonInputFbMail = cCommonDivFbComm.querySelector (".c-common--input__FB_MAIL");
                 const cCommonLabelFbMail = cCommonDivFbComm.querySelector (".c-common--label__FB_MAIL");
                 const cCommonSvgFbMail = cCommonDivFbComm.querySelector (".c-common--svg__FB_MAIL");
                 const cCommonSpanFbMail = cCommonDivFbComm.querySelector (".c-common--span__FB_MAIL");
-    
-                
+
+
                 cCommonInputFbMail.addEventListener ("input", () => {
                     if (cCommonInputFbMail.value !== "") {
                         cCommonSpanFbMail.classList.add ("__c-common--span__FB_MAIL");
@@ -885,16 +882,16 @@ window.addEventListener ("load", function () {
                         cCommonSpanFbMail.classList.remove ("__c-common--span__FB_MAIL");
                     }
                 });
-    
-    
-    
+
+
+
                 // 2.3 Поле телефона
-    
+
                 const cCommonInputFbTel = cCommonDivFbComm.querySelector (".c-common--input__FB_TEL");
                 const cCommonSvgFbTel = cCommonDivFbComm.querySelector (".c-common--svg__FB_TEL");
                 const cCommonSpanFbTel = cCommonDivFbComm.querySelector (".c-common--span__FB_TEL");
-    
-                
+
+
                 cCommonInputFbTel.addEventListener ("input", () => {
                     if (cCommonInputFbTel.value !== "") {
                         cCommonSpanFbTel.classList.add ("__c-common--span__FB_TEL");
@@ -902,17 +899,17 @@ window.addEventListener ("load", function () {
                         cCommonSpanFbTel.classList.remove ("__c-common--span__FB_TEL");
                     }
                 });
-    
-    
-    
+
+
+
                 // 2.4 Поле комментария
-    
+
                 const cCommonTextareaFbTa = cCommonDivFbComm.querySelector (".c-common--textarea__FB_TA");
                 const cCommonLabelFbTa = cCommonDivFbComm.querySelector (".c-common--label__FB_TA");
                 const cCommonSvgFbTa = cCommonDivFbComm.querySelector (".c-common--svg__FB_TA");
                 const cCommonSpanFbTa = cCommonDivFbComm.querySelector (".c-common--span__FB_TA");
-    
-    
+
+
                 cCommonTextareaFbTa.addEventListener ("input", () => {
                     if (cCommonTextareaFbTa.value !== "") {
                         cCommonSpanFbTa.classList.add ("__c-common--span__FB_TA");
@@ -920,10 +917,10 @@ window.addEventListener ("load", function () {
                         cCommonSpanFbTa.classList.remove ("__c-common--span__FB_TA");
                     }
                 });
-    
-    
-    
-    
+
+
+
+
                 // 4. ИНИЦИАЛИЗАЦИЯ ПЛАГИНА intlTelInput
 
                 window.intlTelInput(cCommonInputFbTel, {
@@ -931,31 +928,28 @@ window.addEventListener ("load", function () {
                     initialCountry: "ru",
                     autoPlaceholder: "aggressive",
                     customPlaceholder: function(selectedPlaceholder, selectedCountryData) {
-                        // Если выбрана Россия (код страны "ru")
                         if (selectedCountryData.iso2 === 'ru') {
                             return "8 999 999-99-99";
                         }
-
-                        // Для остальных стран оставляем стандартный плейсхолдер плагина
                         return selectedPlaceholder;
                     },
                     formatOnDisplay: true,
                     strictMode: true
                 });
-    
-    
-    
-    
+
+
+
+
                 // 5. ВАЛИДАЦИЯ, ОТПРАВКА И ОТБИВКА (!!! ПРИ ИНТЕГРАЦИИ ВОЗМОЖНО БУДЕТ НЕОБХОДИМО ИЗМЕНЕНИЕ В ЧАСТИ ОТПРАВКИ)
-    
+
                 const cCommonDivFbDoneComm = document.querySelector (".c-common--div__FB_DONE._FORM_COMMON");
                 const cCommonButtonFbDoneClose = cCommonDivFbDoneComm.querySelector (".c-common--button__FB_DONE_CLOSE");
-    
-                
+
+
                 cCommonFormFb.addEventListener ("submit", (e) => {
                     e.preventDefault ();
-                    
-    
+
+
                     if (cCommonInputFbName.checkValidity ()) {
                         cCommonLabelFbName.classList.remove ("__c-common--label__FB");
                         cCommonSvgFbName.classList.remove ("__c-common--svg__FB");
@@ -963,9 +957,9 @@ window.addEventListener ("load", function () {
                         cCommonLabelFbName.classList.add ("__c-common--label__FB");
                         cCommonSvgFbName.classList.add ("__c-common--svg__FB");
                     }
-                    
-                    
-                    
+
+
+
                     if (cCommonInputFbSurName.checkValidity ()) {
                         cCommonLabelFbSurName.classList.remove ("__c-common--label__FB");
                         cCommonSvgFbSurName.classList.remove ("__c-common--svg__FB");
@@ -973,9 +967,9 @@ window.addEventListener ("load", function () {
                         cCommonLabelFbSurName.classList.add ("__c-common--label__FB");
                         cCommonSvgFbSurName.classList.add ("__c-common--svg__FB");
                     }
-                    
-            
-                    
+
+
+
                     if (cCommonInputFbMail.checkValidity ()) {
                         cCommonLabelFbMail.classList.remove ("__c-common--label__FB");
                         cCommonSvgFbMail.classList.remove ("__c-common--svg__FB");
@@ -983,9 +977,9 @@ window.addEventListener ("load", function () {
                         cCommonLabelFbMail.classList.add ("__c-common--label__FB");
                         cCommonSvgFbMail.classList.add ("__c-common--svg__FB");
                     }
-                    
-                    
-                    
+
+
+
                     if (cCommonInputFbTel.checkValidity ()) {
                         cCommonInputFbTel.classList.remove ("__c-common--input__FB_TEL");
                         cCommonSvgFbTel.classList.remove ("__c-common--svg__FB");
@@ -993,9 +987,9 @@ window.addEventListener ("load", function () {
                         cCommonInputFbTel.classList.add ("__c-common--input__FB_TEL");
                         cCommonSvgFbTel.classList.add ("__c-common--svg__FB");
                     }
-                    
-            
-                    
+
+
+
                     if (cCommonTextareaFbTa.checkValidity ()) {
                         cCommonLabelFbTa.classList.remove ("__c-common--label__FB");
                         cCommonSvgFbTa.classList.remove ("__c-common--svg__FB");
@@ -1003,9 +997,9 @@ window.addEventListener ("load", function () {
                         cCommonLabelFbTa.classList.add ("__c-common--label__FB");
                         cCommonSvgFbTa.classList.add ("__c-common--svg__FB");
                     }
-                    
-                    
-                    
+
+
+
                     if (cCommonDivFbComm.querySelector (".c-common--input__FB_APPR").checkValidity ()) {
                         cCommonDivFbComm.querySelector (".c-common--div__FB_APPR").classList.remove ("__c-common--div__FB_APPR");
                         cCommonDivFbComm.querySelector (".c-common--p__FB_APPR").classList.remove ("__c-common--p__FB_APPR");
@@ -1013,9 +1007,9 @@ window.addEventListener ("load", function () {
                         cCommonDivFbComm.querySelector (".c-common--div__FB_APPR").classList.add ("__c-common--div__FB_APPR");
                         cCommonDivFbComm.querySelector (".c-common--p__FB_APPR").classList.add ("__c-common--p__FB_APPR");
                     }
-                    
-    
-            
+
+
+
                     setTimeout (() => {
                         if (!cCommonDivFbComm.querySelector (".__c-common--label__FB") && !cCommonDivFbComm.querySelector (".__c-common--input__FB_TEL") && !cCommonDivFbComm.querySelector (".__c-common--div__FB_APPR")) {
                             sendFormAjax(cCommonFormFb, function () {
@@ -1026,9 +1020,9 @@ window.addEventListener ("load", function () {
                         }
                     }, 50)
                 });
-    
-    
-                
+
+
+
                 cCommonButtonFbDoneClose.addEventListener ("click", () => {
                     cCommonDivFbDoneComm.classList.remove ("__c-common--div__FB_DONE");
                     cCommonSpanFbName.classList.remove ("__c-common--span__FB_NAME");
@@ -1037,9 +1031,9 @@ window.addEventListener ("load", function () {
                     cCommonSpanFbTel.classList.remove ("__c-common--span__FB_TEL");
                     cCommonSpanFbTa.classList.remove ("__c-common--span__FB_TA");
                 });
-                
-                
-                
+
+
+
                 cCommonDivFbDoneComm.addEventListener ("click", (e) => {
                     if (e.target === cCommonDivFbDoneComm) {
                         cCommonDivFbDoneComm.classList.remove ("__c-common--div__FB_DONE");
@@ -1050,14 +1044,14 @@ window.addEventListener ("load", function () {
                         cCommonSpanFbTa.classList.remove ("__c-common--span__FB_TA");
                     }
                 });
-    
-    
-    
-    
+
+
+
+
                 // 6. АНИМАЦИЯ ПРИ СКРОЛЛЕ 
-    
+
                 const scrolls = cCommonDivFbComm.querySelectorAll('.__C-SCRL');
-    
+
                 const callback = (entries, observer) => {
                     entries.forEach((entry) => {
                         if (entry.isIntersecting) {
@@ -1066,23 +1060,23 @@ window.addEventListener ("load", function () {
                         }
                     });
                 }
-    
+
                 const options = {
                     rootMargin: '-40px 0px 0px 0px',
                     threshold: 0,
                 }
-    
+
                 const observer = new IntersectionObserver(callback, options)
-    
+
                 scrolls.forEach((v) => observer.observe(v));
-                
+
             } else {
                 document.querySelector (".c-common--div__FB._FORM_COMMON").classList.add ("__c-common--div__FB");
             }
-            
+
         });
     });
-    
+
 
 
 
@@ -1091,16 +1085,16 @@ window.addEventListener ("load", function () {
 
 
     /* --- РЕГИСТРАЦИОННАЯ ФОРМА --- */
-    
-    
+
+
     // 1. ОТКРЫТИЕ / ЗАКРЫТИЕ МОДАЛЬНЫХ ОКОН
 
     const openFrmReg = Array.from (document.querySelectorAll ("._OPEN_FRM._FORM_REGISTRATION"));
-    
+
 
     // 1.1 Открытие
 
-    
+
     openFrmReg?.forEach ((v0, i0, a0) => {
         a0[i0].addEventListener ("click", () => {
             if (!document.querySelector (".c-common--div__FB._FORM_REGISTRATION")) {
@@ -1291,40 +1285,40 @@ window.addEventListener ("load", function () {
                         </div>
                     </div>
                 `);
-    
-    
-    
+
+
+
                 const cCommonDivFbReg = document.querySelector (".c-common--div__FB._FORM_REGISTRATION");
                 const cCommonButtonFbCloseReg = cCommonDivFbReg.querySelector (".c-common--button__FB_CLOSE");
                 const cCommonFormFb = cCommonDivFbReg.querySelector (".c-common--form__FB");
-    
+
                 setTimeout (() => {
                     cCommonDivFbReg.classList.add ("__c-common--div__FB");
                 }, 50);
-    
-    
-    
+
+
+
                 // 1.2 Закрытие
-    
+
                 cCommonButtonFbCloseReg.addEventListener ("click", () => {
                     cCommonDivFbReg.classList.remove ("__c-common--div__FB");
                 });
-                
-                
+
+
                 cCommonDivFbReg.addEventListener ("click", (e) => {
                     if (e.target === cCommonDivFbReg) {
                         cCommonDivFbReg.classList.remove ("__c-common--div__FB");
                     }
                 });
-    
-    
-    
-    
+
+
+
+
                 // 2. ИСЧЕЗАНИЕ / ПОЯВЛЕНИЕ ЗВЕЗДОЧКИ И/ИЛИ ПОДПИСЕЙ В ПОЛЯХ ПРИ НАБОРЕ
-    
-                
+
+
                 // 2.1 Поля имени и фамилии
-    
+
                 const cCommonInputFbName = cCommonDivFbReg.querySelector (".c-common--input__FB_NAME");
                 const cCommonLabelFbName = cCommonDivFbReg.querySelector (".c-common--label__FB_NAME");
                 const cCommonSvgFbName = cCommonDivFbReg.querySelector (".c-common--svg__FB_NAME");
@@ -1333,7 +1327,7 @@ window.addEventListener ("load", function () {
                 const cCommonLabelFbSurName = cCommonDivFbReg.querySelector (".c-common--label__FB_SURNAME");
                 const cCommonSvgFbSurName = cCommonDivFbReg.querySelector (".c-common--svg__FB_SURNAME");
                 const cCommonSpanFbSurName = cCommonDivFbReg.querySelector (".c-common--span__FB_SURNAME");
-    
+
                 cCommonInputFbName.addEventListener ("input", () => {
                     if (cCommonInputFbName.value !== "") {
                         cCommonSpanFbName.classList.add ("__c-common--span__FB_NAME");
@@ -1341,8 +1335,8 @@ window.addEventListener ("load", function () {
                         cCommonSpanFbName.classList.remove ("__c-common--span__FB_NAME");
                     }
                 });
-                
-                
+
+
                 cCommonInputFbSurName.addEventListener ("input", () => {
                     if (cCommonInputFbSurName.value !== "") {
                         cCommonSpanFbSurName.classList.add ("__c-common--span__FB_SURNAME");
@@ -1350,17 +1344,17 @@ window.addEventListener ("load", function () {
                         cCommonSpanFbSurName.classList.remove ("__c-common--span__FB_SURNAME");
                     }
                 });
-                
-    
-    
+
+
+
                 // 2.2 Поле электронной почты
-    
+
                 const cCommonInputFbMail = cCommonDivFbReg.querySelector (".c-common--input__FB_MAIL");
                 const cCommonLabelFbMail = cCommonDivFbReg.querySelector (".c-common--label__FB_MAIL");
                 const cCommonSvgFbMail = cCommonDivFbReg.querySelector (".c-common--svg__FB_MAIL");
                 const cCommonSpanFbMail = cCommonDivFbReg.querySelector (".c-common--span__FB_MAIL");
-    
-                
+
+
                 cCommonInputFbMail.addEventListener ("input", () => {
                     if (cCommonInputFbMail.value !== "") {
                         cCommonSpanFbMail.classList.add ("__c-common--span__FB_MAIL");
@@ -1368,16 +1362,16 @@ window.addEventListener ("load", function () {
                         cCommonSpanFbMail.classList.remove ("__c-common--span__FB_MAIL");
                     }
                 });
-    
-    
-    
+
+
+
                 // 2.3 Поле телефона
-    
+
                 const cCommonInputFbTel = cCommonDivFbReg.querySelector (".c-common--input__FB_TEL");
                 const cCommonSvgFbTel = cCommonDivFbReg.querySelector (".c-common--svg__FB_TEL");
                 const cCommonSpanFbTel = cCommonDivFbReg.querySelector (".c-common--span__FB_TEL");
-    
-                
+
+
                 cCommonInputFbTel.addEventListener ("input", () => {
                     if (cCommonInputFbTel.value !== "") {
                         cCommonSpanFbTel.classList.add ("__c-common--span__FB_TEL");
@@ -1385,11 +1379,11 @@ window.addEventListener ("load", function () {
                         cCommonSpanFbTel.classList.remove ("__c-common--span__FB_TEL");
                     }
                 });
-    
-    
-    
+
+
+
                 // 2.4 Поля компании и должности
-    
+
                 const cCommonInputFbComp1 = cCommonDivFbReg.querySelector (".c-common--input__FB_COMP1");
                 const cCommonLabelFbComp1 = cCommonDivFbReg.querySelector (".c-common--label__FB_COMP1");
                 const cCommonSvgFbComp1 = cCommonDivFbReg.querySelector (".c-common--svg__FB_COMP1");
@@ -1398,8 +1392,8 @@ window.addEventListener ("load", function () {
                 const cCommonLabelFbPost1 = cCommonDivFbReg.querySelector (".c-common--label__FB_POST1");
                 const cCommonSvgFbPost1 = cCommonDivFbReg.querySelector (".c-common--svg__FB_POST1");
                 const cCommonSpanFbPost1 = cCommonDivFbReg.querySelector (".c-common--span__FB_POST1");
-    
-                
+
+
                 cCommonInputFbComp1.addEventListener ("input", () => {
                     if (cCommonInputFbComp1.value !== "") {
                         cCommonSpanFbComp1.classList.add ("__c-common--span__FB_COMP1");
@@ -1407,9 +1401,9 @@ window.addEventListener ("load", function () {
                         cCommonSpanFbComp1.classList.remove ("__c-common--span__FB_COMP1");
                     }
                 });
-            
-            
-            
+
+
+
                 cCommonInputFbPost1.addEventListener ("input", () => {
                     if (cCommonInputFbPost1.value !== "") {
                         cCommonSpanFbPost1.classList.add ("__c-common--span__FB_POST1");
@@ -1417,10 +1411,10 @@ window.addEventListener ("load", function () {
                         cCommonSpanFbPost1.classList.remove ("__c-common--span__FB_POST1");
                     }
                 });
-                            
-    
-    
-    
+
+
+
+
                 // 4. ИНИЦИАЛИЗАЦИЯ ПЛАГИНА intlTelInput
 
                 window.intlTelInput(cCommonInputFbTel, {
@@ -1428,31 +1422,28 @@ window.addEventListener ("load", function () {
                     initialCountry: "ru",
                     autoPlaceholder: "aggressive",
                     customPlaceholder: function(selectedPlaceholder, selectedCountryData) {
-                        // Если выбрана Россия (код страны "ru")
                         if (selectedCountryData.iso2 === 'ru') {
                             return "8 999 999-99-99";
                         }
-
-                        // Для остальных стран оставляем стандартный плейсхолдер плагина
                         return selectedPlaceholder;
                     },
                     formatOnDisplay: true,
                     strictMode: true
                 });
-    
-    
-    
-    
+
+
+
+
                 // 5. ВАЛИДАЦИЯ, ОТПРАВКА И ОТБИВКА (!!! ПРИ ИНТЕГРАЦИИ ВОЗМОЖНО БУДЕТ НЕОБХОДИМО ИЗМЕНЕНИЕ В ЧАСТИ ОТПРАВКИ)
-    
+
                 const cCommonDivFbDoneReg = document.querySelector (".c-common--div__FB_DONE._FORM_REGISTRATION");
                 const cCommonButtonFbDoneClose = cCommonDivFbDoneReg.querySelector (".c-common--button__FB_DONE_CLOSE");
-    
-                
+
+
                 cCommonFormFb.addEventListener ("submit", (e) => {
                     e.preventDefault ();
-                    
-    
+
+
                     if (cCommonInputFbName.checkValidity ()) {
                         cCommonLabelFbName.classList.remove ("__c-common--label__FB");
                         cCommonSvgFbName.classList.remove ("__c-common--svg__FB");
@@ -1460,9 +1451,9 @@ window.addEventListener ("load", function () {
                         cCommonLabelFbName.classList.add ("__c-common--label__FB");
                         cCommonSvgFbName.classList.add ("__c-common--svg__FB");
                     }
-                    
-                    
-                    
+
+
+
                     if (cCommonInputFbSurName.checkValidity ()) {
                         cCommonLabelFbSurName.classList.remove ("__c-common--label__FB");
                         cCommonSvgFbSurName.classList.remove ("__c-common--svg__FB");
@@ -1470,9 +1461,9 @@ window.addEventListener ("load", function () {
                         cCommonLabelFbSurName.classList.add ("__c-common--label__FB");
                         cCommonSvgFbSurName.classList.add ("__c-common--svg__FB");
                     }
-                    
-            
-                    
+
+
+
                     if (cCommonInputFbMail.checkValidity ()) {
                         cCommonLabelFbMail.classList.remove ("__c-common--label__FB");
                         cCommonSvgFbMail.classList.remove ("__c-common--svg__FB");
@@ -1480,9 +1471,9 @@ window.addEventListener ("load", function () {
                         cCommonLabelFbMail.classList.add ("__c-common--label__FB");
                         cCommonSvgFbMail.classList.add ("__c-common--svg__FB");
                     }
-                    
-                    
-                    
+
+
+
                     if (cCommonInputFbTel.checkValidity ()) {
                         cCommonInputFbTel.classList.remove ("__c-common--input__FB_TEL");
                         cCommonSvgFbTel.classList.remove ("__c-common--svg__FB");
@@ -1490,9 +1481,9 @@ window.addEventListener ("load", function () {
                         cCommonInputFbTel.classList.add ("__c-common--input__FB_TEL");
                         cCommonSvgFbTel.classList.add ("__c-common--svg__FB");
                     }
-    
-    
-                    
+
+
+
                     if (cCommonInputFbComp1.checkValidity ()) {
                         cCommonLabelFbComp1.classList.remove ("__c-common--label__FB");
                         cCommonSvgFbComp1.classList.remove ("__c-common--svg__FB");
@@ -1500,9 +1491,9 @@ window.addEventListener ("load", function () {
                         cCommonLabelFbComp1.classList.add ("__c-common--label__FB");
                         cCommonSvgFbComp1.classList.add ("__c-common--svg__FB");
                     }
-            
-                    
-                    
+
+
+
                     if (cCommonInputFbPost1.checkValidity ()) {
                         cCommonLabelFbPost1.classList.remove ("__c-common--label__FB");
                         cCommonSvgFbPost1.classList.remove ("__c-common--svg__FB");
@@ -1510,9 +1501,9 @@ window.addEventListener ("load", function () {
                         cCommonLabelFbPost1.classList.add ("__c-common--label__FB");
                         cCommonSvgFbPost1.classList.add ("__c-common--svg__FB");
                     }
-    
-                    
-                    
+
+
+
                     if (cCommonDivFbReg.querySelector (".c-common--input__FB_APPR").checkValidity ()) {
                         cCommonDivFbReg.querySelector (".c-common--div__FB_APPR").classList.remove ("__c-common--div__FB_APPR");
                         cCommonDivFbReg.querySelector (".c-common--p__FB_APPR").classList.remove ("__c-common--p__FB_APPR");
@@ -1520,9 +1511,9 @@ window.addEventListener ("load", function () {
                         cCommonDivFbReg.querySelector (".c-common--div__FB_APPR").classList.add ("__c-common--div__FB_APPR");
                         cCommonDivFbReg.querySelector (".c-common--p__FB_APPR").classList.add ("__c-common--p__FB_APPR");
                     }
-                    
-    
-            
+
+
+
                     setTimeout (() => {
                         if (!cCommonDivFbReg.querySelector (".__c-common--label__FB") && !cCommonDivFbReg.querySelector (".__c-common--input__FB_TEL") && !cCommonDivFbReg.querySelector (".__c-common--div__FB_APPR")) {
                             sendFormAjax(cCommonFormFb, function () {
@@ -1533,9 +1524,9 @@ window.addEventListener ("load", function () {
                         }
                     }, 50)
                 });
-    
-    
-                
+
+
+
                 cCommonButtonFbDoneClose.addEventListener ("click", () => {
                     cCommonDivFbDoneReg.classList.remove ("__c-common--div__FB_DONE");
                     cCommonSpanFbName.classList.remove ("__c-common--span__FB_NAME");
@@ -1545,9 +1536,9 @@ window.addEventListener ("load", function () {
                     cCommonSpanFbComp1.classList.remove ("__c-common--span__FB_COMP1");
                     cCommonSpanFbPost1.classList.remove ("__c-common--span__FB_POST1");
                 });
-                
-                
-                
+
+
+
                 cCommonDivFbDoneReg.addEventListener ("click", (e) => {
                     if (e.target === cCommonDivFbDoneReg) {
                         cCommonDivFbDoneReg.classList.remove ("__c-common--div__FB_DONE");
@@ -1559,14 +1550,14 @@ window.addEventListener ("load", function () {
                         cCommonSpanFbPost1.classList.remove ("__c-common--span__FB_POST1");
                     }
                 });
-    
-    
-    
-    
+
+
+
+
                 // 6. АНИМАЦИЯ ПРИ СКРОЛЛЕ 
-    
+
                 const scrolls = cCommonDivFbReg.querySelectorAll('.__C-SCRL');
-    
+
                 const callback = (entries, observer) => {
                     entries.forEach((entry) => {
                         if (entry.isIntersecting) {
@@ -1575,23 +1566,23 @@ window.addEventListener ("load", function () {
                         }
                     });
                 }
-    
+
                 const options = {
                     rootMargin: '-40px 0px 0px 0px',
                     threshold: 0,
                 }
-    
+
                 const observer = new IntersectionObserver(callback, options)
-    
+
                 scrolls.forEach((v) => observer.observe(v));
-                
+
             } else {
                 document.querySelector (".c-common--div__FB._FORM_REGISTRATION").classList.add ("__c-common--div__FB");
             }
-            
+
         });
     });
-    
+
 
 
 
@@ -1600,16 +1591,16 @@ window.addEventListener ("load", function () {
 
 
     /* --- ФОРМА ДЛЯ ВАКАНСИЙ --- */
-    
-    
+
+
     // 1. ОТКРЫТИЕ / ЗАКРЫТИЕ МОДАЛЬНЫХ ОКОН
 
     const openFrmVac = Array.from (document.querySelectorAll ("._OPEN_FRM._FORM_VACANCY"));
-    
+
 
     // 1.1 Открытие
 
-    
+
     openFrmVac?.forEach ((v0, i0, a0) => {
         a0[i0].addEventListener ("click", () => {
             if (!document.querySelector (".c-common--div__FB._FORM_VACANCY")) {
@@ -1809,40 +1800,40 @@ window.addEventListener ("load", function () {
                         </div>
                     </div>
                 `);
-    
-    
-    
+
+
+
                 const cCommonDivFbVac = document.querySelector (".c-common--div__FB._FORM_VACANCY");
                 const cCommonButtonFbCloseVac = cCommonDivFbVac.querySelector (".c-common--button__FB_CLOSE");
                 const cCommonFormFb = cCommonDivFbVac.querySelector (".c-common--form__FB");
-    
+
                 setTimeout (() => {
                     cCommonDivFbVac.classList.add ("__c-common--div__FB");
                 }, 50);
-    
-    
-    
+
+
+
                 // 1.2 Закрытие
-    
+
                 cCommonButtonFbCloseVac.addEventListener ("click", () => {
                     cCommonDivFbVac.classList.remove ("__c-common--div__FB");
                 });
-                
-                
+
+
                 cCommonDivFbVac.addEventListener ("click", (e) => {
                     if (e.target === cCommonDivFbVac) {
                         cCommonDivFbVac.classList.remove ("__c-common--div__FB");
                     }
                 });
-    
-    
-    
-    
+
+
+
+
                 // 2. ИСЧЕЗАНИЕ / ПОЯВЛЕНИЕ ЗВЕЗДОЧКИ И/ИЛИ ПОДПИСЕЙ В ПОЛЯХ ПРИ НАБОРЕ
-    
-                
+
+
                 // 2.1 Поля имени и фамилии
-    
+
                 const cCommonInputFbName = cCommonDivFbVac.querySelector (".c-common--input__FB_NAME");
                 const cCommonLabelFbName = cCommonDivFbVac.querySelector (".c-common--label__FB_NAME");
                 const cCommonSvgFbName = cCommonDivFbVac.querySelector (".c-common--svg__FB_NAME");
@@ -1851,7 +1842,7 @@ window.addEventListener ("load", function () {
                 const cCommonLabelFbSurName = cCommonDivFbVac.querySelector (".c-common--label__FB_SURNAME");
                 const cCommonSvgFbSurName = cCommonDivFbVac.querySelector (".c-common--svg__FB_SURNAME");
                 const cCommonSpanFbSurName = cCommonDivFbVac.querySelector (".c-common--span__FB_SURNAME");
-    
+
                 cCommonInputFbName.addEventListener ("input", () => {
                     if (cCommonInputFbName.value !== "") {
                         cCommonSpanFbName.classList.add ("__c-common--span__FB_NAME");
@@ -1859,8 +1850,8 @@ window.addEventListener ("load", function () {
                         cCommonSpanFbName.classList.remove ("__c-common--span__FB_NAME");
                     }
                 });
-                
-                
+
+
                 cCommonInputFbSurName.addEventListener ("input", () => {
                     if (cCommonInputFbSurName.value !== "") {
                         cCommonSpanFbSurName.classList.add ("__c-common--span__FB_SURNAME");
@@ -1868,17 +1859,17 @@ window.addEventListener ("load", function () {
                         cCommonSpanFbSurName.classList.remove ("__c-common--span__FB_SURNAME");
                     }
                 });
-                
-    
-    
+
+
+
                 // 2.2 Поле электронной почты
-    
+
                 const cCommonInputFbMail = cCommonDivFbVac.querySelector (".c-common--input__FB_MAIL");
                 const cCommonLabelFbMail = cCommonDivFbVac.querySelector (".c-common--label__FB_MAIL");
                 const cCommonSvgFbMail = cCommonDivFbVac.querySelector (".c-common--svg__FB_MAIL");
                 const cCommonSpanFbMail = cCommonDivFbVac.querySelector (".c-common--span__FB_MAIL");
-    
-                
+
+
                 cCommonInputFbMail.addEventListener ("input", () => {
                     if (cCommonInputFbMail.value !== "") {
                         cCommonSpanFbMail.classList.add ("__c-common--span__FB_MAIL");
@@ -1886,16 +1877,16 @@ window.addEventListener ("load", function () {
                         cCommonSpanFbMail.classList.remove ("__c-common--span__FB_MAIL");
                     }
                 });
-    
-    
-    
+
+
+
                 // 2.3 Поле телефона
-    
+
                 const cCommonInputFbTel = cCommonDivFbVac.querySelector (".c-common--input__FB_TEL");
                 const cCommonSvgFbTel = cCommonDivFbVac.querySelector (".c-common--svg__FB_TEL");
                 const cCommonSpanFbTel = cCommonDivFbVac.querySelector (".c-common--span__FB_TEL");
-    
-                
+
+
                 cCommonInputFbTel.addEventListener ("input", () => {
                     if (cCommonInputFbTel.value !== "") {
                         cCommonSpanFbTel.classList.add ("__c-common--span__FB_TEL");
@@ -1903,10 +1894,10 @@ window.addEventListener ("load", function () {
                         cCommonSpanFbTel.classList.remove ("__c-common--span__FB_TEL");
                     }
                 });
-                            
-    
-    
-    
+
+
+
+
                 // 4. ИНИЦИАЛИЗАЦИЯ ПЛАГИНА intlTelInput
 
                 window.intlTelInput(cCommonInputFbTel, {
@@ -1914,46 +1905,43 @@ window.addEventListener ("load", function () {
                     initialCountry: "ru",
                     autoPlaceholder: "aggressive",
                     customPlaceholder: function(selectedPlaceholder, selectedCountryData) {
-                        // Если выбрана Россия (код страны "ru")
                         if (selectedCountryData.iso2 === 'ru') {
                             return "8 999 999-99-99";
                         }
-
-                        // Для остальных стран оставляем стандартный плейсхолдер плагина
                         return selectedPlaceholder;
                     },
                     formatOnDisplay: true,
                     strictMode: true
                 });
-    
-    
-    
-    
+
+
+
+
                 // 5. ОГРАНИЧЕНИЕ РАЗМЕРА ЗАГРУЖАЕМОГО ФАЙЛА (!!! ЖЕЛАТЕЛЬНО СДЕЛАТЬ ПРОВЕРКУ И НА СТОРОНЕ СЕРВЕРА)
-    
+
                 const cCommonInputFbResm = document.querySelector (".c-common--input__FB_RESM");
                 const cCommonSvgFbResm1 = document.querySelector (".c-common--svg__FB_RESM1");
-    
+
                 cCommonInputFbResm.addEventListener ("change", () => {
                     if (cCommonInputFbResm.files[0].size > 10485760) {
                         cCommonInputFbResm.setCustomValidity ("Превышен допустимый размер файла");
                     }
                 });
-    
-    
-    
-    
+
+
+
+
                 // 6. ВАЛИДАЦИЯ, ОТПРАВКА И ОТБИВКА (!!! ПРИ ИНТЕГРАЦИИ ВОЗМОЖНО БУДЕТ НЕОБХОДИМО ИЗМЕНЕНИЕ В ЧАСТИ ОТПРАВКИ)
-    
+
                 const cCommonDivFbDoneVac = document.querySelector (".c-common--div__FB_DONE._FORM_VACANCY");
                 const cCommonButtonFbDoneClose = cCommonDivFbDoneVac.querySelector (".c-common--button__FB_DONE_CLOSE");
-    
-                
+
+
                 cCommonFormFb.addEventListener ("submit", (e) => {
                     e.preventDefault ();
-    
-    
-                    
+
+
+
                     if (cCommonDivFbVac.querySelector (".c-common--input__FB_RESM").checkValidity ()) {
                         cCommonDivFbVac.querySelector (".c-common--label__FB_RESM").classList.remove ("__c-common--label__FB");
                         cCommonDivFbVac.querySelector (".c-common--svg__FB_RESM").classList.remove ("__c-common--svg__FB");
@@ -1963,9 +1951,9 @@ window.addEventListener ("load", function () {
                         cCommonDivFbVac.querySelector (".c-common--svg__FB_RESM").classList.add ("__c-common--svg__FB");
                         cCommonDivFbVac.querySelector (".c-common--svg__FB_RESM1").classList.add ("__c-common--svg__FB_RESM1");
                     }
-                    
-                    
-    
+
+
+
                     if (cCommonInputFbName.checkValidity ()) {
                         cCommonLabelFbName.classList.remove ("__c-common--label__FB");
                         cCommonSvgFbName.classList.remove ("__c-common--svg__FB");
@@ -1973,9 +1961,9 @@ window.addEventListener ("load", function () {
                         cCommonLabelFbName.classList.add ("__c-common--label__FB");
                         cCommonSvgFbName.classList.add ("__c-common--svg__FB");
                     }
-                    
-                    
-                    
+
+
+
                     if (cCommonInputFbSurName.checkValidity ()) {
                         cCommonLabelFbSurName.classList.remove ("__c-common--label__FB");
                         cCommonSvgFbSurName.classList.remove ("__c-common--svg__FB");
@@ -1983,9 +1971,9 @@ window.addEventListener ("load", function () {
                         cCommonLabelFbSurName.classList.add ("__c-common--label__FB");
                         cCommonSvgFbSurName.classList.add ("__c-common--svg__FB");
                     }
-                    
-            
-                    
+
+
+
                     if (cCommonInputFbMail.checkValidity ()) {
                         cCommonLabelFbMail.classList.remove ("__c-common--label__FB");
                         cCommonSvgFbMail.classList.remove ("__c-common--svg__FB");
@@ -1993,9 +1981,9 @@ window.addEventListener ("load", function () {
                         cCommonLabelFbMail.classList.add ("__c-common--label__FB");
                         cCommonSvgFbMail.classList.add ("__c-common--svg__FB");
                     }
-                    
-                    
-                    
+
+
+
                     if (cCommonInputFbTel.checkValidity ()) {
                         cCommonInputFbTel.classList.remove ("__c-common--input__FB_TEL");
                         cCommonSvgFbTel.classList.remove ("__c-common--svg__FB");
@@ -2003,9 +1991,9 @@ window.addEventListener ("load", function () {
                         cCommonInputFbTel.classList.add ("__c-common--input__FB_TEL");
                         cCommonSvgFbTel.classList.add ("__c-common--svg__FB");
                     }
-    
-                    
-                    
+
+
+
                     if (cCommonDivFbVac.querySelector (".c-common--input__FB_APPR").checkValidity ()) {
                         cCommonDivFbVac.querySelector (".c-common--div__FB_APPR").classList.remove ("__c-common--div__FB_APPR");
                         cCommonDivFbVac.querySelector (".c-common--p__FB_APPR").classList.remove ("__c-common--p__FB_APPR");
@@ -2013,9 +2001,9 @@ window.addEventListener ("load", function () {
                         cCommonDivFbVac.querySelector (".c-common--div__FB_APPR").classList.add ("__c-common--div__FB_APPR");
                         cCommonDivFbVac.querySelector (".c-common--p__FB_APPR").classList.add ("__c-common--p__FB_APPR");
                     }
-                    
-    
-            
+
+
+
                     setTimeout (() => {
                         if (!cCommonDivFbVac.querySelector (".__c-common--label__FB") && !cCommonDivFbVac.querySelector (".__c-common--input__FB_TEL") && !cCommonDivFbVac.querySelector (".__c-common--div__FB_APPR")) {
                             sendFormAjax(cCommonFormFb, function () {
@@ -2026,9 +2014,9 @@ window.addEventListener ("load", function () {
                         }
                     }, 50)
                 });
-    
-    
-                
+
+
+
                 cCommonButtonFbDoneClose.addEventListener ("click", () => {
                     cCommonDivFbDoneVac.classList.remove ("__c-common--div__FB_DONE");
                     cCommonSpanFbName.classList.remove ("__c-common--span__FB_NAME");
@@ -2036,9 +2024,9 @@ window.addEventListener ("load", function () {
                     cCommonSpanFbMail.classList.remove ("__c-common--span__FB_MAIL");
                     cCommonSpanFbTel.classList.remove ("__c-common--span__FB_TEL");
                 });
-                
-                
-                
+
+
+
                 cCommonDivFbDoneVac.addEventListener ("click", (e) => {
                     if (e.target === cCommonDivFbDoneVac) {
                         cCommonDivFbDoneVac.classList.remove ("__c-common--div__FB_DONE");
@@ -2048,14 +2036,14 @@ window.addEventListener ("load", function () {
                         cCommonSpanFbTel.classList.remove ("__c-common--span__FB_TEL");
                     }
                 });
-    
-    
-    
-    
+
+
+
+
                 // 7. АНИМАЦИЯ ПРИ СКРОЛЛЕ 
-    
+
                 const scrolls = cCommonDivFbVac.querySelectorAll('.__C-SCRL');
-    
+
                 const callback = (entries, observer) => {
                     entries.forEach((entry) => {
                         if (entry.isIntersecting) {
@@ -2064,23 +2052,23 @@ window.addEventListener ("load", function () {
                         }
                     });
                 }
-    
+
                 const options = {
                     rootMargin: '-40px 0px 0px 0px',
                     threshold: 0,
                 }
-    
+
                 const observer = new IntersectionObserver(callback, options)
-    
+
                 scrolls.forEach((v) => observer.observe(v));
-                
+
             } else {
                 document.querySelector (".c-common--div__FB._FORM_VACANCY").classList.add ("__c-common--div__FB");
             }
-            
+
         });
     });
-    
+
 
 
 
@@ -2089,16 +2077,16 @@ window.addEventListener ("load", function () {
 
 
     /* --- ФОРМА ДЛЯ ПОДПИСКИ --- */
-    
-    
+
+
     // 1. ОТКРЫТИЕ / ЗАКРЫТИЕ МОДАЛЬНЫХ ОКОН
 
     const openFrmSub = Array.from (document.querySelectorAll ("._OPEN_FRM._FORM_SUBSCR"));
-    
+
 
     // 1.1 Открытие
 
-    
+
     openFrmSub?.forEach ((v0, i0, a0) => {
         a0[i0].addEventListener ("click", () => {
             if (!document.querySelector (".c-common--div__FB._FORM_SUBSCR")) {
@@ -2246,40 +2234,40 @@ window.addEventListener ("load", function () {
                         </div>
                     </div>
                 `);
-    
-    
-    
+
+
+
                 const cCommonDivFbSub = document.querySelector (".c-common--div__FB._FORM_SUBSCR");
                 const cCommonButtonFbCloseSub = cCommonDivFbSub.querySelector (".c-common--button__FB_CLOSE");
                 const cCommonFormFb = cCommonDivFbSub.querySelector (".c-common--form__FB");
-    
+
                 setTimeout (() => {
                     cCommonDivFbSub.classList.add ("__c-common--div__FB");
                 }, 50);
-    
-    
-    
+
+
+
                 // 1.2 Закрытие
-    
+
                 cCommonButtonFbCloseSub.addEventListener ("click", () => {
                     cCommonDivFbSub.classList.remove ("__c-common--div__FB");
                 });
-                
-                
+
+
                 cCommonDivFbSub.addEventListener ("click", (e) => {
                     if (e.target === cCommonDivFbSub) {
                         cCommonDivFbSub.classList.remove ("__c-common--div__FB");
                     }
                 });
-    
-    
-    
-    
+
+
+
+
                 // 2. ИСЧЕЗАНИЕ / ПОЯВЛЕНИЕ ЗВЕЗДОЧКИ И/ИЛИ ПОДПИСЕЙ В ПОЛЯХ ПРИ НАБОРЕ
-    
-                
+
+
                 // 2.1 Поля имени и фамилии
-    
+
                 const cCommonInputFbName = cCommonDivFbSub.querySelector (".c-common--input__FB_NAME");
                 const cCommonLabelFbName = cCommonDivFbSub.querySelector (".c-common--label__FB_NAME");
                 const cCommonSvgFbName = cCommonDivFbSub.querySelector (".c-common--svg__FB_NAME");
@@ -2288,7 +2276,7 @@ window.addEventListener ("load", function () {
                 const cCommonLabelFbSurName = cCommonDivFbSub.querySelector (".c-common--label__FB_SURNAME");
                 const cCommonSvgFbSurName = cCommonDivFbSub.querySelector (".c-common--svg__FB_SURNAME");
                 const cCommonSpanFbSurName = cCommonDivFbSub.querySelector (".c-common--span__FB_SURNAME");
-    
+
                 cCommonInputFbName.addEventListener ("input", () => {
                     if (cCommonInputFbName.value !== "") {
                         cCommonSpanFbName.classList.add ("__c-common--span__FB_NAME");
@@ -2296,8 +2284,8 @@ window.addEventListener ("load", function () {
                         cCommonSpanFbName.classList.remove ("__c-common--span__FB_NAME");
                     }
                 });
-                
-                
+
+
                 cCommonInputFbSurName.addEventListener ("input", () => {
                     if (cCommonInputFbSurName.value !== "") {
                         cCommonSpanFbSurName.classList.add ("__c-common--span__FB_SURNAME");
@@ -2305,17 +2293,17 @@ window.addEventListener ("load", function () {
                         cCommonSpanFbSurName.classList.remove ("__c-common--span__FB_SURNAME");
                     }
                 });
-                
-    
-    
+
+
+
                 // 2.2 Поле электронной почты
-    
+
                 const cCommonInputFbMail = cCommonDivFbSub.querySelector (".c-common--input__FB_MAIL");
                 const cCommonLabelFbMail = cCommonDivFbSub.querySelector (".c-common--label__FB_MAIL");
                 const cCommonSvgFbMail = cCommonDivFbSub.querySelector (".c-common--svg__FB_MAIL");
                 const cCommonSpanFbMail = cCommonDivFbSub.querySelector (".c-common--span__FB_MAIL");
-    
-                
+
+
                 cCommonInputFbMail.addEventListener ("input", () => {
                     if (cCommonInputFbMail.value !== "") {
                         cCommonSpanFbMail.classList.add ("__c-common--span__FB_MAIL");
@@ -2323,20 +2311,20 @@ window.addEventListener ("load", function () {
                         cCommonSpanFbMail.classList.remove ("__c-common--span__FB_MAIL");
                     }
                 });
-    
-    
-    
-    
+
+
+
+
                 // 5. ВАЛИДАЦИЯ, ОТПРАВКА И ОТБИВКА (!!! ПРИ ИНТЕГРАЦИИ ВОЗМОЖНО БУДЕТ НЕОБХОДИМО ИЗМЕНЕНИЕ В ЧАСТИ ОТПРАВКИ)
-    
+
                 const cCommonDivFbDoneSub = document.querySelector (".c-common--div__FB_DONE._FORM_SUBSCR");
                 const cCommonButtonFbDoneClose = cCommonDivFbDoneSub.querySelector (".c-common--button__FB_DONE_CLOSE");
-    
-                
+
+
                 cCommonFormFb.addEventListener ("submit", (e) => {
                     e.preventDefault ();
-                    
-                    
+
+
                     if (cCommonInputFbName.checkValidity ()) {
                         cCommonLabelFbName.classList.remove ("__c-common--label__FB");
                         cCommonSvgFbName.classList.remove ("__c-common--svg__FB");
@@ -2344,9 +2332,9 @@ window.addEventListener ("load", function () {
                         cCommonLabelFbName.classList.add ("__c-common--label__FB");
                         cCommonSvgFbName.classList.add ("__c-common--svg__FB");
                     }
-                    
-                    
-                    
+
+
+
                     if (cCommonInputFbSurName.checkValidity ()) {
                         cCommonLabelFbSurName.classList.remove ("__c-common--label__FB");
                         cCommonSvgFbSurName.classList.remove ("__c-common--svg__FB");
@@ -2354,9 +2342,9 @@ window.addEventListener ("load", function () {
                         cCommonLabelFbSurName.classList.add ("__c-common--label__FB");
                         cCommonSvgFbSurName.classList.add ("__c-common--svg__FB");
                     }
-                    
-            
-                    
+
+
+
                     if (cCommonInputFbMail.checkValidity ()) {
                         cCommonLabelFbMail.classList.remove ("__c-common--label__FB");
                         cCommonSvgFbMail.classList.remove ("__c-common--svg__FB");
@@ -2364,9 +2352,9 @@ window.addEventListener ("load", function () {
                         cCommonLabelFbMail.classList.add ("__c-common--label__FB");
                         cCommonSvgFbMail.classList.add ("__c-common--svg__FB");
                     }
-    
-                    
-                    
+
+
+
                     if (cCommonDivFbSub.querySelector (".c-common--input__FB_APPR").checkValidity ()) {
                         cCommonDivFbSub.querySelector (".c-common--div__FB_APPR").classList.remove ("__c-common--div__FB_APPR");
                         cCommonDivFbSub.querySelector (".c-common--p__FB_APPR").classList.remove ("__c-common--p__FB_APPR");
@@ -2374,9 +2362,9 @@ window.addEventListener ("load", function () {
                         cCommonDivFbSub.querySelector (".c-common--div__FB_APPR").classList.add ("__c-common--div__FB_APPR");
                         cCommonDivFbSub.querySelector (".c-common--p__FB_APPR").classList.add ("__c-common--p__FB_APPR");
                     }
-                    
-    
-            
+
+
+
                     setTimeout (() => {
                         if (!cCommonDivFbSub.querySelector (".__c-common--label__FB") && !cCommonDivFbSub.querySelector (".__c-common--input__FB_TEL") && !cCommonDivFbSub.querySelector (".__c-common--div__FB_APPR")) {
                             sendFormAjax(cCommonFormFb, function () {
@@ -2387,18 +2375,18 @@ window.addEventListener ("load", function () {
                         }
                     }, 50)
                 });
-    
-    
-                
+
+
+
                 cCommonButtonFbDoneClose.addEventListener ("click", () => {
                     cCommonDivFbDoneSub.classList.remove ("__c-common--div__FB_DONE");
                     cCommonSpanFbName.classList.remove ("__c-common--span__FB_NAME");
                     cCommonSpanFbSurName.classList.remove ("__c-common--span__FB_SURNAME");
                     cCommonSpanFbMail.classList.remove ("__c-common--span__FB_MAIL");
                 });
-                
-                
-                
+
+
+
                 cCommonDivFbDoneSub.addEventListener ("click", (e) => {
                     if (e.target === cCommonDivFbDoneSub) {
                         cCommonDivFbDoneSub.classList.remove ("__c-common--div__FB_DONE");
@@ -2407,14 +2395,14 @@ window.addEventListener ("load", function () {
                         cCommonSpanFbMail.classList.remove ("__c-common--span__FB_MAIL");
                     }
                 });
-    
-    
-    
-    
+
+
+
+
                 // 6. АНИМАЦИЯ ПРИ СКРОЛЛЕ 
-    
+
                 const scrolls = cCommonDivFbSub.querySelectorAll('.__C-SCRL');
-    
+
                 const callback = (entries, observer) => {
                     entries.forEach((entry) => {
                         if (entry.isIntersecting) {
@@ -2423,25 +2411,25 @@ window.addEventListener ("load", function () {
                         }
                     });
                 }
-    
+
                 const options = {
                     rootMargin: '-40px 0px 0px 0px',
                     threshold: 0,
                 }
-    
+
                 const observer = new IntersectionObserver(callback, options)
-    
+
                 scrolls.forEach((v) => observer.observe(v));
-                
+
             } else {
                 document.querySelector (".c-common--div__FB._FORM_SUBSCR").classList.add ("__c-common--div__FB");
             }
-            
+
         });
     });
-    
-    
-    
+
+
+
 
 
 
@@ -2453,11 +2441,11 @@ window.addEventListener ("load", function () {
     // 1. ОТКРЫТИЕ / ЗАКРЫТИЕ МОДАЛЬНЫХ ОКОН
 
     const openFrmServ = Array.from (document.querySelectorAll ("._OPEN_FRM._FORM_SERVICE"));
-    
+
 
     // 1.1 Открытие
 
-    
+
     openFrmServ?.forEach ((v0, i0, a0) => {
         a0[i0].addEventListener ("click", () => {
             if (!document.querySelector (".c-common--div__FB._FORM_SERVICE")) {
@@ -2690,41 +2678,41 @@ window.addEventListener ("load", function () {
                         </div>
                     </div>
                 `);
-    
-    
+
+
                 const cCommonDivFbServ = document.querySelector (".c-common--div__FB._FORM_SERVICE");
                 const cCommonButtonFbCloseServ = cCommonDivFbServ.querySelector (".c-common--button__FB_CLOSE");
                 const cCommonFormFb = cCommonDivFbServ.querySelector (".c-common--form__FB");
-    
-    
+
+
                 setTimeout (() => {
                     cCommonDivFbServ.classList.add ("__c-common--div__FB");
                 }, 50);
-                
-    
-    
-    
+
+
+
+
                 // 1.2 Закрытие
-    
+
                 cCommonButtonFbCloseServ.addEventListener ("click", () => {
                     cCommonDivFbServ.classList.remove ("__c-common--div__FB");
                 });
-                
-                
+
+
                 cCommonDivFbServ.addEventListener ("click", (e) => {
                     if (e.target === cCommonDivFbServ) {
                         cCommonDivFbServ.classList.remove ("__c-common--div__FB");
                     }
                 });
-    
-    
-    
-    
+
+
+
+
                 // 2. ИСЧЕЗАНИЕ / ПОЯВЛЕНИЕ ЗВЕЗДОЧКИ И/ИЛИ ПОДПИСЕЙ В ПОЛЯХ ПРИ НАБОРЕ
-    
-    
+
+
                 // 2.1 Поля имени и фамилии
-    
+
                 const cCommonInputFbName = cCommonDivFbServ.querySelector (".c-common--input__FB_NAME");
                 const cCommonLabelFbName = cCommonDivFbServ.querySelector (".c-common--label__FB_NAME");
                 const cCommonSvgFbName = cCommonDivFbServ.querySelector (".c-common--svg__FB_NAME");
@@ -2733,7 +2721,7 @@ window.addEventListener ("load", function () {
                 const cCommonLabelFbSurName = cCommonDivFbServ.querySelector (".c-common--label__FB_SURNAME");
                 const cCommonSvgFbSurName = cCommonDivFbServ.querySelector (".c-common--svg__FB_SURNAME");
                 const cCommonSpanFbSurName = cCommonDivFbServ.querySelector (".c-common--span__FB_SURNAME");
-    
+
                 cCommonInputFbName.addEventListener ("input", () => {
                     if (cCommonInputFbName.value !== "") {
                         cCommonSpanFbName.classList.add ("__c-common--span__FB_NAME");
@@ -2741,8 +2729,8 @@ window.addEventListener ("load", function () {
                         cCommonSpanFbName.classList.remove ("__c-common--span__FB_NAME");
                     }
                 });
-                
-                
+
+
                 cCommonInputFbSurName.addEventListener ("input", () => {
                     if (cCommonInputFbSurName.value !== "") {
                         cCommonSpanFbSurName.classList.add ("__c-common--span__FB_SURNAME");
@@ -2750,17 +2738,17 @@ window.addEventListener ("load", function () {
                         cCommonSpanFbSurName.classList.remove ("__c-common--span__FB_SURNAME");
                     }
                 });
-                
-    
-    
+
+
+
                 // 2.2 Поле электронной почты
-    
+
                 const cCommonInputFbMail = cCommonDivFbServ.querySelector (".c-common--input__FB_MAIL");
                 const cCommonLabelFbMail = cCommonDivFbServ.querySelector (".c-common--label__FB_MAIL");
                 const cCommonSvgFbMail = cCommonDivFbServ.querySelector (".c-common--svg__FB_MAIL");
                 const cCommonSpanFbMail = cCommonDivFbServ.querySelector (".c-common--span__FB_MAIL");
-    
-                
+
+
                 cCommonInputFbMail.addEventListener ("input", () => {
                     if (cCommonInputFbMail.value !== "") {
                         cCommonSpanFbMail.classList.add ("__c-common--span__FB_MAIL");
@@ -2768,16 +2756,16 @@ window.addEventListener ("load", function () {
                         cCommonSpanFbMail.classList.remove ("__c-common--span__FB_MAIL");
                     }
                 });
-    
-    
-    
+
+
+
                 // 2.3 Поле телефона
-    
+
                 const cCommonInputFbTel = cCommonDivFbServ.querySelector (".c-common--input__FB_TEL");
                 const cCommonSvgFbTel = cCommonDivFbServ.querySelector (".c-common--svg__FB_TEL");
                 const cCommonSpanFbTel = cCommonDivFbServ.querySelector (".c-common--span__FB_TEL");
-    
-                
+
+
                 cCommonInputFbTel.addEventListener ("input", () => {
                     if (cCommonInputFbTel.value !== "") {
                         cCommonSpanFbTel.classList.add ("__c-common--span__FB_TEL");
@@ -2794,8 +2782,8 @@ window.addEventListener ("load", function () {
                 const cCommonLabelFbComp = cCommonDivFbServ.querySelector (".c-common--label__FB_COMP");
                 const cCommonSvgFbComp = cCommonDivFbServ.querySelector (".c-common--svg__FB_COMP");
                 const cCommonSpanFbComp = cCommonDivFbServ.querySelector (".c-common--span__FB_COMP");
-    
-                
+
+
                 cCommonInputFbComp.addEventListener ("input", () => {
                     if (cCommonInputFbComp.value !== "") {
                         cCommonSpanFbComp.classList.add ("__c-common--span__FB_COMP");
@@ -2812,8 +2800,8 @@ window.addEventListener ("load", function () {
                 const cCommonLabelFbPost = cCommonDivFbServ.querySelector (".c-common--label__FB_POST");
                 const cCommonSvgFbPost = cCommonDivFbServ.querySelector (".c-common--svg__FB_POST");
                 const cCommonSpanFbPost = cCommonDivFbServ.querySelector (".c-common--span__FB_POST");
-    
-                
+
+
                 cCommonInputFbPost.addEventListener ("input", () => {
                     if (cCommonInputFbPost.value !== "") {
                         cCommonSpanFbPost.classList.add ("__c-common--span__FB_POST");
@@ -2830,8 +2818,8 @@ window.addEventListener ("load", function () {
                 const cCommonLabelFbNum = cCommonDivFbServ.querySelector (".c-common--label__FB_NUM");
                 const cCommonSvgFbNum = cCommonDivFbServ.querySelector (".c-common--svg__FB_NUM");
                 const cCommonSpanFbNum = cCommonDivFbServ.querySelector (".c-common--span__FB_NUM");
-    
-                
+
+
                 cCommonInputFbNum.addEventListener ("input", () => {
                     if (cCommonInputFbNum.value !== "") {
                         cCommonSpanFbNum.classList.add ("__c-common--span__FB_NUM");
@@ -2839,17 +2827,17 @@ window.addEventListener ("load", function () {
                         cCommonSpanFbNum.classList.remove ("__c-common--span__FB_NUM");
                     }
                 });
-    
-    
-    
+
+
+
                 // 2.7 Поле комментария
-    
+
                 const cCommonTextareaFbTa = cCommonDivFbServ.querySelector (".c-common--textarea__FB_TA");
                 const cCommonLabelFbTa = cCommonDivFbServ.querySelector (".c-common--label__FB_TA");
                 const cCommonSvgFbTa = cCommonDivFbServ.querySelector (".c-common--svg__FB_TA");
                 const cCommonSpanFbTa = cCommonDivFbServ.querySelector (".c-common--span__FB_TA");
-    
-    
+
+
                 cCommonTextareaFbTa.addEventListener ("input", () => {
                     if (cCommonTextareaFbTa.value !== "") {
                         cCommonSpanFbTa.classList.add ("__c-common--span__FB_TA");
@@ -2857,10 +2845,10 @@ window.addEventListener ("load", function () {
                         cCommonSpanFbTa.classList.remove ("__c-common--span__FB_TA");
                     }
                 });
-    
-    
-    
-    
+
+
+
+
                 // 4. ИНИЦИАЛИЗАЦИЯ ПЛАГИНА intlTelInput
 
                 window.intlTelInput(cCommonInputFbTel, {
@@ -2868,12 +2856,9 @@ window.addEventListener ("load", function () {
                     initialCountry: "ru",
                     autoPlaceholder: "aggressive",
                     customPlaceholder: function(selectedPlaceholder, selectedCountryData) {
-                        // Если выбрана Россия (код страны "ru")
                         if (selectedCountryData.iso2 === 'ru') {
                             return "8 999 999-99-99";
                         }
-
-                        // Для остальных стран оставляем стандартный плейсхолдер плагина
                         return selectedPlaceholder;
                     },
                     formatOnDisplay: true,
@@ -2884,29 +2869,29 @@ window.addEventListener ("load", function () {
 
 
                 // 5. ОГРАНИЧЕНИЕ РАЗМЕРА ЗАГРУЖАЕМОГО ФАЙЛА (!!! ЖЕЛАТЕЛЬНО СДЕЛАТЬ ПРОВЕРКУ И НА СТОРОНЕ СЕРВЕРА)
-    
+
                 const cCommonInputFbDoc = document.querySelector (".c-common--input__FB_DOC");
                 const cCommonSvgFbDoc1 = document.querySelector (".c-common--svg__FB_DOC1");
-    
+
                 cCommonInputFbDoc.addEventListener ("change", () => {
                     if (cCommonInputFbDoc.files[0].size > 10485760) {
                         cCommonInputFbDoc.setCustomValidity ("Превышен допустимый размер файла");
                     }
                 });
-    
-    
-    
-    
+
+
+
+
                 // 6. ВАЛИДАЦИЯ, ОТПРАВКА И ОТБИВКА (!!! ПРИ ИНТЕГРАЦИИ ВОЗМОЖНО БУДЕТ НЕОБХОДИМО ИЗМЕНЕНИЕ В ЧАСТИ ОТПРАВКИ)
-    
+
                 const cCommonDivFbDoneComm = document.querySelector (".c-common--div__FB_DONE._FORM_COMMON");
                 const cCommonButtonFbDoneClose = cCommonDivFbDoneComm.querySelector (".c-common--button__FB_DONE_CLOSE");
-    
-                
+
+
                 cCommonFormFb.addEventListener ("submit", (e) => {
                     e.preventDefault ();
-                    
-    
+
+
                     if (cCommonInputFbName.checkValidity ()) {
                         cCommonLabelFbName.classList.remove ("__c-common--label__FB");
                         cCommonSvgFbName.classList.remove ("__c-common--svg__FB");
@@ -2914,9 +2899,9 @@ window.addEventListener ("load", function () {
                         cCommonLabelFbName.classList.add ("__c-common--label__FB");
                         cCommonSvgFbName.classList.add ("__c-common--svg__FB");
                     }
-                    
-                    
-                    
+
+
+
                     if (cCommonInputFbSurName.checkValidity ()) {
                         cCommonLabelFbSurName.classList.remove ("__c-common--label__FB");
                         cCommonSvgFbSurName.classList.remove ("__c-common--svg__FB");
@@ -2924,9 +2909,9 @@ window.addEventListener ("load", function () {
                         cCommonLabelFbSurName.classList.add ("__c-common--label__FB");
                         cCommonSvgFbSurName.classList.add ("__c-common--svg__FB");
                     }
-                    
-            
-                    
+
+
+
                     if (cCommonInputFbMail.checkValidity ()) {
                         cCommonLabelFbMail.classList.remove ("__c-common--label__FB");
                         cCommonSvgFbMail.classList.remove ("__c-common--svg__FB");
@@ -2934,9 +2919,9 @@ window.addEventListener ("load", function () {
                         cCommonLabelFbMail.classList.add ("__c-common--label__FB");
                         cCommonSvgFbMail.classList.add ("__c-common--svg__FB");
                     }
-                    
-                    
-                    
+
+
+
                     if (cCommonInputFbTel.checkValidity ()) {
                         cCommonInputFbTel.classList.remove ("__c-common--input__FB_TEL");
                         cCommonSvgFbTel.classList.remove ("__c-common--svg__FB");
@@ -2986,9 +2971,9 @@ window.addEventListener ("load", function () {
                         cCommonDivFbServ.querySelector (".c-common--svg__FB_DOC").classList.add ("__c-common--svg__FB");
                         cCommonDivFbServ.querySelector (".c-common--svg__FB_DOC1").classList.add ("__c-common--svg__FB_DOC1");
                     }
-                    
-            
-                    
+
+
+
                     if (cCommonTextareaFbTa.checkValidity ()) {
                         cCommonLabelFbTa.classList.remove ("__c-common--label__FB");
                         cCommonSvgFbTa.classList.remove ("__c-common--svg__FB");
@@ -2996,9 +2981,9 @@ window.addEventListener ("load", function () {
                         cCommonLabelFbTa.classList.add ("__c-common--label__FB");
                         cCommonSvgFbTa.classList.add ("__c-common--svg__FB");
                     }
-                    
-                    
-                    
+
+
+
                     if (cCommonDivFbServ.querySelector (".c-common--input__FB_APPR").checkValidity ()) {
                         cCommonDivFbServ.querySelector (".c-common--div__FB_APPR").classList.remove ("__c-common--div__FB_APPR");
                         cCommonDivFbServ.querySelector (".c-common--p__FB_APPR").classList.remove ("__c-common--p__FB_APPR");
@@ -3006,9 +2991,9 @@ window.addEventListener ("load", function () {
                         cCommonDivFbServ.querySelector (".c-common--div__FB_APPR").classList.add ("__c-common--div__FB_APPR");
                         cCommonDivFbServ.querySelector (".c-common--p__FB_APPR").classList.add ("__c-common--p__FB_APPR");
                     }
-                    
-    
-            
+
+
+
                     setTimeout (() => {
                         if (!cCommonDivFbServ.querySelector (".__c-common--label__FB") && !cCommonDivFbServ.querySelector (".__c-common--input__FB_TEL") && !cCommonDivFbServ.querySelector (".__c-common--div__FB_APPR")) {
                             sendFormAjax(cCommonFormFb, function () {
@@ -3019,9 +3004,9 @@ window.addEventListener ("load", function () {
                         }
                     }, 50)
                 });
-    
-    
-                
+
+
+
                 cCommonButtonFbDoneClose.addEventListener ("click", () => {
                     cCommonDivFbDoneComm.classList.remove ("__c-common--div__FB_DONE");
                     cCommonSpanFbName.classList.remove ("__c-common--span__FB_NAME");
@@ -3033,9 +3018,9 @@ window.addEventListener ("load", function () {
                     cCommonSpanFbNum.classList.remove ("__c-common--span__FB_NUM");
                     cCommonSpanFbTa.classList.remove ("__c-common--span__FB_TA");
                 });
-                
-                
-                
+
+
+
                 cCommonDivFbDoneComm.addEventListener ("click", (e) => {
                     if (e.target === cCommonDivFbDoneComm) {
                         cCommonDivFbDoneComm.classList.remove ("__c-common--div__FB_DONE");
@@ -3049,14 +3034,14 @@ window.addEventListener ("load", function () {
                         cCommonSpanFbTa.classList.remove ("__c-common--span__FB_TA");
                     }
                 });
-    
-    
-    
-    
+
+
+
+
                 // 6. АНИМАЦИЯ ПРИ СКРОЛЛЕ 
-    
+
                 const scrolls = cCommonDivFbServ.querySelectorAll('.__C-SCRL');
-    
+
                 const callback = (entries, observer) => {
                     entries.forEach((entry) => {
                         if (entry.isIntersecting) {
@@ -3065,20 +3050,20 @@ window.addEventListener ("load", function () {
                         }
                     });
                 }
-    
+
                 const options = {
                     rootMargin: '-40px 0px 0px 0px',
                     threshold: 0,
                 }
-    
+
                 const observer = new IntersectionObserver(callback, options)
-    
+
                 scrolls.forEach((v) => observer.observe(v));
-                
+
             } else {
                 document.querySelector (".c-common--div__FB._FORM_SERVICE").classList.add ("__c-common--div__FB");
             }
-            
+
         });
     });
 });
