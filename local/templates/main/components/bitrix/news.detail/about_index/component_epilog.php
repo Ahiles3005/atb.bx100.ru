@@ -428,8 +428,8 @@ if ($isNotEmptyGALLARY_FOTO && count($arResult["PROPERTIES"]['GALLARY_VIDEO']['V
                                                 <div class="c-common--div__GLR_SWIPER_SLIDE swiper-slide">
                                                     <div class="c-common--div__GLR_IMAGE">
                                                         <video class="c-common--img__GLR_IMAGE"
-                                                             src="<?= $slide['SRC'] ?>"
-                                                               alt="" loading="lazy" controls> </video>
+                                                               src="<?= $slide['SRC'] ?>"
+                                                               alt="" loading="lazy" controls></video>
                                                     </div>
                                                 </div>
                                             <? endforeach ?>
@@ -945,24 +945,24 @@ if ($isNotEmptyGALLARY_FOTO && count($arResult["PROPERTIES"]['GALLARY_VIDEO']['V
                                   fill="#0C0C0C"/>
                         </svg>
                         <p class="cd-reg--p__TABLE_NAME">
-                            <?=$reestr['NAME']?>
+                            <?= $reestr['NAME'] ?>
                         </p>
                     </div>
 
                     <p class="cd-reg--p__TABLE_NUMBER">
                         <span class="cd-reg--span__TABLE_NUMBER_TOP">Номер в реестре:</span>
-                        <span class="cd-reg--span__TABLE_NUMBER1">   <?=$reestr['NUMBER']?></span>
-<!--                        от-->
-<!--                        <span class="cd-reg--span__TABLE_NUMBER2">29.07.2025</span>-->
+                        <span class="cd-reg--span__TABLE_NUMBER1">   <?= $reestr['NUMBER'] ?></span>
+                        <!--                        от-->
+                        <!--                        <span class="cd-reg--span__TABLE_NUMBER2">29.07.2025</span>-->
 
                     </p>
 
-                    <a class="cd-reg--a__TABLE_PDF" href="<?=$reestr['FILE']['SRC']?>" download>
+                    <a class="cd-reg--a__TABLE_PDF" href="<?= $reestr['FILE']['SRC'] ?>" download>
                         <img class="cd-reg--img__TABLE_PDF" src="/images/card/cd-cnf_pdf.svg" alt="pdf">
                         <span>Выписка</span>
                     </a>
 
-                    <a class="cd-reg--a__TABLE_GISP" href="<?=$reestr['LINK']?>">
+                    <a class="cd-reg--a__TABLE_GISP" href="<?= $reestr['LINK'] ?>">
                         <span>НА САЙТЕ ГИСП</span>
                         <span>ПЕРЕЙТИ</span>
                         <svg width="29" height="23" viewBox="0 0 29 23" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -987,7 +987,7 @@ if ($isNotEmptyGALLARY_FOTO && count($arResult["PROPERTIES"]['GALLARY_VIDEO']['V
 
 <!-- ---------- ********** СЕКЦИЯ DOC ********** ---------- -->
 
-<?if($DOKYMENTY):?>
+<? if ($DOKYMENTY): ?>
     <section class="cd-mat" id="ab-doc">
         <div class="cd-mat--div__CONT C-CONTAINER">
             <div class="c-common--div__HEAD cd-mat--div__HEAD" role="button">
@@ -1030,7 +1030,7 @@ if ($isNotEmptyGALLARY_FOTO && count($arResult["PROPERTIES"]['GALLARY_VIDEO']['V
             <div class="cd-mat--div__CARDS __C-SCRL DOWN">
                 <? foreach ($arResult["PROPERTIES"]['DOKYMENTY'] as $key => $documents): ?>
                     <? foreach ($documents['elements'] as $document): ?>
-                        <a class="cd-mat--a__CARD" href="<?= $document['src'] ?>" target="_blank">
+                        <a class="cd-mat--a__CARD" href="<?= $document['src'] ?>" target="_blank" data-type="<?=$key?>">
                             <div class="cd-mat--div__CARD_IMAGES">
                                 <svg class="cd-mat--svg__CARD_IMAGE_1" width="34" height="41" viewBox="0 0 34 41"
                                      fill="none"
@@ -1074,7 +1074,7 @@ if ($isNotEmptyGALLARY_FOTO && count($arResult["PROPERTIES"]['GALLARY_VIDEO']['V
             </div>
         </div>
     </section>
-<?endif?>
+<? endif ?>
 
 
 
