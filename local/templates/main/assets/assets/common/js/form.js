@@ -445,6 +445,15 @@ window.addEventListener ("load", function () {
                     loadUtils: () => import("/local/templates/main/assets/libs/intlTelInput/js/utils.js"),
                     initialCountry: "ru",
                     autoPlaceholder: "aggressive",
+                    customPlaceholder: function(selectedPlaceholder, selectedCountryData) {
+                        // Если выбрана Россия (код страны "ru")
+                        if (selectedCountryData.iso2 === 'ru') {
+                            return "8 999 999-99-99";
+                        }
+
+                        // Для остальных стран оставляем стандартный плейсхолдер плагина
+                        return selectedPlaceholder;
+                    },
                     formatOnDisplay: true,
                     strictMode: true
                 });
@@ -921,6 +930,15 @@ window.addEventListener ("load", function () {
                     loadUtils: () => import("/local/templates/main/assets/libs/intlTelInput/js/utils.js"),
                     initialCountry: "ru",
                     autoPlaceholder: "aggressive",
+                    customPlaceholder: function(selectedPlaceholder, selectedCountryData) {
+                        // Если выбрана Россия (код страны "ru")
+                        if (selectedCountryData.iso2 === 'ru') {
+                            return "8 999 999-99-99";
+                        }
+
+                        // Для остальных стран оставляем стандартный плейсхолдер плагина
+                        return selectedPlaceholder;
+                    },
                     formatOnDisplay: true,
                     strictMode: true
                 });
@@ -1409,6 +1427,15 @@ window.addEventListener ("load", function () {
                     loadUtils: () => import("/local/templates/main/assets/libs/intlTelInput/js/utils.js"),
                     initialCountry: "ru",
                     autoPlaceholder: "aggressive",
+                    customPlaceholder: function(selectedPlaceholder, selectedCountryData) {
+                        // Если выбрана Россия (код страны "ru")
+                        if (selectedCountryData.iso2 === 'ru') {
+                            return "8 999 999-99-99";
+                        }
+
+                        // Для остальных стран оставляем стандартный плейсхолдер плагина
+                        return selectedPlaceholder;
+                    },
                     formatOnDisplay: true,
                     strictMode: true
                 });
@@ -1886,6 +1913,15 @@ window.addEventListener ("load", function () {
                     loadUtils: () => import("/local/templates/main/assets/libs/intlTelInput/js/utils.js"),
                     initialCountry: "ru",
                     autoPlaceholder: "aggressive",
+                    customPlaceholder: function(selectedPlaceholder, selectedCountryData) {
+                        // Если выбрана Россия (код страны "ru")
+                        if (selectedCountryData.iso2 === 'ru') {
+                            return "8 999 999-99-99";
+                        }
+
+                        // Для остальных стран оставляем стандартный плейсхолдер плагина
+                        return selectedPlaceholder;
+                    },
                     formatOnDisplay: true,
                     strictMode: true
                 });
@@ -2831,6 +2867,15 @@ window.addEventListener ("load", function () {
                     loadUtils: () => import("/local/templates/main/assets/libs/intlTelInput/js/utils.js"),
                     initialCountry: "ru",
                     autoPlaceholder: "aggressive",
+                    customPlaceholder: function(selectedPlaceholder, selectedCountryData) {
+                        // Если выбрана Россия (код страны "ru")
+                        if (selectedCountryData.iso2 === 'ru') {
+                            return "8 999 999-99-99";
+                        }
+
+                        // Для остальных стран оставляем стандартный плейсхолдер плагина
+                        return selectedPlaceholder;
+                    },
                     formatOnDisplay: true,
                     strictMode: true
                 });
