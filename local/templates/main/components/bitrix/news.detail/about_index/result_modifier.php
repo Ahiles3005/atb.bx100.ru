@@ -156,7 +156,8 @@ if (CModule::IncludeModule("highloadblock")) {
     }
 
     if (!empty($ISTORIA_KOMPANII)) {
-        foreach ($arResult['PROPERTIES']['ISTORIA_KOMPANII']['VALUE'] as $k => $code) {
+        $reverseISTORIA_KOMPANII = array_reverse($arResult['PROPERTIES']['ISTORIA_KOMPANII']['VALUE']);
+        foreach ($reverseISTORIA_KOMPANII as $k => $code) {
 
             $value = $ISTORIA_KOMPANII[$code];
 
